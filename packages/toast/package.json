@@ -1,0 +1,11 @@
+{
+  "name": "YunUI-toast",
+  "description": "",
+  "version": "1.0.0",
+  "author": "haoyang_hu <haoyang_hu@kingdee.com>",
+  "scripts": {
+    "test": "printf 'test'"
+  },
+  "dependencies": {
+  }
+}
