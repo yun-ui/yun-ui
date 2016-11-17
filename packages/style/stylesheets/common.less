@@ -1,0 +1,35 @@
+@import "var";
+/* font-size 规范文本大小 */
+h1 { font-size:0.36rem; }
+h2 { font-size:0.34rem; }
+h3 { font-size:0.32rem; }
+h4 { font-size:0.28rem; }
+h5 { font-size:0.26rem; }
+h6 { font-size:0.22rem; }
+
+/* font color 文本颜色 */
+.@{uiName} {
+  &-text-default { color:@defaultFontColor; }
+  &-text-secondary { color:@secondaryFontColor; }
+  &-text-active { color:@activeFontColor; }
+  &-text-warn { color:@warnFontColor; }
+  &-text-tips { color:@tipsFontColor; }
+}
+
+/* flex grid  基于flex布局的栅格系统*/
+.@{uiName} {
+  &-flex-container{
+    display: -webkit-box;
+    display: flex;
+  }
+  &-flex-item{
+    -webkit-box-flex: 1;
+    flex:1;
+    display: block;
+    width:0;
+  }
+  &-flex-content{
+    width:100%;
+    overflow: hidden;
+  }
+}

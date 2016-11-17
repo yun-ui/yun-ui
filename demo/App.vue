@@ -1,8 +1,8 @@
 <template>
     <div>
-        <button>首页</button>
-        <yun-toast></yun-toast>
-        <yun-button></yun-button>
+        <router-link :to="{name: 'Button'}">
+          <button>首页</button>
+        </router-link>
     </div>
 </template>
 

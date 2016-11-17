@@ -24,7 +24,8 @@ webpackConfig.push(merge(baseWebpackConfig, {
         path: config.build.assetsRoot,
         filename: utils.assetsPath('[name]/index.js'),
         //chunkFilename: utils.assetsPath('[name]/[id].[chunkhash].js')
-        chunkFilename: utils.assetsPath('[id].js')
+        chunkFilename: utils.assetsPath('[id].js'),
+        libraryTarget: "umd"
     },
     vue: {
         loaders: utils.cssLoaders({
@@ -121,7 +122,7 @@ console.log(JSON.stringify(webpackConfig[1]))
 
 /*if ( config.build.productionGzip ) {
     var CompressionWebpackPlugin = require('compression-webpack-plugin')
-    
+
     webpackConfig.plugins.push(
         new CompressionWebpackPlugin({
             asset: '[path].gz[query]',

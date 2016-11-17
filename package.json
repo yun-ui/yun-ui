@@ -13,7 +13,7 @@
   "author": "haoyang_hu <haoyang_hu@kingdee.com>",
   "private": true,
   "scripts": {
-    "dev-demo": "export NODE_ENV=dev_demo && node build/dev-server.js",
+    "dev-demo": "cross-env NODE_ENV=dev_demo node build/dev-server.js",
     "dev": "node build/dev-server.js",
     "build": "npm run lint && node build/build.js",
     "build-demo": "npm run lint && node build/build-demo.js",

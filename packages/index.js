@@ -1,7 +1,8 @@
-import button from './button'
-import toast from './toast'
+import yunButton from './button'
+import yunToast from './toast'
+
 const Components = {
-    button,
-    toast
+    yunButton,
+    yunToast
 }
 module.exports = Components
