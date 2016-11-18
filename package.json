@@ -1,7 +1,7 @@
 {
-  "name": "cloudhub_ui",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "YunUI",
+  "version": "1.0.1",
+  "description": "Mobile UI Components Library for Vue.js by CloudHub.",
   "keywords": [
     "component",
     "vue",
@@ -11,22 +11,24 @@
     "YunUI"
   ],
   "author": "haoyang_hu <haoyang_hu@kingdee.com>",
-  "private": true,
+  "main": "dist/yun/index.js",
+  "style": "dist/yun/index.css",
   "scripts": {
     "dev-demo": "cross-env NODE_ENV=dev_demo node build/dev-server.js",
     "dev": "node build/dev-server.js",
     "build": "npm run lint && node build/build.js",
     "build-demo": "npm run lint && node build/build-demo.js",
     "lint": "eslint packages/*.js packages/**/*.{js,vue} demo/*.{js,vue} demo/**/*.{js,vue} src/* src/**/* --quiet",
+    "publish": "npm publish",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e"
   },
   "license": "MIT",
   "dependencies": {
-    "vue": "^2.0.1"
   },
   "devDependencies": {
+    "vue": "^2.0.1",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
