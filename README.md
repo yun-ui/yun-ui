@@ -1,5 +1,5 @@
-#YunUI 前端技术大纲 v1.0
-##版本：v1.0 时间：2016-10-17
+#YunUI
+##版本：v1.0 时间：2016-11-18
 
 ##Overview
 
@@ -14,29 +14,29 @@
 
 ###文件目录结构
 ``` bash
-CloudHubUI/							##根目录
-	build/						    ##webpack构建配置目录
-	config/							##环境配置文件目录
-	demo/							##demo源文件
-	dist/							##构建后的文件
-		|_ demo/					##构建后的demo文件
-		|_ yun/						##构建后的各个组件代码
-	node_modules/					##第三方依赖包
-	packages/						##lerna拆分的组件包源文件
-	src/							##其他基础公共源文件
-	static/							##静态资源文件（图片图标等）
-		|_ demo/					##demo的静态资源文件
-		|_ yun/						##YunUI组件的静态资源文件
-	test/							##测试代码源文件
-	.babelrc						##babel配置文件
-	.editorconfig					##编辑器配置文件
-	.eslintignore					##eslint忽略检查的文件
-	.eslintrc						##eslint配置文件
-	.gitignore						##git忽略文件的配置
-	index.html						##总入口文件
-	lerna.json						##lerna配置文件
-	package.json					##依赖包声明
-	README.md						##read me
+CloudHubUI/						##根目录
+	build/						##webpack构建配置目录
+	config/						##环境配置文件目录
+	demo/						##demo源文件
+	dist/						##构建后的文件
+		|_ demo/				##构建后的demo文件
+		|_ yun/					##构建后的各个组件代码
+	node_modules/				##第三方依赖包
+	packages/					##lerna拆分的组件包源文件
+	src/						##其他基础公共源文件
+	static/						##静态资源文件（图片图标等）
+		|_ demo/				##demo的静态资源文件
+		|_ yun/					##YunUI组件的静态资源文件
+	test/						##测试代码源文件
+	.babelrc					##babel配置文件
+	.editorconfig				##编辑器配置文件
+	.eslintignore				##eslint忽略检查的文件
+	.eslintrc					##eslint配置文件
+	.gitignore					##git忽略文件的配置
+	index.html					##总入口文件
+	lerna.json					##lerna配置文件
+	package.json				##依赖包声明
+	README.md					##read me
 ```
 
 ##Getting Started
@@ -48,7 +48,7 @@ CloudHubUI/							##根目录
 推荐使用npm的方式安装，它能更好地与Webpack等构建工具结合使用。
 
 ``` bash
-npm install yunui
+npm install YunUI
 ```
 
 **CDN** *(TODO)*
@@ -70,13 +70,11 @@ main.js ->
 
 import Vue from 'vue'
 /* 引入组件库js文件 */
-import Yun from '../dist/yun/'
+import Yun from 'YunUI'
 /* 引入组件库样式文件 */
-import '../dist/yun/index.css'
+import 'YunUI/dist/yun/index.css'
 
 Vue.use(Yun)
-
-const app = new Vue({}).$mount('#app')
 
 ---------------
 example.vue ->
@@ -96,19 +94,20 @@ example.vue ->
 你可以只安装你需要的组件。这里以安装YunUI的button组件为例：
 
 ``` bash
-npm install yun-button --save-dev
+npm install YunUI --save
 ```
 安装后在所需的vue文件中进行声明和使用：
 
 ``` javascript
 <template>
     <div>
-        <yun-button></yun-button>
+        <yun-button>test</yun-button>
     </div>
 </template>
 
 <script>
-    import yunButton from 'yunui/button/'
+    import yunButton from 'YunUI/dist/yun/button/'
+	import 'YunUI/dist/yun/button/index.css'
 
     export default {
         components: {
@@ -126,7 +125,7 @@ npm install yun-button --save-dev
 目前在`package.json`中声明了多个脚本模式，可以通过`npm run xxx`的方式进行运行，各个命令启动服务如下：
 
 ``` bash
-dev-demo: 
+dev-demo:
 启动demo的本地开发模式，监听http://localhost:8090/
 dev:
 启动组件库的本地开发模式，监听http://localhost:8080/
@@ -136,6 +135,8 @@ build-demo:
 编译打包demo页面，可发布并通过http(s)访问，输入文件目录：dist/demo/
 lint:
 执行eslint检查
+publish:
+发布更改到npm
 unit:TODO
 e2e:TODO
 test:TODO
