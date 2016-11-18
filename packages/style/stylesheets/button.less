@@ -1,0 +1,49 @@
+@import "var";
+
+/* button mixin */
+.buttonSize(@width,@height,@padding,@fontSize){
+    width:@width;
+    height: @height;
+    line-height: @height;
+    border-radius: @height/2;
+    padding: 0 @padding;
+    font-size:@fontSize;
+}
+
+/* button */
+.@{uiName} {
+    &-button {
+        .buttonSize(100%,0.88rem,0,0.32rem);
+        text-align: center;
+        color: #ffffff;
+        background-color: @themeColor;
+        cursor: pointer;
+        &-normal {
+            background-color: @themeColor;
+        }
+        &-inverse {
+            border: 0.02rem solid #b9c7d2;
+            color: #98a1a8;
+            background-color: #ffffff;
+            &:active {
+                background: rgb(243,244,245);
+            }
+        }
+        &-large {
+            .buttonSize(100%,0.88rem,0,0.32rem);
+        }
+        &-middle {
+            .buttonSize(auto,0.7rem,0.88rem,0.28rem);
+        }
+        &-small {
+            .buttonSize(auto,0.56rem,0.24rem,0.24rem);
+        }
+        &.is-disabled{
+            color: #98a1a8;
+            background: #DCE1E7;
+        }
+        &:not(.is-disable):active{
+            opacity: 0.5;
+        }
+    }
+}
