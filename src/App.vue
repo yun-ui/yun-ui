@@ -1,4 +1,5 @@
 <template>
+    <!--页面中所有内联样式都是作为效果展示-->
     <div>
         <!--Base--star-->
         <div>
@@ -43,23 +44,111 @@
                     </div>
                 </div>
             </div>
+            <h2>辅助类</h2>
+            <div class="clearfix">
+                <p class="left">左浮动</p>
+                <p class="right">右浮动</p>
+            </div>
+            <div>
+                <p class="text-left">文字左对齐</p>
+                <p class="text-center">文字居中对齐</p>
+                <p class="text-right">文字右对齐</p>
+                <div class="block-center">定宽的块级元素水平居中</div>
+            </div>
         </div>
         <!--Base--end-->
         <!--Button--star-->
-        <yun-button type="normal">默認按钮</yun-button>
-        <yun-button type="inverse">反转（线性）按钮</yun-button>
-        <yun-button size="large">large 撑满按钮</yun-button>
-        <yun-button size="middle">middle 中等按钮</yun-button>
-        <yun-button size="small">small 小按钮</yun-button>
-        <yun-button type="inverse" size="middle">反转（线性）按钮 中等按钮</yun-button>
-        <yun-button disabled>禁用按钮</yun-button>
+        <div>
+            <h1>Button</h1>
+            <yun-button type="normal">默認按钮</yun-button>
+            <yun-button type="inverse">反转（线性）按钮</yun-button>
+            <yun-button size="large">large 撑满按钮</yun-button>
+            <yun-button size="middle">middle 中等按钮</yun-button>
+            <yun-button size="small">small 小按钮</yun-button>
+            <yun-button type="inverse" size="middle">反转（线性）按钮 中等按钮</yun-button>
+            <yun-button disabled>禁用按钮</yun-button>
+        </div>
         <!--Button--end-->
+
+        <!--ButtonGroup-star-->
+        <div>
+            <h1>ButtonGroup</h1>
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-button-group>
+                    <yun-tab-item>新浪</yun-tab-item>
+                    <yun-tab-item>同事圈</yun-tab-item>
+                    <yun-tab-item>朋友圈</yun-tab-item>
+                    <yun-tab-item>QQ</yun-tab-item>
+                </yun-button-group>
+            </div>
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-button-group>
+                    <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-qq"></i></yun-tab-item>
+                </yun-button-group>
+            </div>
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-button-group>
+                    <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>按钮</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i>按钮</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-qq"></i>按钮</yun-tab-item>
+                </yun-button-group>
+            </div>
+        </div>
+        <!--ButtonGroup-end-->
+
+        <!--Tabbar--star-->
+        <div>
+            <h1>Tabbar</h1>
+            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-tabbar>
+                    <yun-tab-item><i class="iconfont icon-sina"></i>新浪</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>同事圈</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i>朋友圈</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-qq"></i>QQ</yun-tab-item>
+                </yun-tabbar>
+            </div>
+
+        </div>
+        <!--Tabbar--end-->
+
+        <!--Navbar--star-->
+        <div>
+            <h1>Navbar</h1>
+            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-navbar>
+                    <yun-tab-item active>新浪</yun-tab-item>
+                    <yun-tab-item>同事圈</yun-tab-item>
+                    <yun-tab-item>朋友圈</yun-tab-item>
+                    <yun-tab-item>QQ</yun-tab-item>
+                </yun-navbar>
+            </div>
+            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-navbar>
+                    <yun-tab-item active>新浪</yun-tab-item>
+                    <yun-tab-item>同事圈</yun-tab-item>
+                    <yun-tab-item>朋友圈</yun-tab-item>
+                </yun-navbar>
+            </div>
+            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+                <yun-navbar>
+                    <yun-tab-item active>同事圈</yun-tab-item>
+                    <yun-tab-item>朋友圈</yun-tab-item>
+                </yun-navbar>
+            </div>
+
+        </div>
+        <!--Navbar--end-->
+
         <yun-toast></yun-toast>
     </div>
 </template>
 
 <script>
-    import {yunButton, yunToast} from '../packages/index'
+    import {yunButton, yunToast, yunTabbar, yunTabItem, yunButtonGroup, yunNavbar} from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
         props: {},
@@ -70,7 +159,11 @@
         },
         components: {
             yunButton,
-            yunToast
+            yunToast,
+            yunTabbar,
+            yunTabItem,
+            yunButtonGroup,
+            yunNavbar
         }
     }
 

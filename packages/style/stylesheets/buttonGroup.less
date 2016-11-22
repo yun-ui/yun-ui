@@ -1,0 +1,28 @@
+@import "var";
+
+/* tabbar */
+.@{uiName} {
+    &-button-group {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        display: -webkit-box;
+        text-align: center;
+        background-color: #ffffff;
+        &.is-fixed{
+            position: fixed;
+            z-index: @zIndexNormal;
+        }
+        //重置内嵌的tabItem默认样式
+        .@{uiName}-tab-item-label {
+            height: @buttonGroupHeight;
+            line-height: @buttonGroupHeight;
+            font-size: @buttonGroupFontSize;
+            .iconfont{
+                padding:0 @buttonGroupIconFontPadding;
+            }
+        }
+    }
+}

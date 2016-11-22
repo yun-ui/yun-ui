@@ -1,0 +1,42 @@
+@import "var";
+
+/* tabbar */
+.@{uiName} {
+    &-navbar {
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        display: -webkit-box;
+        text-align: center;
+        background-color: #ffffff;
+        &.is-fixed{
+            position: fixed;
+            z-index: @zIndexNormal;
+        }
+        //重置内嵌的tabItem默认样式
+        .@{uiName}-tab-item-label {
+            height: @navbarHeight;
+            line-height: @navbarHeight;
+            font-size: @navbarFontSize;
+            color: @navbarColor;
+            .iconfont{
+                font-size: @tabbarTabItemIconFontSize;
+                display: block;
+            }
+            &.is-active{
+                position: relative;
+                color:@navbarActiveColor;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width:50%;
+                    border: 0.02rem solid @navbarActiveColor;
+                    bottom:0;
+                    left: 25%;
+                }
+            }
+        }
+    }
+}
