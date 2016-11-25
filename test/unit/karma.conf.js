@@ -13,7 +13,10 @@ var projectRoot = path.resolve(__dirname, '../../')
 var webpackConfig = merge(baseConfig, {
   // use inline sourcemap for karma-sourcemap-loader
   module: {
+
+    // add babel into module loaders
     loaders: utils.styleLoaders()
+            .concat({ test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' })
   },
   devtool: '#inline-source-map',
   vue: {
