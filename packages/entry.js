@@ -4,6 +4,9 @@ import tabbar from '../packages/tabbar'
 import tabItem from '../packages/tabItem'
 import buttonGroup from '../packages/buttonGroup'
 import navbar from '../packages/navbar'
+import listContainer from '../packages/listContainer'
+import listItemAline from '../packages/listItemAline'
+import listItemMulti from '../packages/listItemMulti'
 
 let Yun = {}
 
@@ -15,6 +18,10 @@ const install = function (Vue) {
     Vue.component(tabItem.name, tabItem)
     Vue.component(buttonGroup.name, buttonGroup)
     Vue.component(navbar.name, navbar)
+    Vue.component(alert.name, alert)
+    Vue.component(listContainer.name, listContainer)
+    Vue.component(listItemAline.name, listItemAline)
+    Vue.component(listItemMulti.name, listItemMulti)
 }
 
 Yun = {
@@ -23,7 +30,11 @@ Yun = {
     tabbar,
     tabItem,
     buttonGroup,
-    navbar
+    navbar,
+    alert,
+    listContainer,
+    listItemAline,
+    listItemMulti
 }
 
 console.log(Yun)
@@ -39,5 +50,9 @@ module.exports = {
     tabbar,
     tabItem,
     buttonGroup,
-    navbar
+    navbar,
+    alert,
+    listContainer,
+    listItemAline,
+    listItemMulti
 }

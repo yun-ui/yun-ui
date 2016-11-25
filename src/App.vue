@@ -1,7 +1,7 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
-        <!--Base--star-->
+        <!--Base--start-->
         <div>
             <h1>Base 基础样式</h1>
             <p>基础样式主要分为：文本（字体），颜色，布局</p>
@@ -57,7 +57,7 @@
             </div>
         </div>
         <!--Base--end-->
-        <!--Button--star-->
+        <!--Button--start-->
         <div>
             <h1>Button</h1>
             <yun-button type="normal">默認按钮</yun-button>
@@ -70,10 +70,10 @@
         </div>
         <!--Button--end-->
 
-        <!--ButtonGroup-star-->
+        <!--ButtonGroup-start-->
         <div>
             <h1>ButtonGroup</h1>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;">
                 <yun-button-group>
                     <yun-tab-item>新浪</yun-tab-item>
                     <yun-tab-item>同事圈</yun-tab-item>
@@ -81,7 +81,7 @@
                     <yun-tab-item>QQ</yun-tab-item>
                 </yun-button-group>
             </div>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;">
                 <yun-button-group>
                     <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
@@ -89,7 +89,7 @@
                     <yun-tab-item><i class="iconfont icon-qq"></i></yun-tab-item>
                 </yun-button-group>
             </div>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;">
                 <yun-button-group>
                     <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-tongshiquan"></i>按钮</yun-tab-item>
@@ -100,10 +100,10 @@
         </div>
         <!--ButtonGroup-end-->
 
-        <!--Tabbar--star-->
+        <!--Tabbar--start-->
         <div>
             <h1>Tabbar</h1>
-            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div  style="position:relative;height:1rem;">
                 <yun-tabbar>
                     <yun-tab-item><i class="iconfont icon-sina"></i>新浪</yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-tongshiquan"></i>同事圈</yun-tab-item>
@@ -115,7 +115,7 @@
         </div>
         <!--Tabbar--end-->
 
-        <!--Navbar--star-->
+        <!--Navbar--start-->
         <div>
             <h1>Navbar</h1>
             <div  style="position:relative;height:1rem;background-color:#f2f2f2">
@@ -143,12 +143,60 @@
         </div>
         <!--Navbar--end-->
 
+        <!--Alert--start-->
+        <yun-alert></yun-alert>
+        <!--Alert--end-->
+
+        <!--list--start-->
+        <yun-list-container>
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本"></yun-list-item-aline>
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link></yun-list-item-aline>
+            <yun-list-item-aline title="列表标题">
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item-aline>
+
+            <yun-list-item-aline title="列表标题" link>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item-aline>
+
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本">
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
+            </yun-list-item-aline>
+
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
+            </yun-list-item-aline>
+
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本">
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
+            </yun-list-item-aline>
+
+            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
+            </yun-list-item-aline>
+
+            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" avatar link>
+                <img src="../src/assets/placeholder-figure.png" slot="img">
+            </yun-list-item-multi>
+
+            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="img">
+            </yun-list-item-multi>
+
+            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" link>
+            </yun-list-item-multi>
+        </yun-list-container>
+        <!--list--end-->
+
         <yun-toast></yun-toast>
     </div>
 </template>
 
 <script>
-    import {yunButton, yunToast, yunTabbar, yunTabItem, yunButtonGroup, yunNavbar} from '../packages/index'
+    import {yunButton, yunToast, yunTabbar, yunTabItem, yunButtonGroup,
+            yunNavbar, yunAlert, yunListContainer, yunListItemAline, yunListItemMulti} from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
         props: {},
@@ -163,11 +211,18 @@
             yunTabbar,
             yunTabItem,
             yunButtonGroup,
-            yunNavbar
+            yunNavbar,
+            yunAlert,
+            yunListContainer,
+            yunListItemAline,
+            yunListItemMulti
         }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
+    body{
+        background-color: #f2f2f2 !important;
+    }
 </style>
