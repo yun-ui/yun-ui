@@ -1,8 +1,8 @@
 <template>
     <button
-        class="UIName-button"
-        :class="[UIName+'-button-' + type, UIName+'-button-' + size, {'is-disabled':disabled}]"
+        :class="[UIName+'-button', UIName+'-button-' + type, UIName+'-button-' + size, {'is-disabled':disabled}]"
         :disabled="disabled"
+        @click="handleClick"
     >
         <slot></slot>
     </button>
@@ -24,12 +24,15 @@
             },
             disabled: Boolean
         },
-        methods: {}
+        methods: {
+            handleClick (e) {
+            }
+        }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base.css";
-    @import "../../style/stylesheets/button.css";
+    @import "../../style/stylesheets/base";
+    @import "../../style/stylesheets/button";
 </style>
