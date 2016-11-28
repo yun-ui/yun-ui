@@ -103,7 +103,7 @@
         <!--Tabbar--start-->
         <div>
             <h1>Tabbar</h1>
-            <div  style="position:relative;height:1rem;">
+            <div style="position:relative;height:1rem;">
                 <yun-tabbar>
                     <yun-tab-item><i class="iconfont icon-sina"></i>新浪</yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-tongshiquan"></i>同事圈</yun-tab-item>
@@ -118,7 +118,7 @@
         <!--Navbar--start-->
         <div>
             <h1>Navbar</h1>
-            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
                 <yun-navbar>
                     <yun-tab-item active>新浪</yun-tab-item>
                     <yun-tab-item>同事圈</yun-tab-item>
@@ -126,14 +126,14 @@
                     <yun-tab-item>QQ</yun-tab-item>
                 </yun-navbar>
             </div>
-            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
                 <yun-navbar>
                     <yun-tab-item active>新浪</yun-tab-item>
                     <yun-tab-item>同事圈</yun-tab-item>
                     <yun-tab-item>朋友圈</yun-tab-item>
                 </yun-navbar>
             </div>
-            <div  style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:1rem;background-color:#f2f2f2">
                 <yun-navbar>
                     <yun-tab-item active>同事圈</yun-tab-item>
                     <yun-tab-item>朋友圈</yun-tab-item>
@@ -149,44 +149,19 @@
 
         <!--list--start-->
         <yun-list-container>
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本"></yun-list-item-aline>
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link></yun-list-item-aline>
-            <yun-list-item-aline title="列表标题">
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-list-item-aline>
-
-            <yun-list-item-aline title="列表标题" link>
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-list-item-aline>
-
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本">
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item-aline>
-
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item-aline>
-
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本">
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item-aline>
-
-            <yun-list-item-aline title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item-aline>
-
-            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" avatar link>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-list-item-multi>
+            </yun-list-item>
 
-            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-list-item-multi>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
+            </yun-list-item>
 
-            <yun-list-item-multi title="列表标题" secondaryText="辅助文本" link>
-            </yun-list-item-multi>
+            <yun-list-item title="列表标题" secondaryText="辅助文本">
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item>
+
         </yun-list-container>
         <!--list--end-->
 
@@ -195,8 +170,17 @@
 </template>
 
 <script>
-    import {yunButton, yunToast, yunTabbar, yunTabItem, yunButtonGroup,
-            yunNavbar, yunAlert, yunListContainer, yunListItemAline, yunListItemMulti} from '../packages/index'
+    import {
+        yunButton,
+        yunToast,
+        yunTabbar,
+        yunTabItem,
+        yunButtonGroup,
+        yunNavbar,
+        yunAlert,
+        yunListContainer,
+        yunListItem
+    } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
         props: {},
@@ -214,15 +198,14 @@
             yunNavbar,
             yunAlert,
             yunListContainer,
-            yunListItemAline,
-            yunListItemMulti
+            yunListItem
         }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    body{
+    body {
         background-color: #f2f2f2 !important;
     }
 </style>

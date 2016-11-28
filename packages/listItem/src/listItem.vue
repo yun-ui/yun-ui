@@ -1,5 +1,27 @@
 <template>
-    <div :class="UIName+'-list-item-aline'">
+    <div :class="UIName+'-list-item-multi'" v-if="multi">
+        <div :class="[UIName+'-list-img', {'is-avatar':avatar}]" v-if="img|| $slots.img">
+            <slot name="img"></slot>
+        </div>
+        <div :class="UIName+'-list-content'">
+            <div :class="[UIName+'-list-title', UIName+'-aline-ellipse']" v-if="title|| $slots.title">
+                <slot name="title">
+                    <span v-text="title"></span>
+                </slot>
+            </div>
+            <div :class="UIName+'-list-secondary-text'" v-if="secondaryText|| $slots.secondaryText">
+                <slot name="secondaryText">
+                    <span v-text="secondaryText"></span>
+                </slot>
+            </div>
+        </div>
+        <div :class="UIName+'-list-link'"
+             v-if="link">
+            <span class="iconfont icon-arrow-right"></span>
+        </div>
+    </div>
+
+    <div :class="UIName+'-list-item-aline'" v-else="!multi">
         <div :class="UIName+'-list-icon'" v-if="icon|| $slots.icon">
             <slot name="icon"></slot>
         </div>
@@ -28,14 +50,15 @@
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-list-item-aline',
+        name: 'yun-list-item',
         mixins: [UIName],
         props: {
             icon: String,
             iconRight: String,
             title: String,
             secondaryText: String,
-            link: Boolean
+            link: Boolean,
+            multi: Boolean
         },
         methods: {}
     }

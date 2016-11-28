@@ -1,8 +1,5 @@
 <template>
-    <div
-        :class="[UIName+'-navbar', {'is-fixed':fixed}]"
-        :fixed="fixed"
-    >
+    <div :class="[UIName+'-navbar', {'is-fixed': fixed}]" :fixed="fixed">
         <slot></slot>
     </div>
 </template>
@@ -14,18 +11,15 @@
         mixins: [UIName],
         props: {
             fixed: Boolean,
-            value:{}
+            value: {}
         },
         methods: {},
-        events:{
-            input(data){
+        events: {
+            input (data) {
                 console.log(data)
             }
         },
-        created(){
-            this.$on('input',(data)=> {
-                console.log(this.value)
-            })
+        created () {
         }
     }
 

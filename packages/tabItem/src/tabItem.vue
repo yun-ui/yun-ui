@@ -1,8 +1,6 @@
 <template>
     <button class="divided" :class="UIName+'-tab-item'">
-        <div :class="[UIName+'-tab-item-label', {'is-active':active}]"
-            @click="test"
-        >
+        <div :class="[UIName+'-tab-item-label', {'is-active':active}]">
             <slot></slot>
         </div>
     </button>
@@ -16,17 +14,13 @@
         props: {
             active: Boolean
         },
-        data(){
+        data () {
             return {
                 selected: false
             }
         },
         methods: {
-            test(data){
-                this.$parent.$emit('input','aaaa')
-                console.log("value")
-                console.log(data)
-            }
+
         }
     }
 

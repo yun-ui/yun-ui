@@ -6,8 +6,7 @@ import yunButtonGroup from './buttonGroup'
 import yunNavbar from './navbar'
 import yunAlert from './alert'
 import yunListContainer from './listContainer'
-import yunListItemAline from './listItemAline'
-import yunListItemMulti from './listItemMulti'
+import yunListItem from './listItem'
 
 const Components = {
     yunButton,
@@ -18,7 +17,6 @@ const Components = {
     yunNavbar,
     yunAlert,
     yunListContainer,
-    yunListItemAline,
-    yunListItemMulti
+    yunListItem
 }
 module.exports = Components
