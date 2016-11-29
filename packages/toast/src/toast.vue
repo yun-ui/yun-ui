@@ -15,7 +15,7 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import "../../style/stylesheets/base.css";
+  @import "../../style/stylesheets/base";
 
   .toast {
         button {
