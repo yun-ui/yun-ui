@@ -5,8 +5,7 @@ import tabItem from '../packages/tabItem'
 import buttonGroup from '../packages/buttonGroup'
 import navbar from '../packages/navbar'
 import listContainer from '../packages/listContainer'
-import listItemAline from '../packages/listItemAline'
-import listItemMulti from '../packages/listItemMulti'
+import listItem from '../packages/listItem'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -18,8 +17,7 @@ const install = function (Vue) {
     Vue.component(navbar.name, navbar)
     Vue.component(alert.name, alert)
     Vue.component(listContainer.name, listContainer)
-    Vue.component(listItemAline.name, listItemAline)
-    Vue.component(listItemMulti.name, listItemMulti)
+    Vue.component(listItem.name, listItem)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -36,6 +34,5 @@ module.exports = {
     navbar,
     alert,
     listContainer,
-    listItemAline,
-    listItemMulti
+    listItem
 }
