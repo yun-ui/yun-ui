@@ -14,6 +14,8 @@ var env = process.env.NODE_ENV === 'testing'
     : config.build.env
 
 var webpackConfig = []
+
+//单独打包各个组件内容
 webpackConfig.push(merge(baseWebpackConfig, {
     entry: Components,
     module: {
@@ -33,7 +35,7 @@ webpackConfig.push(merge(baseWebpackConfig, {
             extract: true
         })
     },
-    externals:{
+    externals: {
         vue: {
             root: 'Vue',
             commonjs: 'vue',
@@ -58,25 +60,25 @@ webpackConfig.push(merge(baseWebpackConfig, {
         // you can customize output by editing /index.html
         // see https://github.com/ampedandwired/html-webpack-plugin
         /*new HtmlWebpackPlugin({
-            filename: process.env.NODE_ENV === 'testing'
-                ? 'index.html'
-                : config.build.index,
-            template: './src/index.html',
-            inject: true,
-            minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeAttributeQuotes: true
-                // more options:
-                // https://github.com/kangax/html-minifier#options-quick-reference
-            },
-            // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-            chunksSortMode: 'dependency'
-        })*/
+         filename: process.env.NODE_ENV === 'testing'
+         ? 'index.html'
+         : config.build.index,
+         template: './src/index.html',
+         inject: true,
+         minify: {
+         removeComments: true,
+         collapseWhitespace: true,
+         removeAttributeQuotes: true
+         // more options:
+         // https://github.com/kangax/html-minifier#options-quick-reference
+         },
+         // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+         chunksSortMode: 'dependency'
+         })*/
     ]
 }))
 
-
+//打包合并全部的组件
 webpackConfig.push(merge(baseWebpackConfig, {
     entry: {
         app: ['./packages/entry.js']
@@ -85,8 +87,8 @@ webpackConfig.push(merge(baseWebpackConfig, {
         path: config.build.assetsRoot,
         filename: 'index.js',
         //chunkFilename: utils.assetsPath('[name]/[id].[chunkhash].js')
-        chunkFilename:'[id].js',
-        libraryTarget:'umd'
+        chunkFilename: '[id].js',
+        libraryTarget: 'umd'
     },
     vue: {
         loaders: utils.cssLoaders({
@@ -94,7 +96,7 @@ webpackConfig.push(merge(baseWebpackConfig, {
             extract: true
         })
     },
-    externals:{
+    externals: {
         vue: {
             root: 'Vue',
             commonjs: 'vue',
@@ -121,21 +123,21 @@ webpackConfig.push(merge(baseWebpackConfig, {
 console.log(JSON.stringify(webpackConfig[1]))
 
 /*if ( config.build.productionGzip ) {
-    var CompressionWebpackPlugin = require('compression-webpack-plugin')
-
-    webpackConfig.plugins.push(
-        new CompressionWebpackPlugin({
-            asset: '[path].gz[query]',
-            algorithm: 'gzip',
-            test: new RegExp(
-                '\\.(' +
-                config.build.productionGzipExtensions.join('|') +
-                ')$'
-            ),
-            threshold: 10240,
-            minRatio: 0.8
-        })
-    )
-}*/
+ var CompressionWebpackPlugin = require('compression-webpack-plugin')
+ 
+ webpackConfig.plugins.push(
+ new CompressionWebpackPlugin({
+ asset: '[path].gz[query]',
+ algorithm: 'gzip',
+ test: new RegExp(
+ '\\.(' +
+ config.build.productionGzipExtensions.join('|') +
+ ')$'
+ ),
+ threshold: 10240,
+ minRatio: 0.8
+ })
+ )
+ }*/
 
 module.exports = webpackConfig

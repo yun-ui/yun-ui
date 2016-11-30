@@ -1,6 +1,6 @@
 {
   "name": "YunUI",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "Mobile UI Components Library for Vue.js by CloudHub.",
   "keywords": [
     "component",
@@ -19,7 +19,7 @@
     "build": "npm run lint && node build/build.js",
     "build-demo": "npm run lint && node build/build-demo.js",
     "lint": "eslint packages/*.js packages/**/*.{js,vue} demo/*.{js,vue} demo/**/*.{js,vue} src/* src/**/* --quiet",
-    "publish": "npm publish",
+    "publish": "npm run lint && npm publish",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e"

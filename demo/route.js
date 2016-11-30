@@ -25,5 +25,4 @@ route.route.push({
     component: require('./App.vue')
 })
 
-export const nav = route.nav
-export default route.route
+export default route

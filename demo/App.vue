@@ -1,23 +1,40 @@
 <template>
     <div>
-        <router-link :to="{name: 'Button'}">
-          <button>首页</button>
-        </router-link>
+        <div v-for="group in nav">
+            <yun-list-container>
+                <yun-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi
+                               img="../src/assets/placeholder-figure.png">
+                </yun-list-item>
+                <yun-list-item v-for="component in group.list" :title="component.name" link
+                               @click.native="goToDetail(component.path)">
+                </yun-list-item>
+            </yun-list-container>
+        </div>
     </div>
 </template>
 
 <script>
-    import nav from './route'
+    import route from './route'
 
     export default {
         name: 'yun-ui-demo',
         props: {},
-        created () {
-            console.info(nav)
+        data () {
+            return {
+                nav: []
+            }
         },
-        methods: {},
-        components: {
-        }
+        created () {
+            this.nav = route.nav
+        },
+        methods: {
+            goToDetail: function (path) {
+                this.$router.push({
+                    path: path
+                })
+            }
+        },
+        components: {}
     }
 
 </script>

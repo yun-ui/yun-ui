@@ -1,27 +1,44 @@
 [
-  {
-    "title": "JS Components",
-    "list": [
-      {
-        "path": "/toast",
-        "name": "Toast",
-        "icon": "toast"
-      }
-    ]
-  },
-  {
-    "title": "CSS Components",
-    "list": [
-      {
-        "path": "/button",
-        "name": "Button",
-        "icon": "button"
-      }
-    ]
-  },
-  {
-    "title": "Form Components",
-    "list": [
-    ]
-  }
+    {
+        "title": {
+            "main": "基础组件",
+            "secondary": "Basic",
+            "icon": ""
+        },
+        "list": [
+            {
+                "path": "/button",
+                "name": "Button",
+                "icon": "button"
+            }
+        ]
+    },
+    {
+        "title": {
+            "main": "导航",
+            "secondary": "Navigation",
+            "icon": ""
+        },
+        "list": [
+            {
+                "path": "/navbar",
+                "name": "Navbar",
+                "icon": "navbar"
+            },
+            {
+                "path": "/tabbar",
+                "name": "Tabbar",
+                "icon": "tabbar"
+            }
+        ]
+    },
+    {
+        "title": {
+            "main": "表单",
+            "secondary": "Form",
+            "icon": ""
+        },
+        "list": [
+        ]
+    }
 ]
