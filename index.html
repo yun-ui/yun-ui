@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name=format-detection content="telephone=no"><title>YunUI Demo</title><script>(function () {
+            var dpr = window.devicePixelRatio
+            var fontSize
+            if (window.devicePixelRatio >= 1.5) {
+                dpr = 2
+            }
+            document.documentElement.setAttribute('data-dpr', dpr)
+
+            var userAgent = navigator.userAgent
+            if (userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || userAgent.match(/Android/i)) {
+                fontSize = document.documentElement.clientWidth / 6.4
+                fontSize = fontSize > 60 ? 60 : fontSize
+                document.documentElement.style.fontSize = fontSize + 'px'
+                return
+            }
+
+            document.documentElement.style.fontSize = '53.825px'
+        })()
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.addEventListener('touchstart', function () {})
+        }, false)</script><link href=/static/css/app.60df8750497cf2364c6372e218011625.css rel=stylesheet></head><body><div id=app><router-view></router-view></div><script type=text/javascript src=/static/js/manifest.8a0ec6d96a5ce47c0e03.js></script><script type=text/javascript src=/static/js/vendor.a0fcc0f67a1f63f86645.js></script><script type=text/javascript src=/static/js/app.d22222c3cc0cd78960da.js></script></body></html>

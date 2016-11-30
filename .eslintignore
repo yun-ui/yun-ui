@@ -1,6 +1,0 @@
-#these files and directory would be ignored by eslint
-/build/*
-/config/*
-/node_modules/*
-/static/*
-/src/assets/*

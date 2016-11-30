@@ -1,8 +1,0 @@
-{
-  "button": [
-    "./packages/button/index.js"
-  ],
-  "toast": [
-    "./packages/toast/index.js"
-  ]
-}
