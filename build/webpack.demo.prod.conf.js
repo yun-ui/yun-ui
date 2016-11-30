@@ -17,6 +17,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     devtool: config.demo_prod.productionSourceMap ? '#source-map' : false,
     output: {
         path: config.demo_prod.assetsRoot,
+        publicPath: '',
         filename: utils.assetsPath('js/[name].[chunkhash].js'),
         chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     },
@@ -81,7 +82,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     ]
 })
 
-if ( config.demo_prod.productionGzip ) {
+if (config.demo_prod.productionGzip) {
     var CompressionWebpackPlugin = require('compression-webpack-plugin')
     
     webpackConfig.plugins.push(
