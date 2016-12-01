@@ -1,10 +1,10 @@
 <template>
     <div :class="UIName+'-list-item-multi'" v-if="multi">
         <div :class="[UIName+'-list-img', {'is-avatar': avatar}]" v-if="img || $slots.img">
-            <img :src="img">
+            <slot name="img"></slot>
         </div>
         <div :class="UIName+'-list-content'">
-            <div :class="[UIName+'-list-title', UIName+'-aline-ellipse']" v-if="title || $slots.title">
+            <div :class="[UIName+'-list-title', UIName+'-ellipse']" v-if="title || $slots.title">
                 <span v-text="title"></span>
             </div>
             <div :class="UIName+'-list-secondary-text'" v-if="secondaryText || $slots.secondaryText">
@@ -16,18 +16,18 @@
         </div>
     </div>
 
-    <div :class="UIName+'-list-item-aline'" v-else="!multi">
+    <div :class="UIName+'-list-item-single'" v-else="!multi">
         <div :class="UIName+'-list-icon'" v-if="icon || $slots.icon">
-            <img :src="icon">
+            <slot name="icon"></slot>
         </div>
-        <div :class="[UIName+'-list-title', UIName+'-aline-ellipse']" v-if="title || $slots.title">
+        <div :class="[UIName+'-list-title', UIName+'-ellipse']" v-if="title || $slots.title">
             <span v-text="title"></span>
         </div>
         <div :class="UIName+'-list-secondary-text'" v-if="secondaryText || $slots.secondaryText">
             <span v-text="secondaryText"></span>
         </div>
         <div :class="[UIName+'-list-icon-right']" v-if="iconRight || $slots.iconRight">
-            <img :src="iconRight">
+            <slot name="iconRight"></slot>
         </div>
         <div :class="UIName+'-list-link'" v-if="link">
             <span class="iconfont icon-arrow-right"></span>
@@ -54,5 +54,4 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
 </style>
