@@ -8,8 +8,6 @@ import listContainer from '../packages/listContainer'
 import listItemAline from '../packages/listItemAline'
 import listItemMulti from '../packages/listItemMulti'
 
-let Yun = {}
-
 const install = function (Vue) {
     if (install.installed) return
     Vue.component(button.name, button)
@@ -23,21 +21,6 @@ const install = function (Vue) {
     Vue.component(listItemAline.name, listItemAline)
     Vue.component(listItemMulti.name, listItemMulti)
 }
-
-Yun = {
-    button,
-    toast,
-    tabbar,
-    tabItem,
-    buttonGroup,
-    navbar,
-    alert,
-    listContainer,
-    listItemAline,
-    listItemMulti
-}
-
-console.log(Yun)
 
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
