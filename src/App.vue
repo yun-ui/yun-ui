@@ -61,11 +61,11 @@
         <div>
             <h1>Button</h1>
             <yun-button type="normal">默認按钮</yun-button>
-            <yun-button type="inverse">反转（线性）按钮</yun-button>
+            <yun-button type="linear">线性按钮</yun-button>
             <yun-button size="large">large 撑满按钮</yun-button>
             <yun-button size="middle">middle 中等按钮</yun-button>
             <yun-button size="small">small 小按钮</yun-button>
-            <yun-button type="inverse" size="middle">反转（线性）按钮 中等按钮</yun-button>
+            <yun-button type="linear" size="middle">反转（线性）按钮 中等按钮</yun-button>
             <yun-button disabled>禁用按钮</yun-button>
         </div>
         <!--Button--end-->
@@ -150,6 +150,16 @@
         <!--list--start-->
         <yun-list-container>
             <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
+                <img src="../src/assets/placeholder-figure.png" slot="img">
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
             </yun-list-item>
 
@@ -160,6 +170,21 @@
 
             <yun-list-item title="列表标题" secondaryText="辅助文本">
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item>
+            <yun-list-item title="列表标题" link>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本">
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight" >
+            </yun-list-item>
+
+            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
             </yun-list-item>
 
         </yun-list-container>

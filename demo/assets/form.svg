@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="轻应用控件手机DEMO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-Copy" transform="translate(0.000000, 1.000000)" fill="#3CBAFF">
+            <path d="M20.8037109,1.5 C21.2179245,1.5 21.5537109,1.16421356 21.5537109,0.75 C21.5537109,0.335786438 21.2179245,2.22044605e-16 20.8037109,2.22044605e-16 L1,0 C0.585786438,0 0.25,0.335786438 0.25,0.75 C0.25,1.16421356 0.585786438,1.5 1,1.5 L20.8037109,1.5 Z" id="Line"></path>
+            <path d="M20.8037109,10.5 C21.2179245,10.5 21.5537109,10.1642136 21.5537109,9.75 C21.5537109,9.33578644 21.2179245,9 20.8037109,9 L1,9 C0.585786438,9 0.25,9.33578644 0.25,9.75 C0.25,10.1642136 0.585786438,10.5 1,10.5 L20.8037109,10.5 Z" id="Line-Copy"></path>
+            <path d="M20.8037109,20.5 C21.2179245,20.5 21.5537109,20.1642136 21.5537109,19.75 C21.5537109,19.3357864 21.2179245,19 20.8037109,19 L1,19 C0.585786438,19 0.25,19.3357864 0.25,19.75 C0.25,20.1642136 0.585786438,20.5 1,20.5 L20.8037109,20.5 Z" id="Line-Copy-2"></path>
+        </g>
+    </g>
+</svg>

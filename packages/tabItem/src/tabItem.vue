@@ -9,7 +9,7 @@
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-tabItem',
+        name: 'yun-tab-item',
         mixins: [UIName],
         props: {
             active: Boolean

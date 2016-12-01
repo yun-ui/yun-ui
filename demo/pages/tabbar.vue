@@ -1,6 +1,10 @@
 <template>
-    <button>button11211
-    </button>
+    <yun-tabbar>
+        <yun-tab-item><i class="iconfont icon-sina"></i>tabitem1</yun-tab-item>
+        <yun-tab-item><i class="iconfont icon-tongshiquan"></i>tabitem2</yun-tab-item>
+        <yun-tab-item><i class="iconfont icon-pengyouquan"></i>tabitem3</yun-tab-item>
+        <yun-tab-item><i class="iconfont icon-qq"></i>tabitem4</yun-tab-item>
+    </yun-tabbar>
 </template>
 
 <script>

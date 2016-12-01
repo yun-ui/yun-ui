@@ -1,6 +1,8 @@
 <template>
-    <button>button11211
-    </button>
+    <yun-navbar fixed>
+        <yun-tab-item active>tabitem1</yun-tab-item>
+        <yun-tab-item>tabitem2</yun-tab-item>
+    </yun-navbar>
 </template>
 
 <script>
@@ -15,6 +17,6 @@
 
 </script>
 
-<style lang="css">
+<style lang="less">
 
 </style>

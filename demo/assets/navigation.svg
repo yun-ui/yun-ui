@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="轻应用控件手机DEMO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval-7-Copy" stroke="#3CBAFF" stroke-width="1.5" cx="11" cy="11" r="11"></circle>
+            <path d="M12.0153104,13.5395302 L12.5395302,13.0153104 L5.56734861,15.321231 L6.60967464,16.363557 L8.91559527,9.39137543 L8.39137543,9.91559527 L15.363557,7.60967464 L14.321231,6.56734861 L12.0153104,13.5395302 Z M14.8454509,6.04312877 L7.87326924,8.3490494 C7.62543613,8.43101563 7.43101563,8.62543613 7.3490494,8.87326924 L5.04312877,15.8454509 C4.83021617,16.4892134 5.44169227,17.1006895 6.0854548,16.8877769 L13.0576364,14.5818563 C13.3054695,14.49989 13.49989,14.3054695 13.5818563,14.0576364 L15.8877769,7.0854548 C16.1006895,6.44169227 15.4892134,5.83021617 14.8454509,6.04312877 Z" id="Page-1-Copy" fill="#3CBAFF"></path>
+            <polygon id="Page-1-Copy-2" fill="#3CBAFF" opacity="0.5" transform="translate(10.293029, 11.293029) rotate(-45.000000) translate(-10.293029, -11.293029) " points="10.2930286 8.31469321 4.37167758 11.2933229 10.2930286 14.2713639 16.2143796 11.2933229"></polygon>
+        </g>
+    </g>
+</svg>
