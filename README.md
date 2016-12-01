@@ -1,3 +1,6 @@
+<p align="center">
+  <a href="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg"><img src="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg" alt="Build Status"></a>
+</p>
 #YunUI
 ##版本：v1.0 时间：2016-11-18
 
