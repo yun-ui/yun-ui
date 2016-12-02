@@ -158,6 +158,9 @@
             <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
             </yun-list-item>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
+                <img src="../src/assets/placeholder-figure.png" slot="img">
+            </yun-list-item>
 
             <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
                 <img src="../src/assets/placeholder-figure.png" slot="img">

@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <div class="title">
+            <h3>文字排版 Typography</h3>
+            <p>YunUI 定义了一套基础的文本排版规则。规范了HTML元素的大小和样式，其中涉及到的元素有：
+                <span class="yun-text-active">&lt;h1&gt;</span> ...
+                <span class="yun-text-active">&lt;h6&gt;</span>、
+                <span class="yun-text-active">&lt;p&gt;</span>、
+                <span class="yun-text-active">&lt;i&gt;</span>、
+                <span class="yun-text-active">&lt;strong&gt;</span>、
+                <span class="yun-text-active">&lt;small&gt;</span>。
+            </p>
+        </div>
+        <div class="content">
+            <h4>h1-h6 Headings</h4>
+            <div class="row">
+                <div class="panel">
+                    <h1>h1</h1>
+                    <h2>h2</h2>
+                    <h3>h3</h3>
+                    <h4>h4</h4>
+                    <h5>h5</h5>
+                    <h6>h6</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: '',
+        props: {},
+        created () {
+        },
+        methods: {}
+    }
+
+</script>
+
+<style lang="less">
+
+</style>

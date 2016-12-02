@@ -28,16 +28,5 @@
 </script>
 
 <style lang="less">
-    .title{
-        padding:0.6rem;
-        p{
-            margin-top: 0.2rem;
-        }
-    }
-    .content{
-        padding:0 0.24rem;
-        button{
-            margin-bottom: 0.16rem;
-        }
-    }
+
 </style>

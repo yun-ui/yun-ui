@@ -1,5 +1,5 @@
 <template>
-    <button class="divided" :class="UIName+'-tab-item'">
+    <button class="divided hidden-last-divided" :class="UIName+'-tab-item'">
         <div :class="[UIName+'-tab-item-label', {'is-active':active}]">
             <slot></slot>
         </div>

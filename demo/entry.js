@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import routes from './route.js'
 import Yun from '../dist/yun/'
 import '../dist/yun/index.css'
+import './css/demo-css.less'
 
 /* eslint-disable no-new */
 console.log('demo entry load!')

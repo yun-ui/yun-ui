@@ -46,7 +46,9 @@
             title: String,
             secondaryText: String,
             link: Boolean,
-            multi: Boolean
+            multi: Boolean,
+            img: String,
+            avatar: Boolean
         },
         methods: {}
     }
