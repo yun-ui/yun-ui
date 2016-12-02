@@ -1,4 +1,4 @@
-import RouteConfig from './route.config.json'
+import RouteConfig from './route.config'
 
 const registerRoute = config => {
     let route = []

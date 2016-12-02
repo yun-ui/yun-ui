@@ -1,15 +1,15 @@
-[
+export default [
     {
         'title': {
             'main': '基础组件',
             'secondary': 'Basic',
-            'icon': './assets/placeholder-figure.png'
+            'icon': require('./assets/placeholder-figure.png')
         },
         'list': [
             {
                 'path': '/button',
                 'name': 'Button',
-                'icon': 'button'
+                'icon': require('./assets/placeholder-figure.png')
             }
         ]
     },
@@ -17,7 +17,7 @@
         'title': {
             'main': '导航',
             'secondary': 'Navigation',
-            'icon': ''
+            'icon': require('./assets/placeholder-figure.png')
         },
         'list': [
             {
@@ -36,7 +36,7 @@
         'title': {
             'main': '表单',
             'secondary': 'Form',
-            'icon': ''
+            'icon': require('./assets/placeholder-figure.png')
         },
         'list': []
     }
