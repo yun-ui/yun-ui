@@ -1,21 +1,18 @@
-<p align="center">
-  <a href="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg"><img src="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg" alt="Build Status"></a>
-</p>
-#YunUI
-##版本：v1.0 时间：2016-11-18
+# YunUI <a href="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg"><img src="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg" alt="Build Status"></a>
+## 版本：v1.0 时间：2016-11-18
 
-##Overview
+## Overview
 
 本文将介绍YunUI的安装方式和基本的使用方法。
 
-###基础技术框架
+### 基础技术框架
 1. [Vue.js](https://vuejs.org/)
 2. [Lerna.js](https://lernajs.io/)
 3. ECMAScript 2015
 4. [Webpack](https://webpack.github.io/docs/)
 5. [ESLint](http://eslint.org/)
 
-###文件目录结构
+### 文件目录结构
 ``` bash
 CloudHubUI/						##根目录
 	build/						##webpack构建配置目录
@@ -42,9 +39,9 @@ CloudHubUI/						##根目录
 	README.md					##read me
 ```
 
-##Getting Started
+## Getting Started
 
-####I.	Install
+#### I.	Install
 
 **npm安装** *(TODO)*
 
@@ -58,13 +55,13 @@ npm install YunUI
 
 可以从静态资源服务器获取最新的资源文件。
 
-####II. Start
+#### II. Start
 
 **引入Yun UI**
 
 你可以引入整个Yun UI组件库，或者根据需要引入部分组件。
 
-#####完整引入
+##### 完整引入
 
 在你的工程目录入口js文件中，写入以下内容：
 
@@ -92,7 +89,7 @@ example.vue ->
 
 ```
 
-#####按需引入
+##### 按需引入
 
 你可以只安装你需要的组件。这里以安装YunUI的button组件为例：
 
@@ -121,7 +118,7 @@ npm install YunUI --save
 
 ```
 
-###增加组件
+### 增加组件
 
 **I.	开发**
 
@@ -169,10 +166,10 @@ npm run build
 **IV. 发布**
 请提交[Pull Request](https://git-scm.com/docs/git-request-pull)。
 
-###代码规范
+### 代码规范
 
 请参考 [ESLint](http://eslint.org/) standard 规范进行书写，并执行`npm run lint`进行代码检查。
 
-###Tips
+### Tips
 
 如果你使用的是Webstorm，请在运行`npm install`之前，在`Preferences | Editor | File Types | Ignore files and folders`中增加`node_modules`，避免循环依赖造成的死循环。
