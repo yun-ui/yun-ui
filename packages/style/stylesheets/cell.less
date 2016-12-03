@@ -1,13 +1,13 @@
 @import "var";
 
-/* list */
+/* cell */
 .@{uiName} {
 
-  &-list-container {
+  &-cell-container {
     background-color: #ffffff;
   }
-  &-list-item-single,
-  &-list-item-multi{
+  &-cell-item-single,
+  &-cell-item-multi{
     &:after{
       content: '';
       display: block;
@@ -21,16 +21,16 @@
     }
   }
 
-  &-list-item-single{
+  &-cell-item-single{
     position: relative;
     padding:@itemAlinePadding - 0.02 @itemAlinePadding;
     line-height: @itemAlineLineHeight;
     display: flex;
     display: -webkit-box;
     &:active{
-      background-color: @listActiveBG;
+      background-color: @cellActiveBG;
     }
-    .@{uiName}-list-title{
+    .@{uiName}-cell-title{
       display: block;
       width:0;
       flex: 1;
@@ -39,14 +39,14 @@
   }
 
 
-  &-list-icon,
-  &-list-icon-right{
+  &-cell-icon,
+  &-cell-icon-right{
     width: @itemAlineImgSize;
     height: @itemAlineImgSize;
     margin-right: @blank;
   }
 
-  &-list-icon-right{
+  &-cell-icon-right{
     position: relative;
     margin:0 0 0 @blank*2;
     &:before{
@@ -64,14 +64,14 @@
     }
   }
 
-  &-list-title{
-    font-size: @listTileFontSize;
+  &-cell-title{
+    font-size: @cellTileFontSize;
   }
-  &-list-secondary-text {
+  &-cell-secondary-text {
     color: @secondaryFontColor;
   }
-  &-list-link{
-    width:@list-link-width;
+  &-cell-link{
+    width:@cell-link-width;
     text-align: right;
     display: flex;
     display: -webkit-box;
@@ -79,15 +79,15 @@
     -webkit-box-pack: center;
   }
 
-  &-list-item-multi{
+  &-cell-item-multi{
     position: relative;
     padding:@itemAlinePadding - 0.02 @itemAlinePadding;
     display: flex;
     display: -webkit-box;
     &:active{
-      background-color: @listActiveBG;
+      background-color: @cellActiveBG;
     }
-    .@{uiName}-list-secondary-text{
+    .@{uiName}-cell-secondary-text{
       margin-top:0.08rem;
     }
     .is-avatar{
@@ -95,12 +95,12 @@
       overflow: hidden;
     }
   }
-  &-list-img{
+  &-cell-img{
     width:@itemMultiImgSize;
     height:@itemMultiImgSize;
     margin-right:@blank;;
   }
-  &-list-content{
+  &-cell-content{
     display: block;
     width:0;
     flex: 1;

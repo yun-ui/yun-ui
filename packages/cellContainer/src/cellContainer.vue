@@ -1,6 +1,6 @@
 <template>
     <div
-        :class="UIName+'-list-container'"
+        :class="UIName+'-cell-container'"
     >
         <slot></slot>
     </div>
@@ -9,7 +9,7 @@
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-list-container',
+        name: 'yun-cell-container',
         mixins: [UIName],
         props: {
         },
@@ -20,5 +20,5 @@
 
 <style lang="less" rel="stylesheet/less">
     @import "../../style/stylesheets/base";
-    @import "../../style/stylesheets/list";
+    @import "../../style/stylesheets/cell";
 </style>

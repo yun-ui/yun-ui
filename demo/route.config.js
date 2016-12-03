@@ -55,7 +55,12 @@ export default [
             'secondary': 'JS Component',
             'icon': require('./assets/placeholder-figure.png')
         },
-        'list': []
+        'list': [
+            {
+                'path': '/cell',
+                'name': 'Cell'
+            }
+        ]
     },
     {
         'title': {

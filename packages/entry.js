@@ -4,8 +4,8 @@ import tabbar from '../packages/tabbar'
 import tabItem from '../packages/tabItem'
 import buttonGroup from '../packages/buttonGroup'
 import navbar from '../packages/navbar'
-import listContainer from '../packages/listContainer'
-import listItem from '../packages/listItem'
+import cellContainer from '../packages/cellContainer'
+import cellItem from '../packages/cellItem'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -16,8 +16,8 @@ const install = function (Vue) {
     Vue.component(buttonGroup.name, buttonGroup)
     Vue.component(navbar.name, navbar)
     Vue.component(alert.name, alert)
-    Vue.component(listContainer.name, listContainer)
-    Vue.component(listItem.name, listItem)
+    Vue.component(cellContainer.name, cellContainer)
+    Vue.component(cellItem.name, cellItem)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -33,6 +33,6 @@ module.exports = {
     buttonGroup,
     navbar,
     alert,
-    listContainer,
-    listItem
+    cellContainer,
+    cellItem
 }

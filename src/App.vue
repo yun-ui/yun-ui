@@ -148,49 +148,49 @@
         <!--Alert--end-->
 
         <!--list--start-->
-        <yun-list-container>
-            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
-            </yun-list-item>
+        <yun-cell-container>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
-            </yun-list-item>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-list-item>
-            <yun-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
+            </yun-cell-item>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi avatar>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本">
+            <yun-cell-item title="列表标题" secondaryText="辅助文本">
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-list-item>
-            <yun-list-item title="列表标题" link>
+            </yun-cell-item>
+            <yun-cell-item title="列表标题" link>
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本">
+            <yun-cell-item title="列表标题" secondaryText="辅助文本">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight" >
-            </yun-list-item>
+            </yun-cell-item>
 
-            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-list-item>
+            </yun-cell-item>
 
-        </yun-list-container>
+        </yun-cell-container>
         <!--list--end-->
 
         <yun-toast></yun-toast>
@@ -206,8 +206,8 @@
         yunButtonGroup,
         yunNavbar,
         yunAlert,
-        yunListContainer,
-        yunListItem
+        yunCellContainer,
+        yunCellItem
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
@@ -225,8 +225,8 @@
             yunButtonGroup,
             yunNavbar,
             yunAlert,
-            yunListContainer,
-            yunListItem
+            yunCellContainer,
+            yunCellItem
         }
     }
 

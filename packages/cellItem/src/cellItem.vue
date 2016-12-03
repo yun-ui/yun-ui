@@ -1,35 +1,35 @@
 <template>
-    <div :class="UIName+'-list-item-multi'" v-if="multi">
-        <div :class="[UIName+'-list-img', {'is-avatar': avatar}]" v-if="img || $slots.img">
+    <div :class="UIName+'-cell-item-multi'" v-if="multi">
+        <div :class="[UIName+'-cell-img', {'is-avatar': avatar}]" v-if="img || $slots.img">
             <slot name="img"></slot>
         </div>
-        <div :class="UIName+'-list-content'">
-            <div :class="[UIName+'-list-title', UIName+'-ellipse']" v-if="title || $slots.title">
+        <div :class="UIName+'-cell-content'">
+            <div :class="[UIName+'-cell-title', UIName+'-ellipse']" v-if="title || $slots.title">
                 <span v-text="title"></span>
             </div>
-            <div :class="UIName+'-list-secondary-text'" v-if="secondaryText || $slots.secondaryText">
+            <div :class="UIName+'-cell-secondary-text'" v-if="secondaryText || $slots.secondaryText">
                 <span v-text="secondaryText"></span>
             </div>
         </div>
-        <div :class="UIName+'-list-link'" v-if="link">
+        <div :class="UIName+'-cell-link'" v-if="link">
             <span class="iconfont icon-arrow-right"></span>
         </div>
     </div>
 
-    <div :class="UIName+'-list-item-single'" v-else="!multi">
-        <div :class="UIName+'-list-icon'" v-if="icon || $slots.icon">
+    <div :class="UIName+'-cell-item-single'" v-else="!multi">
+        <div :class="UIName+'-cell-icon'" v-if="icon || $slots.icon">
             <slot name="icon"></slot>
         </div>
-        <div :class="[UIName+'-list-title', UIName+'-ellipse']" v-if="title || $slots.title">
+        <div :class="[UIName+'-cell-title', UIName+'-ellipse']" v-if="title || $slots.title">
             <span v-text="title"></span>
         </div>
-        <div :class="UIName+'-list-secondary-text'" v-if="secondaryText || $slots.secondaryText">
+        <div :class="UIName+'-cell-secondary-text'" v-if="secondaryText || $slots.secondaryText">
             <span v-text="secondaryText"></span>
         </div>
-        <div :class="[UIName+'-list-icon-right']" v-if="iconRight || $slots.iconRight">
+        <div :class="[UIName+'-cell-icon-right']" v-if="iconRight || $slots.iconRight">
             <slot name="iconRight"></slot>
         </div>
-        <div :class="UIName+'-list-link'" v-if="link">
+        <div :class="UIName+'-cell-link'" v-if="link">
             <span class="iconfont icon-arrow-right"></span>
         </div>
     </div>
@@ -38,7 +38,7 @@
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-list-item',
+        name: 'yun-cell-item',
         mixins: [UIName],
         props: {
             icon: String,

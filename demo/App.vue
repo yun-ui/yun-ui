@@ -6,15 +6,15 @@
                 第三方开发以及统一用户体验。</p>
         </div>
         <div v-for="group in nav">
-            <yun-list-container>
-                <yun-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
+            <yun-cell-container>
+                <yun-cell-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
                     <img :src="group.title.icon" slot="img">
-                </yun-list-item>
-                <yun-list-item v-for="component in group.list" :title="component.name"
+                </yun-cell-item>
+                <yun-cell-item v-for="component in group.list" :title="component.name"
                                :secondaryText="component.secondary" link
                                @click.native="goToDetail(component.path)">
-                </yun-list-item>
-            </yun-list-container>
+                </yun-cell-item>
+            </yun-cell-container>
         </div>
     </div>
 </template>
