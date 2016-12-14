@@ -125,13 +125,13 @@ npm install YunUI --save
 目前在`package.json`中声明了多个脚本模式，可以通过`npm run xxx`的方式进行运行，各个命令启动服务如下：
 
 ``` bash
-dev-demo:
+dev:demo:
 启动demo的本地开发模式，监听http://localhost:8090/
 dev:
 启动组件库的本地开发模式，监听http://localhost:8080/
 build:
 编译打包组件库，输出文件目录为：dist/yun/
-build-demo:
+build:demo:
 编译打包demo页面，可发布并通过http(s)访问，输入文件目录：dist/demo/
 lint:
 执行eslint检查
@@ -151,7 +151,7 @@ test:TODO
 构建demo页面：
 
 ``` bash
-npm run build-demo
+npm run build:demo
 ```
 demo构建后的文件在`dist/demo`目录下。
 

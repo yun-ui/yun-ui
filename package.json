@@ -15,8 +15,8 @@
   "style": "dist/yun/index.css",
   "scripts": {
     "dev:demo": "cross-env NODE_ENV=dev_demo node build/dev-server.js",
-    "dev:yun": "node build/dev-server.js",
-    "build:yun": "npm run lint && node build/build.js",
+    "dev": "node build/dev-server.js",
+    "build": "npm run lint && node build/build.js",
     "build:demo": "npm run lint && node build/build-demo.js",
     "lint": "eslint --ext .vue,.js packages/ test/ demo/ src/",
     "publish": "npm publish",
