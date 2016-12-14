@@ -154,6 +154,58 @@ small {
     }
 }
 
+//1px border
+.borderSize(@borderWidth,@borderHeight,@scaleValue){
+    content: '';
+    display: block;
+    width: @borderWidth;
+    height: @borderHeight;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #dce1e8;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(@scaleValue);
+    transform: scale(@scaleValue);
+}
+.borderPosition(@top,@bottom){
+    border-width: 0;
+    height: 1px;
+    background: #dce1e8;
+    top: @top;
+    bottom: @bottom;
+}
+
+.border { border: 1px solid #dce1e8; }
+.border-t { border-width: 1px 0 0 0; }
+
+.border-b { border-width: 0 0 1px 0; }
+
+html[data-dpr="2"] .border,
+html[data-dpr="3"] .border{
+    position: relative;
+    border: none;
+    &:before{ z-index:1; }
+}
+
+html[data-dpr="2"] .border:before {
+    .borderSize(200%,200%,0.5);
+}
+
+html[data-dpr="3"] .border:before {
+    .borderSize(300%,300%,0.33333333);
+}
+
+html[data-dpr="2"] .border-b:before,
+html[data-dpr="3"] .border-b:before{
+    .borderPosition(initial,0);
+}
+
+html[data-dpr="2"] .border-t:before,
+html[data-dpr="3"] .border-t:before{
+    .borderPosition(0,initial);
+}
 
 /* layout */
 // AVG Grid 等分网格
@@ -213,3 +265,13 @@ small {
     }
 }
 
+/* mask */
+.mask{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:@zIndexNormal + 1;
+    background: @maskColor;
+}

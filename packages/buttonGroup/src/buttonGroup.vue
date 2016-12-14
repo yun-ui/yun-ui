@@ -10,7 +10,7 @@
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-buttonGroup',
+        name: 'yun-button-group',
         mixins: [UIName],
         props: {
             fixed: Boolean

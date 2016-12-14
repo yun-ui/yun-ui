@@ -1,0 +1,103 @@
+@import "var";
+
+
+@keyframes loading {
+  0% {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: center;
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform-origin: center;
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform-origin: center;
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes loading {
+  0% {
+    -moz-transform-origin: center;
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform-origin: center;
+    -moz-transform: rotate(360deg);
+  }
+}
+
+//垂直居中
+.middleCenter {
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform-origin: 50% 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform-origin: 50% 50%;
+  -ms-transform: translate(-50%, -50%);
+}
+
+.@{uiName} {
+  &-loading-container {
+    position: fixed;
+    display: block;
+    width: @loadingSize;
+    padding: @loadingPadding 0;
+    .middleCenter;
+    z-index: @zIndexNormal;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    background-color: fade(@loadingBG,80%);
+    border-radius: @loadingRadius;
+  }
+  //loading icon
+  &-loading-icon {
+    position: relative;
+    width: @loadingIconSize;
+    height: @loadingIconSize;
+    margin: 0 auto;
+    animation: loading .9s linear infinite;
+    -webkit-animation: loading .9s linear infinite;
+    -moz-animation: loading .9s linear infinite;
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+  //loading文字内容显示区域
+  &-loading-content {
+    margin-top: @loadingPadding/2;
+    font-size: @loadingFontSize;
+  }
+}
+//刷新类型的loading
+.is-loading-refresh {
+  top: @loadingPadding*2;
+  background-color: transparent;
+  .@{uiName}-loading-icon,
+  .@{uiName}-loading-content{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .@{uiName}-loading-icon{
+    width: @loadingRefreshIconSize;
+    height: @loadingRefreshIconSize;
+    margin-right: @loadingPadding/2;
+  }
+  .@{uiName}-loading-content{
+    margin:0;
+    color: #7a797b;
+  }
+}

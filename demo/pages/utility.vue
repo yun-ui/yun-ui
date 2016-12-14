@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="yun-bg-white">
         <div class="title">
             <h3>辅助类 Utility</h3>
             <p>YunUI 提供了一系列辅助类，这些辅助类直接作用在HTML元素上，
@@ -104,7 +104,7 @@
                 </div>
             </div>
             <h4>快速定位</h4>
-            <small>快速定位提供：左右浮动，定宽的块级元素水平居中等定位方式。</small>
+            <small class="yun-text-secondary">快速定位提供：左右浮动，定宽的块级元素水平居中等定位方式。</small>
             <div class="row">
                 <div class="panel clearfix">
                     <div class="left">.left</div>
@@ -113,7 +113,16 @@
                 <div class="panel text-center clearfix">
                     <div class="block-center" style="width:3rem;">block center</div>
                 </div>
-            </div>
+            <h4>1px 边框</h4>
+            <small class="yun-text-secondary">HTML元素的：上边框、下边框、全边框和割线</small>
+                <div class="row border-1px">
+                    <p class="border border-t">上边框</p>
+                    <p class="border border-b">下边框</p>
+                    <p class="border">全边框边框</p>
+                    <p><span class="divided">割线</span><span class="divided">割线</span>
+                        <span class="divided">割线</span><span class="divided">割线</span>
+                    </p>
+                </div>
         </div>
     </div>
 </template>

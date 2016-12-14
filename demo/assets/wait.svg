@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="82px" height="82px" viewBox="0 0 82 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>等待icon copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="图标" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="等待icon-copy" transform="translate(1.000000, 1.000000)">
+            <path d="M40,80 C62.09139,80 80,62.09139 80,40 C80,17.90861 62.09139,0 40,0 C17.90861,0 0,17.90861 0,40 C0,62.09139 17.90861,80 40,80 Z" id="Oval-6" stroke="#D3D8DD" fill="#E5E7E9"></path>
+            <g id="Group-2" transform="translate(35.428571, 18.142857)" fill="#B9C7D2">
+                <path d="M4,20 L4,2.00494659 C4,0.897026226 3.1045695,0 2,0 C0.887729645,0 0,0.897645164 0,2.00494659 L0,21.9950534 C0,21.9958781 4.9609869e-07,21.9967026 1.48801305e-06,21.997527 C5.00001992e-07,21.9983508 3.55271368e-15,21.9991753 3.55271368e-15,22 C3.55271368e-15,22.5553076 0.223743923,23.054647 0.585616493,23.4154891 C0.949203617,23.7764104 1.44853719,24 2,24 C2.00082468,24 2.00164923,23.9999995 2.00247366,23.9999985 C2.00329738,23.9999995 2.00412193,24 2.00494659,24 L21.9950534,24 C23.1029738,24 24,23.1045695 24,22 C24,20.8877296 23.1023548,20 21.9950534,20 L4,20 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

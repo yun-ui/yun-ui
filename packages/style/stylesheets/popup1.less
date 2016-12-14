@@ -1,0 +1,91 @@
+@import "var";
+
+//垂直居中
+.middleCenter {
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform-origin: 50% 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform-origin: 50% 50%;
+  -ms-transform: translate(-50%, -50%);
+}
+
+.@{uiName} {
+  &-popup {
+    position: fixed;
+    width: @popupWidth;
+    max-height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: @popupRadius;
+    background-color: #ffffff;
+    z-index: @zIndexNormal+2;
+    .middleCenter;
+  }
+  &-popup-title {
+    text-align: center;
+    font-size: @popupTitleFontSize;
+    line-height: @popupTitleLineHeight;
+  }
+  &-popup-content,
+  &-popup-input,
+  &-popup-button,
+  &-popup-list {
+    padding: 0.2rem 0.4rem;
+  }
+  &-popup-button &-button {
+    margin-bottom: 0.2rem;
+  }
+  &-popup-input {
+    input, textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 0.28rem;
+    }
+    input {
+      height: 0.6rem;
+      font-size: 0.28rem;
+      padding: 0.1rem 0;
+    }
+    textarea {
+      height: 1.8rem;
+      resize: none;
+    }
+  }
+  &-popup-cover {
+    height: 3.3rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  &-popup-list {
+    padding-top: 0.1rem;
+    padding-bottom: 0;
+    color: @secondaryFontColor;
+    ul {
+      li {
+        position: relative;
+        padding-left: 0.24rem;
+        padding-bottom: 0.2rem;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0.13rem;
+          display: block;
+          width: 0.1rem;
+          height: 0.1rem;
+          margin-left: -0.24rem;
+          border-radius: 100%;
+          background: #EAEFF3;
+        }
+      }
+    }
+  }
+}

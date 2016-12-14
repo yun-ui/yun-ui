@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="yun-bg-white">
         <div class="title">
             <h3>文字排版 Typography</h3>
             <p>YunUI 定义了一套基础的文本排版规则。规范了HTML元素的大小和样式，其中涉及到的元素有：
@@ -12,8 +12,9 @@
             </p>
         </div>
         <div class="content">
-            <h4>h1-h6 Headings</h4>
+            <h4>预览</h4>
             <div class="row">
+                <h4>h1-h6 Headings</h4>
                 <div class="panel">
                     <h1>h1</h1>
                     <h2>h2</h2>
@@ -22,8 +23,22 @@
                     <h5>h5</h5>
                     <h6>h6</h6>
                 </div>
+                <div class="panel">
+                    <p>
+                        <strong>strong 粗体字</strong>
+                    </p>
+                    <p>
+                        <small>small 小一号的字</small>
+                    </p>
+                </div>
+                <div class="panel">
+                    <p>
+                        这是一个文本段落这是一个文本段落这是一个文本段落
+                        这是一个文本段落这是一个文本段落这是一个文本段落
+                    </p>
+                </div>
             </div>
-
+            <h4></h4>
         </div>
     </div>
 </template>

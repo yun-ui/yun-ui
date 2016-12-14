@@ -45,6 +45,10 @@
                     <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
                     </yun-cell-item>
 
+                    <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
+                        <img src="../../demo/assets/placeholder-figure.png" slot="icon">
+                    </yun-cell-item>
+
                     <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
                         <img src="../../demo/assets/placeholder-figure.png" slot="img">
                     </yun-cell-item>

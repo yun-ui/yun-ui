@@ -1,6 +1,26 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
+
+        <!--popup--start-->
+        <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
+        <yun-popup title="标题标题标"
+                   content="文本内容文本内容文本内容文本内容文本内容
+                文本内容文本内容文本内容文本内容文本内容文本内容文本内容"
+                   input="input"
+                   :textList="textListArray"
+                   v-if='showPop' :close="close">
+            <img src="../src/assets/popup-cover.png" slot="cover"/>
+            <yun-button size="large" type="normal" slot="button">默認按钮</yun-button>
+            <yun-button size="large" type="normal" disabled slot="button">默認按钮</yun-button>
+            <yun-button-group fixed="fixed" class="border border-t" slot="buttonGroup">
+                <yun-tab-item>取消</yun-tab-item>
+                <yun-tab-item class="active">确认</yun-tab-item>
+            </yun-button-group>
+
+        </yun-popup>
+        <!--popup--end-->
+
         <!--Base--start-->
         <div>
             <h1>Base 基础样式</h1>
@@ -143,12 +163,11 @@
         </div>
         <!--Navbar--end-->
 
-        <!--Alert--start-->
-        <yun-alert></yun-alert>
-        <!--Alert--end-->
-
-        <!--list--start-->
+        <!--cell--start-->
         <yun-cell-container>
+            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
+                <img src="../src/assets/placeholder-figure.png" slot="icon">
+            </yun-cell-item>
             <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
             </yun-cell-item>
 
@@ -167,23 +186,23 @@
             </yun-cell-item>
 
             <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
             </yun-cell-item>
 
             <yun-cell-item title="列表标题" secondaryText="辅助文本">
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
             </yun-cell-item>
             <yun-cell-item title="列表标题" link>
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
             </yun-cell-item>
 
             <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="icon">
+                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
             </yun-cell-item>
 
             <yun-cell-item title="列表标题" secondaryText="辅助文本">
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight" >
+                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
             </yun-cell-item>
 
             <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
@@ -191,42 +210,71 @@
             </yun-cell-item>
 
         </yun-cell-container>
-        <!--list--end-->
-
+        <!--cell--end-->
+        <yun-loading content="加载中" refresh>
+            <img src="../src/assets/loading.png" slot="icon"/>
+        </yun-loading>
         <yun-toast></yun-toast>
     </div>
 </template>
 
 <script>
     import {
-        yunButton,
-        yunToast,
-        yunTabbar,
-        yunTabItem,
-        yunButtonGroup,
-        yunNavbar,
-        yunAlert,
-        yunCellContainer,
-        yunCellItem
-    } from '../packages/index'
-    import {UIName} from '../src/mixins/'
-    export default {
-        props: {},
-        methods: {},
-        mixins: [UIName],
-        created () {
-            console.log(yunButton)
-        },
-        components: {
             yunButton,
-            yunToast,
             yunTabbar,
             yunTabItem,
             yunButtonGroup,
             yunNavbar,
-            yunAlert,
+            yunPopup,
             yunCellContainer,
-            yunCellItem
+            yunCellItem,
+            yunLoading,
+            yunToast
+    } from '../packages/index'
+    import {UIName} from '../src/mixins/'
+    export default {
+        props: {},
+        methods: {
+            handleClick: function () {
+                console.log('clicked')
+                this.showPop = true
+            },
+
+            close () {
+                console.log('close')
+                this.showPop = false
+            }
+        },
+        data () {
+            return {
+                showPop: false,
+                textListArray: [
+                    {
+                        content: '这是一段文本'
+                    },
+                    {
+                        content: '这是一段文本这是一段文本'
+                    },
+                    {
+                        content: '这是一段文本这是一段文本这是一段文本这是一段文本'
+                    }
+                ]
+            }
+        },
+        mixins: [UIName],
+        created () {
+        },
+        components: {
+            yunButton,
+            yunTabbar,
+            yunTabItem,
+            yunButtonGroup,
+            yunNavbar,
+            yunPopup,
+            yunCellContainer,
+            yunCellItem,
+            yunLoading,
+            yunToast
         }
     }
 

@@ -1,10 +1,10 @@
 <template>
     <div>
         <div class="title">
-            <h3>常用按钮</h3>
+            <h3>按钮 Button</h3>
             <p>我们提供常用的按钮以便统一体验。</p>
         </div>
-        <div class="content">
+        <div class="content button-container">
             <yun-button type="normal">默认按钮</yun-button>
             <yun-button type="linear">线性按钮</yun-button>
             <yun-button disabled>禁用按钮</yun-button>

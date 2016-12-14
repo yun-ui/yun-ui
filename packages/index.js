@@ -4,9 +4,10 @@ import yunTabbar from './tabbar'
 import yunTabItem from './tabItem'
 import yunButtonGroup from './buttonGroup'
 import yunNavbar from './navbar'
-import yunAlert from './alert'
+import yunPopup from './popup'
 import yunCellContainer from './cellContainer'
 import yunCellItem from './cellItem'
+import yunLoading from './loading'
 
 const Components = {
     yunButton,
@@ -15,9 +16,10 @@ const Components = {
     yunTabItem,
     yunButtonGroup,
     yunNavbar,
-    yunAlert,
+    yunPopup,
     yunCellContainer,
-    yunCellItem
+    yunCellItem,
+    yunLoading
 }
 
 module.exports = Components
