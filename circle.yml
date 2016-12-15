@@ -2,6 +2,17 @@ machine:
   node:
     version: 6
 
+general:
+  branches:
+    ignore:
+      - gh-pages
+
 test:
   override:
     - bash build/ci.sh
+
+deployment:
+  staging:
+    branch: develop
+    commands:
+      - bash build/deploy-ghpages.sh dist/demo
