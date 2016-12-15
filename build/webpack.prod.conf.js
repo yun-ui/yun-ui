@@ -111,8 +111,12 @@ webpackConfig.push(merge(baseWebpackConfig, {
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
-            }
+                warnings: false,
+                drop_console: true
+            },
+            output: {
+                comments: false
+            } 
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
         // extract css into its own file
