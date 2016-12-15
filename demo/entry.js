@@ -12,7 +12,6 @@ Vue.use(Yun)
 Vue.use(VueRouter)
 console.log(routes)
 const router = new VueRouter({
-    mode: 'history',
     routes: routes.route
 })
 
