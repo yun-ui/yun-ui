@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="mask" @click="aaa"></div>
+        <div class="mask"></div>
         <div :class="[UIName+'-popup']">
             <div :class="[UIName+'-popup-cover']"
                  v-if="cover || $slots.cover">
@@ -8,7 +8,8 @@
             </div>
             <div :class="[UIName+'-popup-title', UIName+'-ellipse']"
                  v-text="title"
-                 v-if="title || $slots.title"></div>
+                 v-if="title || $slots.title">
+            </div>
             <div :class="[UIName+'-popup-list']"
                  v-if="textList || $slots.textList">
                 <ul>
@@ -36,12 +37,13 @@
             <div :class="[UIName+'-popup-button']" v-if="button || $slots.button">
                 <slot name="button"></slot>
             </div>
-            <slot name="buttonGroup" v-if="button || $slots.button"></slot>
+            <slot name="buttonGroup" v-if="buttonGroup || $slots.buttonGroup"></slot>
         </div>
     </div>
 </template>
 
 <script>
+    // TODO 错误文本（类似表单验证）
     import {UIName} from '../../../src/mixins/'
     export default {
         name: 'yun-popup',
@@ -57,15 +59,11 @@
             close: Function
         },
         methods: {
-            aaa () {
-                alert(111)
-            }
         }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
     @import "../../style/stylesheets/popup1";
 </style>

@@ -7,7 +7,12 @@ import navbar from '../packages/navbar'
 import popup from '../packages/popup'
 import cellContainer from '../packages/cellContainer'
 import cellItem from '../packages/cellItem'
+import listContainer from '../packages/listContainer'
+import listItem from '../packages/listItem'
 import loading from '../packages/loading'
+import Switch from '../packages/switch'
+import badge from '../packages/badge'
+import search from '../packages/search'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -20,7 +25,12 @@ const install = function (Vue) {
     Vue.component(popup.name, popup)
     Vue.component(cellContainer.name, cellContainer)
     Vue.component(cellItem.name, cellItem)
+    Vue.component(listContainer.name, listContainer)
+    Vue.component(listItem.name, listItem)
     Vue.component(loading.name, loading)
+    Vue.component(Switch.name, Switch)
+    Vue.component(badge.name, badge)
+    Vue.component(search.name, search)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -38,5 +48,10 @@ module.exports = {
     popup,
     cellContainer,
     cellItem,
-    loading
+    listContainer,
+    listItem,
+    loading,
+    Switch,
+    badge,
+    search
 }

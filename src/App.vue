@@ -1,12 +1,27 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
+        <!--search--starat-->
+        <div>
+            <yun-search></yun-search>
+        </div>
+        <!--search--end-->
+        <!--badge--starat-->
+        <div>
+            <yun-badge type="text" number="100+" color="#3cbaff"></yun-badge>
+            <yun-badge type="text" number="1"></yun-badge>
+            <yun-badge></yun-badge>
+        </div>
+        <!--badge--end-->
+        <!--switch--start-->
+        <yun-switch></yun-switch>
+        <!--switch--end-->
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
         <yun-popup title="标题标题标"
                    content="文本内容文本内容文本内容文本内容文本内容
-                文本内容文本内容文本内容文本内容文本内容文本内容文本内容"
+                    内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="input"
                    :textList="textListArray"
                    v-if='showPop' :close="close">
@@ -163,58 +178,42 @@
         </div>
         <!--Navbar--end-->
 
-        <!--cell--start-->
-        <yun-cell-container>
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
+        <!--list--start-->
+        <yun-list-container>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
                 <img src="../src/assets/placeholder-figure.png" slot="icon">
-            </yun-cell-item>
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
-            </yun-cell-item>
+            </yun-list-item>
 
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
-            </yun-cell-item>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
+            </yun-list-item>
 
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-cell-item>
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi avatar>
+            </yun-list-item>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-cell-item>
+            </yun-list-item>
 
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" multi link>
-                <img src="../src/assets/placeholder-figure.png" slot="img">
-            </yun-cell-item>
-
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
+            <yun-list-item title="列表标题" secondaryText="辅助文本" link>
                 <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-cell-item>
+            </yun-list-item>
 
-            <yun-cell-item title="列表标题" secondaryText="辅助文本">
+            <yun-list-item title="列表标题" link>
                 <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
-            </yun-cell-item>
-            <yun-cell-item title="列表标题" link>
-                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
-            </yun-cell-item>
+            </yun-list-item>
 
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
-            </yun-cell-item>
-
-            <yun-cell-item title="列表标题" secondaryText="辅助文本">
+            <yun-list-item title="列表标题" secondaryText="辅助文本">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-cell-item>
-
-            <yun-cell-item title="列表标题" secondaryText="辅助文本" link>
-                <img src="../src/assets/placeholder-figure.png" slot="iconRight">
-            </yun-cell-item>
-
-        </yun-cell-container>
+            </yun-list-item>
+        </yun-list-container>
         <!--cell--end-->
-        <yun-loading content="加载中" refresh>
+        <yun-loading content="加载中" style="display:none">
             <img src="../src/assets/loading.png" slot="icon"/>
         </yun-loading>
-        <yun-toast></yun-toast>
+        <yun-toast content="操作成功" bottom style="display:none">
+        </yun-toast>
+
     </div>
 </template>
 
@@ -226,10 +225,15 @@
             yunButtonGroup,
             yunNavbar,
             yunPopup,
+            yunListContainer,
+            yunListItem,
             yunCellContainer,
             yunCellItem,
             yunLoading,
-            yunToast
+            yunToast,
+            yunSwitch,
+            yunBadge,
+            yunSearch
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
@@ -273,15 +277,22 @@
             yunPopup,
             yunCellContainer,
             yunCellItem,
+            yunListContainer,
+            yunListItem,
             yunLoading,
-            yunToast
+            yunToast,
+            yunSwitch,
+            yunBadge,
+            yunSearch
         }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
+    @import "../packages/style/stylesheets/base";
     body {
         background-color: #f2f2f2 !important;
     }
+
 </style>

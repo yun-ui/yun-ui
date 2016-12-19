@@ -41,6 +41,7 @@
 <yun-button-group fixed></yun-button-group>
 ```
 API
+
 | 参数        | 描述        | 类型        | 可选值       | 默认值       |
 | ----       | ----       | ----       | ----       | ----       |
 | fixed       | 定位 |  Boolean  | | false |

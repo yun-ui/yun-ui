@@ -136,3 +136,6 @@ input[type=button] {width: auto; overflow: visible;}
 /* 后面自己增加的 */
 button{ outline: none; border: none; text-shadow: none; background: transparent; overflow: hidden;
     padding:0; }
+input{
+	outline: none;
+}

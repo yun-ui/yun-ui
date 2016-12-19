@@ -1,0 +1,54 @@
+@import "var";
+
+//垂直居中
+.middleCenter {
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform-origin: 50% 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform-origin: 50% 50%;
+  -ms-transform: translate(-50%, -50%);
+}
+
+.@{uiName} {
+  &-toast-container {
+    position: fixed;
+    display: block;
+    width: @toastSize;
+    padding: @toastPadding 0;
+    .middleCenter;
+    z-index: @zIndexNormal;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    background-color: fade(@toastBG, 80%);
+    border-radius: @toastRadius;
+  }
+  //loading icon
+  &-toast-icon {
+    position: relative;
+    width: @toastIconSize;
+    height: @toastIconSize;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  //loading文字内容显示区域
+  &-toast-content {
+    font-size: @toastFontSize;
+  }
+}
+
+.is-loading-bottom {
+  width: auto;
+  top: auto;
+  padding: @toastPadding/2 @toastPadding*2;
+  bottom: @toastPadding * 2;
+  border-radius: @toastPadding;
+}

@@ -21,6 +21,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
     @import "../../style/stylesheets/tabbar";
 </style>

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+    // TODO active状态还没做
     import {UIName} from '../../../src/mixins/'
     export default {
         name: 'yun-navbar',

@@ -1,0 +1,31 @@
+@import "var";
+
+/* badge */
+.@{uiName} {
+  &-badge{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: @whiteFontColor;
+  }
+
+  &-badge-text{
+    top:0;
+    display: block;
+    padding: 0 0.1rem;
+    height: @badgeSize;
+    line-height: @badgeSize;
+    font-size: @badgeFontSize;
+    min-width: @badgeSize;
+    text-align: center;
+    border-radius: @badgeRadius;
+    background-color: @warnColor;
+  }
+  &-badge-dot{
+    display: block;
+    width: @badgeDotSize;
+    height: @badgeDotSize;
+    border-radius: 100%;
+    background-color: @warnColor;
+  }
+}

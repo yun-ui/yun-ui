@@ -25,6 +25,7 @@
 <yun-button disabled>disabled</yun-button>
 ```
 API
+
 | 参数        | 描述        | 类型        | 可选值       | 默认值       |
 | ----       | ----       | ----       | ----       | ----       |
 | type   | 按钮形态 | String  | normal，inverse | normal |

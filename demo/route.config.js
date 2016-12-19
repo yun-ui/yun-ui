@@ -8,24 +8,24 @@ export default [
         'list': [
             {
                 'path': '/color',
-                'name': 'Color'
+                'name': '颜色 Color'
             },
             {
                 'path': '/layout',
-                'name': 'Layout'
+                'name': '布局 Layout'
             },
             {
                 'path': '/utility',
-                'name': 'Utility'
+                'name': '辅助类 Utility'
             },
             {
                 'path': '/typography',
-                'name': 'Typography'
+                'name': '文字排版 Typography'
             },
             // 外层path要写成/pathName形式，它的children子路由要只写名称，要保证url路径名，文件资源名与path名称三者统一
             {
                 'path': '/statePage',
-                'name': 'StatePage',
+                'name': '状态页 StatePage',
                 'children': [
                     {
                         'path': 'index',
@@ -68,19 +68,23 @@ export default [
         'list': [
             {
                 'path': '/navbar',
-                'name': 'Navbar'
+                'name': '顶部导航 Navbar'
             },
             {
                 'path': '/tabbar',
-                'name': 'Tabbar'
+                'name': '底部导航 Tabbar'
             },
             {
                 'path': '/button',
-                'name': 'Button'
+                'name': '按钮 Button'
             },
             {
                 'path': '/buttonGroup',
-                'name': 'ButtonGroup'
+                'name': '按钮组 ButtonGroup'
+            },
+            {
+                'path': '/list',
+                'name': '列表 List'
             }
         ]
     },
@@ -92,8 +96,16 @@ export default [
         },
         'list': [
             {
-                'path': '/cell',
-                'name': 'Cell'
+                'path': '/loading',
+                'name': '加载 Loading'
+            },
+            {
+                'path': '/toast',
+                'name': '提示 Toast'
+            },
+            {
+                'path': '/popup',
+                'name': '弹窗 Popup'
             }
         ]
     },
@@ -103,6 +115,11 @@ export default [
             'secondary': 'Form Component',
             'icon': require('./assets/form.png')
         },
-        'list': []
+        'list': [
+            {
+                'path': '/input',
+                'name': '输入框 Input'
+            }
+        ]
     }
 ]
