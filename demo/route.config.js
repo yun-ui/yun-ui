@@ -8,24 +8,29 @@ export default [
         'list': [
             {
                 'path': '/color',
-                'name': '颜色 Color'
+                'name': 'Color',
+                'secondary': '颜色 '
             },
             {
                 'path': '/layout',
-                'name': '布局 Layout'
+                'name': 'Layout',
+                'secondary': '布局 '
             },
             {
                 'path': '/utility',
-                'name': '辅助类 Utility'
+                'name': 'Utility',
+                'secondary': '辅助类 '
             },
             {
                 'path': '/typography',
-                'name': '文字排版 Typography'
+                'name': 'Typography',
+                'secondary': '文字排版 '
             },
             // 外层path要写成/pathName形式，它的children子路由要只写名称，要保证url路径名，文件资源名与path名称三者统一
             {
                 'path': '/statePage',
-                'name': '状态页 StatePage',
+                'name': 'StatePage',
+                'secondary': '状态页 ',
                 'children': [
                     {
                         'path': 'index',
@@ -68,23 +73,33 @@ export default [
         'list': [
             {
                 'path': '/navbar',
-                'name': '顶部导航 Navbar'
+                'name': 'Navbar',
+                'secondary': '顶部导航 '
             },
             {
                 'path': '/tabbar',
-                'name': '底部导航 Tabbar'
+                'name': 'Tabbar',
+                'secondary': '底部导航 '
             },
             {
                 'path': '/button',
-                'name': '按钮 Button'
+                'name': 'Button',
+                'secondary': '按钮 '
             },
             {
                 'path': '/buttonGroup',
-                'name': '按钮组 ButtonGroup'
+                'name': 'ButtonGroup',
+                'secondary': '按钮组 '
             },
             {
                 'path': '/list',
-                'name': '列表 List'
+                'name': 'List',
+                'secondary': '列表 '
+            },
+            {
+                'path': '/badge',
+                'name': 'Badge',
+                'secondary': '徽章 '
             }
         ]
     },
@@ -97,15 +112,23 @@ export default [
         'list': [
             {
                 'path': '/loading',
-                'name': '加载 Loading'
+                'name': 'Loading',
+                'secondary': '加载 '
             },
             {
                 'path': '/toast',
-                'name': '提示 Toast'
+                'name': 'Toast',
+                'secondary': '提示 '
             },
             {
                 'path': '/popup',
-                'name': '弹窗 Popup'
+                'name': 'Popup',
+                'secondary': '弹窗 '
+            },
+            {
+                'path': '/search',
+                'name': 'Search',
+                'secondary': '搜索 '
             }
         ]
     },
@@ -118,7 +141,8 @@ export default [
         'list': [
             {
                 'path': '/input',
-                'name': '输入框 Input'
+                'name': 'Input',
+                'secondary': '输入框 '
             }
         ]
     }

@@ -10,9 +10,8 @@
                 <yun-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
                     <img :src="group.title.icon" slot="icon">
                 </yun-list-item>
-                <yun-list-item v-for="component in group.list" :title="component.name"
-                               :secondaryText="component.secondary" link
-                               @click.native="goToDetail(component.path)">
+                <yun-list-item v-for="component in group.list" :title="component.secondary + component.name"
+                               link @click.native="goToDetail(component.path)">
                 </yun-list-item>
             </yun-list-container>
         </div>
@@ -46,5 +45,5 @@
 </script>
 
 <style lang="less">
-
+    @import "../packages/style/stylesheets/base";
 </style>

@@ -17,27 +17,27 @@
             <h4>图标按钮</h4>
             <div class="row">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
                 </yun-button-group>
             </div>
             <h4>图标 + 文本按钮</h4>
             <div class="row">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
                 </yun-button-group>
             </div>
             <h4>按钮固定在底部&nbsp;&#8681;</h4>
             <yun-button-group fixed>
-                <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
-                <yun-tab-item><i class="iconfont icon-tongshiquan"></i>文本</yun-tab-item>
+                <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
             </yun-button-group>
         </div>
     </div>

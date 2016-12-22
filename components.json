@@ -4,5 +4,41 @@
   ],
   "toast": [
     "./packages/toast/index.js"
+  ],
+  "badge": [
+    "./packages/badge/index.js"
+  ],
+  "buttonGroup": [
+    "./packages/buttonGroup/index.js"
+  ],
+  "cellContainer": [
+    "./packages/cellContainer/index.js"
+  ],
+  "cellItem": [
+    "./packages/cellItem/index.js"
+  ],
+  "listContainer": [
+    "./packages/listContainer/index.js"
+  ],
+  "listItem": [
+    "./packages/listItem/index.js"
+  ],
+  "loading": [
+    "./packages/loading/index.js"
+  ],
+  "navbar": [
+    "./packages/navbar/index.js"
+  ],
+  "tabbar": [
+    "./packages/tabbar/index.js"
+  ],
+  "search": [
+    "./packages/search/index.js"
+  ],
+  "switch": [
+    "./packages/switch/index.js"
+  ],
+  "tabItem": [
+    "./packages/tabItem/index.js"
   ]
 }

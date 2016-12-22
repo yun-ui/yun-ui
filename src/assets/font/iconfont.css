@@ -12,26 +12,78 @@
   font-size:0.26rem;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-checked-block:before { content: "\e600"; }
-.icon-delete-block:before { content: "\e601"; }
-.icon-add-block:before { content: "\e602"; }
-.icon-search:before { content: "\e603"; }
-.icon-warn-block:before { content: "\e604"; }
-.icon-back:before { content: "\e605"; }
-.icon-close:before { content: "\e606"; }
-.icon-delete-small:before { content: "\e607"; }
-.icon-arrow-right:before { content: "\e609"; }
-.icon-qzone:before { content: "\e60a"; }
-.icon-tongshi:before { content: "\e60b"; }
-.icon-pengyouquan:before { content: "\e60c"; }
-.icon-sina:before { content: "\e60d"; }
-.icon-qq:before { content: "\e60e"; }
-.icon-email:before { content: "\e60f"; }
-.icon-tongshiquan:before { content: "\e610"; }
-.icon-wechat:before { content: "\e611"; }
-.icon-arrow-left:before { content: "\e612"; }
-.icon-arrow-top:before { content: "\e613"; }
-.icon-arrow-bottom:before { content: "\e614"; }
+
+.icon-add-block:before { content: "\e6f0"; }
+
+.icon-arrow-up:before { content: "\e6f1"; }
+
+.icon-arrow-down:before { content: "\e6f2"; }
+
+.icon-addr:before { content: "\e6f3"; }
+
+.icon-addr-block:before { content: "\e6f4"; }
+
+.icon-add-field:before { content: "\e6f5"; }
+
+.icon-arrow-left:before { content: "\e6f6"; }
+
+.icon-arrow-right:before { content: "\e6f7"; }
+
+.icon-friends-community:before { content: "\e6f8"; }
+
+.icon-close:before { content: "\e6f9"; }
+
+.icon-close-block:before { content: "\e6fa"; }
+
+.icon-colleague-community:before { content: "\e6fb"; }
+
+.icon-close-line:before { content: "\e6fc"; }
+
+.icon-clock:before { content: "\e6fd"; }
+
+.icon-comment:before { content: "\e6fe"; }
+
+.icon-email:before { content: "\e6ff"; }
+
+.icon-delete-block:before { content: "\e700"; }
+
+.icon-delete:before { content: "\e701"; }
+
+.icon-filter:before { content: "\e702"; }
+
+.icon-demo:before { content: "\e703"; }
+
+.icon-forward:before { content: "\e704"; }
+
+.icon-images:before { content: "\e705"; }
+
+.icon-like:before { content: "\e706"; }
+
+.icon-moon:before { content: "\e707"; }
+
+.icon-qq:before { content: "\e708"; }
+
+.icon-pop:before { content: "\e709"; }
+
+.icon-map:before { content: "\e70a"; }
+
+.icon-sina:before { content: "\e70b"; }
+
+.icon-structure:before { content: "\e70c"; }
+
+.icon-search:before { content: "\e70d"; }
+
+.icon-true:before { content: "\e70e"; }
+
+.icon-sun:before { content: "\e70f"; }
+
+.icon-user:before { content: "\e710"; }
+
+.icon-true-block:before { content: "\e711"; }
+
+.icon-warn:before { content: "\e712"; }
+
+.icon-wechat:before { content: "\e713"; }
+
