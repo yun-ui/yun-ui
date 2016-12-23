@@ -1,19 +1,43 @@
 <template>
-    <div :class="UIName+'-cell-item'" v-else="!multi">
-        <div :class="UIName+'-cell-icon-left'" v-if="iconLeft || $slots.iconLeft">
-            <slot name="iconLeft"></slot>
+    <div>
+
+        <!--input-->
+        <div :class="[UIName+'-cell-item', UIName+'-input-item']" v-if="input || $slots.input">
+            <label :class="UIName + '-input-label'" v-text="label"></label>
+            <div :class="[UIName + '-input-control']"><input type="text" placeholder="placeholder"/></div>
         </div>
-        <div :class="[UIName+'-cell-title', UIName+'-ellipse']" v-if="title || $slots.title">
-            <span v-text="title"></span>
+
+        <!--textarea-->
+        <div :class="[UIName+'-cell-item', UIName+'-input-item', UIName+'-textarea-item']" v-if="textarea || $slots.textarea">
+            <!--<label :class="UIName + '-input-label'" v-text="label"></label>-->
+            <div :class="[UIName + '-input-control']">
+                <textarea :placeholder="label"></textarea>
+                <div :class="[UIName + '-textarea-count']">7/200</div>
+            </div>
         </div>
-        <div :class="UIName+'-cell-secondary-text'" v-if="secondaryText || $slots.secondaryText">
-            <span v-text="secondaryText"></span>
+
+        <!--counter-->
+        <div :class="[UIName+'-cell-item', UIName+'-counter-item']" v-if="counter || $slots.counter">
+            <div :class="UIName + '-cell-title'" v-text="title"></div>
+            <slot name="counter"></slot>
         </div>
-        <div :class="[UIName+'-cell-icon-right']" v-if="iconRight || $slots.iconRight">
-            <slot name="iconRight"></slot>
+
+        <!--switch-->
+        <div :class="[UIName+'-cell-item', UIName+'-switch-item']"  v-if="Switch || $slots.Switch">
+            <div :class="UIName + '-cell-title'" v-text="title"></div>
+            <slot name="Switch"></slot>
         </div>
-        <div :class="UIName+'-cell-link'" v-if="link">
-            <span class="iconfont icon-arrow-right"></span>
+
+        <!--checkbox-->
+        <div :class="[UIName+'-cell-item', UIName+'-checkbox-item']"  v-if="checkbox || $slots.checkbox">
+            <slot name="checkbox"></slot>
+            <div :class="UIName + '-cell-title'" v-text="title"></div>
+        </div>
+
+        <!--radio-->
+        <div :class="[UIName+'-cell-item', UIName+'-checkbox-item']"  v-if="radio || $slots.radio">
+            <input type="radio"/>
+            <div :class="UIName + '-cell-title'" v-text="title"></div>
         </div>
     </div>
 </template>
@@ -24,7 +48,14 @@
         name: 'yun-cell-item',
         mixins: [UIName],
         props: {
-
+            right: Boolean,
+            label: String,
+            title: String,
+            Switch: Boolean,
+            counter: Boolean,
+            checkbox: Boolean,
+            input: Boolean,
+            textarea: Boolean
         },
         methods: {}
     }

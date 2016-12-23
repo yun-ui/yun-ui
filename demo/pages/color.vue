@@ -1,5 +1,5 @@
 <template>
-    <div class="yun-bg-white color-page">
+    <div class="yun-bg-white page-full">
         <div class="title">
             <h3>颜色 Color</h3>
             <p>YunUI 提供云之家官方使用的一系列颜色，用于轻应用主题色，以及第三方开发使用。</p>
@@ -45,9 +45,6 @@
 </script>
 
 <style lang="less">
-    .color-page{
-        min-height: 100%;
-    }
     .theme-blcok-color{
         width:2.4rem;
         height:0.88rem;

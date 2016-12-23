@@ -1,14 +1,14 @@
 <template>
-    <div :class="UIName+'-switch'">
-        <input :class="UIName+'-switch-checkbox'" type="checkbox" />
-        <div :class="[UIName+'-switch-inner']"></div>
+    <div :class="UIName+'-checkbox'">
+        <input :class="UIName+'-checkbox-input'" type="checkbox" />
+        <div :class="[UIName+'-checkbox-inner']"></div>
     </div>
 </template>
 
 <script>
     import {UIName} from '../../../src/mixins/'
     export default {
-        name: 'yun-switch',
+        name: 'yun-checkbox',
         mixins: [UIName],
         props: {
         },
@@ -19,5 +19,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/switch";
+    @import "../../style/stylesheets/checkbox";
 </style>

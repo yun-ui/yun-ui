@@ -6,60 +6,75 @@
   &-cell-container {
     background-color: #ffffff;
   }
-  &-cell-item{
-    &:after{
+  &-cell-item {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    &:after {
       content: '';
       display: block;
       position: absolute;
-      right:0;
-      bottom:0;
-      left:@itemSingleLinePadding;
+      right: 0;
+      bottom: 0;
+      left: @cellPadding;
       border-bottom: 1px solid #dce1e8;
       transform: scaleY(.5);
       -webkit-transform: scaleY(.5);
     }
   }
 
-  &-cell-item-single{
-    position: relative;
-    padding:@itemSingleLinePadding - 0.02 @itemSingleLinePadding;
-    line-height: @itemSingleLineLineHeight;
-    display: flex;
-    display: -webkit-box;
-    &:active{
-      background-color: @cellActiveBG;
-    }
-    .@{uiName}-cell-title{
+  // -*-item
+  &-input-item,
+  &-counter-item,
+  &-checkbox-item,
+  &-switch-item {
+    padding:0 @cellPadding;
+    height:0.88rem;
+  }
+  &-textarea-item {
+    padding:0 @cellPadding;
+    height:auto;
+  }
+  &-input-label,
+  &-cell-title {
+    font-size: @cellLabelFontSize;
+    padding-right: @cellPadding;
+  }
+
+  &-input-control {
+    -webkit-flex: 1;
+    flex: 1;
+    >input,>textarea{
       display: block;
-      width:0;
-      flex: 1;
-      -webkit-box-flex: 1;
+      width: 100%;
+      border:none;
+    }
+    >textarea{
+      margin:@cellPadding 0;
+      height:2.8rem;
+      resize: none;
     }
   }
-
-
-  &-cell-icon-left,
-  &-cell-icon-right{
-    width: @itemSingleLineIconSize;
-    height: @itemSingleLineIconSize;
-    margin-right: @blank;
+  &-textarea-count{
+    color: @warnColor;
+    padding-bottom: @cellPadding;
+    text-align: right;
+  }
+  &-cell-title{
+    -webkit-flex: 1;
+    flex: 1;
   }
 
-  &-cell-icon-right{
-    position: relative;
-    margin:0 0 0 @blank*2;
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      height: @itemSingleLineIconSize;
-      top: 50%;
-      margin-top:-(@itemSingleLineIconSize/2);
-      left:-@blank;
-      border-left: 1px solid #dce1e8;
-      vertical-align: middle;
-      transform: scaleX(.5);
-      -webkit-transform: scaleX(.5);
-    }
+  &-checkbox-item:after{
+    left:@cellPadding + 0.68;
   }
+
 }

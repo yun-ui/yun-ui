@@ -1,5 +1,5 @@
 <template>
-    <div class="badge-page yun-bg-white">
+    <div class="page-full yun-bg-white">
         <div class="title">
             <h3>徽章 Badge</h3>
             <p>YunUI 提供一套简介的统一标记样式，用于标注状态，提醒。
@@ -80,9 +80,3 @@
     }
 
 </script>
-
-<style lang="less">
-    .badge-page{
-        min-height: 100%;
-    }
-</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="yun-bg-white">
+    <div class="page-full yun-bg-white">
         <div class="title">
             <h3>辅助类 Utility</h3>
             <p>YunUI 提供了一系列辅助类，这些辅助类直接作用在HTML元素上，

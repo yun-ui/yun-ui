@@ -13,6 +13,8 @@ import loading from '../packages/loading'
 import Switch from '../packages/switch'
 import badge from '../packages/badge'
 import search from '../packages/search'
+import counter from '../packages/counter'
+import checkbox from '../packages/checkbox'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -31,6 +33,8 @@ const install = function (Vue) {
     Vue.component(Switch.name, Switch)
     Vue.component(badge.name, badge)
     Vue.component(search.name, search)
+    Vue.component(counter.name, counter)
+    Vue.component(checkbox.name, checkbox)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -53,5 +57,7 @@ module.exports = {
     loading,
     Switch,
     badge,
-    search
+    search,
+    counter,
+    checkbox
 }
