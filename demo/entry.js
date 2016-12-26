@@ -10,10 +10,12 @@ console.log('demo entry load!')
 Vue.use(Yun)
 
 Vue.use(VueRouter)
-console.log(routes)
+
 const router = new VueRouter({
     routes: routes.route
 })
+
+window._router = router
 
 const app = new Vue({ // eslint-disable-line
     router
