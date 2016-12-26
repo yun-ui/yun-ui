@@ -36,4 +36,6 @@ route.route.push({
     component: require('./App.vue')
 })
 
+window._route = route
+
 export default route
