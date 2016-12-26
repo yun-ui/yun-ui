@@ -1,0 +1,60 @@
+@import "var";
+
+/* search */
+.@{uiName} {
+  &-search{
+
+  }
+  &-searchbar{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  &-input-wrap {
+    position: relative;
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    padding: @searchBarPadding - 0.1 @searchBarPadding;
+    height: @searchBarHeight;
+    line-height: @searchBarHeight;
+  }
+  &-search-icon {
+    position: absolute;
+    top:0;
+    left: @searchBarPadding*2;
+    color: @tipsFontColor;
+  }
+  &-search-reset {
+    position: absolute;
+    top:0;
+    right:@searchBarPadding*2;
+    color: @secondaryFontColor;
+  }
+  &-input-ph {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    text-align: center;
+    color: @tipsFontColor;
+  }
+  &-search-input{
+    display: block;
+    padding:0 @searchBarPadding 0 @searchBarPadding*3;
+    width:100%;
+    height:100%;
+    border:none;
+    border-radius: @searchBarHeight/2;
+    color: @tipsFontColor;
+    background: #F0F4F7;
+  }
+  &-search-cancel{
+    font-size: @searchCancelFontSize;
+    padding-right: @searchBarPadding;
+  }
+}

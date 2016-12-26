@@ -7,26 +7,43 @@
 ### 例子
 
 默认按钮
-``` bash
+
+``` javascript
 <yun-button type="normal">normal</yun-button>
 ```
+
 线性按钮
-``` bash
+
+``` javascript
 <yun-button type="inverse">inverse</yun-button>
 ```
+
 改变大小
-``` bash
+
+``` javascript
 <yun-button size="large">large</yun-button>
 <yun-button size="middle">middle</yun-button>
 <yun-button size="small">small</yun-button>
 ```
+
 禁用按钮
-``` bash
+
+``` javascript
 <yun-button disabled>disabled</yun-button>
 ```
+
 API
+
+<<<<<<< Updated upstream
 | 参数        | 描述        | 类型        | 可选值       | 默认值       |
 | ----       | ----       | ----       | ----       | ----       |
 | type   | 按钮形态 | String  | normal，inverse | normal |
 | size       | 尺寸   | String   | large,middle,small | large |
 | disabled       | 禁用状态 |  Boolean  | | false |
+=======
+|    参数    |    描述    |    类型    |       可选值    |      默认值   |
+|   ----    |   ----     |   ----    |      ----      |     ----     |
+|    type   |   按钮形态   |  String  | normal，inverse |    normal    |
+|   size    |    尺寸    |   String  |large,middle,small|   large  |
+| disabled  |   禁用状态  |   Boolean |                |     false    |
+>>>>>>> Stashed changes

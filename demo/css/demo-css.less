@@ -17,6 +17,10 @@ body {
   -ms-transform-origin:50% 50%;
   -ms-transform:translate(-50% ,-50%);
 }
+// page full
+.page-full{
+  min-height: 100%;
+}
 
 /* 作为demo预览页文字排版布局样式 */
 .banner {
@@ -37,6 +41,10 @@ body {
   padding: 0 0.24rem;
   .row {
     padding: 0.16rem 0 0.36rem;
+    &.clearContentPadding{
+      margin-left:-0.24rem;
+      margin-right:-0.24rem;
+    }
   }
   p {
     margin-top: 0.2rem;
@@ -79,8 +87,8 @@ body {
   ul li {
     text-align: center;
     display: inline-block;
-    width: 0.88rem;
-    height: 0.88rem;
+    width: 0.8rem;
+    height: 0.8rem;
     line-height: 0.88rem;
     border-radius: 0.08rem;
     margin:0 0.1rem 0.1rem 0;

@@ -8,24 +8,29 @@ export default [
         'list': [
             {
                 'path': '/color',
-                'name': 'Color'
+                'name': 'Color',
+                'secondary': '颜色 '
             },
             {
                 'path': '/layout',
-                'name': 'Layout'
+                'name': 'Layout',
+                'secondary': '布局 '
             },
             {
                 'path': '/utility',
-                'name': 'Utility'
+                'name': 'Utility',
+                'secondary': '辅助类 '
             },
             {
                 'path': '/typography',
-                'name': 'Typography'
+                'name': 'Typography',
+                'secondary': '文字排版 '
             },
             // 外层path要写成/pathName形式，它的children子路由要只写名称，要保证url路径名，文件资源名与path名称三者统一
             {
                 'path': '/statePage',
                 'name': 'StatePage',
+                'secondary': '状态页 ',
                 'children': [
                     {
                         'path': 'index',
@@ -68,19 +73,33 @@ export default [
         'list': [
             {
                 'path': '/navbar',
-                'name': 'Navbar'
+                'name': 'Navbar',
+                'secondary': '顶部导航 '
             },
             {
                 'path': '/tabbar',
-                'name': 'Tabbar'
+                'name': 'Tabbar',
+                'secondary': '底部导航 '
             },
             {
                 'path': '/button',
-                'name': 'Button'
+                'name': 'Button',
+                'secondary': '按钮 '
             },
             {
                 'path': '/buttonGroup',
-                'name': 'ButtonGroup'
+                'name': 'ButtonGroup',
+                'secondary': '按钮组 '
+            },
+            {
+                'path': '/list',
+                'name': 'List',
+                'secondary': '列表 '
+            },
+            {
+                'path': '/badge',
+                'name': 'Badge',
+                'secondary': '徽章 '
             }
         ]
     },
@@ -92,8 +111,24 @@ export default [
         },
         'list': [
             {
-                'path': '/cell',
-                'name': 'Cell'
+                'path': '/loading',
+                'name': 'Loading',
+                'secondary': '加载 '
+            },
+            {
+                'path': '/toast',
+                'name': 'Toast',
+                'secondary': '提示 '
+            },
+            {
+                'path': '/popup',
+                'name': 'Popup',
+                'secondary': '弹窗 '
+            },
+            {
+                'path': '/search',
+                'name': 'Search',
+                'secondary': '搜索 '
             }
         ]
     },
@@ -103,6 +138,12 @@ export default [
             'secondary': 'Form Component',
             'icon': require('./assets/form.png')
         },
-        'list': []
+        'list': [
+            {
+                'path': '/input',
+                'name': 'Input',
+                'secondary': '输入框 '
+            }
+        ]
     }
 ]

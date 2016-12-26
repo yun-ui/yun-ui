@@ -1,0 +1,120 @@
+@import "var";
+
+/* list */
+.@{uiName} {
+
+  &-list-container {
+    background-color: #ffffff;
+  }
+  &-list-item-single,
+  &-list-item-multi{
+    background-color: #ffffff;
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right:0;
+      bottom:0;
+      left:@itemSingleLinePadding;
+      border-bottom: 1px solid #dce1e8;
+      transform: scaleY(.5);
+      -webkit-transform: scaleY(.5);
+    }
+  }
+
+  &-list-item-single{
+    position: relative;
+    padding:@itemSingleLinePadding - 0.02 @itemSingleLinePadding;
+    line-height: @itemSingleLineLineHeight;
+    display: flex;
+    display: -webkit-box;
+    &:active{
+      background-color: @listActiveBG;
+    }
+    .@{uiName}-list-title{
+      display: block;
+      width:0;
+      flex: 1;
+      -webkit-box-flex: 1;
+    }
+  }
+
+
+  &-list-icon-left,
+  &-list-icon-right{
+    width: @itemSingleLineIconSize;
+    height: @itemSingleLineIconSize;
+    margin-right: @blank;
+  }
+
+  &-list-icon-right{
+    position: relative;
+    margin:0 0 0 @blank*2;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      height: @itemSingleLineIconSize;
+      top: 50%;
+      margin-top:-(@itemSingleLineIconSize/2);
+      left:-@blank;
+      border-left: 1px solid #dce1e8;
+      vertical-align: middle;
+      transform: scaleX(.5);
+      -webkit-transform: scaleX(.5);
+    }
+  }
+
+  &-list-title{
+    font-size: @listTileFontSize;
+  }
+  &-list-secondary-text {
+    color: @secondaryFontColor;
+  }
+  &-list-link{
+    width:@list-link-width;
+    color: @secondaryFontColor;
+    text-align: right;
+    display: flex;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+  }
+
+  &-list-item-multi{
+    position: relative;
+    padding:@itemSingleLinePadding - 0.02 @itemSingleLinePadding;
+    display: flex;
+    display: -webkit-box;
+    &:active{
+      background-color: @cellActiveBG;
+    }
+    .@{uiName}-list-secondary-text{
+      margin-top:0.08rem;
+    }
+    .is-avatar{
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+  &-list-img{
+    width:@itemMultiImgSize;
+    height:@itemMultiImgSize;
+    margin-right:@blank;
+  }
+  &-list-icon{
+    width:@itemMultiIconSize;
+    height:@itemMultiIconSize;
+    margin-top:(@itemMultiImgSize - @itemMultiIconSize)/2;
+    margin-right:@blank;
+  }
+  &-list-content{
+    display: block;
+    width:0;
+    flex: 1;
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+  }
+}

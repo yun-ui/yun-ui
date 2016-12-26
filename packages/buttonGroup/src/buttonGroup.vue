@@ -8,7 +8,9 @@
 </template>
 
 <script>
+    // TODO 按钮的active状态
     import {UIName} from '../../../src/mixins/'
+
     export default {
         name: 'yun-button-group',
         mixins: [UIName],
@@ -17,10 +19,8 @@
         },
         methods: {}
     }
-
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
     @import "../../style/stylesheets/buttonGroup";
 </style>
