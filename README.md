@@ -1,5 +1,5 @@
 # [YunUI](https://yun-ui.github.io/yun-ui-doc/)
-[![npm package](https://img.shields.io/npm/v/YunUI.svg?style=flat-square)](https://www.npmjs.org/package/YunUI)
+[![npm package](https://img.shields.io/npm/v/yun-ui.svg?style=flat-square)](https://www.npmjs.org/package/yun-ui)
 [![Build Status](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)
 [![Dependencies](https://img.shields.io/david/yun-ui/yun-ui.svg?style=flat-square)](https://david-dm.org/yun-ui/yun-ui)
 
@@ -51,7 +51,7 @@ yun-ui/						##根目录
 推荐使用npm的方式安装，它能更好地与Webpack等构建工具结合使用。
 
 ``` bash
-npm install YunUI
+npm install yun-ui
 ```
 
 **CDN** *(TODO)*
