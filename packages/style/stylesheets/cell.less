@@ -32,17 +32,11 @@
   }
 
   // -*-item
-  &-input-item,
-  &-counter-item,
-  &-checkbox-item,
-  &-radio-item,
-  &-imagePicker-item,
-  &-switch-item {
+  &-cell-item {
     padding:0 @cellPadding;
     height:0.88rem;
   }
   &-textarea-item {
-    padding:0 @cellPadding;
     height:auto;
   }
   &-input-label,
@@ -117,7 +111,8 @@
     color: @secondaryFontColor;
   }
   //imagePicker
-  &-imagePicker-item{
+  &-imagePicker-item,
+  &-filePicker-item{
     &:after{
       display: none;
     }
@@ -175,5 +170,52 @@
     .icon-warn{
       color: @warnFontColor;
     }
+  }
+
+  //filePicker
+  &-file-container{
+    padding:0 @cellPadding @cellPadding;
+  }
+  &-file-content{
+    color: @secondaryFontColor;
+    padding:0.1rem 0.4rem 0.1rem @cellPadding + 0.6;
+  }
+  &-file-item{
+    position: relative;
+    height:0.88rem;
+    border:1px solid @borderColor;
+    margin-top: 0.16rem;
+    background: rgba(241, 244, 248, 0.3);
+  }
+  &-file-icon{
+    position: absolute;
+    width:0.6rem;
+    height:0.6rem;
+    top:0.1rem;
+    left:0.1rem;
+  }
+  &-file-delete{
+    position: absolute;
+    height:100%;
+    line-height: 0.88rem;
+    right:0;
+    top:0;
+    padding-right:0.2rem;
+    text-align: right;
+    .icon-close{
+      color: @secondaryFontColor;
+    }
+  }
+  &-file-error,
+  &-file-size,
+  &-upload-time{
+    font-size: 0.2rem;
+  }
+  &-file-error{
+    color: @warnColor;
+  }
+  &-upload-time{
+    padding:0 @cellPadding @cellPadding;
+    color: @secondaryFontColor;
   }
 }

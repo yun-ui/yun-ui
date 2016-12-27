@@ -1,16 +1,17 @@
 <template>
     <div>
-
+        <!--TODO 表单组件拆分-->
         <!--input-->
         <div :class="[UIName+'-cell-item', UIName+'-input-item']" v-if="input || $slots.input">
             <label :class="UIName + '-input-label'">
-                <span  v-text="label"></span>
+                <span v-text="label"></span>
             </label>
             <div :class="[UIName + '-input-control']"><input type="text" placeholder="placeholder"/></div>
         </div>
 
         <!--textarea-->
-        <div :class="[UIName+'-cell-item', UIName+'-input-item', UIName+'-textarea-item']" v-if="textarea || $slots.textarea">
+        <div :class="[UIName+'-cell-item', UIName+'-input-item', UIName+'-textarea-item']"
+             v-if="textarea || $slots.textarea">
             <div :class="[UIName + '-input-control']">
                 <textarea :placeholder="label"></textarea>
                 <div :class="[UIName + '-textarea-count']">7/200</div>
@@ -26,7 +27,7 @@
         </div>
 
         <!--switch-->
-        <div :class="[UIName+'-cell-item', UIName+'-switch-item']"  v-if="Switch || $slots.Switch">
+        <div :class="[UIName+'-cell-item', UIName+'-switch-item']" v-if="Switch || $slots.Switch">
             <div :class="UIName + '-cell-title'">
                 <span v-text="title"></span>
             </div>
@@ -34,7 +35,7 @@
         </div>
 
         <!--checkbox-->
-        <div :class="[UIName+'-cell-item', UIName+'-checkbox-item']"  v-if="checkbox || $slots.checkbox">
+        <div :class="[UIName+'-cell-item', UIName+'-checkbox-item']" v-if="checkbox || $slots.checkbox">
             <slot name="checkbox"></slot>
             <div :class="UIName + '-cell-title'">
                 <span v-text="title"></span>
@@ -42,7 +43,7 @@
         </div>
 
         <!--radio-->
-        <div :class="[UIName+'-cell-item', UIName+'-radio-item']"  v-if="radio || $slots.radio">
+        <div :class="[UIName+'-cell-item', UIName+'-radio-item']" v-if="radio || $slots.radio">
             <div :class="UIName + '-cell-title'">
                 <span v-text="title"></span>
             </div>
@@ -55,7 +56,7 @@
         </div>
 
         <!--imagePicker-->
-        <div  v-if="imagePicker || $slots.imagePicker">
+        <div v-if="imagePicker || $slots.imagePicker">
             <div :class="[UIName+'-cell-item', UIName+'-imagePicker-item']">
                 <div :class="UIName + '-cell-title'">
                     <span v-text="title"></span>
@@ -72,12 +73,46 @@
                         <slot name="image"></slot>
                     </div>
                     <div :class="UIName+'-image-upload-progress'">
+                        <!--TODO 图片上传过程交互-->
                         <span>50%</span>
                         <i class="iconfont icon-warn"></i>
                     </div>
                     <span :class="[UIName+'-delete-image', 'iconfont', 'icon-close-line']"></span>
                 </div>
             </div>
+        </div>
+
+        <!--filePicker-->
+        <div v-if="filePicker || $slots.filePicker">
+            <div :class="[UIName+'-cell-item', UIName+'-filePicker-item']">
+                <div :class="UIName + '-cell-title'">
+                    <span v-text="title"></span>
+                    <small :class="UIName+ '-cell-secondary'" v-text="secondary"></small>
+                </div>
+                <div :class="UIName+'-icon-container'">
+                    <i class="iconfont icon-add-field"></i>
+                </div>
+            </div>
+            <!--TODO repeat文件-->
+            <div :class="UIName+'-file-container'">
+                <div :class="UIName+'-file-item'">
+                    <!--TODO 文件对应展示图标-->
+                    <div :class="UIName+'-file-icon'">
+                        <slot name="fileIcon"></slot>
+                    </div>
+                    <!--TODO 文件信息状态，上传交互-->
+                    <div :class="UIName+'-file-content'">
+                        <div :class="UIName+'-file-name'" v-text="fileName"></div>
+                        <span :class="UIName+'-file-error'" v-text="errorInfo"></span>
+                        <small :class="UIName+'-file-size'" v-text="fileSize"></small>
+                    </div>
+                    <!--TODO 删除当前文件-->
+                    <div :class="UIName+'-file-delete'">
+                        <span class="iconfont icon-close"></span>
+                    </div>
+                </div>
+            </div>
+            <div :class="UIName+'-upload-time'" v-text="uploadTime"></div>
         </div>
     </div>
 </template>
@@ -99,7 +134,13 @@
             textarea: Boolean,
             radio: Boolean,
             imagePicker: Boolean,
-            image: String
+            image: String,
+            filePicker: Boolean,
+            fileIcon: String,
+            errorInfo: String,
+            fileSize: String,
+            fileName: String,
+            uploadTime: String
         },
         methods: {}
     }
