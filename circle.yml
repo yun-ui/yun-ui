@@ -28,3 +28,8 @@ deployment:
     branch: develop
     commands:
       - bash build/deploy-ghpages.sh dist/demo
+  
+  production:
+    branch: master
+    commands:
+      - bash build/npm-delpoy.sh
