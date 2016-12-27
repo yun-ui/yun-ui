@@ -15,6 +15,7 @@ import yunBadge from './badge'
 import yunSearch from './search'
 import yunCounter from './counter'
 import yunCheckbox from './checkbox'
+import yunPopMenu from './popMenu'
 
 const Components = {
     yunButton,
@@ -33,7 +34,8 @@ const Components = {
     yunBadge,
     yunSearch,
     yunCounter,
-    yunCheckbox
+    yunCheckbox,
+    yunPopMenu
 }
 
 module.exports = Components

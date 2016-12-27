@@ -1,34 +1,67 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
+        <!--<yun-pop-menu popMenuTitle="分享到" menuItemName="微信" style="display:none">-->
+            <!--<img src="../src/assets/placeholder-figure.png" slot="menuItemImage"/>-->
+        <!--</yun-pop-menu>-->
         <!--switch--start-->
         <yun-switch></yun-switch>
         <yun-counter></yun-counter>
         <yun-checkbox></yun-checkbox>
         <!--switch--end-->
         <!--cell--start-->
-        <yun-cell-container>
-            <yun-cell-item input label="单行输入框"></yun-cell-item>
-            <yun-cell-item textarea label="多行输入框"></yun-cell-item>
+        <div class="group">
+            <yun-cell-container>
+                <yun-cell-item filePicker title="选择附件" secondary="已选择2个" fileName="文件名称"
+                               errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
+                    <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
+                </yun-cell-item>
+            </yun-cell-container>
+        </div>
+        <div class="group">
+            <yun-cell-container>
+                <yun-cell-item imagePicker title="照片选择器" secondary="已选择5张">
+                    <img src="../src/assets/placeholder-figure.png" slot="image">
+                </yun-cell-item>
+            </yun-cell-container>
+        </div>
+        <div class="group">
+            <yun-cell-container>
+                <yun-cell-item radio title="单选框 radio">
+                </yun-cell-item>
+                <yun-cell-item radio title="单选框 radio">
+                </yun-cell-item>
+                <yun-cell-item  radio title="单选框 radio">
+                </yun-cell-item>
+            </yun-cell-container>
+        </div>
+        <div class="group">
+            <yun-cell-container>
+                <yun-cell-item title="复选框checkbox">
+                    <yun-checkbox slot="checkbox"></yun-checkbox>
+                </yun-cell-item>
+                <yun-cell-item title="复选框checkbox">
+                    <yun-checkbox slot="checkbox"></yun-checkbox>
+                </yun-cell-item>
+                <yun-cell-item title="复选框checkbox">
+                    <yun-checkbox slot="checkbox"></yun-checkbox>
+                </yun-cell-item>
+            </yun-cell-container>
+        </div>
+        <div class="group">
+            <yun-cell-container>
+                <yun-cell-item input label="单行输入框"></yun-cell-item>
+                <yun-cell-item textarea label="多行输入框"></yun-cell-item>
 
-            <yun-cell-item title="计数器">
-                <yun-counter slot="counter"></yun-counter>
-            </yun-cell-item>
+                <yun-cell-item title="计数器">
+                    <yun-counter slot="counter"></yun-counter>
+                </yun-cell-item>
 
-            <yun-cell-item title="开关列表">
-                <yun-Switch slot="Switch"></yun-Switch>
-            </yun-cell-item>
-
-            <yun-cell-item title="复选框checkbox">
-                <yun-checkbox slot="checkbox"></yun-checkbox>
-            </yun-cell-item>
-            <yun-cell-item title="复选框checkbox">
-                <yun-checkbox slot="checkbox"></yun-checkbox>
-            </yun-cell-item>
-            <yun-cell-item title="复选框checkbox">
-                <yun-checkbox slot="checkbox"></yun-checkbox>
-            </yun-cell-item>
-        </yun-cell-container>
+                <yun-cell-item title="开关列表">
+                    <yun-Switch slot="Switch"></yun-Switch>
+                </yun-cell-item>
+            </yun-cell-container>
+        </div>
         <!--cell--end-->
 
         <!--search--starat-->
@@ -267,7 +300,8 @@
             yunBadge,
             yunSearch,
             yunCounter,
-            yunCheckbox
+            yunCheckbox,
+            yunPopMenu
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
@@ -319,7 +353,8 @@
             yunBadge,
             yunSearch,
             yunCounter,
-            yunCheckbox
+            yunCheckbox,
+            yunPopMenu
         }
     }
 
@@ -329,6 +364,9 @@
     @import "../packages/style/stylesheets/base";
     body {
         background-color: #f2f2f2 !important;
+    }
+    .group{
+        margin-top:0.16rem;
     }
 
 </style>
