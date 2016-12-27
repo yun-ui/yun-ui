@@ -20,7 +20,7 @@ const app = new Vue({ // eslint-disable-line
 }).$mount('#app')
 
 window.addEventListener('message', function (e) {
-    if (e.source !== window.parent) {
+    if (e.source !== window.parent || !e.data.redirectName) {
         return
     }
     router.push({path: `/${e.data.redirectName}`})
