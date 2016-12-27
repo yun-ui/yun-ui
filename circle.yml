@@ -32,4 +32,4 @@ deployment:
   production:
     branch: master
     commands:
-      - bash build/npm-delpoy.sh
+      - bash build/npm-deploy.sh
