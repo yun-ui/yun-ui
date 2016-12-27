@@ -15,8 +15,13 @@ const router = new VueRouter({
     routes: routes.route
 })
 
-window._router = router
-
 const app = new Vue({ // eslint-disable-line
     router
 }).$mount('#app')
+
+window.addEventListener('message', function (e) {
+    if (e.source !== window.parent) {
+        return
+    }
+    router.push({path: `/${e.data.redirectName}`})
+}, false)
