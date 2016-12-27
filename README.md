@@ -1,5 +1,8 @@
-# YunUI <a href="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg"><img src="https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg" alt="Build Status"></a>
-## 版本：v1.0 时间：2016-11-18
+# [YunUI](https://yun-ui.github.io/yun-ui-doc/)
+[![npm package](https://img.shields.io/npm/v/YunUI.svg?style=flat-square)](https://www.npmjs.org/package/YunUI)
+[![Build Status](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)
+[![Dependencies](https://img.shields.io/david/yun-ui/yun-ui.svg?style=flat-square)](https://david-dm.org/yun-ui/yun-ui)
+
 
 ## Overview
 
@@ -14,7 +17,7 @@
 
 ### 文件目录结构
 ``` bash
-CloudHubUI/						##根目录
+yun-ui/						##根目录
 	build/						##webpack构建配置目录
 	config/						##环境配置文件目录
 	demo/						##demo源文件
@@ -43,7 +46,7 @@ CloudHubUI/						##根目录
 
 #### I.	Install
 
-**npm安装** *(TODO)*
+**npm安装**
 
 推荐使用npm的方式安装，它能更好地与Webpack等构建工具结合使用。
 
@@ -118,33 +121,29 @@ npm install YunUI --save
 
 ```
 
-### 增加组件
+### 贡献组件
 
 **I.	开发**
 
 目前在`package.json`中声明了多个脚本模式，可以通过`npm run xxx`的方式进行运行，各个命令启动服务如下：
 
 ``` bash
-dev:demo:
-启动demo的本地开发模式，监听http://localhost:8090/
-dev:
-启动组件库的本地开发模式，监听http://localhost:8080/
-build:
-编译打包组件库，输出文件目录为：dist/yun/
-build:demo:
-编译打包demo页面，可发布并通过http(s)访问，输入文件目录：dist/demo/
-lint:
-执行eslint检查
-publish:
+npm run dev:demo
+启动demo的本地开发模式
+npm run dev
+启动组件库的本地开发模式
+npm publish
 发布更改到npm
-unit:TODO
-e2e:TODO
-test:TODO
 ```
 
 **II. 测试**
 
-*TODO*
+```bash
+npm run unit
+执行单元测试
+npm test
+执行所有测试
+```
 
 **III. 构建**
 
