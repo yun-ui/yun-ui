@@ -2,14 +2,17 @@
 
 全局展示一个提示框，置于所有元素之上。
 
-## 何时使用
+### 何时使用
 
 可用于异步请求时，或在用户操作后等待下一步操作时的提示.
 
-## 使用方法
+### 使用方法
 ``` javascript
 <template>
     <yun-loading content="加载中...">
+        <img src="../assets/loading.png" slot="icon"/>
+    </yun-loading>
+    <yun-loading content="加载中..." refresh>
         <img src="../assets/loading.png" slot="icon"/>
     </yun-loading>
 </template>
@@ -30,6 +33,12 @@ export default {
 
 | 参数        | 描述        | 类型        | 可选值     | 默认值      |
 | ----       | ----       | ----        | ----       | ----      |
-| icon       | 定位       |  Boolean   |            | false      |
-| refresh    | 定位       |  Boolean   |            | false      |
-| content    | 定位       |  Boolean   |            | false      |
+| icon       | 图标       |  String   |            |       |
+| content    | 提示内容       |  String   |            |       |
+| refresh    | 刷新类型标记       |  Boolean   |            | false      |
+
+### Slot
+
+|   参数  |   描述  |
+|   ----    |   ----    |
+|   icon        |   【双行列表】左边小图标 |

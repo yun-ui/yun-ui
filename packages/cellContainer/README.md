@@ -1,18 +1,21 @@
 # CellContainer
 
-通用列表项组件容器。
+通用表单项组件容器。
 
-## 何时使用
+### 何时使用
 
-最基本的列表项组件的容器，可用于包含文字、图标、图片、文本段等，用于列表区域。
+最基本的表单项组件的容器，可用于包含表单项组件，比如：单选框组件（radio）、
+复选框组件（checkbox）、文本输入组件（input | textarea）等。
 
-## 使用方法
+> 注：仅作为语义化组件用，没有API
+
+### 使用方法
 
 ``` javascript
 <template>
     <yun-cell-container>
-        <p>Cell Content 1</p>
-        <p>Cell Content 2</p>
+        <p>Cell item 1</p>
+        <p>Cell item 2</p>
     </yun-cell-container>
 </template>
 <script>
@@ -27,5 +30,3 @@ export default {
 </script>
 
 ```
-
-结合Cell Item组件创建更丰富的列表，详细参见Cell Item组件用法。

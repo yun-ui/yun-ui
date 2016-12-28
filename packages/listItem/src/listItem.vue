@@ -44,15 +44,15 @@
         name: 'yun-list-item',
         mixins: [UIName],
         props: {
-            icon: String,
-            iconLeft: String,
-            iconRight: String,
             title: String,
             secondaryText: String,
             link: Boolean,
             multi: Boolean,
+            avatar: Boolean,
+            iconLeft: String,
+            iconRight: String,
             img: String,
-            avatar: Boolean
+            icon: String
         },
         methods: {}
     }
