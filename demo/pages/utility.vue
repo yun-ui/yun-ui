@@ -1,14 +1,14 @@
 <template>
     <div class="page-full yun-bg-white">
         <div class="title">
-            <h3>辅助类 Utility</h3>
+            <h3 class="yun-h3">辅助类 Utility</h3>
             <p>YunUI 提供了一系列辅助类，这些辅助类直接作用在HTML元素上，
                 可以快速帮助你完善一些排版细节。</p>
             <p>这些辅助类主要分为：<strong>图标、快速背景色、文本缺省、情景文字、快速定位、
                 割线、1px边框等。</strong></p>
         </div>
         <div class="content utility">
-            <h4>图标库 Icon</h4>
+            <h4 class="yun-h4">图标库 Icon</h4>
             <div class="row icon-container">
                 <ul>
                     <li>
@@ -127,7 +127,7 @@
                     </li>
                 </ul>
             </div>
-            <h4>快速背景色 Quick Background Color</h4>
+            <h4 class="yun-h4">快速背景色 Quick Background Color</h4>
             <div class="row">
                 <ul>
                     <li class="yun-bg-blue"></li>
@@ -142,10 +142,10 @@
                     <li class="yun-bg-green"></li>
                     <li class="yun-bg-brown"></li>
                     <li class="yun-bg-grey"></li>
-                    <li class="yun-bg-white"></li>
+                    <li class="yun-bg-white yun-border"></li>
                 </ul>
             </div>
-            <h4>情景文字 Contextual Text</h4>
+            <h4 class="yun-h4">情景文字 Contextual Text</h4>
             <div class="row">
                 <div class="panel">
                     <p class="yun-text-default">默认文本</p>
@@ -156,38 +156,39 @@
                     <p class="yun-bg-grey yun-text-white">白色文本</p>
                 </div>
             </div>
-            <h4>文本缺省 Text Ellipsis</h4>
+            <h4 class="yun-h4">文本缺省 Text Ellipsis</h4>
             <div class="row">
                 <div class="panel">
                     <small class="yun-ellipse">单行文本单行文本单行文本单行文本单行文本单行文本单行文本单行文本</small>
                 </div>
                 <div class="panel">
                     <small class="yun-multi-ellipse">双行文本双行文本双行文本双行文本双行文本双行文本双行文本
-                        双行文本双行文本双行文本双行文本双行文本双行文本双行文本双行文本双行文本</small>
+                        双行文本双行文本双行文本双行文本双行文本双行文本双行文本双行文本双行文本
+                    </small>
                 </div>
             </div>
-            <h4>快速定位</h4>
+            <h4 class="yun-h4">快速定位</h4>
             <small class="yun-text-secondary">快速定位提供：左右浮动，定宽的块级元素水平居中等定位方式。</small>
             <div class="row">
                 <div class="panel clearfix">
-                    <div class="left">.left</div>
-                    <div class="right">.right</div>
+                    <div class="yun-left">.left</div>
+                    <div class="yun-right">.right</div>
                 </div>
-                <div class="panel text-center clearfix">
+                <div class="panel yun-text-center clearfix">
                     <div class="block-center" style="width:3rem;">block center</div>
                 </div>
-            <h4>1px 边框</h4>
-            <small class="yun-text-secondary">HTML元素的：上边框、下边框、全边框和割线</small>
+                <h4>1px 边框</h4>
+                <small class="yun-text-secondary">HTML元素的：上边框、下边框、全边框和割线</small>
                 <div class="row border-1px">
-                    <p class="border border-t">上边框</p>
-                    <p class="border border-b">下边框</p>
-                    <p class="border">全边框边框</p>
-                    <p><span class="divided">割线</span><span class="divided">割线</span>
-                        <span class="divided">割线</span><span class="divided">割线</span>
+                    <p class="yun-border yun-border-t">上边框</p>
+                    <p class="yun-border yun-border-b">下边框</p>
+                    <p class="yun-border">全边框边框</p>
+                    <p><span class="yun-divided">割线</span><span class="yun-divided">割线</span>
+                        <span class="yun-divided">割线</span><span class="yun-divided">割线</span>
                     </p>
                 </div>
+            </div>
         </div>
-    </div>
 </template>
 
 <script>

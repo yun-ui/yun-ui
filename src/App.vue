@@ -71,26 +71,25 @@
         <!--search--end-->
         <!--badge--starat-->
         <div>
-            <yun-badge type="text" number="100+" color="#3cbaff"></yun-badge>
-            <yun-badge type="text" number="1"></yun-badge>
+            <yun-badge type="text" value="100+" color="#3cbaff"></yun-badge>
+            <yun-badge type="text" value="1"></yun-badge>
             <yun-badge></yun-badge>
         </div>
         <!--badge--end-->
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <yun-popup title="标题标题标"
+        <yun-popup title="标题标题标" style="display:none"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="input"
-                   :textList="textListArray"
-                   v-if='showPop' :close="close">
+                   :textList="textListArray">
             <img src="../src/assets/popup-cover.png" slot="cover"/>
             <yun-button size="large" type="normal" slot="button">默認按钮</yun-button>
             <yun-button size="large" type="normal" disabled slot="button">默認按钮</yun-button>
             <yun-button-group fixed="fixed" class="border border-t" slot="buttonGroup">
-                <yun-tab-item>取消</yun-tab-item>
-                <yun-tab-item class="active">确认</yun-tab-item>
+                <yun-tab-item title="取消"></yun-tab-item>
+                <yun-tab-item title="确认"class="active"></yun-tab-item>
             </yun-button-group>
 
         </yun-popup>
@@ -98,17 +97,17 @@
 
         <!--Base--start-->
         <div>
-            <h1>Base 基础样式</h1>
+            <h1 class="yun-h1">Base 基础样式</h1>
             <p>基础样式主要分为：文本（字体），颜色，布局</p>
             <h2>文本</h2>
             <h3>文本大小</h3>
             <ul>
-                <li><h1>h1,0.36rem</h1></li>
-                <li><h2>h2,0.34rem</h2></li>
-                <li><h3>h3,0.32rem</h3></li>
-                <li><h4>h4,0.28rem</h4></li>
-                <li><h5>h5,0.26rem</h5></li>
-                <li><h6>h6,0.2rem</h6></li>
+                <li><h1 class="yun-h1">h1,0.36rem</h1></li>
+                <li><h2 class="yun-h2">h2,0.34rem</h2></li>
+                <li><h3 class="yun-h3">h3,0.32rem</h3></li>
+                <li><h4 class="yun-h4">h4,0.28rem</h4></li>
+                <li><h5 class="yun-h5">h5,0.26rem</h5></li>
+                <li><h6 class="yun-h6">h6,0.2rem</h6></li>
             </ul>
             <h3>文本颜色</h3>
             <ul>
@@ -141,14 +140,14 @@
             </div>
             <h2>辅助类</h2>
             <div class="clearfix">
-                <p class="left">左浮动</p>
-                <p class="right">右浮动</p>
+                <p class="yun-left">左浮动</p>
+                <p class="yun-right">右浮动</p>
             </div>
             <div>
-                <p class="text-left">文字左对齐</p>
-                <p class="text-center">文字居中对齐</p>
-                <p class="text-right">文字右对齐</p>
-                <div class="block-center">定宽的块级元素水平居中</div>
+                <p class="yun-text-left">文字左对齐</p>
+                <p class="yun-text-center">文字居中对齐</p>
+                <p class="yun-text-right">文字右对齐</p>
+                <div class="yun-block-center">定宽的块级元素水平居中</div>
             </div>
         </div>
         <!--Base--end-->
@@ -168,28 +167,28 @@
         <!--ButtonGroup-start-->
         <div>
             <h1>ButtonGroup</h1>
-            <div style="position:relative;height:1rem;">
+            <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item>新浪</yun-tab-item>
-                    <yun-tab-item>同事圈</yun-tab-item>
-                    <yun-tab-item>朋友圈</yun-tab-item>
-                    <yun-tab-item>QQ</yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
                 </yun-button-group>
             </div>
-            <div style="position:relative;height:1rem;">
+            <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-qq"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-button-group>
             </div>
-            <div style="position:relative;height:1rem;">
+            <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-sina"></i></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>按钮</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i>按钮</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-qq"></i>按钮</yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-button-group>
             </div>
         </div>
@@ -198,12 +197,12 @@
         <!--Tabbar--start-->
         <div>
             <h1>Tabbar</h1>
-            <div style="position:relative;height:1rem;">
+            <div style="position:relative;height:50px">
                 <yun-tabbar>
-                    <yun-tab-item><i class="iconfont icon-sina"></i>新浪</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-tongshiquan"></i>同事圈</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-pengyouquan"></i>朋友圈</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-qq"></i>QQ</yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-tabbar>
             </div>
 
@@ -213,25 +212,25 @@
         <!--Navbar--start-->
         <div>
             <h1>Navbar</h1>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:100px;background-color:#f2f2f2">
                 <yun-navbar>
-                    <yun-tab-item active>新浪</yun-tab-item>
-                    <yun-tab-item>同事圈</yun-tab-item>
-                    <yun-tab-item>朋友圈</yun-tab-item>
-                    <yun-tab-item>QQ</yun-tab-item>
+                    <yun-tab-item title="text" active></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
                 </yun-navbar>
             </div>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:100px;background-color:#f2f2f2">
                 <yun-navbar>
-                    <yun-tab-item active>新浪</yun-tab-item>
-                    <yun-tab-item>同事圈</yun-tab-item>
-                    <yun-tab-item>朋友圈</yun-tab-item>
+                     <yun-tab-item title="text" active></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
                 </yun-navbar>
             </div>
-            <div style="position:relative;height:1rem;background-color:#f2f2f2">
+            <div style="position:relative;height:100px;background-color:#f2f2f2">
                 <yun-navbar>
-                    <yun-tab-item active>同事圈</yun-tab-item>
-                    <yun-tab-item>朋友圈</yun-tab-item>
+                    <yun-tab-item title="text" active></yun-tab-item>
+                    <yun-tab-item title="text"></yun-tab-item>
                 </yun-navbar>
             </div>
 
@@ -366,7 +365,7 @@
         background-color: #f2f2f2 !important;
     }
     .group{
-        margin-top:0.16rem;
+        margin-top:20px;
     }
 
 </style>

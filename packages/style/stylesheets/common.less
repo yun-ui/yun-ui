@@ -2,41 +2,43 @@
 
 /* Typography */
 // headings 规范h1-h6文本大小
-h1 {
-    font-size: 0.36rem;
-}
+.@{uiName}{
+    &-h1 {
+        font-size: @h1Size;
+    }
 
-h2 {
-    font-size: 0.34rem;
-}
+    &-h2 {
+        font-size: @h2Size;
+    }
 
-h3 {
-    font-size: 0.32rem;
-}
+    &-h3 {
+        font-size: @h3Size;
+    }
 
-h4 {
-    font-size: 0.28rem;
-}
+    &-h4 {
+        font-size: @h4Size;
+    }
 
-h5 {
-    font-size: 0.26rem;
-}
+    &-h5 {
+        font-size: @h5Size;
+    }
 
-h6 {
-    font-size: 0.22rem;
-}
-small {
-    font-size:0.22rem;
-}
-//text alignment 文本对齐
-.text-center{
-    text-align: center;
-}
-.text-left{
-    text-align: left;
-}
-.text-right{
-    text-align: right;
+    &-h6 {
+        font-size: @h6Size;
+    }
+    &-small {
+        font-size: @smallSize;
+    }
+    //text alignment 文本对齐
+    &-text-center{
+        text-align: center;
+    }
+    &-text-left{
+        text-align: left;
+    }
+    &-text-right{
+        text-align: right;
+    }
 }
 
 /* Utility 辅助类 */
@@ -108,14 +110,16 @@ small {
     }
 }
 //quick position 快速定位
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
-.block-center{
-    margin: 0 auto;
+.@{uiName}{
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+    &-block-center{
+        margin: 0 auto;
+    }
 }
 
 //文字缺省
@@ -135,7 +139,7 @@ small {
     }
 }
 //divided 割线 增加.hidden-last-divided
-.divided{
+.@{uiName}-divided{
     position: relative;
     &:after{
         content: '';
@@ -178,33 +182,33 @@ small {
     bottom: @bottom;
 }
 
-.border { border: 1px solid #dce1e8; }
-.border-t { border-width: 1px 0 0 0; }
+.@{uiName}-border { border: 1px solid #dce1e8; }
+.@{uiName}-border-t { border-width: 1px 0 0 0; }
 
-.border-b { border-width: 0 0 1px 0; }
+.@{uiName}-border-b { border-width: 0 0 1px 0; }
 
-html[data-dpr="2"] .border,
-html[data-dpr="3"] .border{
+html[data-dpr="2"] .@{uiName}-border,
+html[data-dpr="3"] .@{uiName}-border{
     position: relative;
     border: none;
     &:before{ z-index:1; }
 }
 
-html[data-dpr="2"] .border:before {
+html[data-dpr="2"] .@{uiName}-border:before {
     .borderSize(200%,200%,0.5);
 }
 
-html[data-dpr="3"] .border:before {
+html[data-dpr="3"] .@{uiName}-border:before {
     .borderSize(300%,300%,0.33333333);
 }
 
-html[data-dpr="2"] .border-b:before,
-html[data-dpr="3"] .border-b:before{
+html[data-dpr="2"] .@{uiName}-border-b:before,
+html[data-dpr="3"] .@{uiName}-border-b:before{
     .borderPosition(initial,0);
 }
 
-html[data-dpr="2"] .border-t:before,
-html[data-dpr="3"] .border-t:before{
+html[data-dpr="2"] .@{uiName}-border-t:before,
+html[data-dpr="3"] .@{uiName}-border-t:before{
     .borderPosition(0,initial);
 }
 
@@ -267,7 +271,7 @@ html[data-dpr="3"] .border-t:before{
 }
 
 /* mask */
-.mask{
+.@{uiName}-mask{
     position: fixed;
     width:100%;
     height:100%;

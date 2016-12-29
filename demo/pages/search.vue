@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="title">
-            <h3>搜索 Search</h3>
+            <h3 class="yun-h3">搜索 Search</h3>
             <p>YunUI 统一搜索组件。
         </div>
         <div class="content">

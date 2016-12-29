@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="title">
-            <h3>加载 Loading</h3>
+            <h3 class="yun-h3">加载 Loading</h3>
             <p>YunUI 提供了两种页面加载过程中的提示效果。
                 一种用于页面 <strong>刷新</strong> 类加载，
                 一种用于需要响应较长时间的 <strong>跳转</strong> 类加载。</p>

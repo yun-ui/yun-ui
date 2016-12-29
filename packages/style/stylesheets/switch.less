@@ -2,49 +2,49 @@
 
 .@{uiName} {
   &-switch {
-    width: 0.88rem;
-    height: 0.48rem;
+    width: @switchWidth;
+    height: @switchHeight;
     position: relative;
   }
-  &-switch-checkbox{
+  &-switch-checkbox {
     position: absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
     opacity: 0;
-    z-index:1;
+    z-index: 1;
   }
-  &-switch-inner{
-    width:100%;
-    height:100%;
-    &:before{
+  &-switch-inner {
+    width: 100%;
+    height: 100%;
+    &:before {
       content: '';
-      width:100%;
-      height:0.36rem;
-      margin-top:(0.48rem - 0.36)/2;
+      width: 100%;
+      height: @switchInnerHeight;
+      margin-top: (@switchHeight - @switchInnerHeight)/2;
       display: block;
       position: absolute;
-      background: rgba(206,206,206,0.58);
-      border-radius: 100px;
+      background: rgba(206, 206, 206, 0.58);
+      border-radius: @switchHeight;
     }
-    &:after{
+    &:after {
       content: '';
       position: absolute;
-      width:0.48rem;
-      height:0.48rem;
+      width: @switchHeight;
+      height: @switchHeight;
       background: #C0C1C9;
-      border-radius: 100px;
+      border-radius: 50%;
     }
   }
 
-  &-switch-checkbox:checked + &-switch-inner{
-    &:before{
-      background: rgba(67,187,252,0.33);
+  &-switch-checkbox:checked + &-switch-inner {
+    &:before {
+      background: rgba(67, 187, 252, 0.33);
     }
-    &:after{
+    &:after {
       background: #44BBFC;
-      right:0;
+      right: 0;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="title">
-            <h3>提示 Toast</h3>
+            <h3 class="yun-h3">提示 Toast</h3>
             <p>YunUI 提供了两种提示样式，一种是位于中间的 <strong>图文提示</strong>，
                 一种是位于 <strong>底部</strong> 的文字提示。</p>
         </div>

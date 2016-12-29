@@ -2,7 +2,7 @@
     <div>
         <div class="middleCenter state-page-container">
             <img class="state-img" src="../../assets/state-img-1.png" />
-            <p class="text-center yun-text-secondary ">服务器异常</p>
+            <p class="yun-text-center yun-text-secondary ">服务器异常</p>
         </div>
     </div>
 </template>

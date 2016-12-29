@@ -70,6 +70,7 @@
   }
   &-list-secondary-text {
     color: @secondaryFontColor;
+    font-size:@listSecondaryTextFontSize
   }
   &-list-link{
     width:@list-link-width;
@@ -83,11 +84,11 @@
 
   &-list-item-multi{
     position: relative;
-    padding:@itemSingleLinePadding - 0.02 @itemSingleLinePadding;
+    padding:@itemSingleLinePadding;
     display: flex;
     display: -webkit-box;
     &:active{
-      background-color: @cellActiveBG;
+      background-color: @listActiveBG;
     }
     .@{uiName}-list-secondary-text{
       margin-top:0.08rem;

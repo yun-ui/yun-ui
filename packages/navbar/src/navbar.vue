@@ -5,14 +5,14 @@
 </template>
 
 <script>
+    // TODO 优化传入参数配置项
     // TODO active状态还没做
     import {UIName} from '../../../src/mixins/'
     export default {
         name: 'yun-navbar',
         mixins: [UIName],
         props: {
-            fixed: Boolean,
-            value: {}
+            fixed: Boolean
         },
         methods: {},
         events: {
@@ -27,6 +27,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
     @import "../../style/stylesheets/navbar";
 </style>

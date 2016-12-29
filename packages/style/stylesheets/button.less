@@ -13,7 +13,7 @@
 /* button */
 .@{uiName} {
     &-button {
-        .buttonSize(100%,0.8rem,0,0.3rem);
+        .buttonSize(100%,@buttonNormalHeight,0,@buttonNormalFontSize);
         text-align: center;
         color: #ffffff;
         background-color: @themeColor;
@@ -30,13 +30,13 @@
             }
         }
         &-small {
-            .buttonSize(auto,0.56rem,0.24rem,0.24rem);
+            .buttonSize(auto,@buttonSmallHeight,@buttonSmallPadding,@buttonSmallFontSize);
         }
         &-middle {
-            .buttonSize(auto,0.7rem,0.88rem,0.28rem);
+            .buttonSize(auto,@buttonMiddleHeight,@buttonMiddlePadding,@buttonMiddleFontSize);
         }
         &-large {
-            .buttonSize(100%,0.8rem,0,0.3rem);
+            .buttonSize(100%,@buttonLargeHeight,0,@buttonLargeFontSize);
         }
         &.is-disabled{
             color: #98a1a8;

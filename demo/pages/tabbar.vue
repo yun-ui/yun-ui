@@ -1,9 +1,9 @@
 <template>
     <yun-tabbar>
-        <yun-tab-item><i class="iconfont icon-demo"></i>tabitem1</yun-tab-item>
-        <yun-tab-item><i class="iconfont icon-demo"></i>tabitem2</yun-tab-item>
-        <yun-tab-item><i class="iconfont icon-demo"></i>tabitem3</yun-tab-item>
-        <yun-tab-item><i class="iconfont icon-demo"></i>tabitem4</yun-tab-item>
+        <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+        <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+        <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+        <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
     </yun-tabbar>
 </template>
 

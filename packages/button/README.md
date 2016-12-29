@@ -2,20 +2,19 @@
 
 按钮，根据尺寸和状态提供了几种基础样式。
 
-------
 
 ### 例子
 
 默认按钮
 
 ``` javascript
-<yun-button type="normal">normal</yun-button>
+ <yun-button type="normal">normal</yun-button>
 ```
 
 线性按钮
 
 ``` javascript
-<yun-button type="inverse">inverse</yun-button>
+<yun-button type="linear">linear</yun-button>
 ```
 
 改变大小
@@ -32,18 +31,10 @@
 <yun-button disabled>disabled</yun-button>
 ```
 
-API
+### API
 
-<<<<<<< Updated upstream
-| 参数        | 描述        | 类型        | 可选值       | 默认值       |
-| ----       | ----       | ----       | ----       | ----       |
-| type   | 按钮形态 | String  | normal，inverse | normal |
-| size       | 尺寸   | String   | large,middle,small | large |
-| disabled       | 禁用状态 |  Boolean  | | false |
-=======
 |    参数    |    描述    |    类型    |       可选值    |      默认值   |
 |   ----    |   ----     |   ----    |      ----      |     ----     |
-|    type   |   按钮形态   |  String  | normal，inverse |    normal    |
-|   size    |    尺寸    |   String  |large,middle,small|   large  |
+|   type    |   按钮形态  |   String  |  normal，linear |    normal    |
+|   size    |    尺寸    |   String  |  large,middle,small  |   large  |
 | disabled  |   禁用状态  |   Boolean |                |     false    |
->>>>>>> Stashed changes

@@ -1,7 +1,7 @@
 <template>
     <span :class="UIName+'-badge'">
         <sup :style="{ backgroundColor: color }"
-             :class="UIName + '-badge-' + type" v-text="number"></sup>
+             :class="UIName + '-badge-' + type" v-text="value"></sup>
     </span>
 </template>
 
@@ -15,7 +15,7 @@
                 type: String,
                 default: 'dot'
             },
-            number: String,
+            value: String,
             color: String
         },
         methods: {
