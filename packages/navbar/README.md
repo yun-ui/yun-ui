@@ -11,13 +11,6 @@
 与tab item组件搭配使用，创建导航。
 
 ``` javascript
-<template>
-    <yun-navbar>
-        <yun-tab-item>导航文本</yun-tab-item>
-        <yun-tab-item>导航文本</yun-tab-item>
-    </yun-navbar>
-</template>
-<script>
 // 如果你已经引入了全部的YunUI组件，忽略import
 
 import yunCellContainer from 'YunUI/dist/yun/cellContainer'
@@ -33,6 +26,18 @@ export default {
 </script>
 ```
 
+### 例子
+
+``` javascript
+<template>
+    <yun-navbar>
+        <yun-tab-item>导航文本</yun-tab-item>
+        <yun-tab-item>导航文本</yun-tab-item>
+    </yun-navbar>
+</template>
+```
+
+
 固定在页面顶部
 
 ``` javascript
@@ -44,3 +49,10 @@ export default {
 | 参数        | 描述        | 类型        | 可选值       | 默认值       |
 | ----       | ----       | ----       | ----       | ----       |
 | fixed       | 定位 |  Boolean  | | false |
+
+### TabItem API
+
+| 参数        | 描述        | 类型        | 可选值       | 默认值       |
+| ----       | ----       | ----       | ----       | ----       |
+| active      | 点击状态       |  Boolean   |           |   false    |
+| title |   文本  |   String  |       |       |

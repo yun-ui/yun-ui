@@ -12,10 +12,10 @@
 
 ``` javascript
 <yun-button-group>
-    <yun-tab-item>文本</yun-tab-item>
-    <yun-tab-item>文本</yun-tab-item>
-    <yun-tab-item>文本</yun-tab-item>
-    <yun-tab-item>文本</yun-tab-item>
+    <yun-tab-item title="text"></yun-tab-item>
+    <yun-tab-item title="text"></yun-tab-item>
+    <yun-tab-item title="text"></yun-tab-item>
+    <yun-tab-item title="text"></yun-tab-item>
 </yun-button-group>
 ```
 
@@ -23,10 +23,10 @@
 
 ``` javascript
 <yun-button-group>
-    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i></yun-tab-item>
+    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
 </yun-button-group>
 ```
 
@@ -34,10 +34,10 @@
 
 ``` javascript
 <yun-button-group>
-    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
 </yun-button-group>
 ```
 
@@ -52,4 +52,17 @@
 | 参数        | 描述        | 类型        | 可选值       | 默认值       |
 | ----       | ----       | ----       | ----       | ----       |
 | fixed      | 定位       |  Boolean   |            | false      |
+
+### TabItem API
+
+| 参数        | 描述        | 类型        | 可选值       | 默认值       |
+| ----       | ----       | ----       | ----       | ----       |
+| active      | 点击状态       |  Boolean   |           |   false    |
+| title |   文本  |   String  |       |       |
+
+### Slot
+
+| 参数        | 描述        |
+| ----       | ----       |
+| icon      | 按钮组中加入的图标    |
 

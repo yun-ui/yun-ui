@@ -1,7 +1,8 @@
 <template>
-    <button class="divided hidden-last-divided" :class="UIName+'-tab-item'">
+    <button :class="[UIName+'-tab-item',UIName+'-divided', 'hidden-last-divided']">
         <div :class="[UIName+'-tab-item-label', {'is-active':active}]">
-            <slot></slot>
+            <slot name="icon"></slot>
+            <span v-text="title"></span>
         </div>
     </button>
 </template>
@@ -12,7 +13,9 @@
         name: 'yun-tab-item',
         mixins: [UIName],
         props: {
-            active: Boolean
+            active: Boolean,
+            title: String,
+            icon: String
         },
         data () {
             return {
@@ -27,6 +30,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/base";
     @import "../../style/stylesheets/tabItem";
 </style>

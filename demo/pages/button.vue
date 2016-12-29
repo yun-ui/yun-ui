@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="title">
-            <h3>按钮 Button</h3>
+            <h3 class="yun-h3">按钮 Button</h3>
             <p>我们提供常用的按钮以便统一体验。</p>
         </div>
         <div class="content button-container">

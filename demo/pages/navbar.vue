@@ -1,7 +1,7 @@
 <template>
     <yun-navbar fixed>
-        <yun-tab-item active>tabitem1</yun-tab-item>
-        <yun-tab-item>tabitem2</yun-tab-item>
+        <yun-tab-item title="文本" active></yun-tab-item>
+        <yun-tab-item title="文本"></yun-tab-item>
     </yun-navbar>
 </template>
 

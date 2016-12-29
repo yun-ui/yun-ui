@@ -1,6 +1,6 @@
 <template>
     <div :class="UIName+'-pop-menu'">
-        <div class="mask"></div>
+        <div :class="UIName+'-mask'"></div>
         <div :class="UIName+'-pop-menu-container'">
             <div :class="UIName+'-pop-menu-panel'">
                 <div :class="UIName+'-pop-menu-title'" v-text="popMenuTitle"></div>

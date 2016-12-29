@@ -2,7 +2,7 @@
     <div>
         <div class="state-page-container">
             <img class="state-img" src="../../assets/wait.svg" />
-            <h3 class="text-centet ">操作等待</h3>
+            <h3 class="yun-text-centet ">操作等待</h3>
             <p class="state-info yun-text-secondary">内容详情，可根据实际需求安排，如果换行则不超过规定
                 长度，居中展示</p>
             <div class="row">

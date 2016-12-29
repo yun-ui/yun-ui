@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="mask"></div>
+        <div :class="UIName+'-mask'"></div>
         <div :class="[UIName+'-popup']">
             <div :class="[UIName+'-popup-cover']"
                  v-if="cover || $slots.cover">
@@ -65,5 +65,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/popup1";
+    @import "../../style/stylesheets/popup";
 </style>

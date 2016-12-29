@@ -9,16 +9,10 @@
 
 > 注：仅作为语义化组件用，没有API
 
-### 使用方法
+### 引入
 
 ``` javascript
-<template>
-    <yun-cell-container>
-        <p>Cell item 1</p>
-        <p>Cell item 2</p>
-    </yun-cell-container>
-</template>
-<script>
+
 // 如果你已经引入了全部的YunUI组件，忽略import
 import yunCellContainer from 'YunUI/dist/yun/cellContainer'
 import 'YunUI/dist/yun/cellContainer/index.css'
@@ -28,5 +22,13 @@ export default {
     }
 }
 </script>
+```
 
+### 例子
+
+``` javascript
+<yun-cell-container>
+    <p>Cell item 1</p>
+    <p>Cell item 2</p>
+</yun-cell-container>
 ```

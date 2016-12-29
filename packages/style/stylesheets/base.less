@@ -1,4 +1,4 @@
-/* 引入resrt.css等基础样式库 */
+@import "var";
 @import "reset.css";
 @import "common";
 @import "../../../src/assets/font/iconfont.css";
@@ -9,7 +9,7 @@ html,body{
   min-height: 100%;
 }
 body{
-  color: #030303;
-  font-size: 0.26rem;
+  color: @defaultFontColor;
+  font-size: @bodyFontSize;
   font-family: -apple-system,Microsoft YaHei,Arial,Microsoft JhengHei,Helvetica Neue,sans-serif;
 }

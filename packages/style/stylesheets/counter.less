@@ -4,14 +4,14 @@
   &-counter {
 
     &-icon{
-      font-size:0.44rem;
+      font-size:@counterIconSize;
       color: @themeColor;
     }
     &-number{
       color: @secondaryFontColor;
-      font-size:0.32rem;
-      line-height: 0.44rem;
-      padding: 0 0.1rem;
+      font-size:@counterNumberFontSize;
+      line-height: @counterIconSize;
+      padding: 0 @cellPadding/2;
     }
   }
 
