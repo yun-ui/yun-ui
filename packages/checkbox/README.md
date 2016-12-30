@@ -7,7 +7,6 @@
 
 ### 例子
 
-
 ``` javascript
  <yun-checkbox></yun-checkbox>
 ```

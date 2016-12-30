@@ -20,36 +20,36 @@
             <yun-button type="linear" @click.native="showPopup6 = !showPopup6">输入类弹窗错误提示</yun-button>
         </div>
 
-        <yun-popup title="标题标题标" v-show="showPopup1"
+        <yun-popup title="标题" v-show="showPopup1"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定" class="active"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题标题标" v-show="showPopup2"
+        <yun-popup title="标题" v-show="showPopup2"
                    input="input">
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
                 <yun-tab-item class="active" title="取消"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题标题标" v-show="showPopup3"
+        <yun-popup title="标题" v-show="showPopup3"
                    input="textarea">
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
                 <yun-tab-item class="active" title="取消"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题标题标" v-show="showPopup4"
+        <yun-popup title="标题" v-show="showPopup4"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button size="large" type="normal" slot="button">文本</yun-button>
             <yun-button size="large" type="normal" disabled slot="button">文本</yun-button>
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="知道了"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
@@ -57,16 +57,16 @@
         <yun-popup title="标题" v-show="showPopup5"
                    :textList="textListArray">
             <img src="../assets/popup-cover.png" slot="cover"/>
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="知道了"></yun-tab-item>
                 <yun-tab-item title="了解更多" class="active"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题标题标" v-show="showPopup6" input="input"
+        <yun-popup title="标题" v-show="showPopup6" input="input"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
-            <yun-button-group class="yun-border yun-border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="知道了"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
