@@ -79,15 +79,15 @@
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <yun-popup title="标题标题标" style="display:none"
+        <yun-popup title="标题标题标"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
-                   input="input"
+                   input="textarea"
                    :textList="textListArray">
             <img src="../src/assets/popup-cover.png" slot="cover"/>
             <yun-button size="large" type="normal" slot="button">默認按钮</yun-button>
             <yun-button size="large" type="normal" disabled slot="button">默認按钮</yun-button>
-            <yun-button-group fixed="fixed" class="border border-t" slot="buttonGroup">
+            <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="取消"></yun-tab-item>
                 <yun-tab-item title="确认"class="active"></yun-tab-item>
             </yun-button-group>
@@ -177,7 +177,7 @@
             </div>
             <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i> <yun-badge></yun-badge></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
@@ -185,7 +185,7 @@
             </div>
             <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i> <yun-badge type="text" value="100+" color="#3cbaff"></yun-badge></yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>

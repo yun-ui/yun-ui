@@ -26,20 +26,48 @@
         })()
 
         document.addEventListener('DOMContentLoaded', function () {
-            document.body.addEventListener('touchstart', function () {})
+            document.body.addEventListener('touchstart', function () {
+            })
         }, false)
     </script>
     <style type="text/css">
-        #app{
-            width:100%;
+        #app {
+            padding-top:44px;
+            width: 100%;
             height: 100%;
+        }
+
+        .demo-header {
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 44px;
+            line-height: 44px;
+            color: #ffffff;
+            background-color: #3cbaff;
+            text-align: center;
+
+        }
+
+        .icon-arrow-left {
+            position: absolute;
+            display: block;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div id="app">
-        <router-view></router-view>
+<div id="app">
+    <div class="demo-header">
+        <span class="iconfont icon-arrow-left"></span>
+        YunUI
     </div>
-    <!-- built files will be auto injected -->
+    <router-view></router-view>
+</div>
+<!-- built files will be auto injected -->
 </body>
 </html>

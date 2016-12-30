@@ -3,6 +3,7 @@
         <div :class="[UIName+'-tab-item-label', {'is-active':active}]">
             <slot name="icon"></slot>
             <span v-text="title"></span>
+            <slot></slot>
         </div>
     </button>
 </template>

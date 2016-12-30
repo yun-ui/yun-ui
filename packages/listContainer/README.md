@@ -4,12 +4,12 @@
 
 > 注：仅作为语义化组件用，没有API
 
-### 何时使用
+### 使用场景
 
 最基本的列表项组件的容器，可用于包含文字、图标、图片、文本段等，用于列表区域。
 
 
-### 使用方法
+### 引入
 
 ``` javascript
 <script>
@@ -27,12 +27,10 @@ export default {
 ### 例子
 
 ``` javascript
-<template>
-    <yun-list-container>
-        <p>List item 1</p>
-        <p>List item 2</p>
-    </yun-list-container>
-</template>
+<yun-list-container>
+    <p>List item 1</p>
+    <p>List item 2</p>
+</yun-list-container>
 ```
 
 结合List Item组件创建更丰富的列表，详细参见List Item组件用法。

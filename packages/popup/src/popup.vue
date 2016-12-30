@@ -37,7 +37,9 @@
             <div :class="[UIName+'-popup-button']" v-if="button || $slots.button">
                 <slot name="button"></slot>
             </div>
-            <slot name="buttonGroup" v-if="buttonGroup || $slots.buttonGroup"></slot>
+            <div  :class="[UIName+'-border',UIName+'-border-t']">
+                <slot name="buttonGroup" v-if="buttonGroup || $slots.buttonGroup"></slot>
+            </div>
         </div>
     </div>
 </template>

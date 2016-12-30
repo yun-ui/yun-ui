@@ -41,28 +41,27 @@
             </div>
             <div class="row clearContentPadding">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本<yun-badge></yun-badge></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                </yun-button-group>
-            </div>
-            <div class="row clearContentPadding">
-                <yun-button-group>
-                    <yun-tab-item>文本
-                        <yun-badge type="text" number="100" color="#F7BF28"></yun-badge>
+                    <yun-tab-item title="文本">
+                        <i class="iconfont icon-demo" slot="icon"></i>
+                        <yun-badge type="text" value="new" color="#F7BF28"></yun-badge>
                     </yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i></yun-tab-item>
                 </yun-button-group>
             </div>
             <div class="row clearContentPadding">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本<yun-badge color="#01D386"></yun-badge></yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
-                    <yun-tab-item><i class="iconfont icon-demo"></i>文本</yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i><yun-badge></yun-badge></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                </yun-button-group>
+            </div>
+            <div class="row clearContentPadding">
+                <yun-button-group fixed>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i><yun-badge color="#01D386"></yun-badge></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo"></i></yun-tab-item>
                 </yun-button-group>
             </div>
 
@@ -80,3 +79,7 @@
     }
 
 </script>
+
+<style lang="less">
+
+</style>

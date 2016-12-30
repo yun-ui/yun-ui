@@ -2,11 +2,11 @@
 
 全局展示一个提示框，置于所有元素之上。
 
-### 何时使用
+### 使用场景
 
 可用于异步请求时，或在用户操作后等待下一步操作时的提示.
 
-### 使用方法
+### 引入
 
 ``` javascript
 <script>
@@ -24,14 +24,12 @@ export default {
 ### 例子
 
 ``` javascript
-<template>
-    <yun-loading content="加载中...">
-        <img src="../assets/loading.png" slot="icon"/>
-    </yun-loading>
-    <yun-loading content="加载中..." refresh>
-        <img src="../assets/loading.png" slot="icon"/>
-    </yun-loading>
-</template>
+<yun-loading content="加载中...">
+    <img src="../assets/loading.png" slot="icon"/>
+</yun-loading>
+<yun-loading content="加载中..." refresh>
+    <img src="../assets/loading.png" slot="icon"/>
+</yun-loading>
 ```
 
 ### API
