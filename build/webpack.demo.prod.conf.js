@@ -17,7 +17,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     devtool: config.demo_prod.productionSourceMap ? '#source-map' : false,
     output: {
         path: config.demo_prod.assetsRoot,
-        publicPath: '',
+        publicPath: '/yun-ui/',
         filename: utils.assetsPath('js/[name].[chunkhash].js'),
         chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
     },
