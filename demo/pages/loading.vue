@@ -41,5 +41,7 @@
 </script>
 
 <style lang="less">
-
+    .is-loading-refresh{
+        top: 64px;
+    }
 </style>
