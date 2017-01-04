@@ -5,8 +5,8 @@ import tabItem from '../packages/tabItem'
 import buttonGroup from '../packages/buttonGroup'
 import navbar from '../packages/navbar'
 import popup from '../packages/popup'
-import cellContainer from '../packages/cellContainer'
-import cellItem from '../packages/cellItem'
+import form from '../packages/form'
+import formItem from '../packages/formItem'
 import listContainer from '../packages/listContainer'
 import listItem from '../packages/listItem'
 import loading from '../packages/loading'
@@ -26,8 +26,8 @@ const install = function (Vue) {
     Vue.component(buttonGroup.name, buttonGroup)
     Vue.component(navbar.name, navbar)
     Vue.component(popup.name, popup)
-    Vue.component(cellContainer.name, cellContainer)
-    Vue.component(cellItem.name, cellItem)
+    Vue.component(form.name, form)
+    Vue.component(formItem.name, formItem)
     Vue.component(listContainer.name, listContainer)
     Vue.component(listItem.name, listItem)
     Vue.component(loading.name, loading)
@@ -52,8 +52,8 @@ module.exports = {
     buttonGroup,
     navbar,
     popup,
-    cellContainer,
-    cellItem,
+    form,
+    formItem,
     listContainer,
     listItem,
     loading,

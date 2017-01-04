@@ -2,7 +2,7 @@
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
         <!--<yun-pop-menu popMenuTitle="分享到" menuItemName="微信" style="display:none">-->
-            <!--<img src="../src/assets/placeholder-figure.png" slot="menuItemImage"/>-->
+        <!--<img src="../src/assets/placeholder-figure.png" slot="menuItemImage"/>-->
         <!--</yun-pop-menu>-->
         <!--switch--start-->
         <yun-switch></yun-switch>
@@ -11,56 +11,36 @@
         <!--switch--end-->
         <!--cell--start-->
         <div class="group">
-            <yun-cell-container>
-                <yun-cell-item filePicker title="选择附件" secondary="已选择2个" fileName="文件名称"
+            <yun-form>
+                <yun-form-item filePicker title="选择附件" secondary="已选择2个" fileName="文件名称"
                                errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
                     <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
-                </yun-cell-item>
-            </yun-cell-container>
+                </yun-form-item>
+            </yun-form>
         </div>
         <div class="group">
-            <yun-cell-container>
-                <yun-cell-item imagePicker title="照片选择器" secondary="已选择5张">
+            <yun-form>
+                <yun-form-item imagePicker title="照片选择器" secondary="已选择5张">
                     <img src="../src/assets/placeholder-figure.png" slot="image">
-                </yun-cell-item>
-            </yun-cell-container>
+                </yun-form-item>
+            </yun-form>
         </div>
         <div class="group">
-            <yun-cell-container>
-                <yun-cell-item radio title="单选框 radio">
-                </yun-cell-item>
-                <yun-cell-item radio title="单选框 radio">
-                </yun-cell-item>
-                <yun-cell-item  radio title="单选框 radio">
-                </yun-cell-item>
-            </yun-cell-container>
-        </div>
-        <div class="group">
-            <yun-cell-container>
-                <yun-cell-item title="复选框checkbox">
-                    <yun-checkbox slot="checkbox"></yun-checkbox>
-                </yun-cell-item>
-                <yun-cell-item title="复选框checkbox">
-                    <yun-checkbox slot="checkbox"></yun-checkbox>
-                </yun-cell-item>
-                <yun-cell-item title="复选框checkbox">
-                    <yun-checkbox slot="checkbox"></yun-checkbox>
-                </yun-cell-item>
-            </yun-cell-container>
-        </div>
-        <div class="group">
-            <yun-cell-container>
-                <yun-cell-item input label="单行输入框"></yun-cell-item>
-                <yun-cell-item textarea label="多行输入框"></yun-cell-item>
-
-                <yun-cell-item title="计数器">
-                    <yun-counter slot="counter"></yun-counter>
-                </yun-cell-item>
-
-                <yun-cell-item title="开关列表">
-                    <yun-Switch slot="Switch"></yun-Switch>
-                </yun-cell-item>
-            </yun-cell-container>
+            <yun-form>
+                <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
+                <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
+                <yun-form-item type="counter" label="计数器"></yun-form-item>
+                <yun-form-item type="switch" label="开关列表"></yun-form-item>
+                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
+                <yun-form-item type="radio" label="单选框"></yun-form-item>
+                <yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">
+                    <img src="../src/assets/placeholder-figure.png" slot="image">
+                </yun-form-item>
+                <yun-form-item type="filePicker" label="选择附件" text="已选择2个" fileName="文件名称"
+                               errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
+                    <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
+                </yun-form-item>
+            </yun-form>
         </div>
         <!--cell--end-->
 
@@ -79,7 +59,7 @@
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <yun-popup title="标题标题标"
+        <!--<yun-popup title="标题标题标"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="textarea"
@@ -92,7 +72,7 @@
                 <yun-tab-item title="确认"class="active"></yun-tab-item>
             </yun-button-group>
 
-        </yun-popup>
+        </yun-popup>-->
         <!--popup--end-->
 
         <!--Base--start-->
@@ -177,7 +157,9 @@
             </div>
             <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i> <yun-badge></yun-badge></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i>
+                        <yun-badge></yun-badge>
+                    </yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
@@ -185,7 +167,9 @@
             </div>
             <div style="position:relative;height:50px;">
                 <yun-button-group>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i> <yun-badge type="text" value="100+" color="#3cbaff"></yun-badge></yun-tab-item>
+                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i>
+                        <yun-badge type="text" value="100+" color="#3cbaff"></yun-badge>
+                    </yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
@@ -222,7 +206,7 @@
             </div>
             <div style="position:relative;height:100px;background-color:#f2f2f2">
                 <yun-navbar>
-                     <yun-tab-item title="text" active></yun-tab-item>
+                    <yun-tab-item title="text" active></yun-tab-item>
                     <yun-tab-item title="text"></yun-tab-item>
                     <yun-tab-item title="text"></yun-tab-item>
                 </yun-navbar>
@@ -283,24 +267,24 @@
 
 <script>
     import {
-            yunButton,
-            yunTabbar,
-            yunTabItem,
-            yunButtonGroup,
-            yunNavbar,
-            yunPopup,
-            yunListContainer,
-            yunListItem,
-            yunCellContainer,
-            yunCellItem,
-            yunLoading,
-            yunToast,
-            yunSwitch,
-            yunBadge,
-            yunSearch,
-            yunCounter,
-            yunCheckbox,
-            yunPopMenu
+        yunButton,
+        yunTabbar,
+        yunTabItem,
+        yunButtonGroup,
+        yunNavbar,
+        yunPopup,
+        yunListContainer,
+        yunListItem,
+        yunForm,
+        yunFormItem,
+        yunLoading,
+        yunToast,
+        yunSwitch,
+        yunBadge,
+        yunSearch,
+        yunCounter,
+        yunCheckbox,
+        yunPopMenu
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
@@ -342,8 +326,8 @@
             yunButtonGroup,
             yunNavbar,
             yunPopup,
-            yunCellContainer,
-            yunCellItem,
+            yunForm,
+            yunFormItem,
             yunListContainer,
             yunListItem,
             yunLoading,
@@ -361,11 +345,13 @@
 
 <style lang="less" rel="stylesheet/less">
     @import "../packages/style/stylesheets/base";
+
     body {
         background-color: #f2f2f2 !important;
     }
-    .group{
-        margin-top:20px;
+
+    .group {
+        margin-top: 20px;
     }
 
 </style>

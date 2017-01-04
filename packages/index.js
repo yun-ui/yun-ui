@@ -5,8 +5,8 @@ import yunTabItem from './tabItem'
 import yunButtonGroup from './buttonGroup'
 import yunNavbar from './navbar'
 import yunPopup from './popup'
-import yunCellContainer from './cellContainer'
-import yunCellItem from './cellItem'
+import yunForm from './form'
+import yunFormItem from './formItem'
 import yunListContainer from './listContainer'
 import yunListItem from './listItem'
 import yunLoading from './loading'
@@ -25,8 +25,8 @@ const Components = {
     yunButtonGroup,
     yunNavbar,
     yunPopup,
-    yunCellContainer,
-    yunCellItem,
+    yunForm,
+    yunFormItem,
     yunListContainer,
     yunListItem,
     yunLoading,

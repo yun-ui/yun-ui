@@ -1,4 +1,4 @@
-# CellItem
+# FormItem
 
 表单项组件。
 

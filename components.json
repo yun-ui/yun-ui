@@ -11,11 +11,11 @@
   "buttonGroup": [
     "./packages/buttonGroup/index.js"
   ],
-  "cellContainer": [
-    "./packages/cellContainer/index.js"
+  "form": [
+    "./packages/form/index.js"
   ],
-  "cellItem": [
-    "./packages/cellItem/index.js"
+  "formItem": [
+    "./packages/formItem/index.js"
   ],
   "listContainer": [
     "./packages/listContainer/index.js"

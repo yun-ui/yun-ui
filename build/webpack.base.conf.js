@@ -18,7 +18,8 @@ module.exports = {
             'src': path.resolve(__dirname, '../src'),
             'assets': path.resolve(__dirname, '../src/assets'),
             'components': path.resolve(__dirname, '../src/components'),
-            'mixins': path.resolve(__dirname, '../src/mixins')
+            'mixins': path.resolve(__dirname, '../src/mixins'),
+            'packages': path.resolve(__dirname, '../packages')
         }
     },
     resolveLoader: {
