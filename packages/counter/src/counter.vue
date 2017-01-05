@@ -1,9 +1,9 @@
 <template>
     <div :class="UIName+'-counter'">
-        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ is-disabled: min > defaultValue - step }]"
+        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ 'is-disabled': min > defaultValue - step }]"
               @click="minus"></span>
         <span :class="UIName + '-counter-number'">{{ defaultValue }}</span>
-        <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ is-disabled: max < defaultValue + step}]"
+        <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ 'is-disabled': max < defaultValue + step}]"
               @click="increase"></span>
     </div>
 </template>
