@@ -1,9 +1,11 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
-        <!--<yun-pop-menu popMenuTitle="分享到" menuItemName="微信" style="display:none">-->
-        <!--<img src="../src/assets/placeholder-figure.png" slot="menuItemImage"/>-->
-        <!--</yun-pop-menu>-->
+        <!--<yun-action-sheet PanelTitle="分享到" actionSheetItemName="微信"-->
+            <!--listTitle="操作项">-->
+            <!--<span class="iconfont icon-demo yun-text-theme" slot="listIcon"></span>-->
+            <!--<img src="../src/assets/placeholder-figure.png" slot="actionSheetItemImage"/>-->
+        <!--</yun-action-sheet>-->
         <!--switch--start-->
         <yun-switch></yun-switch>
         <yun-counter></yun-counter>
@@ -19,12 +21,14 @@
                 <yun-form-item type="switch" label="开关列表 默认关" @change="switchFormChange"></yun-form-item>
                 <yun-form-item type="switch" label="开关列表" :checked="true" @change="switchFormChange"></yun-form-item>
                 <yun-form-item type="checkbox" label="复选框"></yun-form-item>
+                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
+                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
                 <yun-form-item type="radio" label="单选框"></yun-form-item>
                 <yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">
                     <img src="../src/assets/placeholder-figure.png" slot="image">
                 </yun-form-item>
                 <yun-form-item type="filePicker" label="选择附件" text="已选择2个" fileName="文件名称"
-                               errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
+                               errorInfo="上传失败，点击重传" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
                     <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
                 </yun-form-item>
             </yun-form>
@@ -47,7 +51,7 @@
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <!--<yun-popup title="标题标题标"
+        <yun-popup title="标题标题标"   style="display:none"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="textarea"
@@ -61,7 +65,7 @@
                 <yun-tab-item title="确认" class="active"></yun-tab-item>
             </yun-button-group>
 
-        </yun-popup>-->
+        </yun-popup>
         <!--popup--end-->
 
         <!--Base--start-->
@@ -274,7 +278,7 @@
         yunSearch,
         yunCounter,
         yunCheckbox,
-        yunPopMenu
+        yunActionSheet
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
@@ -352,7 +356,7 @@
             yunSearch,
             yunCounter,
             yunCheckbox,
-            yunPopMenu
+            yunActionSheet
         }
     }
 

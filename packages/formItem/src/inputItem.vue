@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-cell-item', UIName+'-input-item']">
+    <div :class="[UIName+'-form-item', UIName+'-input-item']">
         <label :class="UIName + '-input-label'">
             <span v-text="label"></span>
         </label>

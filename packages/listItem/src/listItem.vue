@@ -1,5 +1,5 @@
 <template>
-    <div :class="UIName+'-list-item-multi'" v-if="multi">
+    <div :class="[UIName+'-list-item',UIName+'-list-item-multi']" v-if="multi">
         <div :class="[UIName+'-list-img', {'is-avatar': avatar}]" v-if="img || $slots.img">
             <slot name="img"></slot>
         </div>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div :class="UIName+'-list-item-single'" v-else="!multi">
+    <div :class="UIName+'-list-item'" v-else="!multi">
         <div :class="UIName+'-list-icon-left'" v-if="iconLeft || $slots.iconLeft">
             <slot name="iconLeft"></slot>
         </div>

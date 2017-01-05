@@ -6,8 +6,18 @@
   &-list-container {
     background-color: #ffffff;
   }
-  &-list-item-single,
-  &-list-item-multi{
+  &-list-item{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     background-color: #ffffff;
     &:after{
       content: '';
@@ -20,17 +30,14 @@
       transform: scaleY(.5);
       -webkit-transform: scaleY(.5);
     }
-  }
-
-  &-list-item-single{
-    position: relative;
-    padding:@itemSingleLinePadding - 0.02 @itemSingleLinePadding;
-    line-height: @itemSingleLineLineHeight;
-    display: flex;
-    display: -webkit-box;
     &:active{
       background-color: @listActiveBG;
     }
+  }
+
+  &-list-item{
+    padding: 0 @itemSingleLinePadding;
+    line-height: @itemSingleLineHeight;
     .@{uiName}-list-title{
       display: block;
       width:0;
@@ -39,9 +46,23 @@
     }
   }
 
+  &-list-item-multi{
+    padding:@itemSingleLinePadding;
+    line-height: normal;
+    .@{uiName}-list-title{
+      width:auto;
+    }
+    .@{uiName}-list-secondary-text{
+    }
+    .is-avatar{
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
 
   &-list-icon-left,
   &-list-icon-right{
+    font-size:0;
     width: @itemSingleLineIconSize;
     height: @itemSingleLineIconSize;
     margin-right: @blank;
@@ -81,23 +102,6 @@
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
   }
-
-  &-list-item-multi{
-    position: relative;
-    padding:@itemSingleLinePadding;
-    display: flex;
-    display: -webkit-box;
-    &:active{
-      background-color: @listActiveBG;
-    }
-    .@{uiName}-list-secondary-text{
-      margin-top:0.08rem;
-    }
-    .is-avatar{
-      border-radius: 100%;
-      overflow: hidden;
-    }
-  }
   &-list-img{
     width:@itemMultiImgSize;
     height:@itemMultiImgSize;
@@ -106,7 +110,6 @@
   &-list-icon{
     width:@itemMultiIconSize;
     height:@itemMultiIconSize;
-    margin-top:(@itemMultiImgSize - @itemMultiIconSize)/2;
     margin-right:@blank;
   }
   &-list-content{

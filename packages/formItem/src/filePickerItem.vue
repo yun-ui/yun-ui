@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div :class="[UIName+'-cell-item', UIName+'-filePicker-item']">
-            <div :class="UIName + '-cell-title'">
+        <div :class="[UIName+'-form-item', UIName+'-filePicker-item']">
+            <div :class="UIName + '-form-title'">
                 <span v-text="label"></span>
-                <small :class="UIName+ '-cell-secondary'" v-text="text"></small>
+                <small :class="UIName+ '-form-secondary'" v-text="text"></small>
             </div>
             <div :class="UIName+'-icon-container'">
                 <i class="iconfont icon-add-field"></i>

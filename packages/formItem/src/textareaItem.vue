@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-cell-item', UIName+'-input-item', UIName+'-textarea-item']">
+    <div :class="[UIName+'-form-item', UIName+'-input-item', UIName+'-textarea-item']">
         <div :class="[UIName + '-input-control']">
             <textarea :placeholder="placeholder"></textarea>
             <div :class="[UIName + '-textarea-count']">

@@ -11,7 +11,7 @@
             <yun-button type="linear" @click.native="showLoading = !showLoading">跳转类 Loading</yun-button>
         </div>
 
-        <yun-loading content="加载中" refresh v-show="showFresh">
+        <yun-loading content="加载中" refresh v-show="showFresh" style="top:64px">
             <img src="../assets/loading.png" slot="icon"/>
         </yun-loading>
         <yun-loading content="加载中" v-show="showLoading">

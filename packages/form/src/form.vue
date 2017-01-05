@@ -16,5 +16,5 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../../style/stylesheets/cell";
+    @import "../../style/stylesheets/form";
 </style>

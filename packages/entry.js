@@ -15,7 +15,7 @@ import badge from '../packages/badge'
 import search from '../packages/search'
 import counter from '../packages/counter'
 import checkbox from '../packages/checkbox'
-import popMenu from '../packages/popMenu'
+import actionSheet from '../packages/actionSheet'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -36,7 +36,7 @@ const install = function (Vue) {
     Vue.component(search.name, search)
     Vue.component(counter.name, counter)
     Vue.component(checkbox.name, checkbox)
-    Vue.component(popMenu.name, popMenu)
+    Vue.component(actionSheet.name, actionSheet)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -62,5 +62,5 @@ module.exports = {
     search,
     counter,
     checkbox,
-    popMenu
+    actionSheet
 }

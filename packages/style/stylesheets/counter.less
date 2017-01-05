@@ -6,12 +6,17 @@
     &-icon{
       font-size:@counterIconSize;
       color: @themeColor;
+      &.is-disabled{
+        color: @tipsFontColor;
+      }
     }
     &-number{
+      text-align: center;
+      display: inline-block;
+      min-width:@counterNumberFontSize*2.4;
       color: @secondaryFontColor;
       font-size:@counterNumberFontSize;
       line-height: @counterIconSize;
-      padding: 0 @cellPadding/2;
     }
   }
 

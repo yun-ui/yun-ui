@@ -1,7 +1,7 @@
 <template>
-    <div :class="[UIName+'-cell-item', UIName+'-checkbox-item']">
+    <div :class="[UIName+'-form-item', UIName+'-checkbox-item']">
         <yun-checkbox></yun-checkbox>
-        <div :class="UIName + '-cell-title'">
+        <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
     </div>

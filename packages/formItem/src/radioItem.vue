@@ -1,6 +1,6 @@
 <template>
-    <div :class="[UIName+'-cell-item', UIName+'-radio-item']">
-        <div :class="UIName + '-cell-title'">
+    <div :class="[UIName+'-form-item', UIName+'-radio-item']">
+        <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
         <div :class="UIName+'-radio'">

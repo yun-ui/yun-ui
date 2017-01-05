@@ -140,9 +140,9 @@ export default [
         },
         'list': [
             {
-                'path': '/input',
-                'name': 'Input',
-                'secondary': '输入框 '
+                'path': '/formItem',
+                'name': 'FormItem',
+                'secondary': '表单项 '
             }
         ]
     }

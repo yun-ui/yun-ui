@@ -1,11 +1,10 @@
 <template>
-    <div :class="UIName+'-loading'" v-if="show">
-        <div :class="[UIName+'-loading-container', {'is-loading-refresh': refresh}]">
-            <div :class="UIName+'-loading-icon'">
-                <slot name="icon"></slot>
-            </div>
-            <div :class="UIName+'-loading-content'"
-                 v-text="content" v-if="content || $slots.content"></div>
+    <div :class="[UIName+'-loading', {'is-loading-refresh': refresh}]" v-if="show">
+        <div :class="UIName+'-loading-icon'">
+            <slot name="icon"></slot>
+        </div>
+        <div :class="UIName+'-loading-content'"
+             v-text="content" v-if="content || $slots.content">
         </div>
     </div>
 </template>

@@ -1,6 +1,6 @@
-# PopMenu
+# ActionSheet
 
-底部弹出菜单。
+动作面板。
 
 ### 使用场景
 

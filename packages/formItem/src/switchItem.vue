@@ -1,6 +1,6 @@
 <template>
-    <div :class="[UIName+'-cell-item', UIName+'-switch-item']">
-        <div :class="UIName + '-cell-title'">
+    <div :class="[UIName+'-form-item', UIName+'-switch-item']">
+        <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
         <yun-switch :checked="checked" @change="change"></yun-switch>

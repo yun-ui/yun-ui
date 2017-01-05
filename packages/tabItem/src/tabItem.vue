@@ -14,7 +14,6 @@
         name: 'yun-tab-item',
         mixins: [UIName],
         props: {
-            defaultActive: Boolean,
             title: String,
             icon: String,
             tabId: String

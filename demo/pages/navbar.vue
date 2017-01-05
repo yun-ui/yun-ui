@@ -1,5 +1,5 @@
 <template>
-    <yun-navbar fixed @change="navChange" defaultActiveTabId="2">
+    <yun-navbar fixed @change="navChange" defaultActiveTabId="2" style="top:44px">
         <yun-tab-item title="文本" tabId="1"></yun-tab-item>
         <yun-tab-item title="文本" tabId="2"></yun-tab-item>
     </yun-navbar>

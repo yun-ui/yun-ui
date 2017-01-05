@@ -1,34 +1,34 @@
 @import "var";
 
-// TODO liyueyu 几种弹出菜单
 .@{uiName}{
-  &-pop-menu-container{
+  &-action-sheet-container{
     position: fixed;
     bottom:0;
     left:0;
     right:0;
     z-index: @zIndexNormal + 1;
   }
-  &-pop-menu-panel{
+  //分享操作类型
+  &-action-sheet-panel{
     background-color: #ffffff;
     padding:0 0.4rem;
   }
-  &-pop-menu-title{
+  &-action-sheet-title{
     font-size:0.3rem;
     line-height: 0.88rem;
     border-bottom: 1px solid @borderColor;
   }
-  &-pop-menu-content{
+  &-action-sheet-content{
     padding: 0.4rem 0 0.24rem;
     font-size:0;
     margin-right:-0.4rem;
   }
-  &-pop-menu-item{
+  &-action-sheet-item{
     display: inline-block;
     margin:0 0.4rem 0.24rem 0;
     text-align: center;
   }
-  &-pop-menu-image{
+  &-action-sheet-image{
     width:1.1rem;
     max-height: 1.1rem;
   }
@@ -36,7 +36,16 @@
     margin-top:0.12rem;
     font-size:0.2rem;
   }
-  &-pop-menu-button{
+
+  //列表操作类型
+  &-action-sheet-list{
+    background-color: #ffffff;
+  }
+  &-action-sheet-list-item{
+    line-height: 0.88rem;
+    text-align: center;
+  }
+  &-action-sheet-button{
     margin-top:0.16rem;
     width:100%;
     height:0.88rem;
