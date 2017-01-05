@@ -5,22 +5,18 @@
 </template>
 
 <script>
-    // TODO 优化传入参数配置项
-    // TODO active状态还没做
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-navbar',
         mixins: [UIName],
         props: {
-            fixed: Boolean
+            fixed: Boolean,
+            defaultActiveTabId: String
         },
-        methods: {},
-        events: {
-            input (data) {
-                console.log(data)
+        data () {
+            return {
+                activeId: this.defaultActiveTabId
             }
-        },
-        created () {
         }
     }
 

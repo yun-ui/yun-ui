@@ -1,7 +1,7 @@
 <template>
-    <yun-navbar fixed>
-        <yun-tab-item title="文本" active></yun-tab-item>
-        <yun-tab-item title="文本"></yun-tab-item>
+    <yun-navbar fixed @change="navChange" defaultActiveTabId="2">
+        <yun-tab-item title="文本" tabId="1"></yun-tab-item>
+        <yun-tab-item title="文本" tabId="2"></yun-tab-item>
     </yun-navbar>
 </template>
 
@@ -12,7 +12,11 @@
         created () {
             console.log('navbar demo loaded')
         },
-        methods: {}
+        methods: {
+            navChange: function (tabId) {
+                console.log(tabId)
+            }
+        }
     }
 
 </script>

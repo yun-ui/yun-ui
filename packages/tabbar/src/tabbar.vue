@@ -8,14 +8,19 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-tabbar',
         mixins: [UIName],
         props: {
-            fixed: Boolean
+            fixed: Boolean,
+            defaultActiveTabId: String
         },
-        methods: {}
+        data () {
+            return {
+                activeId: this.defaultActiveTabId
+            }
+        }
     }
 
 </script>

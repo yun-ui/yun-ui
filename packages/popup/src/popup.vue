@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div :class="UIName+'-mask'"></div>
+        <div :class="UIName+'-mask'" @click="maskClicked"></div>
         <div :class="[UIName+'-popup']">
             <div :class="[UIName+'-popup-cover']"
                  v-if="cover || $slots.cover">
@@ -37,7 +37,7 @@
             <div :class="[UIName+'-popup-button']" v-if="button || $slots.button">
                 <slot name="button"></slot>
             </div>
-            <div  :class="[UIName+'-border',UIName+'-border-t']">
+            <div :class="[UIName+'-border',UIName+'-border-t']">
                 <slot name="buttonGroup" v-if="buttonGroup || $slots.buttonGroup"></slot>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
 <script>
     // TODO 错误文本（类似表单验证）
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-popup',
         mixins: [UIName],
@@ -61,6 +61,9 @@
             close: Function
         },
         methods: {
+            maskClicked () {
+                this.$emit('maskClicked')
+            }
         }
     }
 

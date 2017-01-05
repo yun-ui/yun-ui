@@ -1,7 +1,7 @@
 <template>
-    <div :class="UIName+'-toast'">
+    <div :class="UIName+'-toast'" v-if="show">
         <div :class="[UIName+'-toast-container', {'is-loading-bottom': bottom}]">
-            <div :class="UIName+'-toast-icon'"  v-if="icon || $slots.icon">
+            <div :class="UIName+'-toast-icon'" v-if="icon || $slots.icon">
                 <slot name="icon"></slot>
             </div>
             <div :class="UIName+'-toast-content'"
@@ -11,20 +11,19 @@
 </template>
 
 <script>
-    // TODO 提示的显隐交互
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-toast',
         mixins: [UIName],
         props: {
             icon: String,
             bottom: Boolean,
+            show: Boolean,
             content: String
-        },
-        methods: {}
+        }
     }
 </script>
 
 <style lang="less" rel="stylesheet/less">
-  @import "../../style/stylesheets/toast";
+    @import "../../style/stylesheets/toast";
 </style>

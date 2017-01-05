@@ -23,5 +23,5 @@ window.addEventListener('message', function (e) {
     if (e.source !== window.parent || !e.data.redirectName) {
         return
     }
-    router.push({path: `/${e.data.redirectName}`})
+    router.push({ path: `/${e.data.redirectName}` })
 }, false)

@@ -1,6 +1,6 @@
 <template>
-    <button :class="[UIName+'-tab-item',UIName+'-divided', 'hidden-last-divided']">
-        <div :class="[UIName+'-tab-item-label', {'is-active':active}]">
+    <button :class="[UIName+'-tab-item',UIName+'-divided', 'hidden-last-divided']" @click="handleClick">
+        <div :class="[UIName+'-tab-item-label', { 'is-active' : $parent.activeId == tabId }]">
             <slot name="icon"></slot>
             <span v-text="title"></span>
             <slot></slot>
@@ -9,22 +9,21 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-tab-item',
         mixins: [UIName],
         props: {
-            active: Boolean,
+            defaultActive: Boolean,
             title: String,
-            icon: String
-        },
-        data () {
-            return {
-                selected: false
-            }
+            icon: String,
+            tabId: String
         },
         methods: {
-
+            handleClick () {
+                this.$parent.$emit('change', this.tabId)
+                this.$parent.activeId = this.tabId
+            }
         }
     }
 

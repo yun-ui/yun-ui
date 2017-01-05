@@ -1,5 +1,5 @@
 <template>
-    <div :class="UIName+'-loading'">
+    <div :class="UIName+'-loading'" v-if="show">
         <div :class="[UIName+'-loading-container', {'is-loading-refresh': refresh}]">
             <div :class="UIName+'-loading-icon'">
                 <slot name="icon"></slot>
@@ -11,16 +11,16 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-loading',
         mixins: [UIName],
         props: {
             icon: String,
             refresh: Boolean,
+            show: Boolean,
             content: String
-        },
-        methods: {}
+        }
     }
 </script>
 

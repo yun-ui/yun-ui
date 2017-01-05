@@ -12,21 +12,6 @@
         <!--cell--start-->
         <div class="group">
             <yun-form>
-                <yun-form-item filePicker title="选择附件" secondary="已选择2个" fileName="文件名称"
-                               errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">
-                    <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
-                </yun-form-item>
-            </yun-form>
-        </div>
-        <div class="group">
-            <yun-form>
-                <yun-form-item imagePicker title="照片选择器" secondary="已选择5张">
-                    <img src="../src/assets/placeholder-figure.png" slot="image">
-                </yun-form-item>
-            </yun-form>
-        </div>
-        <div class="group">
-            <yun-form>
                 <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
                 <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
                 <yun-form-item type="counter" label="计数器"></yun-form-item>
@@ -44,12 +29,13 @@
         </div>
         <!--cell--end-->
 
-        <!--search--starat-->
+        <!--search--start-->
         <div>
-            <yun-search></yun-search>
+            <yun-search placeholder="输入以搜索" text="搜索" @search="search"></yun-search>
+            输入的内容：{{ searchText }}
         </div>
         <!--search--end-->
-        <!--badge--starat-->
+        <!--badge--start-->
         <div>
             <yun-badge type="text" value="100+" color="#3cbaff"></yun-badge>
             <yun-badge type="text" value="1"></yun-badge>
@@ -63,13 +49,14 @@
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="textarea"
-                   :textList="textListArray">
+                   :textList="textListArray"
+                   @maskClicked="maskClicked">
             <img src="../src/assets/popup-cover.png" slot="cover"/>
             <yun-button size="large" type="normal" slot="button">默認按钮</yun-button>
             <yun-button size="large" type="normal" disabled slot="button">默認按钮</yun-button>
             <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="取消"></yun-tab-item>
-                <yun-tab-item title="确认"class="active"></yun-tab-item>
+                <yun-tab-item title="确认" class="active"></yun-tab-item>
             </yun-button-group>
 
         </yun-popup>-->
@@ -182,11 +169,11 @@
         <div>
             <h1>Tabbar</h1>
             <div style="position:relative;height:50px">
-                <yun-tabbar>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                <yun-tabbar @change="navChange" defaultActiveTabId="3">
+                    <yun-tab-item title="text" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="text" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-tabbar>
             </div>
 
@@ -197,24 +184,24 @@
         <div>
             <h1>Navbar</h1>
             <div style="position:relative;height:100px;background-color:#f2f2f2">
-                <yun-navbar>
-                    <yun-tab-item title="text" active></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
+                <yun-navbar @change="navChange" defaultActiveTabId="2">
+                    <yun-tab-item title="text" tabId="1"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="2"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="3"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="4"></yun-tab-item>
                 </yun-navbar>
             </div>
             <div style="position:relative;height:100px;background-color:#f2f2f2">
-                <yun-navbar>
-                    <yun-tab-item title="text" active></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
+                <yun-navbar @change="navChange" defaultActiveTabId="1">
+                    <yun-tab-item title="text" tabId="1"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="2"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="3"></yun-tab-item>
                 </yun-navbar>
             </div>
             <div style="position:relative;height:100px;background-color:#f2f2f2">
-                <yun-navbar>
-                    <yun-tab-item title="text" active></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
+                <yun-navbar @change="navChange" defaultActiveTabId="text1">
+                    <yun-tab-item title="text" tabId="text1"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="text2"></yun-tab-item>
                 </yun-navbar>
             </div>
 
@@ -256,11 +243,12 @@
         </yun-list-container>
 
         <!--list--end-->
-        <yun-loading content="加载中" style="display:none">
+        <yun-button @click.native="toggleLoading">显示/隐藏Loading</yun-button>
+        <yun-loading content="加载中" :show="showLoading">
             <img src="../src/assets/loading.png" slot="icon"/>
         </yun-loading>
-        <yun-toast content="操作成功" bottom style="display:none">
-        </yun-toast>
+        <yun-button @click.native="toggleToast">显示/隐藏Toast</yun-button>
+        <yun-toast content="操作成功" bottom :show="showToast"></yun-toast>
 
     </div>
 </template>
@@ -298,6 +286,21 @@
             close () {
                 console.log('close')
                 this.showPop = false
+            },
+            search: function (value) {
+                this.searchText = value
+            },
+            navChange: function (activeTab) {
+                console.log(activeTab)
+            },
+            toggleToast: function () {
+                this.showToast = !this.showToast
+            },
+            toggleLoading: function () {
+                this.showLoading = !this.showLoading
+            },
+            maskClicked: function () {
+                console.log('mask clicked')
             }
         },
         data () {
@@ -313,7 +316,11 @@
                     {
                         content: '这是一段文本这是一段文本这是一段文本这是一段文本'
                     }
-                ]
+                ],
+                searchText: '',
+                selectedTab: false,
+                showToast: false,
+                showLoading: false
             }
         },
         mixins: [UIName],
