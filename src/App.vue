@@ -14,8 +14,10 @@
             <yun-form>
                 <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
                 <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
-                <yun-form-item type="counter" label="计数器"></yun-form-item>
-                <yun-form-item type="switch" label="开关列表"></yun-form-item>
+                <yun-form-item type="counter" label="计数器" :value="10" :min="5" :max="20" :step="2"
+                               @change="formCounterChange"></yun-form-item>
+                <yun-form-item type="switch" label="开关列表 默认关" @change="switchFormChange"></yun-form-item>
+                <yun-form-item type="switch" label="开关列表" :checked="true" @change="switchFormChange"></yun-form-item>
                 <yun-form-item type="checkbox" label="复选框"></yun-form-item>
                 <yun-form-item type="radio" label="单选框"></yun-form-item>
                 <yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">
@@ -301,6 +303,12 @@
             },
             maskClicked: function () {
                 console.log('mask clicked')
+            },
+            formCounterChange: function (value) {
+                console.log(value)
+            },
+            switchFormChange: function (value) {
+                console.log(value)
             }
         },
         data () {
