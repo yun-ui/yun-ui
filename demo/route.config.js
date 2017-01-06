@@ -126,6 +126,11 @@ export default [
                 'secondary': '弹窗 '
             },
             {
+                'path': '/actionSheet',
+                'name': 'ActionSheet',
+                'secondary': '操作面板 '
+            },
+            {
                 'path': '/search',
                 'name': 'Search',
                 'secondary': '搜索 '

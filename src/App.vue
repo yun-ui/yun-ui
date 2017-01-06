@@ -1,11 +1,18 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
-        <!--<yun-action-sheet PanelTitle="分享到" actionSheetItemName="微信"-->
-            <!--listTitle="操作项">-->
-            <!--<span class="iconfont icon-demo yun-text-theme" slot="listIcon"></span>-->
-            <!--<img src="../src/assets/placeholder-figure.png" slot="actionSheetItemImage"/>-->
-        <!--</yun-action-sheet>-->
+        <!--actionSheet--start-->
+        <yun-action-sheet type="panel" PanelTitle="分享到" actionSheetItemName="微信"
+                          listTitle="操作项">
+            <img src="../src/assets/placeholder-figure.png" slot="image"/>
+        </yun-action-sheet>
+        <yun-action-sheet type="list" listTitle="操作项">
+            <span class="iconfont icon-demo yun-text-theme" slot="listIcon"></span>
+        </yun-action-sheet>
+        <yun-action-sheet type="checkbox" label="操作项">
+            <span class="iconfont icon-demo yun-text-theme" slot="checkboxListIcon"></span>
+        </yun-action-sheet>
+        <!--actionSheet--end-->
         <!--switch--start-->
         <yun-switch></yun-switch>
         <yun-counter></yun-counter>
@@ -51,7 +58,7 @@
 
         <!--popup--start-->
         <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <yun-popup title="标题标题标"   style="display:none"
+        <yun-popup title="标题标题标" style="display:none"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="textarea"
@@ -261,24 +268,24 @@
 
 <script>
     import {
-        yunButton,
-        yunTabbar,
-        yunTabItem,
-        yunButtonGroup,
-        yunNavbar,
-        yunPopup,
-        yunListContainer,
-        yunListItem,
-        yunForm,
-        yunFormItem,
-        yunLoading,
-        yunToast,
-        yunSwitch,
-        yunBadge,
-        yunSearch,
-        yunCounter,
-        yunCheckbox,
-        yunActionSheet
+            yunButton,
+            yunTabbar,
+            yunTabItem,
+            yunButtonGroup,
+            yunNavbar,
+            yunPopup,
+            yunListContainer,
+            yunListItem,
+            yunForm,
+            yunFormItem,
+            yunLoading,
+            yunToast,
+            yunSwitch,
+            yunBadge,
+            yunSearch,
+            yunCounter,
+            yunCheckbox,
+            yunActionSheet
     } from '../packages/index'
     import {UIName} from '../src/mixins/'
     export default {
