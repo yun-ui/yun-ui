@@ -1,15 +1,15 @@
 <template>
     <button
-        :class="[UIName+'-button', UIName+'-button-' + type, UIName+'-button-' + size, {'is-disabled':disabled}]"
-        :disabled="disabled"
-        @click="handleClick"
+            :class="[UIName+'-button', UIName+'-button-' + type, UIName+'-button-' + size, {'is-disabled':disabled}]"
+            :disabled="disabled"
+            @click="$emit('click')"
     >
         <slot></slot>
     </button>
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-button',
         mixins: [UIName],
@@ -24,10 +24,7 @@
             },
             disabled: Boolean
         },
-        methods: {
-            handleClick (e) {
-            }
-        }
+        methods: {}
     }
 
 </script>

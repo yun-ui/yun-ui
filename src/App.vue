@@ -2,14 +2,19 @@
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
         <!--actionSheet--start-->
+        <yun-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</yun-button>
+        <yun-button @click="toggleActionList">显示/隐藏List型ActionSheet</yun-button>
+        <yun-button @click="toggleActionCheckbox">显示/隐藏Checkbox型ActionSheet</yun-button>
         <yun-action-sheet type="panel" PanelTitle="分享到" actionSheetItemName="微信"
-                          listTitle="操作项">
+                          listTitle="操作项" @maskClicked="maskClicked" :show="showActionPanel" @cancel="maskClicked">
             <img src="../src/assets/placeholder-figure.png" slot="image"/>
         </yun-action-sheet>
-        <yun-action-sheet type="list" listTitle="操作项">
+        <yun-action-sheet type="list" listTitle="操作项" @maskClicked="maskClicked" :show="showActionList"
+                          @cancel="maskClicked">
             <span class="iconfont icon-demo yun-text-theme" slot="listIcon"></span>
         </yun-action-sheet>
-        <yun-action-sheet type="checkbox" label="操作项">
+        <yun-action-sheet type="checkbox" label="操作项" @maskClicked="maskClicked" @confirm="maskClicked"
+                          @cancel="maskClicked" :show="showActionCheckbox">
             <span class="iconfont icon-demo yun-text-theme" slot="checkboxListIcon"></span>
         </yun-action-sheet>
         <!--actionSheet--end-->
@@ -23,14 +28,22 @@
             <yun-form>
                 <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
                 <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
-                <yun-form-item type="counter" label="计数器" :value="10" :min="5" :max="20" :step="2"
+                <yun-form-item type="counter" label="计数器" :counterValue="10" :min="5" :max="20" :step="2"
                                @change="formCounterChange"></yun-form-item>
                 <yun-form-item type="switch" label="开关列表 默认关" @change="switchFormChange"></yun-form-item>
                 <yun-form-item type="switch" label="开关列表" :checked="true" @change="switchFormChange"></yun-form-item>
-                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
-                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
-                <yun-form-item type="checkbox" label="复选框"></yun-form-item>
-                <yun-form-item type="radio" label="单选框"></yun-form-item>
+
+                <yun-form-item type="checkbox" label="复选框" value="checkbox1" :checked="true"
+                               @change="checkboxChange"></yun-form-item>
+                <yun-form-item type="checkbox" label="复选框" value="checkbox2" @change="checkboxChange"></yun-form-item>
+                <yun-form-item type="checkbox" label="复选框" value="checkbox3" @change="checkboxChange"></yun-form-item>
+
+                <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                <yun-form-item type="radio" label="单选框" name="radio2"></yun-form-item>
+                <yun-form-item type="radio" label="单选框" name="radio2"></yun-form-item>
+                <yun-form-item type="radio" label="单选框" name="radio2"></yun-form-item>
                 <yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">
                     <img src="../src/assets/placeholder-figure.png" slot="image">
                 </yun-form-item>
@@ -57,8 +70,8 @@
         <!--badge--end-->
 
         <!--popup--start-->
-        <yun-button type="normal" @click='handleClick'>click show popup</yun-button>
-        <yun-popup title="标题标题标" style="display:none"
+        <yun-button type="normal" @click='togglePop'>显示/隐藏Popup弹窗</yun-button>
+        <yun-popup title="标题标题标" :show="showPop"
                    content="文本内容文本内容文本内容文本内容文本内容
                     内容文本内容文本内容文本内容文本内容文本内容文本内容"
                    input="textarea"
@@ -256,11 +269,11 @@
         </yun-list-container>
 
         <!--list--end-->
-        <yun-button @click.native="toggleLoading">显示/隐藏Loading</yun-button>
+        <yun-button @click="toggleLoading">显示/隐藏Loading</yun-button>
         <yun-loading content="加载中" :show="showLoading">
             <img src="../src/assets/loading.png" slot="icon"/>
         </yun-loading>
-        <yun-button @click.native="toggleToast">显示/隐藏Toast</yun-button>
+        <yun-button @click="toggleToast">显示/隐藏Toast</yun-button>
         <yun-toast content="操作成功" bottom :show="showToast"></yun-toast>
 
     </div>
@@ -268,37 +281,32 @@
 
 <script>
     import {
-            yunButton,
-            yunTabbar,
-            yunTabItem,
-            yunButtonGroup,
-            yunNavbar,
-            yunPopup,
-            yunListContainer,
-            yunListItem,
-            yunForm,
-            yunFormItem,
-            yunLoading,
-            yunToast,
-            yunSwitch,
-            yunBadge,
-            yunSearch,
-            yunCounter,
-            yunCheckbox,
-            yunActionSheet
+        yunButton,
+        yunTabbar,
+        yunTabItem,
+        yunButtonGroup,
+        yunNavbar,
+        yunPopup,
+        yunListContainer,
+        yunListItem,
+        yunForm,
+        yunFormGroup,
+        yunFormItem,
+        yunLoading,
+        yunToast,
+        yunSwitch,
+        yunBadge,
+        yunSearch,
+        yunCounter,
+        yunCheckbox,
+        yunActionSheet
     } from '../packages/index'
-    import {UIName} from '../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         props: {},
         methods: {
-            handleClick: function () {
-                console.log('clicked')
-                this.showPop = true
-            },
-
-            close () {
-                console.log('close')
-                this.showPop = false
+            togglePop: function () {
+                this.showPop = !this.showPop
             },
             search: function (value) {
                 this.searchText = value
@@ -312,14 +320,31 @@
             toggleLoading: function () {
                 this.showLoading = !this.showLoading
             },
+            toggleActionPanel: function () {
+                this.showActionPanel = !this.showActionPanel
+            },
+            toggleActionList: function () {
+                this.showActionList = !this.showActionList
+            },
+            toggleActionCheckbox: function () {
+                this.showActionCheckbox = !this.showActionCheckbox
+            },
             maskClicked: function () {
                 console.log('mask clicked')
+                this.showActionList = false
+                this.showActionCheckbox = false
+                this.showActionPanel = false
+                this.showPop = false
             },
             formCounterChange: function (value) {
                 console.log(value)
             },
             switchFormChange: function (value) {
                 console.log(value)
+            },
+            checkboxChange: function (value, status) {
+                console.log(value)
+                console.log(status)
             }
         },
         data () {
@@ -339,7 +364,10 @@
                 searchText: '',
                 selectedTab: false,
                 showToast: false,
-                showLoading: false
+                showLoading: false,
+                showActionPanel: false,
+                showActionList: false,
+                showActionCheckbox: false
             }
         },
         mixins: [UIName],
@@ -353,6 +381,7 @@
             yunNavbar,
             yunPopup,
             yunForm,
+            yunFormGroup,
             yunFormItem,
             yunListContainer,
             yunListItem,

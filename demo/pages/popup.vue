@@ -4,15 +4,9 @@
             <h3 class="yun-h3">弹窗 popup</h3>
             <p>YunUI 提供了几种弹窗规范。</p>
         </div>
-        <!-- TODO 优化交互流程 -->
-        <div class="close-popup" v-show="showPopup1" @click="showPopup1 = !showPopup1">关闭</div>
-        <div class="close-popup" v-show="showPopup2" @click="showPopup2 = !showPopup2">关闭</div>
-        <div class="close-popup" v-show="showPopup3" @click="showPopup3 = !showPopup3">关闭</div>
-        <div class="close-popup" v-show="showPopup4" @click="showPopup4 = !showPopup4">关闭</div>
-        <div class="close-popup" v-show="showPopup5" @click="showPopup5 = !showPopup5">关闭</div>
-        <div class="close-popup" v-show="showPopup6" @click="showPopup6 = !showPopup6">关闭</div>
         <div class="content button-container">
-            <yun-button type="linear" @click.native="showPopup1 = !showPopup1">确认类弹窗</yun-button>
+            <yun-button type="linear" @click.native="showPopup1 = !showPopup1">确认类弹窗
+            </yun-button>
             <yun-button type="linear" @click.native="showPopup2 = !showPopup2">输入类（单行）弹窗</yun-button>
             <yun-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</yun-button>
             <yun-button type="linear" @click.native="showPopup4 = !showPopup4">内容带跳转按钮弹窗</yun-button>
@@ -20,7 +14,7 @@
             <yun-button type="linear" @click.native="showPopup6 = !showPopup6">输入类弹窗错误提示</yun-button>
         </div>
 
-        <yun-popup title="标题" v-show="showPopup1"
+        <yun-popup title="标题" v-if="showPopup1" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button-group slot="buttonGroup">
@@ -28,7 +22,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-show="showPopup2"
+        <yun-popup title="标题" v-if="showPopup2" @maskClicked="maskClicked"
                    input="input">
             <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
@@ -36,7 +30,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-show="showPopup3"
+        <yun-popup title="标题" v-if="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
             <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
@@ -44,7 +38,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-show="showPopup4"
+        <yun-popup title="标题" v-if="showPopup4" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button size="large" type="normal" slot="button">文本</yun-button>
@@ -54,7 +48,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-show="showPopup5"
+        <yun-popup title="标题" v-if="showPopup5" @maskClicked="maskClicked"
                    :textList="textListArray">
             <img src="../assets/popup-cover.png" slot="cover"/>
             <yun-button-group slot="buttonGroup">
@@ -63,7 +57,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-show="showPopup6" input="input"
+        <yun-popup title="标题" v-if="showPopup6" input="input" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button-group slot="buttonGroup">
@@ -74,7 +68,6 @@
 </template>
 
 <script>
-    // TODO
     export default {
         name: 'yun-toast-demo',
         props: {},
@@ -103,26 +96,34 @@
             console.log('button demo loaded')
         },
         methods: {
+            maskClicked: function () {
+                this.showPopup1 = false
+                this.showPopup2 = false
+                this.showPopup3 = false
+                this.showPopup4 = false
+                this.showPopup5 = false
+                this.showPopup6 = false
+            }
         }
     }
 
 </script>
 
-<style lang="less">
-    .close-popup{
+<style lang="less" rel="stylesheet/less">
+    .close-popup {
         position: fixed;
-        z-index:10;
+        z-index: 10;
         color: #ffffff;
-        right:12px;
-        top:12px;
-        width:44px;
-        height:44px;
+        right: 12px;
+        top: 12px;
+        width: 44px;
+        height: 44px;
         border-radius: 50%;
         line-height: 44px;
         text-align: center;
-        background-color: rgba(255,255,255,0.2);
-        &:hover{
-            background-color: rgba(255,255,255,0.4);
+        background-color: rgba(255, 255, 255, 0.2);
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
             cursor: pointer;
         }
     }

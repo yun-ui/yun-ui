@@ -19,9 +19,11 @@
 </template>
 
 <script>
-    // 1. 默认 e1显示 e2,e4,e5不显示 e3的placeholder没有值
-    // 2. 点击e1后 e2,e5显示 e3 placeholder有值
-    // 3. e4在输入框点击输入后显示，作用是点击后reset输入值
+    /**
+     * @param text {string} 搜索框初始状态时的提示文字
+     * @param placeholder {string} 聚焦时搜索输入框内的提示文字
+     * @function search {function} 搜索输入时的回调，输出值为用户当前的输入内容
+     */
     import {UIName} from 'mixins'
     export default {
         name: 'yun-search',

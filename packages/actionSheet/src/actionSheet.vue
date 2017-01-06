@@ -1,8 +1,8 @@
 <template>
-    <div :class="UIName+'-action-sheet'">
-        <div :class="UIName+'-mask'"></div>
-        <div :class="UIName+'-action-sheet-container'"  v-if="type == 'panel'">
-                <!--分享面板型-->
+    <div :class="UIName+'-action-sheet'" v-show="show">
+        <div :class="UIName+'-mask'" @click="$emit('maskClicked')"></div>
+        <div :class="UIName+'-action-sheet-container'" v-if="type == 'panel'">
+            <!--分享面板型-->
             <div :class="UIName+'-action-sheet-panel'">
                 <div :class="UIName+'-action-sheet-title'" v-text="PanelTitle"></div>
                 <div :class="UIName+'-action-sheet-content'">
@@ -15,9 +15,9 @@
                     </div>
                 </div>
             </div>
-            <button :class="UIName+'-action-sheet-button'">取消</button>
+            <button :class="UIName+'-action-sheet-button'" @click="$emit('cancel')">取消</button>
         </div>
-            <!--操作列表型-->
+        <!--操作列表型-->
         <div :class="UIName+'-action-sheet-container'" v-if="type == 'list'">
             <div :class="UIName+'-action-sheet-list'">
                 <!--TODO 这里需要repeat-->
@@ -26,21 +26,21 @@
                     <span v-text="listTitle"></span>
                 </div>
             </div>
-            <button :class="UIName+'-action-sheet-button'">取消</button>
+            <button :class="UIName+'-action-sheet-button'" @click="$emit('cancel')">取消</button>
         </div>
-            <!--表单型-->
-        <div :class="UIName+'-action-sheet-container'"  v-if="type =='checkbox'">
+        <!--表单型-->
+        <div :class="UIName+'-action-sheet-container'" v-if="type =='checkbox'">
             <div :class="UIName+'-action-sheet-checkbox'">
                 <div :class="UIName+'-action-sheet-header'">
-                    <span class="iconfont icon-close"></span>
-                    <a :class="UIName+'-action-sheet-checkbox-commit'" href="#">确定</a>
+                    <span class="iconfont icon-close" @click="$emit('cancel')"></span>
+                    <a :class="UIName+'-action-sheet-checkbox-commit'" @click="$emit('confirm')">确定</a>
                 </div>
                 <div :class="UIName+'-action-sheet-checkbox-list'">
                     <!--TODO 这里需要repeat-->
                     <div :class="[UIName+'-action-sheet-checkbox-item',UIName+'-border',UIName+'-border-b']">
                         <div :class="UIName+'-action-sheet-checkbox-label'">
                             <slot name="checkboxListIcon"></slot>
-                            <span  v-text="label"></span>
+                            <span v-text="label"></span>
                         </div>
                         <yun-checkbox></yun-checkbox>
                     </div>
@@ -52,7 +52,7 @@
 
 <script>
     import yunCheckbox from 'packages/checkbox'
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
         name: 'yun-action-sheet',
         mixins: [UIName],
@@ -64,10 +64,13 @@
             listIcon: String,
             checkboxListIcon: String,
             label: String,
-            type: String
+            type: String,
+            show: {
+                type: Boolean,
+                default: false
+            }
         },
-        methods: {
-        },
+        methods: {},
         components: {
             yunCheckbox
         }

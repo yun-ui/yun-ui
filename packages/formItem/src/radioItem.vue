@@ -4,7 +4,7 @@
             <span v-text="label"></span>
         </div>
         <div :class="UIName+'-radio'">
-            <input :class="UIName+'-radio-input'" name="radio" type="radio"/>
+            <input :class="UIName+'-radio-input'" :name="name" type="radio"/>
             <div :class="UIName+'-radio-inner'">
                 <i class="iconfont icon-true"></i>
             </div>
@@ -18,7 +18,8 @@
         name: 'yun-radio-item',
         mixins: [UIName],
         props: {
-            label: String
+            label: String,
+            name: String
         },
         methods: {}
     }

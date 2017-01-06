@@ -6,6 +6,7 @@ import yunButtonGroup from './buttonGroup'
 import yunNavbar from './navbar'
 import yunPopup from './popup'
 import yunForm from './form'
+import yunFormGroup from './formGroup'
 import yunFormItem from './formItem'
 import yunListContainer from './listContainer'
 import yunListItem from './listItem'
@@ -26,6 +27,7 @@ const Components = {
     yunNavbar,
     yunPopup,
     yunForm,
+    yunFormGroup,
     yunFormItem,
     yunListContainer,
     yunListItem,

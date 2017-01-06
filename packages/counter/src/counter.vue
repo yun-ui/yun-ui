@@ -1,9 +1,9 @@
 <template>
     <div :class="UIName+'-counter'">
-        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ 'is-disabled': min >= defaultValue }]"
+        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ 'is-disabled': min >= initValue }]"
               @click="minus"></span>
-        <span :class="UIName + '-counter-number'">{{ defaultValue }}</span>
-        <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ 'is-disabled': max <= defaultValue }]"
+        <span :class="UIName + '-counter-number'">{{ initValue }}</span>
+        <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ 'is-disabled': max <= initValue }]"
               @click="increase"></span>
     </div>
 </template>
@@ -15,11 +15,11 @@
         mixins: [UIName],
         data () {
             return {
-                defaultValue: this.value
+                initValue: this.counterValue
             }
         },
         props: {
-            value: {
+            counterValue: {
                 type: Number,
                 default: 0
             },
@@ -38,20 +38,20 @@
         },
         methods: {
             minus: function () {
-                if (this.defaultValue - this.step >= this.min) {
-                    this.defaultValue -= this.step
+                if (this.initValue - this.step >= this.min) {
+                    this.initValue -= this.step
                 } else {
-                    this.defaultValue = this.min
+                    this.initValue = this.min
                 }
-                this.$emit('change', this.defaultValue)
+                this.$emit('change', this.initValue)
             },
             increase: function () {
-                if (this.defaultValue + this.step <= this.max) {
-                    this.defaultValue += this.step
+                if (this.initValue + this.step <= this.max) {
+                    this.initValue += this.step
                 } else {
-                    this.defaultValue = this.max
+                    this.initValue = this.max
                 }
-                this.$emit('change', this.defaultValue)
+                this.$emit('change', this.initValue)
             }
         }
     }

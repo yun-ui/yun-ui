@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div :class="UIName+'-mask'" @click="maskClicked"></div>
+    <div v-if="show">
+        <div :class="UIName+'-mask'" @click="$emit('maskClicked')"></div>
         <div :class="[UIName+'-popup']">
             <div :class="[UIName+'-popup-cover']"
                  v-if="cover || $slots.cover">
@@ -58,13 +58,9 @@
             textList: Array,
             button: String,
             buttonGroup: String,
-            close: Function
+            show: Boolean
         },
-        methods: {
-            maskClicked () {
-                this.$emit('maskClicked')
-            }
-        }
+        methods: {}
     }
 
 </script>

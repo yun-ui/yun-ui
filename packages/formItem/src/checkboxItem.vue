@@ -1,6 +1,6 @@
 <template>
     <div :class="[UIName+'-form-item', UIName+'-checkbox-item']">
-        <yun-checkbox></yun-checkbox>
+        <yun-checkbox :checked="checked" :value="value" @change="change"></yun-checkbox>
         <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
@@ -14,9 +14,15 @@
         name: 'yun-checkbox-item',
         mixins: [UIName],
         props: {
-            label: String
+            label: String,
+            value: String,
+            checked: Boolean
         },
-        methods: {},
+        methods: {
+            change: function (value, status) {
+                this.$parent.$emit('change', value, status)
+            }
+        },
         components: {
             yunCheckbox
         }

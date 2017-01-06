@@ -10,10 +10,10 @@
             <yun-button type="linear" @click.native="showToastBottom = !showToastBottom">底部提示</yun-button>
         </div>
 
-        <yun-toast content="操作成功" v-show="showToast">
+        <yun-toast content="操作成功" :show="showToast">
             <img src="../assets/success.png" slot="icon" />
         </yun-toast>
-        <yun-toast content="操作成功" bottom v-show="showToastBottom"></yun-toast>
+        <yun-toast content="操作成功" bottom :show="showToastBottom"></yun-toast>
     </div>
 </template>
 

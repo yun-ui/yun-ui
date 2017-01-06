@@ -19,9 +19,14 @@
                         <yun-form-item type="checkbox" label="复选框"></yun-form-item>
                     </div>
                     <div>
-                        <yun-form-item type="radio" label="单选框"></yun-form-item>
-                        <yun-form-item type="radio" label="单选框"></yun-form-item>
-                        <yun-form-item type="radio" label="单选框"></yun-form-item>
+                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                    </div>
+                    <div>
+                        <yun-form-item type="radio" label="单选框2" name="radio2"></yun-form-item>
+                        <yun-form-item type="radio" label="单选框2" name="radio2"></yun-form-item>
+                        <yun-form-item type="radio" label="单选框2" name="radio2"></yun-form-item>
                     </div>
                     <yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">
                         <img src="../../src/assets/placeholder-figure.png" slot="image">
@@ -49,7 +54,7 @@
 </script>
 
 <style lang="less">
-    .yun-form>div{
+    .yun-form > div {
         margin-bottom: 8px;
     }
 </style>
