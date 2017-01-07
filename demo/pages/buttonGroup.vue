@@ -6,7 +6,7 @@
         </div>
         <div class="content">
             <h4 class="yun-h4">普通文本按钮组</h4>
-            <div class="row">
+            <div class="row clearContentPadding">
                 <yun-button-group>
                     <yun-tab-item title="文本"></yun-tab-item>
                     <yun-tab-item title="文本"></yun-tab-item>
@@ -15,29 +15,29 @@
                 </yun-button-group>
             </div>
             <h4 class="yun-h4">图标按钮组</h4>
-            <div class="row">
+            <div class="row clearContentPadding">
                 <yun-button-group>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-button-group>
             </div>
             <h4 class="yun-h4">图标 + 文本按钮组</h4>
-            <div class="row">
+            <div class="row clearContentPadding">
                 <yun-button-group>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-button-group>
             </div>
-            <h4>按钮组固定在底部&nbsp;&#8681;</h4>
+            <h4>按钮组固定在底部<i class="iconfont icon-"></i></h4>
             <yun-button-group fixed>
-                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
-                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>文本</yun-tab-item>
+                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
+                <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
             </yun-button-group>
         </div>
     </div>

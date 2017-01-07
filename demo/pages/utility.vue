@@ -41,12 +41,9 @@
                     <li>
                         <span><i class="iconfont icon-add-field"></i></span>
                     </li>
-                    <li>
-                        <span><i class="iconfont icon-demo"></i></span>
-                    </li>
-                    <li>
-                        <span><i class="iconfont icon-true-block"></i></span>
-                    </li>
+                    <!--<li>-->
+                        <!--<span><i class="iconfont icon-demo"></i></span>-->
+                    <!--</li>-->
                     <li>
                         <span><i class="iconfont icon-warn"></i></span>
                     </li>
@@ -171,13 +168,15 @@
             <small class="yun-text-secondary">快速定位提供：左右浮动，定宽的块级元素水平居中等定位方式。</small>
             <div class="row">
                 <div class="panel clearfix">
-                    <div class="yun-left">.left</div>
-                    <div class="yun-right">.right</div>
+                    <div class="yun-left">left</div>
+                    <div class="yun-right">right</div>
                 </div>
                 <div class="panel yun-text-center clearfix">
-                    <div class="block-center" style="width:3rem;">block center</div>
+                    <div class="block-center">blockCenter</div>
                 </div>
-                <h4>1px 边框</h4>
+                </div>
+            <h4 class="yun-h4">1px 边框</h4>
+            <div class="row">
                 <small class="yun-text-secondary">HTML元素的：上边框、下边框、全边框和割线</small>
                 <div class="row border-1px">
                     <p class="yun-border yun-border-t">上边框</p>

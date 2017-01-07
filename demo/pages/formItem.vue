@@ -9,7 +9,7 @@
         <div class="content form">
             <div class="row clearContentPadding">
                 <yun-form>
-                    <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
+                    <yun-form-item type="input" label="单行输入框" placeholder="单行输入框"></yun-form-item>
                     <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
                     <yun-form-item type="counter" label="计数器"></yun-form-item>
                     <yun-form-item type="switch" label="开关列表"></yun-form-item>

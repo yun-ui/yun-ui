@@ -19,18 +19,18 @@
                     </yun-list-item>
 
                     <yun-list-item title="列表标题" secondaryText="辅助文本" link>
-                        <img src="../../demo/assets/placeholder-figure.png" slot="iconLeft">
+                        <img src="../../demo/assets/demo.png" slot="iconLeft">
                     </yun-list-item>
                     <yun-list-item title="列表标题" secondaryText="辅助文本" link>
-                        <img src="../../demo/assets/placeholder-figure.png" slot="iconLeft">
-                        <img src="../../demo/assets/placeholder-figure.png" slot="iconRight">
+                        <img src="../../demo/assets/demo.png" slot="iconLeft">
+                        <img src="../../demo/assets/demo.png" slot="iconRight">
                     </yun-list-item>
                     <yun-list-item title="列表标题" secondaryText="辅助文本">
-                        <img src="../../demo/assets/placeholder-figure.png" slot="iconRight" >
+                        <img src="../../demo/assets/demo.png" slot="iconRight" >
                     </yun-list-item>
 
                     <yun-list-item title="列表标题" secondaryText="辅助文本" link>
-                        <img src="../../demo/assets/placeholder-figure.png" slot="iconRight">
+                        <img src="../../demo/assets/demo.png" slot="iconRight">
                     </yun-list-item>
                 </yun-list-container>
             </div>
@@ -44,7 +44,7 @@
                     </yun-list-item>
 
                     <yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
-                        <img src="../../demo/assets/placeholder-figure.png" slot="icon">
+                        <img src="../../demo/assets/demo.png" slot="icon">
                     </yun-list-item>
 
                     <yun-list-item title="列表标题" secondaryText="辅助文本" multi>
