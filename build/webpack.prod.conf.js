@@ -83,6 +83,9 @@ webpackConfig.push(merge(baseWebpackConfig, {
     entry: {
         app: ['./packages/entry.js']
     },
+    module: {
+        loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
+    },
     output: {
         path: config.build.assetsRoot,
         filename: 'index.js',

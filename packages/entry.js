@@ -16,6 +16,7 @@ import search from '../packages/search'
 import counter from '../packages/counter'
 import checkbox from '../packages/checkbox'
 import actionSheet from '../packages/actionSheet'
+import '../packages/style/stylesheets/base.less'
 
 const install = function (Vue) {
     if (install.installed) return
