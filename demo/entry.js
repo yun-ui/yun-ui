@@ -24,9 +24,9 @@ window.addEventListener('message', function (e) {
         return
     }
     if (e.data.redirectName) {
-    	router.push({ path: `/${e.data.redirectName}` })
+        router.push({path: `/${e.data.redirectName}`})
     }
     if (e.data.type && e.data.type === 'GETCURRENTURL') {
-    	window.parent.postMessage({demoUrl: location.href}, '*')
+        window.parent.postMessage({demoUrl: location.href}, '*')
     }
 }, false)
