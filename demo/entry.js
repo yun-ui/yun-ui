@@ -20,13 +20,8 @@ const app = new Vue({ // eslint-disable-line
 }).$mount('#app')
 
 window.addEventListener('message', function (e) {
-    if (e.source !== window.parent) {
+    if (e.source !== window.parent || !e.data.redirectName) {
         return
     }
-    if (e.data.redirectName) {
-    	router.push({ path: `/${e.data.redirectName}` })
-    }
-    if (e.data.type && e.data.type === 'GETCURRENTURL') {
-    	window.parent.postMessage({demoUrl: location.href}, '*')
-    }
+    router.push({ path: `/${e.data.redirectName}` })
 }, false)
