@@ -42,7 +42,7 @@
                         <span><i class="iconfont icon-add-field"></i></span>
                     </li>
                     <!--<li>-->
-                        <!--<span><i class="iconfont icon-demo"></i></span>-->
+                    <!--<span><i class="iconfont icon-demo"></i></span>-->
                     <!--</li>-->
                     <li>
                         <span><i class="iconfont icon-warn"></i></span>
@@ -174,7 +174,7 @@
                 <div class="panel yun-text-center clearfix">
                     <div class="block-center">blockCenter</div>
                 </div>
-                </div>
+            </div>
             <h4 class="yun-h4">1px 边框</h4>
             <div class="row">
                 <small class="yun-text-secondary">HTML元素的：上边框、下边框、全边框和割线</small>
@@ -188,16 +188,11 @@
                 </div>
             </div>
         </div>
+    </div>
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

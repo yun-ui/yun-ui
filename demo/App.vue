@@ -46,7 +46,8 @@
 
 <style lang="less">
     @import "../packages/style/stylesheets/base";
-    .banner h1{
-            font-size:32px;
-        }
+
+    .banner h1 {
+        font-size: 32px;
+    }
 </style>

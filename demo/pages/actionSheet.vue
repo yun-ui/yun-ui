@@ -17,7 +17,7 @@
         name: 'yun-button-demo',
         props: {},
         created () {
-            console.log('button demo loaded')
+            console.log('action sheet demo loaded')
         },
         methods: {}
     }

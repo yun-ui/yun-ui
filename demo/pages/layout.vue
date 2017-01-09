@@ -78,87 +78,81 @@
             </div>
             <h4 class="yun-h4">栅格 Grid</h4>
             <div class="row">
-               <div class="yun-grid-container yun-text-center">
-                   <div class="yun-grid-col-1">
-                       <div class="yun-gird-content yun-bg-white">
-                           1
-                       </div>
-                   </div>
-               </div>
+                <div class="yun-grid-container yun-text-center">
+                    <div class="yun-grid-col-1">
+                        <div class="yun-gird-content yun-bg-white">
+                            1
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="yun-grid-container yun-text-center">
-                   <div class="yun-grid-col-1">
-                       <div class="yun-gird-content yun-bg-white">
-                           1
-                       </div>
-                   </div>
-                   <div class="yun-grid-col-2">
-                       <div class="yun-gird-content yun-bg-white">
-                           2
-                       </div>
-                   </div>
-               </div>
+                <div class="yun-grid-container yun-text-center">
+                    <div class="yun-grid-col-1">
+                        <div class="yun-gird-content yun-bg-white">
+                            1
+                        </div>
+                    </div>
+                    <div class="yun-grid-col-2">
+                        <div class="yun-gird-content yun-bg-white">
+                            2
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="yun-grid-container yun-text-center">
-                   <div class="yun-grid-col-1">
-                       <div class="yun-gird-content yun-bg-white">
-                           1
-                       </div>
-                   </div>
-                   <div class="yun-grid-col-2">
-                       <div class="yun-gird-content yun-bg-white">
-                           2
-                       </div>
-                   </div>
-                   <div class="yun-grid-col-1">
-                       <div class="yun-gird-content yun-bg-white">
-                           1
-                       </div>
-                   </div>
-               </div>
+                <div class="yun-grid-container yun-text-center">
+                    <div class="yun-grid-col-1">
+                        <div class="yun-gird-content yun-bg-white">
+                            1
+                        </div>
+                    </div>
+                    <div class="yun-grid-col-2">
+                        <div class="yun-gird-content yun-bg-white">
+                            2
+                        </div>
+                    </div>
+                    <div class="yun-grid-col-1">
+                        <div class="yun-gird-content yun-bg-white">
+                            1
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="yun-grid-container yun-text-center">
-                   <div class="yun-grid-col-1">
-                       <div class="yun-gird-content yun-bg-white">
-                           1
-                       </div>
-                   </div>
-                   <div class="yun-grid-col-5">
-                       <div class="yun-gird-content yun-bg-white">
-                           5
-                       </div>
-                   </div>
-               </div>
+                <div class="yun-grid-container yun-text-center">
+                    <div class="yun-grid-col-1">
+                        <div class="yun-gird-content yun-bg-white">
+                            1
+                        </div>
+                    </div>
+                    <div class="yun-grid-col-5">
+                        <div class="yun-gird-content yun-bg-white">
+                            5
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="yun-grid-container yun-text-center">
-                   <div class="yun-grid-col-2">
-                       <div class="yun-gird-content yun-bg-white">
-                           2
-                       </div>
-                   </div>
-                   <div class="yun-grid-col-3">
-                       <div class="yun-gird-content yun-bg-white">
-                           3
-                       </div>
-                   </div>
-               </div>
+                <div class="yun-grid-container yun-text-center">
+                    <div class="yun-grid-col-2">
+                        <div class="yun-gird-content yun-bg-white">
+                            2
+                        </div>
+                    </div>
+                    <div class="yun-grid-col-3">
+                        <div class="yun-gird-content yun-bg-white">
+                            3
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

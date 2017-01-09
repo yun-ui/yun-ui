@@ -26,7 +26,7 @@ const registerRoute = config => {
             })
         })
     )
-    return {route, nav: config}
+    return { route, nav: config }
 }
 
 const route = registerRoute(RouteConfig)

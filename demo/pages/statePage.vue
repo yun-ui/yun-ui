@@ -7,7 +7,6 @@
         name: 'yun-statePage-demo',
         props: {},
         created () {
-            console.log('button demo loaded')
             this.$router.replace({
                 path: '/statePage/index'
             })

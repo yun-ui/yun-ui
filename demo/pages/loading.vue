@@ -29,11 +29,7 @@
                 showFresh: false,
                 showLoading: false
             }
-        },
-        created () {
-            console.log('loading demo loaded')
-        },
-        methods: {}
+        }
     }
 
 </script>

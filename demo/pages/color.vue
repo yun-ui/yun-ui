@@ -28,9 +28,12 @@
                 </ul>
             </div>
             <h4 class="yun-h4">颜色搭配使用规范</h4>
-            <div class="panel"><small class="yun-small yun-text-secondary">
-                由于应用开发可能使用多种颜色，为了达到一致的视觉感受，
-                我们为你提供颜色搭配使用的建议。</small></div>
+            <div class="panel">
+                <small class="yun-small yun-text-secondary">
+                    由于应用开发可能使用多种颜色，为了达到一致的视觉感受，
+                    我们为你提供颜色搭配使用的建议。
+                </small>
+            </div>
         </div>
     </div>
 </template>
@@ -47,9 +50,9 @@
 </script>
 
 <style lang="less">
-    .theme-blcok-color{
-        width:2.4rem;
-        height:0.88rem;
+    .theme-blcok-color {
+        width: 2.4rem;
+        height: 0.88rem;
         border-radius: 0.08rem;
         color: #ffffff;
         text-align: center;

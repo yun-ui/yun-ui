@@ -24,11 +24,11 @@
                         <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
                     </div>
                     <!--<yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">-->
-                        <!--<img src="../../src/assets/placeholder-figure.png" slot="image">-->
+                    <!--<img src="../../src/assets/placeholder-figure.png" slot="image">-->
                     <!--</yun-form-item>-->
                     <!--<yun-form-item type="filePicker" label="选择附件" text="已选择2个" fileName="文件名称"-->
-                                   <!--errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">-->
-                        <!--<img src="../../src/assets/placeholder-figure.png" slot="fileIcon">-->
+                    <!--errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">-->
+                    <!--<img src="../../src/assets/placeholder-figure.png" slot="fileIcon">-->
                     <!--</yun-form-item>-->
                 </yun-form>
             </div>
@@ -38,12 +38,7 @@
 
 <script>
     export default {
-        name: 'yun-field-demo',
-        props: {},
-        created () {
-            console.log('field demo loaded')
-        },
-        methods: {}
+        name: 'yun-field-demo'
     }
 
 </script>

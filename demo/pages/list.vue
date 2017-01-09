@@ -26,7 +26,7 @@
                         <img src="../../demo/assets/demo.png" slot="iconRight">
                     </yun-list-item>
                     <yun-list-item title="列表标题" secondaryText="辅助文本">
-                        <img src="../../demo/assets/demo.png" slot="iconRight" >
+                        <img src="../../demo/assets/demo.png" slot="iconRight">
                     </yun-list-item>
 
                     <yun-list-item title="列表标题" secondaryText="辅助文本" link>
@@ -64,13 +64,7 @@
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

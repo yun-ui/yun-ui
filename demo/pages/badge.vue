@@ -51,14 +51,18 @@
             </div>
             <div class="row clearContentPadding">
                 <yun-button-group>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i><yun-badge></yun-badge></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>
+                        <yun-badge></yun-badge>
+                    </yun-tab-item>
                     <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                 </yun-button-group>
             </div>
             <div class="row clearContentPadding">
                 <yun-button-group fixed>
-                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i><yun-badge color="#01D386"></yun-badge></yun-tab-item>
+                    <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i>
+                        <yun-badge color="#01D386"></yun-badge>
+                    </yun-tab-item>
                     <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
                     <yun-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></yun-tab-item>
@@ -70,13 +74,7 @@
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

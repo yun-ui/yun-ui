@@ -7,14 +7,14 @@
     <title>YunUI Demo</title>
     <script>
         (function () {
-            var dpr = window.devicePixelRatio
-            var fontSize
+            let dpr = window.devicePixelRatio
+            let fontSize
             if (window.devicePixelRatio >= 1.5) {
                 dpr = 2
             }
             document.documentElement.setAttribute('data-dpr', dpr)
 
-            var userAgent = navigator.userAgent
+            let userAgent = navigator.userAgent
             if (userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) || userAgent.match(/Android/i)) {
                 fontSize = document.documentElement.clientWidth / 6.4
                 fontSize = fontSize > 60 ? 60 : fontSize

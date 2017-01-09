@@ -43,13 +43,7 @@
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

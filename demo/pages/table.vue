@@ -5,14 +5,7 @@
 </template>
 
 <script>
-    export default {
-        name: '',
-        props: {},
-        created () {
-            console.log('color demo loaded')
-        },
-        methods: {}
-    }
+    export default {}
 
 </script>
 

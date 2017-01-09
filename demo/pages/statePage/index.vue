@@ -22,7 +22,7 @@
         name: 'yun-statePage-demo',
         props: {},
         created () {
-            console.log('button demo loaded')
+            console.log('state page demo loaded')
         },
         methods: {
             goToPage: function (path) {

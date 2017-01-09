@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="state-page-container">
-            <img class="state-img" src="../../assets/success.svg" />
+            <img class="state-img" src="../../assets/success.svg"/>
             <h3 class="yun-text-centet ">操作成功</h3>
             <p class="state-info yun-text-secondary">内容详情，可根据实际需求安排，如果换行则不超过规定
                 长度，居中展示</p>
@@ -13,22 +13,21 @@
     </div>
 </template>
 <script>
-    export default{
-    }
+    export default{}
 </script>
-<style lang="less">
-    .state-page-container{
-        padding:1rem 0.24rem 0;
+<style lang="less" rel="stylesheet/less">
+    .state-page-container {
+        padding: 1rem 0.24rem 0;
         text-align: center;
-        .state-img{
-            width:1.6rem;
+        .state-img {
+            width: 1.6rem;
             margin-bottom: 0.4rem;
         }
-        .state-info{
-            margin:0.2rem 0;
+        .state-info {
+            margin: 0.2rem 0;
         }
-        .row button{
-            margin-top:0.3rem;
+        .row button {
+            margin-top: 0.3rem;
         }
     }
 </style>

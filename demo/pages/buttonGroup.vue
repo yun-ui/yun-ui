@@ -45,12 +45,7 @@
 
 <script>
     export default {
-        name: 'yun-button-group-demo',
-        props: {},
-        created () {
-            console.log('button demo loaded')
-        },
-        methods: {}
+        name: 'yun-button-group-demo'
     }
 
 </script>
