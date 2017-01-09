@@ -5,7 +5,7 @@
         ></yun-input-item>
 
         <yun-textarea-item
-                v-if="type == 'textarea'" :placeholder="placeholder" :error="error"
+                v-if="type == 'textarea'" :placeholder="placeholder" :error="error" :limit="limit"
         ></yun-textarea-item>
 
         <yun-counter-item
@@ -48,6 +48,7 @@
      * @param label {string} 显示的表单名称
      * @param min {number} 计数器可达到的最小值，默认为负无穷大
      * @param max {number} 计数器可达到的最大值，默认为正无穷大
+     * @param limit {number} 多行输入框限制最大字数，默认为200
      * @param counterValue {number} 计数器初始值，默认为0
      * @param value {string} 多选框、单选框的值
      * @param error {boolean} 表单输入验证错误提示
@@ -81,6 +82,7 @@
             fileIcon: String,
             min: Number,
             max: Number,
+            limit: Number,
             counterValue: Number,
             value: String,
             step: Number,

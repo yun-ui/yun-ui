@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import yunButton from './button'
 import yunToast from './toast'
 import yunTabbar from './tabbar'
@@ -18,9 +19,10 @@ import yunCounter from './counter'
 import yunCheckbox from './checkbox'
 import yunActionSheet from './actionSheet'
 
+Vue.use(yunToast)
+
 const Components = {
     yunButton,
-    yunToast,
     yunTabbar,
     yunTabItem,
     yunButtonGroup,

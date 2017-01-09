@@ -24,7 +24,7 @@
         <div class="group">
             <yun-form>
                 <yun-form-item type="input" label="单行输入框" placeholder="placeholder"></yun-form-item>
-                <yun-form-item type="textarea" placeholder="多行输入框" :error="true"></yun-form-item>
+                <yun-form-item type="textarea" placeholder="多行输入框" :limit="20"></yun-form-item>
                 <yun-form-item type="counter" label="计数器" :counterValue="10" :min="5" :max="20" :step="2"
                                @change="formCounterChange"></yun-form-item>
                 <yun-form-item type="switch" label="开关列表 默认关" @change="switchFormChange"></yun-form-item>
