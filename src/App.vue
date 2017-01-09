@@ -158,11 +158,11 @@
         <div>
             <h1>ButtonGroup</h1>
             <div style="position:relative;height:50px;">
-                <yun-button-group>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
-                    <yun-tab-item title="text"></yun-tab-item>
+                <yun-button-group defaultActiveTabId="2">
+                    <yun-tab-item title="text" tabId="0"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="1"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="2"></yun-tab-item>
+                    <yun-tab-item title="text" tabId="3"></yun-tab-item>
                 </yun-button-group>
             </div>
             <div style="position:relative;height:50px;">

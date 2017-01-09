@@ -1,21 +1,21 @@
 <template>
     <div
-        :class="[UIName+'-button-group', {'is-fixed':fixed}]"
-        :fixed="fixed"
+            :class="[UIName+'-button-group', {'is-fixed':fixed}]"
+            :fixed="fixed"
     >
         <slot></slot>
     </div>
 </template>
 
 <script>
-    // TODO 按钮的active状态
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
 
     export default {
         name: 'yun-button-group',
         mixins: [UIName],
         props: {
-            fixed: Boolean
+            fixed: Boolean,
+            defaultActiveTabId: String
         },
         data () {
             return {
