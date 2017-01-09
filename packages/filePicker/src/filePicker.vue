@@ -35,7 +35,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-file-picker-item',
+        name: 'yun-file-picker',
         mixins: [UIName],
         props: {
             label: String,

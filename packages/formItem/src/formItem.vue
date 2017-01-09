@@ -24,14 +24,14 @@
                 v-if="type == 'radio'" :label="label" :name="name" :value="value"
         ></yun-radio-item>
 
-        <yun-image-picker-item
-                v-if="type == 'imagePicker'" :label="label" :text="text" :image="image"
-        ></yun-image-picker-item>
+        <!--<yun-image-picker-item-->
+                <!--v-if="type == 'imagePicker'" :label="label" :text="text" :image="image"-->
+        <!--&gt;</yun-image-picker-item>-->
 
-        <yun-file-picker-item
-                v-if="type == 'filePicker'" :label="label" :text="text" :fileName="fileName" :errorInfo="errorInfo"
-                :fileSize="fileSize" :uploadTime="uploadTime" :fileIcon="fileIcon"
-        ></yun-file-picker-item>
+        <!--<yun-file-picker-item-->
+                <!--v-if="type == 'filePicker'" :label="label" :text="text" :fileName="fileName" :errorInfo="errorInfo"-->
+                <!--:fileSize="fileSize" :uploadTime="uploadTime" :fileIcon="fileIcon"-->
+        <!--&gt;</yun-file-picker-item>-->
     </div>
 </template>
 
@@ -59,8 +59,6 @@
     import yunInputItem from './inputItem.vue'
     import yunCheckboxItem from './checkboxItem.vue'
     import yunCounterItem from './counterItem.vue'
-    import yunFilePickerItem from './filePickerItem.vue'
-    import yunImagePickerItem from './imagePickerItem.vue'
     import yunRadioItem from './radioItem.vue'
     import yunSwitchItem from './switchItem.vue'
     import yunTextareaItem from './textareaItem.vue'
@@ -93,8 +91,6 @@
             yunInputItem,
             yunCheckboxItem,
             yunCounterItem,
-            yunFilePickerItem,
-            yunImagePickerItem,
             yunRadioItem,
             yunSwitchItem,
             yunTextareaItem
