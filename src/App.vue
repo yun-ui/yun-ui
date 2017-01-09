@@ -273,9 +273,7 @@
         <yun-loading content="加载中" :show="showLoading">
             <img src="../src/assets/loading.png" slot="icon"/>
         </yun-loading>
-        <yun-button @click="toggleToast">显示/隐藏Toast</yun-button>
-        <yun-toast content="操作成功" bottom :show="showToast"></yun-toast>
-
+        <yun-button @click="showToast">显示Toast</yun-button>
     </div>
 </template>
 
@@ -293,7 +291,6 @@
         yunFormGroup,
         yunFormItem,
         yunLoading,
-        yunToast,
         yunSwitch,
         yunBadge,
         yunSearch,
@@ -314,8 +311,10 @@
             navChange: function (activeTab) {
                 console.log(activeTab)
             },
-            toggleToast: function () {
-                this.showToast = !this.showToast
+            showToast: function () {
+                this.$toast({
+                    content: 'test'
+                })
             },
             toggleLoading: function () {
                 this.showLoading = !this.showLoading
@@ -363,7 +362,6 @@
                 ],
                 searchText: '',
                 selectedTab: false,
-                showToast: false,
                 showLoading: false,
                 showActionPanel: false,
                 showActionList: false,
@@ -386,7 +384,6 @@
             yunListContainer,
             yunListItem,
             yunLoading,
-            yunToast,
             yunSwitch,
             yunBadge,
             yunSearch,

@@ -5,7 +5,7 @@
             <p>YunUI 提供了几种弹窗规范。</p>
         </div>
         <div class="content button-container">
-            <yun-button type="linear" @click.native="showPopup1 = !showPopup1">确认类弹窗
+            <yun-button type="linear" @click="showPopup1 = true">确认类弹窗
             </yun-button>
             <yun-button type="linear" @click.native="showPopup2 = !showPopup2">输入类（单行）弹窗</yun-button>
             <yun-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</yun-button>
@@ -14,7 +14,7 @@
             <yun-button type="linear" @click.native="showPopup6 = !showPopup6">输入类弹窗错误提示</yun-button>
         </div>
 
-        <yun-popup title="标题" v-if="showPopup1" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup1" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button-group slot="buttonGroup">
@@ -22,7 +22,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-if="showPopup2" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
                    input="input">
             <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
@@ -30,7 +30,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-if="showPopup3" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
             <yun-button-group slot="buttonGroup">
                 <yun-tab-item title="确定"></yun-tab-item>
@@ -38,7 +38,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-if="showPopup4" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup4" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button size="large" type="normal" slot="button">文本</yun-button>
@@ -48,7 +48,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-if="showPopup5" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup5" @maskClicked="maskClicked"
                    :textList="textListArray">
             <img src="../assets/popup-cover.png" slot="cover"/>
             <yun-button-group slot="buttonGroup">
@@ -57,7 +57,7 @@
             </yun-button-group>
         </yun-popup>
 
-        <yun-popup title="标题" v-if="showPopup6" input="input" @maskClicked="maskClicked"
+        <yun-popup title="标题" :show="showPopup6" input="input" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <yun-button-group slot="buttonGroup">

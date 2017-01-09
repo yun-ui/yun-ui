@@ -1,3 +1,4 @@
+import '../packages/style/stylesheets/base.less'
 import button from '../packages/button'
 import toast from '../packages/toast'
 import tabbar from '../packages/tabbar'
@@ -16,12 +17,10 @@ import search from '../packages/search'
 import counter from '../packages/counter'
 import checkbox from '../packages/checkbox'
 import actionSheet from '../packages/actionSheet'
-import '../packages/style/stylesheets/base.less'
 
 const install = function (Vue) {
     if (install.installed) return
     Vue.component(button.name, button)
-    Vue.component(toast.name, toast)
     Vue.component(tabbar.name, tabbar)
     Vue.component(tabItem.name, tabItem)
     Vue.component(buttonGroup.name, buttonGroup)
@@ -38,6 +37,7 @@ const install = function (Vue) {
     Vue.component(counter.name, counter)
     Vue.component(checkbox.name, checkbox)
     Vue.component(actionSheet.name, actionSheet)
+    Vue.use(toast)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

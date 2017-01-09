@@ -1,22 +1,25 @@
 {
-  "extends": "standard",
-  "env": {
-    "browser": true,
-    "es6": true
-  },
-  "plugins": [
-    "standard",
-    "promise",
-    "html"
-  ],
-  "rules": {
-    "arrow-parens": [
-      2,
-      "as-needed"
+    "extends": "standard",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": [
+        "standard",
+        "promise",
+        "html"
     ],
-    "indent": [
-      "error",
-      4
-    ]
-  }
+    "rules": {
+        "arrow-parens": [
+            2,
+            "as-needed"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "no-extra-bind":[
+            0
+        ]
+    }
 }
