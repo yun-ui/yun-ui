@@ -5,17 +5,14 @@
         <yun-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</yun-button>
         <yun-button @click="toggleActionList">显示/隐藏List型ActionSheet</yun-button>
         <yun-button @click="toggleActionCheckbox">显示/隐藏Checkbox型ActionSheet</yun-button>
-        <yun-action-sheet type="panel" PanelTitle="分享到" actionSheetItemName="微信"
-                          listTitle="操作项" @maskClicked="maskClicked" :show="showActionPanel" @cancel="maskClicked">
-            <img src="../src/assets/placeholder-figure.png" slot="image"/>
+        <yun-action-sheet type="panel" panelTitle="分享到" :actionSheetItem="actionSheetPanelItem"
+                          @maskClicked="maskClicked" :show="showActionPanel" @cancel="maskClicked">
         </yun-action-sheet>
-        <yun-action-sheet type="list" listTitle="操作项" @maskClicked="maskClicked" :show="showActionList"
-                          @cancel="maskClicked">
-            <span class="iconfont icon-demo yun-text-theme" slot="listIcon"></span>
+        <yun-action-sheet type="list" @maskClicked="maskClicked" :show="showActionList"
+                          @cancel="maskClicked" :actionSheetItem="actionSheetPanelItem">
         </yun-action-sheet>
-        <yun-action-sheet type="checkbox" label="操作项" @maskClicked="maskClicked" @confirm="maskClicked"
-                          @cancel="maskClicked" :show="showActionCheckbox">
-            <span class="iconfont icon-demo yun-text-theme" slot="checkboxListIcon"></span>
+        <yun-action-sheet type="checkbox" @maskClicked="maskClicked" @confirm="maskClicked" @change="actionSheetChange"
+                          @cancel="maskClicked" :show="showActionCheckbox" :actionSheetItem="actionSheetCheckboxItem">
         </yun-action-sheet>
         <!--actionSheet--end-->
         <!--switch--start-->
@@ -344,6 +341,13 @@
             checkboxChange: function (value, status) {
                 console.log(value)
                 console.log(status)
+            },
+            actionItemClick: function () {
+                console.log('action item clicked')
+            },
+            actionSheetChange: function (value, status) {
+                console.log(value)
+                console.log(status)
             }
         },
         data () {
@@ -358,6 +362,76 @@
                     },
                     {
                         content: '这是一段文本这是一段文本这是一段文本这是一段文本'
+                    }
+                ],
+                actionSheetPanelItem: [
+                    {
+                        title: '微信',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '同事圈',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '收藏',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '上传到电脑',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '转发',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '其他应用打开',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    }
+                ],
+                actionSheetCheckboxItem: [
+                    {
+                        title: '微信',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        checked: true,
+                        value: 'wechat',
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '同事圈',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        value: 'group',
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '收藏',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        value: 'favorite',
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '上传到电脑',
+                        checked: true,
+                        value: 'upload',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '转发',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '其他应用打开',
+                        icon: require('../src/assets/placeholder-figure.png'),
+                        callback: this.actionItemClick
                     }
                 ],
                 searchText: '',

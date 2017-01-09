@@ -6,6 +6,10 @@
 </template>
 
 <script>
+    /**
+     * @param checked {boolean} 初始是否勾选
+     * @param value {string} 该复选框的值
+     */
     import {UIName} from 'mixins'
     export default {
         name: 'yun-checkbox',
