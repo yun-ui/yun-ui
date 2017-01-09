@@ -20,12 +20,12 @@ function isConfigedRoute (path) {
         // 对子路由的判断
         if (route.children) {
             route.children.map(child => {
-                if (route.path + '/' + child.path == path) {
+                if (route.path + '/' + child.path === path) {
                     result = true
                 }
             })
         }
-        if (route.path == path) {
+        if (route.path === path) {
             result = true
         }
     })
@@ -38,7 +38,7 @@ router.beforeEach((to, from, next) => {
     }
 })
 
-const app = new Vue({
+const app = new Vue({ // eslint-disable-line
     router
 }).$mount('#app')
 
