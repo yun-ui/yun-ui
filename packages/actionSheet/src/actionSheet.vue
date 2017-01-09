@@ -24,8 +24,8 @@
             <div :class="UIName+'-action-sheet-list'">
                 <div :class="[UIName+'-action-sheet-list-item',UIName+'-border',UIName+'-border-b']"
                      v-for="item in actionSheetItem" @click="item.callback">
-                    <img :src="item.icon">
-                    <span v-text="item.title"></span>
+                    <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
+                    <span :class="UIName+'-action-sheet-list-title'" v-text="item.title"></span>
                 </div>
             </div>
             <button :class="UIName+'-action-sheet-button'" @click="$emit('cancel')">取消</button>
@@ -42,7 +42,7 @@
                     <div :class="[UIName+'-action-sheet-checkbox-item',UIName+'-border',UIName+'-border-b']"
                          v-for="item in actionSheetItem" @click="item.callback">
                         <div :class="UIName+'-action-sheet-checkbox-label'">
-                            <img :src="item.icon">
+                            <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
                             <span v-text="item.title"></span>
                         </div>
                         <yun-checkbox :value="item.value" :checked="item.checked"

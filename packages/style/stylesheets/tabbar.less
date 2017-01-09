@@ -19,7 +19,16 @@
         .@{uiName}-tab-item-label {
             padding:@labelPadding 0;
             font-size:@labelFontSize;
+            &.is-active{
+                opacity: 0.8;
+                color: @themeColor;
+                .iconfont{
+                    color: @themeColor;
+                }
+            }
             .iconfont{
+                opacity: 0.4;
+                color: @secondaryFontColor;
                 font-size: @tabbarTabItemIconFontSize;
                 display: block;
             }

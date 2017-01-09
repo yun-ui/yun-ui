@@ -11,7 +11,6 @@
             <yun-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</yun-button>
             <yun-button type="linear" @click.native="showPopup4 = !showPopup4">内容带跳转按钮弹窗</yun-button>
             <yun-button type="linear" @click.native="showPopup5 = !showPopup5">宣传弹窗</yun-button>
-            <yun-button type="linear" @click.native="showPopup6 = !showPopup6">输入类弹窗错误提示</yun-button>
         </div>
 
         <yun-popup title="标题" :show="showPopup1" @maskClicked="maskClicked"
@@ -56,14 +55,6 @@
                 <yun-tab-item title="了解更多" class="active"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
-
-        <yun-popup title="标题" :show="showPopup6" input="input" @maskClicked="maskClicked"
-                   content="文本内容文本内容文本内容文本内容文本内容
-                            文本内容文本内容文本内容文本内容文本内容">
-            <yun-button-group slot="buttonGroup">
-                <yun-tab-item title="知道了"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
     </div>
 </template>
 
@@ -78,7 +69,6 @@
                 showPopup3: false,
                 showPopup4: false,
                 showPopup5: false,
-                showPopup6: false,
                 textListArray: [
                     {
                         content: '这是一段文本'
@@ -102,7 +92,6 @@
                 this.showPopup3 = false
                 this.showPopup4 = false
                 this.showPopup5 = false
-                this.showPopup6 = false
             }
         }
     }

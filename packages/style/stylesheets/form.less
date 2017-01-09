@@ -3,32 +3,28 @@
 
 @keyframes error {
   0% {
-    opacity: 0;
+    background-color: #ffffff;
   }
-  100% {
-    opacity: 1;
-  }
+100% {
+  background-color: @formError;
+}
 }
 
 @-webkit-keyframes error {
-  0% {
-    -webkit-transform-origin: center;
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform-origin: center;
-    -webkit-transform: rotate(360deg);
-  }
+0% {
+  background-color: #ffffff;
+}
+100% {
+  background-color: @formError;
+}
 }
 
 @-moz-keyframes error {
-  0% {
-    -moz-transform-origin: center;
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform-origin: center;
-    -moz-transform: rotate(360deg);
+0% {
+  background-color: #ffffff;
+}
+100% {
+  background-color: @formError;
   }
 }
 
@@ -67,15 +63,8 @@
     &:active{
       background-color: @formItemActiveBG;
     }
-    &.error:before{
-        content: '';
-        position: absolute;
-        top:0;
-        right:0;
-        left:0;
-        bottom:0;
-        background-color:@formError;
-        z-index:1;
+    &.error{
+        background-color:  @formError;
         animation: error .9s 3 linear;
         -webkit-animation: error .9s 3 linear;
         -moz-animation: error .9s 3 linear;

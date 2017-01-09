@@ -35,6 +35,10 @@
   &-action-sheet-item-name{
     margin-top: @actionSheetPadding/2;
     font-size: @actionSheetItemName;
+    width: @actionSheetImageSize;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   //列表操作类型
@@ -44,13 +48,30 @@
   &-action-sheet-list-item{
     line-height: @actionSheetLineHeight;
     text-align: center;
+    &:hover,&:active{
+      background-color: #f6f8fa;
+    }
   }
   &-action-sheet-button{
-    margin-top:@actionSheetPadding;
+    color: #030303;
+    margin-top:@actionSheetButtonMarginTop;
     width:100%;
     height: @actionSheetLineHeight;
     font-size: @actionSheetButtonFontSize;
     background-color: #ffffff;
+  }
+  &-action-sheet-icon{
+    width:@actionSheetLineHeight/2;
+    height:@actionSheetLineHeight/2;
+  }
+  &-action-sheet-icon,
+  &-action-sheet-list-title{
+    vertical-align: middle;
+  }
+  &-action-sheet-list-title{
+    font-size:@actionSheetTitleFontSize;
+    display: inline-block;
+    min-width: @actionSheetLineHeight*2;
   }
 
   //选择操作类型

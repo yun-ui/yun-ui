@@ -17,6 +17,11 @@
         props: {
             fixed: Boolean
         },
+        data () {
+            return {
+                activeId: this.defaultActiveTabId
+            }
+        },
         methods: {}
     }
 </script>

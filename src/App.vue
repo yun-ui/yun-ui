@@ -381,7 +381,7 @@
                         callback: this.actionItemClick
                     },
                     {
-                        title: '上传到电脑',
+                        title: '上传电脑',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
@@ -391,7 +391,7 @@
                         callback: this.actionItemClick
                     },
                     {
-                        title: '其他应用打开',
+                        title: '其他应用',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     }
