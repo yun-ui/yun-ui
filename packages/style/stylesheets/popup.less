@@ -35,7 +35,10 @@
   &-popup-input,
   &-popup-button,
   &-popup-list {
-    padding: @popupItemPadding @popupItemPadding*2;
+    padding: 0 @popupItemPadding @popupItemPadding;
+  }
+  &-popup-button{
+    padding-bottom: 0;
   }
   &-popup-button &-button {
     margin-bottom: @popupItemPadding;
@@ -70,16 +73,15 @@
       li {
         position: relative;
         padding-left: @popupItemPadding;
-        padding-bottom: @popupItemPadding;
+        padding-bottom: @popupListPadding;
         &:before {
           content: '';
           position: absolute;
-          top: @popupItemPadding;
+          top: 6px;
           display: block;
-          margin-top:-2px;
           width: 5px;
           height: 5px;
-          margin-left: -@popupItemPadding;
+          margin-left: -12px;
           border-radius: 100%;
           background: #EAEFF3;
         }

@@ -25,16 +25,16 @@
         <yun-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
                    input="input">
             <yun-button-group slot="buttonGroup">
-                <yun-tab-item title="确定"></yun-tab-item>
-                <yun-tab-item class="active" title="取消"></yun-tab-item>
+                <yun-tab-item class="active" title="确定"></yun-tab-item>
+                <yun-tab-item title="取消"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 
         <yun-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
             <yun-button-group slot="buttonGroup">
-                <yun-tab-item title="确定"></yun-tab-item>
-                <yun-tab-item class="active" title="取消"></yun-tab-item>
+                <yun-tab-item class="active" title="确定"></yun-tab-item>
+                <yun-tab-item title="取消"></yun-tab-item>
             </yun-button-group>
         </yun-popup>
 

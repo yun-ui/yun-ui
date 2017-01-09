@@ -23,15 +23,15 @@
             <div :class="[UIName+'-popup-input']" v-if="input || $slots.input">
                 <div v-if="input=='input'">
                     <input type="text" placeholder="请输入">
-                    <p>
-                        <small :class="[UIName+'-text-warn']">错误提示文本</small>
-                    </p>
+                    <!--<p>-->
+                        <!--<small :class="[UIName+'-text-warn']">错误提示文本</small>-->
+                    <!--</p>-->
                 </div>
                 <div v-if="input=='textarea'">
                     <textarea placeholder="请输入"></textarea>
-                    <p>
-                        <small :class="[UIName+'-text-warn']">错误提示文本</small>
-                    </p>
+                    <!--<p>-->
+                        <!--<small :class="[UIName+'-text-warn']">错误提示文本</small>-->
+                    <!--</p>-->
                 </div>
             </div>
             <div :class="[UIName+'-popup-button']" v-if="button || $slots.button">

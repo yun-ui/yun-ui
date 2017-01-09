@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding-bottom:58px">
         <div class="title">
             <h3 class="yun-h3">按钮组 ButtonGroup</h3>
             <p>我们提供常用的按钮以便统一体验。</p>

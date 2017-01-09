@@ -2,15 +2,20 @@
 
 .@{uiName} {
   &-counter {
-
     &-icon{
+      vertical-align: middle;
       font-size:@counterIconSize;
       color: @themeColor;
+      &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+      }
       &.is-disabled{
-        color: @tipsFontColor;
+        color: #C0C1C9;
       }
     }
     &-number{
+      vertical-align: middle;
       text-align: center;
       display: inline-block;
       min-width:@counterNumberFontSize*2.4;
