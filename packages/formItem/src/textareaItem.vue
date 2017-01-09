@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-input-item', UIName+'-textarea-item']">
+    <div :class="[UIName+'-form-item', UIName+'-input-item', UIName+'-textarea-item', {'error': error}]">
         <div :class="[UIName + '-input-control']">
             <textarea :placeholder="placeholder"></textarea>
             <div :class="[UIName + '-textarea-count']">
@@ -16,7 +16,11 @@
         mixins: [UIName],
         props: {
             label: String,
-            placeholder: String
+            placeholder: String,
+            error: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {}
     }

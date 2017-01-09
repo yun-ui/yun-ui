@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-input-item']">
+    <div :class="[UIName+'-form-item', UIName+'-input-item', {'error': error}]">
         <label :class="UIName + '-input-label'">
             <span v-text="label"></span>
         </label>
@@ -16,7 +16,11 @@
         mixins: [UIName],
         props: {
             label: String,
-            placeholder: String
+            placeholder: String,
+            error: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {}
     }

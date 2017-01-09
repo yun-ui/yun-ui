@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-counter-item']">
+    <div :class="[UIName+'-form-item', UIName+'-counter-item', {'error': error}]">
         <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
@@ -28,7 +28,11 @@
             min: Number,
             max: Number,
             counterValue: Number,
-            step: Number
+            step: Number,
+            error: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {
             change: function (value) {

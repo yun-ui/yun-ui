@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-checkbox-item']">
+    <div :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': error}]">
         <yun-checkbox :checked="checked" :value="value" @change="change"></yun-checkbox>
         <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
@@ -16,7 +16,11 @@
         props: {
             label: String,
             value: String,
-            checked: Boolean
+            checked: Boolean,
+            error: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {
             change: function (value, status) {

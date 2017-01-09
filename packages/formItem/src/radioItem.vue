@@ -1,5 +1,5 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-radio-item']">
+    <div :class="[UIName+'-form-item', UIName+'-radio-item', {'error': error}]">
         <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
         </div>
@@ -19,7 +19,11 @@
         mixins: [UIName],
         props: {
             label: String,
-            name: String
+            name: String,
+            error: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {}
     }
