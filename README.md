@@ -1,4 +1,4 @@
-# [YunUI](https://yun-ui.github.io/yun-ui-doc/)
+# [yun-ui](https://yun-ui.github.io/yun-ui-doc/)
 [![npm package](https://img.shields.io/npm/v/yun-ui.svg?style=flat-square)](https://www.npmjs.org/package/yun-ui)
 [![Build Status](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)](https://img.shields.io/circleci/project/yun-ui/yun-ui/develop.svg)
 [![Dependencies](https://img.shields.io/david/yun-ui/yun-ui.svg?style=flat-square)](https://david-dm.org/yun-ui/yun-ui)
@@ -6,12 +6,12 @@
 
 ## Overview
 
-本文将介绍YunUI的安装方式和基本的使用方法。
+本文将介绍`yun-ui`的安装方式和基本的使用方法。
 
 ### 基础技术框架
 1. [Vue.js](https://vuejs.org/)
 2. [Lerna.js](https://lernajs.io/)
-3. ECMAScript 2015
+3. [ECMAScript 2015](https://babeljs.io/learn-es2015/)
 4. [Webpack](https://webpack.github.io/docs/)
 5. [ESLint](http://eslint.org/)
 
@@ -29,7 +29,7 @@ yun-ui/						##根目录
 	src/						##其他基础公共源文件
 	static/						##静态资源文件（图片图标等）
 		|_ demo/				##demo的静态资源文件
-		|_ yun/					##YunUI组件的静态资源文件
+		|_ yun/					##yun-ui组件的静态资源文件
 	test/						##测试代码源文件
 	.babelrc					##babel配置文件
 	.editorconfig				##编辑器配置文件
@@ -48,7 +48,7 @@ yun-ui/						##根目录
 
 **npm安装**
 
-推荐使用npm的方式安装，它能更好地与Webpack等构建工具结合使用。
+推荐使用`npm`的方式安装，它能更好地与`Webpack`等构建工具结合使用。
 
 ``` bash
 npm install yun-ui
@@ -62,26 +62,25 @@ npm install yun-ui
 
 **引入Yun UI**
 
-你可以引入整个Yun UI组件库，或者根据需要引入部分组件。
+你可以引入整个`yun-ui`组件库，或者根据需要引入部分组件。
 
 ##### 完整引入
 
-在你的工程目录入口js文件中，写入以下内容：
+在你的工程目录入口`js`文件中，写入以下内容：
 
 ``` javascript
-main.js ->
-
 import Vue from 'vue'
 /* 引入组件库js文件 */
-import Yun from 'YunUI'
-/* 引入组件库样式文件 */
-import 'YunUI/dist/yun/index.css'
+import Yun from 'yun-ui'
 
 Vue.use(Yun)
 
----------------
-example.vue ->
-
+new Vue({
+	// vue options
+})
+```
+组件中使用，如在`example.vue`中使用`yun-ui`:
+```html
 <!-- 在vue的template中直接引用即可 -->
 <template>
     <div>
@@ -89,36 +88,34 @@ example.vue ->
         <yun-button></yun-button>
     </div>
 </template>
-
 ```
 
 ##### 按需引入
 
-你可以只安装你需要的组件。这里以安装YunUI的button组件为例：
+你可以只安装你需要的组件。这里以安装`yun-ui`的`button`组件为例：
 
 ``` bash
-npm install YunUI --save
+npm install yun-ui --save
 ```
-安装后在所需的vue文件中进行声明和使用：
-
-``` javascript
+安装后在所需的`.vue`文件中进行声明和使用：
+```html
 <template>
     <div>
         <yun-button>test</yun-button>
     </div>
 </template>
-
+```
+``` javascript
 <script>
-    import yunButton from 'YunUI/dist/yun/button/'
-	import 'YunUI/dist/yun/button/index.css'
+import yunButton from 'yun-ui/dist/yun/button/'
+import 'yun-ui/dist/yun/button/index.css'
 
-    export default {
-        components: {
-            yunButton
-        }
+export default {
+    components: {
+        yunButton
     }
+}
 </script>
-
 ```
 
 ### 贡献组件
@@ -167,7 +164,7 @@ npm run build
 
 ### 代码规范
 
-请参考 [ESLint](http://eslint.org/) standard 规范进行书写，并执行`npm run lint`进行代码检查。
+请参考 [ESLint](http://eslint.org/) `standard` 规范进行书写，并执行`npm run lint`进行代码检查。
 
 ### Tips
 
