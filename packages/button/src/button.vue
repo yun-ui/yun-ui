@@ -11,7 +11,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-button',
+        name: 'y-button',
         mixins: [UIName],
         props: {
             type: {

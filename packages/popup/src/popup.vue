@@ -48,7 +48,7 @@
     // TODO 错误文本（类似表单验证）
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-popup',
+        name: 'y-popup',
         mixins: [UIName],
         props: {
             cover: String,

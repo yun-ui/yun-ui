@@ -12,7 +12,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-tab-item',
+        name: 'y-tab-item',
         mixins: [UIName],
         props: {
             title: String,

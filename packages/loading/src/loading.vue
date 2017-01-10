@@ -12,7 +12,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-loading',
+        name: 'y-loading',
         mixins: [UIName],
         props: {
             icon: String,

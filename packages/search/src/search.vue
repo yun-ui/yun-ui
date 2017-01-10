@@ -26,7 +26,7 @@
      */
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-search',
+        name: 'y-search',
         mixins: [UIName],
         props: {
             text: String,

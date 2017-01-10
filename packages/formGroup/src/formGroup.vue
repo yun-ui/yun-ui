@@ -8,7 +8,7 @@
     // TODO: 还没有任何功能，待做
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-form-group',
+        name: 'y-form-group',
         mixins: [UIName],
         props: {},
         methods: {}

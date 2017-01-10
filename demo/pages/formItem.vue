@@ -8,20 +8,20 @@
         </div>
         <div class="content form">
             <div class="row clearContentPadding">
-                <yun-form>
-                    <yun-form-item type="input" label="单行输入框" placeholder="单行输入框"></yun-form-item>
-                    <yun-form-item type="textarea" placeholder="多行输入框"></yun-form-item>
-                    <yun-form-item type="counter" label="计数器"></yun-form-item>
-                    <yun-form-item type="switch" label="开关列表"></yun-form-item>
+                <y-form>
+                    <y-input label="单行输入框" placeholder="单行输入框"></y-input>
+                    <y-textarea placeholder="多行输入框" :limit="20"></y-textarea>
+                    <y-counter label="计数器"></y-counter>
+                    <y-switch label="开关列表"></y-switch>
                     <div>
-                        <yun-form-item type="checkbox" label="复选框"></yun-form-item>
-                        <yun-form-item type="checkbox" label="复选框"></yun-form-item>
-                        <yun-form-item type="checkbox" label="复选框"></yun-form-item>
+                        <y-checkbox label="复选框"></y-checkbox>
+                        <y-checkbox label="复选框"></y-checkbox>
+                        <y-checkbox label="复选框"></y-checkbox>
                     </div>
                     <div>
-                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
-                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
-                        <yun-form-item type="radio" label="单选框" name="radio"></yun-form-item>
+                        <y-radio label="单选框" name="radio"></y-radio>
+                        <y-radio label="单选框" name="radio"></y-radio>
+                        <y-radio label="单选框" name="radio"></y-radio>
                     </div>
                     <!--<yun-form-item type="imagePicker" label="照片选择器" text="已选择5张">-->
                     <!--<img src="../../src/assets/placeholder-figure.png" slot="image">-->
@@ -30,7 +30,7 @@
                     <!--errorInfo="错误信息" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">-->
                     <!--<img src="../../src/assets/placeholder-figure.png" slot="fileIcon">-->
                     <!--</yun-form-item>-->
-                </yun-form>
+                </y-form>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
 
 <script>
     export default {
-        name: 'yun-field-demo'
+        name: 'y-form-demo'
     }
 
 </script>

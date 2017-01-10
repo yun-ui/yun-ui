@@ -5,25 +5,25 @@
             <p>YunUI 提供一组底部弹出操作面板组件。</p>
         </div>
         <div class="content button-container">
-            <yun-button type="linear" @click="toggleActionPanel">面板型</yun-button>
-            <yun-button type="linear" @click="toggleActionList">列表型</yun-button>
-            <yun-button type="linear" @click="toggleActionCheckbox">选项型</yun-button>
+            <y-button type="linear" @click="toggleActionPanel">面板型</y-button>
+            <y-button type="linear" @click="toggleActionList">列表型</y-button>
+            <y-button type="linear" @click="toggleActionCheckbox">选项型</y-button>
         </div>
-        <yun-action-sheet type="panel" panelTitle="分享到" :actionSheetItem="actionSheetPanelItem"
+        <y-action-sheet type="panel" panelTitle="分享到" :actionSheetItem="actionSheetPanelItem"
                           @maskClicked="maskClicked" :show="showActionPanel" @cancel="maskClicked">
-        </yun-action-sheet>
-        <yun-action-sheet type="list" @maskClicked="maskClicked" :show="showActionList"
+        </y-action-sheet>
+        <y-action-sheet type="list" @maskClicked="maskClicked" :show="showActionList"
                           @cancel="maskClicked" :actionSheetItem="actionSheetPanelItem">
-        </yun-action-sheet>
-        <yun-action-sheet type="checkbox" @maskClicked="maskClicked" @confirm="maskClicked" @change="actionSheetChange"
+        </y-action-sheet>
+        <y-action-sheet type="checkbox" @maskClicked="maskClicked" @confirm="maskClicked" @change="actionSheetChange"
                           @cancel="maskClicked" :show="showActionCheckbox" :actionSheetItem="actionSheetCheckboxItem">
-        </yun-action-sheet>
+        </y-action-sheet>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'yun-button-demo',
+        name: 'y-action-sheet-demo',
         props: {},
         data () {
             return {

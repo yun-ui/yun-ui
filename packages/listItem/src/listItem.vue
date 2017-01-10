@@ -39,9 +39,9 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
-        name: 'yun-list-item',
+        name: 'y-list-item',
         mixins: [UIName],
         props: {
             title: String,

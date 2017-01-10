@@ -7,22 +7,22 @@
                 一种用于需要响应较长时间的 <strong>跳转</strong> 类加载。</p>
         </div>
         <div class="content button-container">
-            <yun-button type="linear" @click.native="showFresh = !showFresh">刷新类 Loading</yun-button>
-            <yun-button type="linear" @click.native="showLoading = !showLoading">跳转类 Loading</yun-button>
+            <y-button type="linear" @click.native="showFresh = !showFresh">刷新类 Loading</y-button>
+            <y-button type="linear" @click.native="showLoading = !showLoading">跳转类 Loading</y-button>
         </div>
 
-        <yun-loading content="加载中" refresh :show="showFresh" style="top:64px">
+        <y-loading content="加载中" refresh :show="showFresh" style="top:64px">
             <img src="../assets/loading.png" slot="icon"/>
-        </yun-loading>
-        <yun-loading content="加载中" :show="showLoading">
+        </y-loading>
+        <y-loading content="加载中" :show="showLoading">
             <img src="../assets/loading.png" slot="icon"/>
-        </yun-loading>
+        </y-loading>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'yun-loading-demo',
+        name: 'y-loading-demo',
         props: {},
         data: function () {
             return {

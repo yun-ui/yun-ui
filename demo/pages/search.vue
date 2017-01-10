@@ -6,7 +6,7 @@
         </div>
         <div class="content">
             <div class="row clearContentPadding">
-                <yun-search text="搜索" placeholder="输入以搜索"></yun-search>
+                <y-search text="搜索" placeholder="输入以搜索"></y-search>
             </div>
         </div>
     </div>

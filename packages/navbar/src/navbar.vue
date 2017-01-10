@@ -7,7 +7,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-navbar',
+        name: 'y-navbar',
         mixins: [UIName],
         props: {
             fixed: Boolean,

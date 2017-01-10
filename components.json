@@ -1,44 +1,62 @@
 {
-  "button": [
-    "./packages/button/index.js"
-  ],
-  "toast": [
-    "./packages/toast/index.js"
-  ],
-  "badge": [
-    "./packages/badge/index.js"
-  ],
-  "buttonGroup": [
-    "./packages/buttonGroup/index.js"
-  ],
-  "form": [
-    "./packages/form/index.js"
-  ],
-  "formItem": [
-    "./packages/formItem/index.js"
-  ],
-  "listContainer": [
-    "./packages/listContainer/index.js"
-  ],
-  "listItem": [
-    "./packages/listItem/index.js"
-  ],
-  "loading": [
-    "./packages/loading/index.js"
-  ],
-  "navbar": [
-    "./packages/navbar/index.js"
-  ],
-  "tabbar": [
-    "./packages/tabbar/index.js"
-  ],
-  "search": [
-    "./packages/search/index.js"
-  ],
-  "switch": [
-    "./packages/switch/index.js"
-  ],
-  "tabItem": [
-    "./packages/tabItem/index.js"
-  ]
+    "actionSheet": [
+        "./packages/actionSheet/index.js"
+    ],
+    "badge": [
+        "./packages/badge/index.js"
+    ],
+    "button": [
+        "./packages/button/index.js"
+    ],
+    "buttonGroup": [
+        "./packages/buttonGroup/index.js"
+    ],
+    "checkbox": [
+        "./packages/checkbox/index.js"
+    ],
+    "counter": [
+        "./packages/counter/index.js"
+    ],
+    "form": [
+        "./packages/form/index.js"
+    ],
+    "input": [
+        "./packages/input/index.js"
+    ],
+    "listContainer": [
+        "./packages/listContainer/index.js"
+    ],
+    "listItem": [
+        "./packages/listItem/index.js"
+    ],
+    "loading": [
+        "./packages/loading/index.js"
+    ],
+    "navbar": [
+        "./packages/navbar/index.js"
+    ],
+    "popup": [
+        "./packages/popup/index.js"
+    ],
+    "radio": [
+        "./packages/radio/index.js"
+    ],
+    "search": [
+        "./packages/search/index.js"
+    ],
+    "switch": [
+        "./packages/switch/index.js"
+    ],
+    "tabbar": [
+        "./packages/tabbar/index.js"
+    ],
+    "tabItem": [
+        "./packages/tabItem/index.js"
+    ],
+    "textarea": [
+        "./packages/textarea/index.js"
+    ],
+    "toast": [
+        "./packages/toast/index.js"
+    ]
 }

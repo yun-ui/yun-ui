@@ -13,7 +13,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-toast',
+        name: 'y-toast',
         mixins: [UIName]
     }
 </script>

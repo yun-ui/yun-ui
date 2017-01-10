@@ -6,15 +6,15 @@
                 一种是位于 <strong>底部</strong> 的文字提示。</p>
         </div>
         <div class="content button-container">
-            <yun-button type="linear" @click="showToast">图文提示</yun-button>
-            <yun-button type="linear" @click="showToastBottom">底部提示</yun-button>
+            <y-button type="linear" @click="showToast">图文提示</y-button>
+            <y-button type="linear" @click="showToastBottom">底部提示</y-button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'yun-toast-demo',
+        name: 'y-toast-demo',
         props: {},
         data: function () {
             return {}

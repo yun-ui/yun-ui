@@ -7,15 +7,18 @@ import buttonGroup from '../packages/buttonGroup'
 import navbar from '../packages/navbar'
 import popup from '../packages/popup'
 import form from '../packages/form'
-import formItem from '../packages/formItem'
+import Checkbox from '../packages/checkbox'
+import Counter from '../packages/counter'
+import Input from '../packages/input'
+import radio from '../packages/radio'
+import Switch from '../packages/switch'
+import textarea from '../packages/textarea'
+// import formItem from '../packages/formItem'
 import listContainer from '../packages/listContainer'
 import listItem from '../packages/listItem'
 import loading from '../packages/loading'
-import Switch from '../packages/switch'
 import badge from '../packages/badge'
 import search from '../packages/search'
-import counter from '../packages/counter'
-import checkbox from '../packages/checkbox'
 import actionSheet from '../packages/actionSheet'
 
 const install = function (Vue) {
@@ -27,15 +30,18 @@ const install = function (Vue) {
     Vue.component(navbar.name, navbar)
     Vue.component(popup.name, popup)
     Vue.component(form.name, form)
-    Vue.component(formItem.name, formItem)
+    Vue.component(Checkbox.name, Checkbox)
+    Vue.component(Counter.name, Counter)
+    Vue.component(Input.name, Input)
+    Vue.component(radio.name, radio)
+    Vue.component(Switch.name, Switch)
+    Vue.component(textarea.name, textarea)
+    // Vue.component(formItem.name, formItem)
     Vue.component(listContainer.name, listContainer)
     Vue.component(listItem.name, listItem)
     Vue.component(loading.name, loading)
-    Vue.component(Switch.name, Switch)
     Vue.component(badge.name, badge)
     Vue.component(search.name, search)
-    Vue.component(counter.name, counter)
-    Vue.component(checkbox.name, checkbox)
     Vue.component(actionSheet.name, actionSheet)
     Vue.use(toast)
 }
@@ -54,14 +60,17 @@ module.exports = {
     navbar,
     popup,
     form,
-    formItem,
+    Checkbox,
+    Counter,
+    Input,
+    radio,
+    Switch,
+    textarea,
+    // formItem,
     listContainer,
     listItem,
     loading,
-    Switch,
     badge,
     search,
-    counter,
-    checkbox,
     actionSheet
 }

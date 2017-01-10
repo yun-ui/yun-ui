@@ -5,62 +5,62 @@
             <p>YunUI 提供了几种弹窗规范。</p>
         </div>
         <div class="content button-container">
-            <yun-button type="linear" @click="showPopup1 = true">确认类弹窗
-            </yun-button>
-            <yun-button type="linear" @click.native="showPopup2 = !showPopup2">输入类（单行）弹窗</yun-button>
-            <yun-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</yun-button>
-            <yun-button type="linear" @click.native="showPopup4 = !showPopup4">内容带跳转按钮弹窗</yun-button>
-            <yun-button type="linear" @click.native="showPopup5 = !showPopup5">宣传弹窗</yun-button>
+            <y-button type="linear" @click="showPopup1 = true">确认类弹窗
+            </y-button>
+            <y-button type="linear" @click.native="showPopup2 = !showPopup2">输入类（单行）弹窗</y-button>
+            <y-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</y-button>
+            <y-button type="linear" @click.native="showPopup4 = !showPopup4">内容带跳转按钮弹窗</y-button>
+            <y-button type="linear" @click.native="showPopup5 = !showPopup5">宣传弹窗</y-button>
         </div>
 
-        <yun-popup title="标题" :show="showPopup1" @maskClicked="maskClicked"
+        <y-popup title="标题" :show="showPopup1" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
-            <yun-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <yun-tab-item title="确定" tabId="1"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
+            <y-button-group slot="buttonGroup" defaultActiveTabId="1">
+                <y-tab-item title="确定" tabId="1"></y-tab-item>
+            </y-button-group>
+        </y-popup>
 
-        <yun-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
+        <y-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
                    input="input">
-            <yun-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <yun-tab-item title="确定" tabId="1"></yun-tab-item>
-                <yun-tab-item title="取消" tabId="2"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
+            <y-button-group slot="buttonGroup" defaultActiveTabId="1">
+                <y-tab-item title="确定" tabId="1"></y-tab-item>
+                <y-tab-item title="取消" tabId="2"></y-tab-item>
+            </y-button-group>
+        </y-popup>
 
-        <yun-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
+        <y-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
-            <yun-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <yun-tab-item class="active" title="确定" tabId="1"></yun-tab-item>
-                <yun-tab-item title="取消" tabId="2"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
+            <y-button-group slot="buttonGroup" defaultActiveTabId="1">
+                <y-tab-item class="active" title="确定" tabId="1"></y-tab-item>
+                <y-tab-item title="取消" tabId="2"></y-tab-item>
+            </y-button-group>
+        </y-popup>
 
-        <yun-popup title="标题" :show="showPopup4" @maskClicked="maskClicked"
+        <y-popup title="标题" :show="showPopup4" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
-            <yun-button size="large" type="normal" slot="button">文本</yun-button>
-            <yun-button size="large" type="normal" disabled slot="button">文本</yun-button>
-            <yun-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <yun-tab-item title="知道了" tabId="1"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
+            <y-button size="large" type="normal" slot="button">文本</y-button>
+            <y-button size="large" type="normal" disabled slot="button">文本</y-button>
+            <y-button-group slot="buttonGroup" defaultActiveTabId="1">
+                <y-tab-item title="知道了" tabId="1"></y-tab-item>
+            </y-button-group>
+        </y-popup>
 
-        <yun-popup title="标题" :show="showPopup5" @maskClicked="maskClicked"
+        <y-popup title="标题" :show="showPopup5" @maskClicked="maskClicked"
                    :textList="textListArray">
             <img src="../assets/popup-cover.png" slot="cover"/>
-            <yun-button-group slot="buttonGroup" defaultActiveTabId="2">
-                <yun-tab-item title="知道了" tabId="1"></yun-tab-item>
-                <yun-tab-item title="了解更多" class="active" tabId="2"></yun-tab-item>
-            </yun-button-group>
-        </yun-popup>
+            <y-button-group slot="buttonGroup" defaultActiveTabId="2">
+                <y-tab-item title="知道了" tabId="1"></y-tab-item>
+                <y-tab-item title="了解更多" class="active" tabId="2"></y-tab-item>
+            </y-button-group>
+        </y-popup>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'yun-toast-demo',
+        name: 'y-toast-demo',
         props: {},
         data: function () {
             return {

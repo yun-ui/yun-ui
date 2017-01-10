@@ -29,7 +29,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-image-picker',
+        name: 'y-image-picker',
         mixins: [UIName],
         props: {
             label: String,

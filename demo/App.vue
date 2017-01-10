@@ -6,14 +6,14 @@
                 第三方开发以及统一用户体验。</p>
         </div>
         <div v-for="group in nav">
-            <yun-list-container>
-                <yun-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
+            <y-list-container>
+                <y-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
                     <img :src="group.title.icon" slot="icon">
-                </yun-list-item>
-                <yun-list-item v-for="component in group.list" :title="component.secondary + component.name"
+                </y-list-item>
+                <y-list-item v-for="component in group.list" :title="component.secondary + component.name"
                                link @click.native="goToDetail(component.path)">
-                </yun-list-item>
-            </yun-list-container>
+                </y-list-item>
+            </y-list-container>
         </div>
     </div>
 </template>
@@ -22,7 +22,7 @@
     import route from './route'
 
     export default {
-        name: 'yun-ui-demo',
+        name: 'y-ui-demo',
         props: {},
         data () {
             return {

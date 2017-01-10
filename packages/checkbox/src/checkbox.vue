@@ -1,7 +1,12 @@
 <template>
-    <div :class="UIName + '-checkbox'">
-        <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checked" @change="change"/>
-        <div :class="[UIName + '-checkbox-inner']"></div>
+    <div :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': error}]">
+        <div :class="UIName + '-checkbox'">
+            <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checked" @change="change"/>
+            <div :class="[UIName + '-checkbox-inner']"></div>
+        </div>
+        <div :class="UIName + '-form-title'">
+            <span v-text="label"></span>
+        </div>
     </div>
 </template>
 
@@ -12,18 +17,24 @@
      */
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-checkbox',
+        name: 'y-checkbox',
         mixins: [UIName],
         props: {
-            checked: {
+            label: String,
+            value: String,
+            error: {
                 type: Boolean,
                 default: false
             },
-            value: String
+            checked: {
+                type: Boolean,
+                default: false
+            }
         },
         methods: {
             change: function (e) {
-                this.$emit('change', this.value, e.target.checked)
+                this.$emit('change', e.target.checked, this.label)
+                this.$parent && this.$parent.$emit('change', e.target.checked, this.label)
             }
         }
     }

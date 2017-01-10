@@ -6,9 +6,9 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
-        name: 'yun-badge',
+        name: 'y-badge',
         mixins: [UIName],
         props: {
             type: {

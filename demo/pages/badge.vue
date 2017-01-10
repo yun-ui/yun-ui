@@ -7,65 +7,65 @@
         </div>
         <div class="content yun-bg-white">
             <div class="row yun-text-center">
-                <yun-badge type="text" value="new"></yun-badge>
-                <yun-badge type="text" value="100" color="#3CBAFF"></yun-badge>
-                <yun-badge type="text" value="100" color="#94D301"></yun-badge>
-                <yun-badge type="text" value="100" color="#F87E4E"></yun-badge>
-                <yun-badge type="text" value="100" color="#F7BF28"></yun-badge>
-                <yun-badge type="text" value="100" color="#AF65DF"></yun-badge>
-                <yun-badge type="text" value="100" color="#FB6691"></yun-badge>
-                <yun-badge type="text" value="100" color="#F35959"></yun-badge>
-                <yun-badge type="text" value="100" color="#31D2EA"></yun-badge>
-                <yun-badge type="text" value="100" color="#4788D8"></yun-badge>
-                <yun-badge type="text" value="100" color="#01D386"></yun-badge>
-                <yun-badge type="text" value="100" color="#C18E6F"></yun-badge>
-                <yun-badge type="text" value="100" color="#6D777D"></yun-badge>
-                <yun-badge type="text" value="100" color="#EAEFF3"></yun-badge>
-                <yun-badge type="text" value="1"></yun-badge>
+                <y-badge type="text" value="new"></y-badge>
+                <y-badge type="text" value="100" color="#3CBAFF"></y-badge>
+                <y-badge type="text" value="100" color="#94D301"></y-badge>
+                <y-badge type="text" value="100" color="#F87E4E"></y-badge>
+                <y-badge type="text" value="100" color="#F7BF28"></y-badge>
+                <y-badge type="text" value="100" color="#AF65DF"></y-badge>
+                <y-badge type="text" value="100" color="#FB6691"></y-badge>
+                <y-badge type="text" value="100" color="#F35959"></y-badge>
+                <y-badge type="text" value="100" color="#31D2EA"></y-badge>
+                <y-badge type="text" value="100" color="#4788D8"></y-badge>
+                <y-badge type="text" value="100" color="#01D386"></y-badge>
+                <y-badge type="text" value="100" color="#C18E6F"></y-badge>
+                <y-badge type="text" value="100" color="#6D777D"></y-badge>
+                <y-badge type="text" value="100" color="#EAEFF3"></y-badge>
+                <y-badge type="text" value="1"></y-badge>
             </div>
             <div class="row yun-text-center">
-                <yun-badge></yun-badge>
-                <yun-badge color="#3CBAFF"></yun-badge>
-                <yun-badge color="#94D301"></yun-badge>
-                <yun-badge color="#F87E4E"></yun-badge>
-                <yun-badge color="#F7BF28"></yun-badge>
-                <yun-badge color="#AF65DF"></yun-badge>
-                <yun-badge color="#FB6691"></yun-badge>
-                <yun-badge color="#F35959"></yun-badge>
-                <yun-badge color="#31D2EA"></yun-badge>
-                <yun-badge color="#4788D8"></yun-badge>
-                <yun-badge color="#01D386"></yun-badge>
-                <yun-badge color="#C18E6F"></yun-badge>
-                <yun-badge color="#6D777D"></yun-badge>
-                <yun-badge color="#EAEFF3"></yun-badge>
+                <y-badge></y-badge>
+                <y-badge color="#3CBAFF"></y-badge>
+                <y-badge color="#94D301"></y-badge>
+                <y-badge color="#F87E4E"></y-badge>
+                <y-badge color="#F7BF28"></y-badge>
+                <y-badge color="#AF65DF"></y-badge>
+                <y-badge color="#FB6691"></y-badge>
+                <y-badge color="#F35959"></y-badge>
+                <y-badge color="#31D2EA"></y-badge>
+                <y-badge color="#4788D8"></y-badge>
+                <y-badge color="#01D386"></y-badge>
+                <y-badge color="#C18E6F"></y-badge>
+                <y-badge color="#6D777D"></y-badge>
+                <y-badge color="#EAEFF3"></y-badge>
             </div>
         </div>
         <div class="row clearContentPadding">
-            <yun-navbar defaultActiveTabId="1">
-                <yun-tab-item title="文本" tabId="1"></yun-tab-item>
-                <yun-tab-item title="文本" tabId="2">
-                    <yun-badge color="#01D386"></yun-badge>
-                </yun-tab-item>
-                <yun-tab-item title="文本" tabId="3"></yun-tab-item>
-            </yun-navbar>
+            <y-navbar defaultActiveTabId="1">
+                <y-tab-item title="文本" tabId="1"></y-tab-item>
+                <y-tab-item title="文本" tabId="2">
+                    <y-badge color="#01D386"></y-badge>
+                </y-tab-item>
+                <y-tab-item title="文本" tabId="3"></y-tab-item>
+            </y-navbar>
         </div>
         <div class="row clearContentPadding">
-            <yun-navbar defaultActiveTabId="1">
-                <yun-tab-item title="文本" tabId="1">
-                    <yun-badge type="text" value="1" color="#01D386"></yun-badge>
-                </yun-tab-item>
-                <yun-tab-item title="文本" tabId="2"></yun-tab-item>
-                <yun-tab-item title="文本" tabId="3"></yun-tab-item>
-            </yun-navbar>
+            <y-navbar defaultActiveTabId="1">
+                <y-tab-item title="文本" tabId="1">
+                    <y-badge type="text" value="1" color="#01D386"></y-badge>
+                </y-tab-item>
+                <y-tab-item title="文本" tabId="2"></y-tab-item>
+                <y-tab-item title="文本" tabId="3"></y-tab-item>
+            </y-navbar>
         </div>
         <div class="row clearContentPadding">
-            <yun-navbar defaultActiveTabId="1">
-                <yun-tab-item title="文本" tabId="1">
-                    <yun-badge type="text" value="new" color="#fa5959"></yun-badge>
-                </yun-tab-item>
-                <yun-tab-item title="文本" tabId="2"></yun-tab-item>
-                <yun-tab-item title="文本" tabId="3"></yun-tab-item>
-            </yun-navbar>
+            <y-navbar defaultActiveTabId="1">
+                <y-tab-item title="文本" tabId="1">
+                    <y-badge type="text" value="new" color="#fa5959"></y-badge>
+                </y-tab-item>
+                <y-tab-item title="文本" tabId="2"></y-tab-item>
+                <y-tab-item title="文本" tabId="3"></y-tab-item>
+            </y-navbar>
         </div>
     </div>
 </template>

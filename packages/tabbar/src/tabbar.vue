@@ -10,7 +10,7 @@
 <script>
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-tabbar',
+        name: 'y-tabbar',
         mixins: [UIName],
         props: {
             fixed: Boolean,

@@ -73,7 +73,7 @@
     import yunCheckbox from 'packages/checkbox'
     import {UIName} from 'mixins'
     export default {
-        name: 'yun-action-sheet',
+        name: 'y-action-sheet',
         mixins: [UIName],
         props: {
             type: String,

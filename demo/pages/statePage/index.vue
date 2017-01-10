@@ -7,19 +7,19 @@
                 操作成功、操作失败、操作等待。</strong></p>
         </div>
         <div class="content statePage-button-container">
-            <yun-button type="linear" @click.native="goToPage('statePage1')">服务器异常</yun-button>
-            <yun-button type="linear" @click.native="goToPage('statePage2')">网络异常</yun-button>
-            <yun-button type="linear" @click.native="goToPage('statePage3')">无数据缺省</yun-button>
-            <yun-button type="linear" @click.native="goToPage('statePage4')">操作成功</yun-button>
-            <yun-button type="linear" @click.native="goToPage('statePage5')">操作失败</yun-button>
-            <yun-button type="linear" @click.native="goToPage('statePage6')">操作等待</yun-button>
+            <y-button type="linear" @click.native="goToPage('statePage1')">服务器异常</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage2')">网络异常</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage3')">无数据缺省</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage4')">操作成功</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage5')">操作失败</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage6')">操作等待</y-button>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'yun-statePage-demo',
+        name: 'y-statePage-demo',
         props: {},
         created () {
             console.log('state page demo loaded')

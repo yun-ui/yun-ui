@@ -11,7 +11,7 @@
     import {UIName} from 'mixins'
 
     export default {
-        name: 'yun-button-group',
+        name: 'y-button-group',
         mixins: [UIName],
         props: {
             fixed: Boolean,

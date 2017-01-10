@@ -6,8 +6,8 @@
             <p class="state-info yun-text-secondary">内容详情，可根据实际需求安排，如果换行则不超过规定
                 长度，居中展示</p>
             <div class="row">
-                <yun-button type="normal">推荐操作</yun-button>
-                <yun-button type="linear">辅助操作</yun-button>
+                <y-button type="normal">推荐操作</y-button>
+                <y-button type="linear">辅助操作</y-button>
             </div>
         </div>
     </div>

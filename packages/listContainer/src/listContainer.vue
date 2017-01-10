@@ -7,9 +7,9 @@
 </template>
 
 <script>
-    import {UIName} from '../../../src/mixins/'
+    import {UIName} from 'mixins'
     export default {
-        name: 'yun-list-container',
+        name: 'y-list-container',
         mixins: [UIName],
         props: {
         },
