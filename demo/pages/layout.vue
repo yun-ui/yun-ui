@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="padding-bottom:30px">
         <div class="title">
             <h3 class="yun-h3">布局Layout</h3>
             <p>YunUI 提供了一套简单的基于flex布局的栅格系统。

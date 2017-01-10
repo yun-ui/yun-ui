@@ -326,7 +326,7 @@
             },
             showToast: function () {
                 this.$toast({
-                    content: 'test'
+                    content: 'test4454578呵呵呵'
                 })
             },
             toggleLoading: function () {

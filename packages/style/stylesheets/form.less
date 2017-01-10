@@ -1,30 +1,29 @@
 @import "var";
 
-
 @keyframes error {
   0% {
     background-color: #ffffff;
   }
-100% {
-  background-color: @formError;
-}
+  100% {
+    background-color: @formError;
+  }
 }
 
 @-webkit-keyframes error {
-0% {
-  background-color: #ffffff;
-}
-100% {
-  background-color: @formError;
-}
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: @formError;
+  }
 }
 
 @-moz-keyframes error {
-0% {
-  background-color: #ffffff;
-}
-100% {
-  background-color: @formError;
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: @formError;
   }
 }
 
@@ -35,6 +34,7 @@
     //background-color: #ffffff;
   }
   &-form-item {
+    .resetInput();
     position: relative;
     padding: 0 @formPadding;
     height: @formItemHeight;
@@ -60,16 +60,16 @@
       transform: scaleY(.5);
       -webkit-transform: scaleY(.5);
     }
-    &:active{
+    &:active {
       background-color: @formItemActiveBG;
     }
-    &.error{
-        background-color:  @formError;
-        animation: error .9s 3 linear;
-        -webkit-animation: error .9s 3 linear;
-        -moz-animation: error .9s 3 linear;
+    &.error {
+      background-color: @formError;
+      animation: error .9s 3 linear;
+      -webkit-animation: error .9s 3 linear;
+      -moz-animation: error .9s 3 linear;
     }
-    textarea,input{
+    textarea, input {
       background-color: transparent;
     }
   }
@@ -110,7 +110,7 @@
   }
 
   &-checkbox-item:after {
-    left: @formPadding + @checkboxSize * 1.5 ;
+    left: @formPadding + @checkboxSize * 1.5;
   }
 
   //radio
@@ -240,9 +240,9 @@
     border: 1px solid @borderColor;
     margin-top: @fieldPadding;
     background: rgba(241, 244, 248, 0.3);
-    padding:@fieldPadding;
-    &:first-child{
-      margin-top:0;
+    padding: @fieldPadding;
+    &:first-child {
+      margin-top: 0;
     }
   }
   &-file-icon {
@@ -250,7 +250,7 @@
     height: @fieldIconSize;
   }
   &-file-name {
-    font-size:@fieldNameFontSize;
+    font-size: @fieldNameFontSize;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

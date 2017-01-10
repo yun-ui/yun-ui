@@ -17,17 +17,17 @@
 </script>
 <style lang="less" rel="stylesheet/less">
     .state-page-container {
-        padding: 1rem 0.24rem 0;
+        padding: 50px 12px 0;
         text-align: center;
         .state-img {
-            width: 1.6rem;
-            margin-bottom: 0.4rem;
+            width: 80px;
+            margin-bottom: 20px;
         }
         .state-info {
-            margin: 0.2rem 0;
+            margin: 10px 0;
         }
         .row button {
-            margin-top: 0.3rem;
+            margin-top: 15px;
         }
     }
 </style>

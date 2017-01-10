@@ -2,25 +2,26 @@
 
 .@{uiName} {
   &-counter {
-    &-icon{
+    .resetInput();
+    &-icon {
       vertical-align: middle;
-      font-size:@counterIconSize;
+      font-size: @counterIconSize;
       color: @themeColor;
-      &:hover{
+      &:active {
         cursor: pointer;
         opacity: 0.5;
       }
-      &.is-disabled{
+      &.is-disabled {
         color: #C0C1C9;
       }
     }
-    &-number{
+    &-number {
       vertical-align: middle;
       text-align: center;
       display: inline-block;
-      min-width:@counterNumberFontSize*2.4;
+      min-width: @counterNumberFontSize*2.4;
       color: @secondaryFontColor;
-      font-size:@counterNumberFontSize;
+      font-size: @counterNumberFontSize;
       line-height: @counterIconSize;
     }
   }

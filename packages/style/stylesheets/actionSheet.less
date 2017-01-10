@@ -1,38 +1,41 @@
 @import "var";
 
-.@{uiName}{
-  &-action-sheet-container{
+.@{uiName} {
+  &-action-sheet{
+    .resetImg();
+  }
+  &-action-sheet-container {
     position: fixed;
-    bottom:0;
-    left:0;
-    right:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: @zIndexNormal + 1;
   }
   //分享操作类型
-  &-action-sheet-panel{
+  &-action-sheet-panel {
     background-color: #ffffff;
-    padding:0 @actionSheetPanelPadding;
+    padding: 0 @actionSheetPanelPadding;
   }
-  &-action-sheet-title{
+  &-action-sheet-title {
     font-size: @actionSheetTitleFontSize;
     line-height: @actionSheetLineHeight;
     border-bottom: 1px solid @borderColor;
   }
-  &-action-sheet-content{
+  &-action-sheet-content {
     padding: @actionSheetPanelPadding 0 @actionSheetPadding;
-    font-size:0;
-    margin-right:-@actionSheetPanelPadding;
+    font-size: 0;
+    margin-right: -@actionSheetPanelPadding;
   }
-  &-action-sheet-item{
+  &-action-sheet-item {
     display: inline-block;
-    margin:0 @actionSheetPanelPadding @actionSheetPadding 0;
+    margin: 0 @actionSheetPanelPadding @actionSheetPadding 0;
     text-align: center;
   }
-  &-action-sheet-image{
-    width:@actionSheetImageSize;
+  &-action-sheet-image {
+    width: @actionSheetImageSize;
     max-height: @actionSheetImageSize;
   }
-  &-action-sheet-item-name{
+  &-action-sheet-item-name {
     margin-top: @actionSheetPadding/2;
     font-size: @actionSheetItemName;
     width: @actionSheetImageSize;
@@ -42,56 +45,57 @@
   }
 
   //列表操作类型
-  &-action-sheet-list{
+  &-action-sheet-list {
     background-color: #ffffff;
   }
-  &-action-sheet-list-item{
+  &-action-sheet-list-item {
     line-height: @actionSheetLineHeight;
     text-align: center;
-    &:hover,&:active{
+    &:hover, &:active {
       background-color: #f6f8fa;
     }
   }
-  &-action-sheet-button{
+  &-action-sheet-button {
+    .resetButton();
     color: #030303;
-    margin-top:@actionSheetButtonMarginTop;
-    width:100%;
+    margin-top: @actionSheetButtonMarginTop;
+    width: 100%;
     height: @actionSheetLineHeight;
     font-size: @actionSheetButtonFontSize;
     background-color: #ffffff;
   }
-  &-action-sheet-icon{
-    width:@actionSheetLineHeight/2;
-    height:@actionSheetLineHeight/2;
+  &-action-sheet-icon {
+    width: @actionSheetLineHeight/2;
+    height: @actionSheetLineHeight/2;
   }
   &-action-sheet-icon,
-  &-action-sheet-list-title{
+  &-action-sheet-list-title {
     vertical-align: middle;
   }
-  &-action-sheet-list-title{
-    font-size:@actionSheetTitleFontSize;
+  &-action-sheet-list-title {
+    font-size: @actionSheetTitleFontSize;
     display: inline-block;
     min-width: @actionSheetLineHeight*2;
   }
 
   //选择操作类型
-  &-action-sheet-checkbox{
+  &-action-sheet-checkbox {
     background-color: #ffffff;
   }
-  &-action-sheet-checkbox-list{
+  &-action-sheet-checkbox-list {
     margin-left: @actionSheetPadding;
   }
-  &-action-sheet-header{
+  &-action-sheet-header {
     background-color: #EAEFF3;
     line-height: @actionSheetHeader;
     padding: 0 @actionSheetPadding;
   }
-  &-action-sheet-checkbox-commit{
+  &-action-sheet-checkbox-commit {
     float: right;
     color: @themeColor;
     text-decoration: none;
   }
-  &-action-sheet-checkbox-item{
+  &-action-sheet-checkbox-item {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -104,12 +108,12 @@
     align-items: center;
     line-height: @actionSheetLineHeight;
   }
-  &-action-sheet-checkbox-label{
+  &-action-sheet-checkbox-label {
     flex: 1;
     -webkit-box-flex: 1;
     font-size: @actionSheetTitleFontSize;
     vertical-align: middle;
-    .iconfont{
+    .iconfont {
       font-size: @actionSheetTitleFontSize;
     }
   }

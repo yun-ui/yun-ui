@@ -13,8 +13,8 @@
     .state-page-container {
         text-align: center;
         .state-img {
-            width: 1.6rem;
-            margin-bottom: 0.4rem;
+            width: 80px;
+            margin-bottom: 20px;
         }
     }
 </style>

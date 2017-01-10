@@ -2,34 +2,33 @@
 
 /* tabbar */
 .@{uiName} {
-    &-button-group {
-        display: flex;
-        display: -webkit-box;
-        text-align: center;
-        background-color: #ffffff;
-        &.is-fixed{
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: @zIndexNormal;
-        }
-        .@{uiName}-tab-item-label:hover,
-        .@{uiName}-tab-item-label:active{
-            opacity: 0.5;
-        }
-        //重置内嵌的tabItem默认样式
-        .@{uiName}-tab-item-label {
-            color: @secondaryFontColor;
-            height: @buttonGroupHeight;
-            line-height: @buttonGroupHeight;
-            font-size: @buttonGroupFontSize;
-            &.is-active{
-                color: @themeColor;
-            }
-            .iconfont{
-                padding:0 @buttonGroupIconFontPadding;
-            }
-        }
+  &-button-group {
+    display: flex;
+    display: -webkit-box;
+    text-align: center;
+    background-color: #ffffff;
+    &.is-fixed {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: @zIndexNormal;
     }
+    .@{uiName}-tab-item-label:active{
+      opacity: 0.5;
+    }
+    //重置内嵌的tabItem默认样式
+    .@{uiName}-tab-item-label {
+      color: @secondaryFontColor;
+      height: @buttonGroupHeight;
+      line-height: @buttonGroupHeight;
+      font-size: @buttonGroupFontSize;
+      &.is-active {
+        color: @themeColor;
+      }
+      .iconfont {
+        padding: 0 @buttonGroupIconFontPadding;
+      }
+    }
+  }
 }

@@ -1,90 +1,129 @@
+/*自定义滚动条样式*/
+::-webkit-scrollbar {
+  overflow: visible;
+  width: 6px;
+  height: 17px;
+}
+
+::-webkit-scrollbar-button {
+  width: 48px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  min-height: 28px;
+  padding: 100px 0 0;
+  border: solid transparent;
+  border-width: 1px;
+  background-color: rgba(138, 153, 170, .6);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  padding: 0 0 0 100px;
+  border-width: 6px 1px 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(138, 153, 170, .8);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(138, 153, 170, 1);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body {
   background-color: #eaeff3;
   color: #5e5e5e;
 }
+
 /* demo展示通用样式 */
 //垂直居中
-.middleCenter{
+.middleCenter {
   position: absolute;
-  top:50%;
-  left:50%;
-  transform-origin:50% 50%;
-  transform:translate(-50% ,-50%);
-  -webkit-transform-origin:50% 50%;
-  -webkit-transform:translate(-50% ,-50%);
-  -moz-transform-origin:50% 50%;
-  -moz-transform:translate(-50% ,-50%);
-  -ms-transform-origin:50% 50%;
-  -ms-transform:translate(-50% ,-50%);
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform-origin: 50% 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform-origin: 50% 50%;
+  -ms-transform: translate(-50%, -50%);
 }
+
 // page full
-.page-full{
+.page-full {
   min-height: 100%;
 }
 
 /* 作为demo预览页文字排版布局样式 */
 .banner {
-  padding: 0.6rem;
+  padding: 30px;
   p {
-    margin-top: 0.2rem;
+    margin-top: 10px;
   }
 }
 
 .title {
-  padding: 0.6rem 0.24rem;
+  padding: 30px 12px;
   p {
-    margin-top: 0.2rem;
+    margin-top: 10px;
   }
 }
 
 .content {
-  padding: 0 0.24rem;
+  padding: 0 12px;
   .row {
-    padding: 0.16rem 0 0.36rem;
-    &.clearContentPadding{
-      margin-left:-0.24rem;
-      margin-right:-0.24rem;
+    padding: 8px 0 18px;
+    &.clearContentPadding {
+      margin-left: -12px;
+      margin-right: -12px;
     }
   }
   p {
-    margin-top: 0.2rem;
+    margin-top: 10px;
   }
   .panel {
-    border-radius: 0.04rem;
-    padding-bottom: 0.16rem;
+    border-radius: 2px;
+    padding-bottom: 8px;
   }
-  h4{
-    margin-top:0.24rem;
+  h4 {
+    margin-top: 12px;
   }
 }
 
 .button-container button,
-.statePage-button-container button
-{
-    margin-bottom: 0.16rem;
+.statePage-button-container button {
+  margin-bottom: 8px;
 }
 
 .layout {
-  .row{
-    padding:0.16rem 0 0;
+  .row {
+    padding: 8px 0 0;
   }
   .yun-grid-container,
   .yun-flex-container {
-    margin: 0 -0.08rem;
+    margin: 0 -4px;
   }
   .yun-flex-content,
   .yun-gird-content {
-    line-height: 0.75rem;
-    border-right: 0.08rem solid #eaeff3;
-    border-left: 0.08rem solid #eaeff3;
+    line-height: 40px;
+    border-right: 4px solid #eaeff3;
+    border-left: 4px solid #eaeff3;
   }
 }
 
 .utility {
   .icon-container {
     .iconfont {
-      font-size: 0.44rem;
-      &:hover,&:active{
+      font-size: 22px;
+      &:hover, &:active {
         color: #3cbaff;
       }
     }
@@ -92,19 +131,19 @@ body {
   ul li {
     text-align: center;
     display: inline-block;
-    width: 0.8rem;
-    height: 0.8rem;
-    line-height: 0.88rem;
-    border-radius: 0.08rem;
-    margin:0 0.1rem 0.1rem 0;
+    width: 40px;
+    height: 40px;
+    line-height: 44px;
+    border-radius: 2px;
+    margin: 0 5px 5px 0;
     vertical-align: middle;
   }
-  .border-1px{
-    p{
-      padding:0.2rem;
-      background-color: rgba(0,0,0,0.02);
-      span{
-        padding:0 0.3rem;
+  .border-1px {
+    p {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.02);
+      span {
+        padding: 0 15px;
       }
     }
   }
@@ -114,14 +153,14 @@ body {
   ul li {
     text-align: center;
     display: inline-block;
-    width: 1.3rem;
-    height: 0.88rem;
-    line-height: 0.88rem;
-    border-radius: 0.08rem;
-    margin:0 0.1rem 0.1rem 0;
+    width: 65px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 4px;
+    margin: 0 5px 5px 0;
   }
 }
 
-.cell .row{
-  margin:0.16rem -0.24rem;
+.cell .row {
+  margin: 8px -12px;
 }

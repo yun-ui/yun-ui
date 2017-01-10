@@ -2,281 +2,295 @@
 
 /* Typography */
 // headings 规范h1-h6文本大小
-.@{uiName}{
-    &-h1 {
-        font-size: @h1Size;
-    }
+.@{uiName} {
+  &-h1 {
+    font-size: @h1Size;
+  }
 
-    &-h2 {
-        font-size: @h2Size;
-    }
+  &-h2 {
+    font-size: @h2Size;
+  }
 
-    &-h3 {
-        font-size: @h3Size;
-    }
+  &-h3 {
+    font-size: @h3Size;
+  }
 
-    &-h4 {
-        font-size: @h4Size;
-    }
+  &-h4 {
+    font-size: @h4Size;
+  }
 
-    &-h5 {
-        font-size: @h5Size;
-    }
+  &-h5 {
+    font-size: @h5Size;
+  }
 
-    &-h6 {
-        font-size: @h6Size;
-    }
-    &-small {
-        font-size: @smallSize;
-    }
-    //text alignment 文本对齐
-    &-text-center{
-        text-align: center;
-    }
-    &-text-left{
-        text-align: left;
-    }
-    &-text-right{
-        text-align: right;
-    }
+  &-h6 {
+    font-size: @h6Size;
+  }
+  &-small {
+    font-size: @smallSize;
+  }
+  //text alignment 文本对齐
+  &-text-center {
+    text-align: center;
+  }
+  &-text-left {
+    text-align: left;
+  }
+  &-text-right {
+    text-align: right;
+  }
 }
 
 /* Utility 辅助类 */
 //contextual text 情景文字
 .@{uiName} {
-    &-text-default {
-        color: @defaultFontColor;
-    }
-    &-text-secondary {
-        color: @secondaryFontColor;
-    }
-    &-text-theme,
-    &-text-active {
-        color: @activeFontColor;
-    }
-    &-text-warn {
-        color: @warnFontColor;
-    }
-    &-text-tips {
-        color: @tipsFontColor;
-    }
-    &-text-white {
-        color: @whiteFontColor;
-    }
+  &-text-default {
+    color: @defaultFontColor;
+  }
+  &-text-secondary {
+    color: @secondaryFontColor;
+  }
+  &-text-theme,
+  &-text-active {
+    color: @activeFontColor;
+  }
+  &-text-warn {
+    color: @warnFontColor;
+  }
+  &-text-tips {
+    color: @tipsFontColor;
+  }
+  &-text-white {
+    color: @whiteFontColor;
+  }
 }
+
 //quick background color 快速背景色
 .@{uiName} {
-    &-bg-blue{
-        background-color: @themeColorBlue;
-    }
-    &-bg-olive{
-        background-color: @themeColorOlive;
-    }
-    &-bg-orange{
-        background-color: @themeColorOrange;
-    }
-    &-bg-yellow{
-        background-color: @themeColorYellow;
-    }
-    &-bg-purple{
-        background-color: @themeColorPurple;
-    }
-    &-bg-pink{
-        background-color: @themeColorPink;
-    }
-    &-bg-red{
-        background-color: @themeColorRed;
-    }
-    &-bg-skyblue{
-        background-color: @themeColorSkyBlue;
-    }
-    &-bg-royalblue{
-        background-color: @themeColorRoyalBlue;
-    }
-    &-bg-green{
-        background-color: @themeColorGreen;
-    }
-    &-bg-brown{
-        background-color: @themeColorBrown;
-    }
-    &-bg-grey{
-        background-color: @themeColorGrey;
-    }
-    &-bg-whitesmoke{
-        background-color: @themeColorWhiteSmoke;
-    }
-    &-bg-white{
-        background-color: @themeColorWhite;
-    }
+  &-bg-blue {
+    background-color: @themeColorBlue;
+  }
+  &-bg-olive {
+    background-color: @themeColorOlive;
+  }
+  &-bg-orange {
+    background-color: @themeColorOrange;
+  }
+  &-bg-yellow {
+    background-color: @themeColorYellow;
+  }
+  &-bg-purple {
+    background-color: @themeColorPurple;
+  }
+  &-bg-pink {
+    background-color: @themeColorPink;
+  }
+  &-bg-red {
+    background-color: @themeColorRed;
+  }
+  &-bg-skyblue {
+    background-color: @themeColorSkyBlue;
+  }
+  &-bg-royalblue {
+    background-color: @themeColorRoyalBlue;
+  }
+  &-bg-green {
+    background-color: @themeColorGreen;
+  }
+  &-bg-brown {
+    background-color: @themeColorBrown;
+  }
+  &-bg-grey {
+    background-color: @themeColorGrey;
+  }
+  &-bg-whitesmoke {
+    background-color: @themeColorWhiteSmoke;
+  }
+  &-bg-white {
+    background-color: @themeColorWhite;
+  }
 }
+
 //quick position 快速定位
-.@{uiName}{
-    &-left {
-        float: left;
-    }
-    &-right {
-        float: right;
-    }
-    &-block-center{
-        margin: 0 auto;
-    }
+.@{uiName} {
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+  &-block-center {
+    margin: 0 auto;
+  }
 }
 
 //文字缺省
 .@{uiName} {
-    &-ellipse{
-        display: block;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    &-multi-ellipse{
-        display: -webkit-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp:@line-clamp-value;
-    }
+  &-ellipse {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  &-multi-ellipse {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: @line-clamp-value;
+  }
 }
+
 //divided 割线 增加.hidden-last-divided
-.@{uiName}-divided{
-    position: relative;
-    &:after{
-        content: '';
-        display: block;
-        height: .3rem;
-        border-left: 1px solid #dce1e8;
-        position: absolute;
-        vertical-align: middle;
-        top: 50%;
-        right:0;
-        margin-top:-0.15rem;
-        transform: scaleX(.5);
-        -webkit-transform: scaleX(.5);
-    }
-    &.hidden-last-divided:last-child:after{
-        display: none;
-    }
+.@{uiName}-divided {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    height: @dividedHeight;
+    border-left: 1px solid #dce1e8;
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    right: 0;
+    margin-top: -@dividedHeight/2;
+    transform: scaleX(.5);
+    -webkit-transform: scaleX(.5);
+  }
+  &.hidden-last-divided:last-child:after {
+    display: none;
+  }
 }
 
 //1px border
-.borderSize(@borderWidth,@borderHeight,@scaleValue){
-    content: '';
-    display: block;
-    width: @borderWidth;
-    height: @borderHeight;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 1px solid #dce1e8;
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-transform: scale(@scaleValue);
-    transform: scale(@scaleValue);
-}
-.borderPosition(@top,@bottom){
-    border-width: 0;
-    height: 1px;
-    background: #dce1e8;
-    top: @top;
-    bottom: @bottom;
+.borderSize(@borderWidth,@borderHeight,@scaleValue) {
+  content: '';
+  display: block;
+  width: @borderWidth;
+  height: @borderHeight;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #dce1e8;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(@scaleValue);
+  transform: scale(@scaleValue);
 }
 
-.@{uiName}-border { border: 1px solid #dce1e8; }
-.@{uiName}-border-t { border-width: 1px 0 0 0; }
+.borderPosition(@top,@bottom) {
+  border-width: 0;
+  height: 1px;
+  background: #dce1e8;
+  top: @top;
+  bottom: @bottom;
+}
 
-.@{uiName}-border-b { border-width: 0 0 1px 0; }
+.@{uiName}-border {
+  border: 1px solid #dce1e8;
+}
+
+.@{uiName}-border-t {
+  border-width: 1px 0 0 0;
+}
+
+.@{uiName}-border-b {
+  border-width: 0 0 1px 0;
+}
 
 html[data-dpr="2"] .@{uiName}-border,
-html[data-dpr="3"] .@{uiName}-border{
-    position: relative;
-    border: none;
-    &:before{ z-index:1; }
+html[data-dpr="3"] .@{uiName}-border {
+  position: relative;
+  border: none;
+  &:before {
+    z-index: 1;
+  }
 }
 
 html[data-dpr="2"] .@{uiName}-border:before {
-    .borderSize(200%,200%,0.5);
+  .borderSize(200%, 200%, 0.5);
 }
 
 html[data-dpr="3"] .@{uiName}-border:before {
-    .borderSize(300%,300%,0.33333333);
+  .borderSize(300%, 300%, 0.33333333);
 }
 
 html[data-dpr="2"] .@{uiName}-border-b:before,
-html[data-dpr="3"] .@{uiName}-border-b:before{
-    .borderPosition(initial,0);
+html[data-dpr="3"] .@{uiName}-border-b:before {
+  .borderPosition(initial, 0);
 }
 
 html[data-dpr="2"] .@{uiName}-border-t:before,
-html[data-dpr="3"] .@{uiName}-border-t:before{
-    .borderPosition(0,initial);
+html[data-dpr="3"] .@{uiName}-border-t:before {
+  .borderPosition(0, initial);
 }
 
 /* layout */
 // AVG Grid 等分网格
 .@{uiName} {
-    &-flex-container {
-        display: -webkit-box;
-        display: flex;
-    }
-    &-flex-item {
-        -webkit-box-flex: 1;
-        flex: 1;
-        display: block;
-        width: 0;
-    }
-    &-flex-content {
-        width: 100%;
-        overflow: hidden;
-    }
+  &-flex-container {
+    display: -webkit-box;
+    display: flex;
+  }
+  &-flex-item {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    width: 0;
+  }
+  &-flex-content {
+    width: 100%;
+    overflow: hidden;
+  }
 }
+
 //flex Grid 基于flex布局的 n列栅格系统 推荐6分割
 .@{uiName} {
-    &-grid-container{
-        display: -webkit-box;
-        display: flex;
-    }
-    &-grid-col-1,
-    &-grid-col-2,
-    &-grid-col-3,
-    &-grid-col-4,
-    &-grid-col-5{
-        display: block;
-        width: 0;
-    }
-    &-grid-col-1 {
-        -webkit-box-flex: 1;
-        flex: 1;
-    }
-    &-grid-col-2 {
-        -webkit-box-flex: 2;
-        flex: 2;
-    }
-    &-grid-col-3 {
-        -webkit-box-flex: 3;
-        flex: 3;
-    }
-    &-grid-col-4 {
-        -webkit-box-flex: 4;
-        flex: 4;
-    }
-    &-grid-col-5 {
-        -webkit-box-flex: 5;
-        flex: 5;
-    }
-    &-gird-content {
-        width: 100%;
-        overflow: hidden;
-    }
+  &-grid-container {
+    display: -webkit-box;
+    display: flex;
+  }
+  &-grid-col-1,
+  &-grid-col-2,
+  &-grid-col-3,
+  &-grid-col-4,
+  &-grid-col-5 {
+    display: block;
+    width: 0;
+  }
+  &-grid-col-1 {
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+  &-grid-col-2 {
+    -webkit-box-flex: 2;
+    flex: 2;
+  }
+  &-grid-col-3 {
+    -webkit-box-flex: 3;
+    flex: 3;
+  }
+  &-grid-col-4 {
+    -webkit-box-flex: 4;
+    flex: 4;
+  }
+  &-grid-col-5 {
+    -webkit-box-flex: 5;
+    flex: 5;
+  }
+  &-gird-content {
+    width: 100%;
+    overflow: hidden;
+  }
 }
 
 /* mask */
-.@{uiName}-mask{
-    position: fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index:@zIndexNormal + 1;
-    background: @maskColor;
+.@{uiName}-mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: @zIndexNormal + 1;
+  background: @maskColor;
 }

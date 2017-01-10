@@ -2,15 +2,16 @@
 
 /* badge */
 .@{uiName} {
-  &-badge{
+  &-badge {
     position: relative;
     display: inline-block;
     vertical-align: middle;
     color: @whiteFontColor;
   }
 
-  &-badge-text{
-    top:0;
+  &-badge-text {
+    box-sizing: border-box;
+    top: 0;
     display: block;
     padding: 0 4px;
     height: @badgeSize;
@@ -21,7 +22,7 @@
     border-radius: @badgeRadius;
     background-color: @warnColor;
   }
-  &-badge-dot{
+  &-badge-dot {
     display: block;
     width: @badgeDotSize;
     height: @badgeDotSize;
