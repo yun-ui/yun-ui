@@ -8,9 +8,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/buttonGroup/index.css')
-    }
     import {UIName} from 'mixins'
 
     export default {

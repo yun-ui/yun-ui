@@ -11,9 +11,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/toast/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-toast',

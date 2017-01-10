@@ -11,9 +11,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/checkbox/index.css')
-    }
     /**
      * @param checked {boolean} 初始是否勾选
      * @param value {string} 该复选框的值

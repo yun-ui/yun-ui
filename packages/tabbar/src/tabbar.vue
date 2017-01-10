@@ -8,9 +8,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/tabbar/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-tabbar',

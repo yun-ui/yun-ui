@@ -10,9 +10,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/tabItem/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-tab-item',

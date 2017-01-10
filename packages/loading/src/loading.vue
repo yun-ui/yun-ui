@@ -10,9 +10,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/loading/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-loading',

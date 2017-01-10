@@ -45,9 +45,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/popup/index.css')
-    }
     // TODO 错误文本（类似表单验证）
     import {UIName} from 'mixins'
     export default {

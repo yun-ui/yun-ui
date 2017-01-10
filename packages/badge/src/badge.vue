@@ -6,9 +6,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/badge/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-badge',

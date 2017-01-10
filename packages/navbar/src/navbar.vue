@@ -5,9 +5,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/navbar/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-navbar',

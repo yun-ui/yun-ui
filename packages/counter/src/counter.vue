@@ -14,9 +14,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/counter/index.css')
-    }
     /**
      * @param label {string} 显示的表单名称
      * @param min {number} 计数器可达到的最小值，默认为负无穷大

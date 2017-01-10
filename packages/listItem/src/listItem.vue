@@ -39,9 +39,6 @@
 </template>
 
 <script>
-    if (process.env === 'production') {
-        require('yun-ui/listItem/index.css')
-    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-list-item',
