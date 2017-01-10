@@ -24,16 +24,16 @@
         <y-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
                    input="input">
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item title="确定" tabId="1"></y-tab-item>
                 <y-tab-item title="取消" tabId="2"></y-tab-item>
+                <y-tab-item title="确定" tabId="1"></y-tab-item>
             </y-button-group>
         </y-popup>
 
         <y-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item class="active" title="确定" tabId="1"></y-tab-item>
                 <y-tab-item title="取消" tabId="2"></y-tab-item>
+                <y-tab-item class="active" title="确定" tabId="1"></y-tab-item>
             </y-button-group>
         </y-popup>
 

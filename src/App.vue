@@ -490,12 +490,19 @@
 </script>
 
 <style lang="less" rel="stylesheet/less">
+    @import "../packages/style/stylesheets/reset.css";
     @import "../packages/style/stylesheets/base";
-
-    body {
-        background-color: #f2f2f2 !important;
+    html, body {
+        height: 100%;
+        min-height: 100%;
     }
 
+    body {
+        color: #030303;
+        font-size: 14px;
+        font-family: Microsoft YaHei, Arial, sans-serif;
+        background-color: #f2f2f2 !important;
+    }
     .group {
         margin-top: 20px;
     }

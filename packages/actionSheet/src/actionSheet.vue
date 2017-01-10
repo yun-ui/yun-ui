@@ -45,8 +45,10 @@
                             <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
                             <span v-text="item.title"></span>
                         </div>
-                        <yun-checkbox :value="item.value" :checked="item.checked"
-                                      @change="checkboxChange"></yun-checkbox>
+                        <div :class="UIName + '-checkbox'">
+                            <input :class="UIName + '-checkbox-input'" type="checkbox"/>
+                            <div :class="[UIName + '-checkbox-inner']"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +75,6 @@
      * @function cancel {function} 点击取消按钮的事件回调
      * @function confirm {function} 点击确定按钮的事件回调
      */
-    import yunCheckbox from 'packages/checkbox'
     import {UIName} from 'mixins'
     export default {
         name: 'y-action-sheet',
@@ -99,9 +100,6 @@
             checkboxChange: function (value, status) {
                 this.$emit('change', value, status)
             }
-        },
-        components: {
-            yunCheckbox
         }
     }
 
@@ -109,4 +107,5 @@
 
 <style lang="less" rel="stylesheet/less">
     @import "../../style/stylesheets/actionSheet";
+    @import "../../style/stylesheets/checkbox";
 </style>

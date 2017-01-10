@@ -45,7 +45,7 @@
 </script>
 
 <style lang="less">
-    @import "../packages/style/stylesheets/base";
+    @import "../packages/style/stylesheets/reset.css";
 
     .banner h1 {
         font-size: 32px;
