@@ -19,6 +19,9 @@
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/search/index.css')
+    }
     /**
      * @param text {string} 搜索框初始状态时的提示文字
      * @param placeholder {string} 聚焦时搜索输入框内的提示文字

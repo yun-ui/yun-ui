@@ -3,6 +3,7 @@ import yunToast from './toast.vue'
 
 let defaultOptions = {
     content: '操作成功',
+    type: '',
     duration: 1000
 }
 

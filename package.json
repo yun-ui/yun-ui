@@ -14,10 +14,10 @@
   "main": "dist/yun/index.js",
   "style": "dist/yun/index.css",
   "scripts": {
-    "dev:demo": "cross-env NODE_ENV=dev_demo node build/dev-server.js",
-    "dev": "node build/dev-server.js",
+    "dev:demo": "npm run build && cross-env NODE_ENV=dev_demo node build/dev-server.js",
+    "dev": "npm run build && node build/dev-server.js",
     "build": "npm run lint && node build/build.js",
-    "build:demo": "npm run lint && node build/build-demo.js",
+    "build:demo": "npm run build && node build/build-demo.js",
     "lint": "eslint --ext .vue,.js packages/ test/ demo/ src/",
     "publish": "npm publish",
     "unit": "karma start test/unit/karma.conf.js --single-run",

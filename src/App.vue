@@ -70,8 +70,8 @@
         <!--search--end-->
         <!--badge--start-->
         <div>
-            <y-badge type="text" value="100+" color="#3cbaff"></y-badge>
-            <y-badge type="text" value="1"></y-badge>
+            <y-badge type="text" text="100+" color="#3cbaff"></y-badge>
+            <y-badge type="text" text="1"></y-badge>
             <y-badge></y-badge>
         </div>
         <!--badge--end-->
@@ -326,7 +326,9 @@
             },
             showToast: function () {
                 this.$toast({
-                    content: 'test4454578呵呵呵'
+                    content: 'test',
+                    duration: 1000000,
+                    bottom: true
                 })
             },
             toggleLoading: function () {

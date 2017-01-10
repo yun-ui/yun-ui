@@ -7,7 +7,6 @@ import yButtonGroup from './buttonGroup'
 import yNavbar from './navbar'
 import yPopup from './popup'
 import yForm from './form'
-import yFormGroup from './formGroup'
 import yTextarea from './textarea'
 import yInput from './input'
 import yRadio from './radio'
@@ -32,7 +31,6 @@ const Components = {
     yNavbar,
     yPopup,
     yForm,
-    yFormGroup,
     yTextarea,
     yInput,
     yRadio,

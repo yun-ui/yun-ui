@@ -1,11 +1,14 @@
 <template>
     <span :class="UIName+'-badge'">
         <sup :style="{ backgroundColor: color }"
-             :class="UIName + '-badge-' + type" v-text="value"></sup>
+             :class="UIName + '-badge-' + type" v-text="text"></sup>
     </span>
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/badge/index.css')
+    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-badge',
@@ -15,7 +18,7 @@
                 type: String,
                 default: 'dot'
             },
-            value: String,
+            text: String,
             color: String
         },
         methods: {

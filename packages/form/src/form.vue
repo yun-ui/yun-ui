@@ -5,6 +5,9 @@
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/form/index.css')
+    }
     /**
      * 对于表单组件：y-checkbox,y-counter,y-input,y-radio,y-switch,y-textarea
      * @param type {string} 使用的表单类型

@@ -11,6 +11,9 @@
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/switch/index.css')
+    }
     /**
      * @param label {string} 显示的表单名称
      * @param checked {boolean} 开关初始的状态

@@ -55,6 +55,9 @@
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/actionSheet/index.css')
+    }
     /**
      * @param type {string} action sheet的类型，有panel，list，checkbox类型
      * @param panelTitle {string} type为panel类型时的面板标题

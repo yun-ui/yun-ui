@@ -9,6 +9,9 @@
 </template>
 
 <script>
+    if (process.env === 'production') {
+        require('yun-ui/button/index.css')
+    }
     import {UIName} from 'mixins'
     export default {
         name: 'y-button',
