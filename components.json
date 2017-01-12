@@ -1,62 +1,62 @@
 {
-    "actionSheet": [
+    "ActionSheet": [
         "./packages/actionSheet/index.js"
     ],
-    "badge": [
+    "Badge": [
         "./packages/badge/index.js"
     ],
-    "button": [
+    "Button": [
         "./packages/button/index.js"
     ],
-    "buttonGroup": [
+    "ButtonGroup": [
         "./packages/buttonGroup/index.js"
     ],
-    "checkbox": [
+    "Checkbox": [
         "./packages/checkbox/index.js"
     ],
-    "counter": [
+    "Counter": [
         "./packages/counter/index.js"
     ],
-    "form": [
+    "Form": [
         "./packages/form/index.js"
     ],
-    "input": [
+    "Input": [
         "./packages/input/index.js"
     ],
-    "listContainer": [
+    "ListContainer": [
         "./packages/listContainer/index.js"
     ],
-    "listItem": [
+    "ListItem": [
         "./packages/listItem/index.js"
     ],
-    "loading": [
+    "Loading": [
         "./packages/loading/index.js"
     ],
-    "navbar": [
+    "Navbar": [
         "./packages/navbar/index.js"
     ],
-    "popup": [
+    "Popup": [
         "./packages/popup/index.js"
     ],
-    "radio": [
+    "Radio": [
         "./packages/radio/index.js"
     ],
-    "search": [
+    "Search": [
         "./packages/search/index.js"
     ],
-    "switch": [
+    "Switch": [
         "./packages/switch/index.js"
     ],
-    "tabbar": [
+    "Tabbar": [
         "./packages/tabbar/index.js"
     ],
-    "tabItem": [
+    "TabItem": [
         "./packages/tabItem/index.js"
     ],
-    "textarea": [
+    "Textarea": [
         "./packages/textarea/index.js"
     ],
-    "toast": [
+    "Toast": [
         "./packages/toast/index.js"
     ]
 }

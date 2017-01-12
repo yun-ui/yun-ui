@@ -66,14 +66,17 @@ npm install yun-ui
 
 ##### 完整引入
 
+完整引入yun-ui后，在以后的引用中，不需再引入组件及样式，可直接在模板中使用或调用方法
 在你的工程目录入口`js`文件中，写入以下内容：
 
 ``` javascript
 import Vue from 'vue'
 /* 引入组件库js文件 */
-import Yun from 'yun-ui'
+import yun from 'yun-ui'
+/* 引入组件库全部css */
+import 'yun-ui/dist/yun/index.css'
 
-Vue.use(Yun)
+Vue.use(yun)
 
 new Vue({
 	// vue options
@@ -84,8 +87,8 @@ new Vue({
 <!-- 在vue的template中直接引用即可 -->
 <template>
     <div>
-        <yun-toast></yun-toast>
-        <yun-button></yun-button>
+        <y-button></y-button>
+		<y-badge></y-badge>
     </div>
 </template>
 ```
@@ -97,24 +100,20 @@ new Vue({
 ``` bash
 npm install yun-ui --save
 ```
-安装后在所需的`.vue`文件中进行声明和使用：
+安装后在所需的`.vue`文件中进行声明和使用，或在入口`js`文件中声明：
 ```html
 <template>
     <div>
-        <yun-button>test</yun-button>
+        <y-button>test</y-button>
     </div>
 </template>
 ```
 ``` javascript
 <script>
-import yunButton from 'yun-ui/dist/yun/button/'
-import 'yun-ui/dist/yun/button/index.css'
-
-export default {
-    components: {
-        yunButton
-    }
-}
+import Vue from 'vue'
+import {Button} from 'yun-ui'
+import 'yun-ui/dist/yun/Button/index.css'
+Vue.component(Button.name,Button)
 </script>
 ```
 

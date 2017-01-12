@@ -3,7 +3,7 @@
 
         <div :class="UIName+'-mask'" @click="$emit('maskClicked')"></div>
 
-        <div :class="UIName+'-action-sheet-container'" v-if="type == 'panel'">
+        <div :class="UIName+'-action-sheet-container'" v-if="type === 'panel'">
             <!--分享面板型-->
             <div :class="UIName+'-action-sheet-panel'">
                 <div :class="UIName+'-action-sheet-title'" v-text="panelTitle"></div>
@@ -20,7 +20,7 @@
         </div>
 
         <!--操作列表型-->
-        <div :class="UIName+'-action-sheet-container'" v-if="type == 'list'">
+        <div :class="UIName+'-action-sheet-container'" v-if="type === 'list'">
             <div :class="UIName+'-action-sheet-list'">
                 <div :class="[UIName+'-action-sheet-list-item',UIName+'-border',UIName+'-border-b']"
                      v-for="item in actionSheetItem" @click="item.callback">
@@ -32,7 +32,7 @@
         </div>
 
         <!--表单型-->
-        <div :class="UIName+'-action-sheet-container'" v-if="type =='checkbox'">
+        <div :class="UIName+'-action-sheet-container'" v-if="type === 'checkbox'">
             <div :class="UIName+'-action-sheet-checkbox'">
                 <div :class="UIName+'-action-sheet-header'">
                     <span class="iconfont icon-close" @click="$emit('cancel')"></span>
@@ -46,7 +46,7 @@
                             <span v-text="item.title"></span>
                         </div>
                         <div :class="UIName + '-checkbox'">
-                            <input :class="UIName + '-checkbox-input'" type="checkbox"/>
+                            <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checked"/>
                             <div :class="[UIName + '-checkbox-inner']"></div>
                         </div>
                     </div>

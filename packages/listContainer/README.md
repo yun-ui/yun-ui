@@ -12,16 +12,11 @@
 ### 引入
 
 ``` javascript
-<script>
-// 如果你已经引入了全部的YunUI组件，忽略import
-import yunListContainer from 'YunUI/dist/yun/listContainer'
-import 'YunUI/dist/yun/listContainer/index.css'
-export default {
-    components:{
-        yunListContainer
-    }
-}
-</script>
+import Vue from 'vue'
+import {ListContainer} from 'yun-ui'
+import 'yun-ui/dist/yun/ListContainer/index.css'
+
+Vue.component(ListContainer.name, ListContainer)
 ```
 
 ### 例子
@@ -33,4 +28,4 @@ export default {
 </yun-list-container>
 ```
 
-结合List Item组件创建更丰富的列表，详细参见List Item组件用法。
+结合List Item组件创建更丰富的列表，详细参见[List Item组件文档](../listItem/README.md)。

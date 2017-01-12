@@ -1,52 +1,71 @@
 # ListItem
 
 列表项组件。单行文本列表和双行文本列表。
+> 为了语义化组件，我们建议在一个列表组外面添加 ListContainer 容器组件。
+> ListContainer组件的用法，请参考[ListContainer文档](../listContainer/README.md)
+> ``` javascript
+> <y-list-container>
+>     <y-list-item title="列表标题"></y-list-item>
+> </y-list-container>
+> ```
 
-### 例子
+### 引入
+
+``` javascript
+import Vue from 'vue'
+import {ListContainer, ListItem} from 'yun-ui'
+import 'yun-ui/dist/yun/ListContainer/index.css'
+import 'yun-ui/dist/yun/ListItem/index.css'
+
+Vue.component(ListContainer.name, ListContainer)
+Vue.component(ListItem.name, ListItem)
+```
+
+### 代码示例
 
 #### 单行文本列表
 
 文字列表
 
 ``` javascript
-<yun-list-item title="列表标题"></yun-list-item>
-<yun-list-item title="列表标题" secondaryText="辅助文本"></yun-list-item>
-<yun-list-item title="列表标题" secondaryText="辅助文本" link></yun-list-item>
+<y-list-item title="列表标题"></y-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本"></y-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" link></y-list-item>
 ```
 
 图片+文字列表
 
 ``` javascript
-<yun-list-item title="列表标题" secondaryText="辅助文本">
-    <img src="../../demo/assets/placeholder-figure.png" slot="iconLeft">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本">
+    <img src="../assets/placeholder-figure.png" slot="iconLeft">
+</y-list-item>
 
-<yun-list-item title="列表标题" secondaryText="辅助文本">
-    <img src="../../demo/assets/placeholder-figure.png" slot="iconRight">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本">
+    <img src="../assets/placeholder-figure.png" slot="iconRight">
+</y-list-item>
 
-<yun-list-item title="列表标题" secondaryText="辅助文本" link>
-    <img src="../../demo/assets/placeholder-figure.png" slot="iconLeft">
-    <img src="../../demo/assets/placeholder-figure.png" slot="iconRight">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" link>
+    <img src="../assets/placeholder-figure.png" slot="iconLeft">
+    <img src="../assets/placeholder-figure.png" slot="iconRight">
+</y-list-item>
 ```
 
 #### 双行文本列表
 
 ``` javascript
-<yun-list-item title="列表标题" secondaryText="辅助文本" multi></yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" multi></y-list-item>
 
-<yun-list-item title="列表标题" secondaryText="辅助文本" multi link>
-    <img src="../../demo/assets/placeholder-figure.png" slot="icon">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" multi link>
+    <img src="../assets/placeholder-figure.png" slot="icon">
+</y-list-item>
 
-<yun-list-item title="列表标题" secondaryText="辅助文本" multi>
-    <img src="../../demo/assets/placeholder-figure.png" slot="img">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" multi>
+    <img src="../assets/placeholder-figure.png" slot="img">
+</y-list-item>
 
-<yun-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
-    <img src="../../demo/assets/placeholder-figure.png" slot="img">
-</yun-list-item>
+<y-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
+    <img src="../assets/placeholder-figure.png" slot="img">
+</y-list-item>
 ```
 
 ### API
@@ -67,10 +86,3 @@
 |   iconRight   |   【单行列表】右边小图标 |
 |   img         |   【双行列表】左边图片  |
 |   icon        |   【双行列表】左边小图标 |
-
-> 为了语义化组件，我们建议在一个列表组外面添加 ListContainer 容器组件。
-> ``` javascript
-> <yun-list-container>
->     <yun-list-item title="列表标题"></yun-list-item>
-> </yun-list-container>
-> ```

@@ -9,27 +9,24 @@
 ### 引入
 
 ``` javascript
-<script>
-// 如果你已经引入了全部的YunUI组件，忽略import
-import yunCellContainer from 'YunUI/dist/yun/loading'
-import 'YunUI/dist/yun/loading/index.css'
-export default {
-    components:{
-        yunLoading
-    }
-}
-</script>
+import Vue from 'vue'
+import {Loading} from 'yun-ui'
+import 'yun-ui/dist/yun/Loading/index.css'
+
+Vue.component(Loading.name, Loading)
 ```
 
-### 例子
+### 代码示例
 
 ``` javascript
-<yun-loading content="加载中...">
+<!-- 在页面中部显示的刷新提示 -->
+<y-loading content="加载中...">
     <img src="../assets/loading.png" slot="icon"/>
-</yun-loading>
-<yun-loading content="加载中..." refresh>
+</y-loading>
+<!-- 在页面顶部显示的刷新提示 -->
+<y-loading content="加载中..." refresh>
     <img src="../assets/loading.png" slot="icon"/>
-</yun-loading>
+</y-loading>
 ```
 
 ### API
@@ -43,4 +40,4 @@ export default {
 
 |   参数  |   描述  |
 |   ----    |   ----    |
-|   icon        |  loading 加入的图标 |
+|   icon        |  loading中使用的图标 |

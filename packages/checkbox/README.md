@@ -1,12 +1,81 @@
 # Checkbox
 
-复选框。
+表单，复选框组件。
 
+### 使用场景
 
-> 可以单独使用，常用于嵌套在表单列表项组件中。
+用于表单中创建复选框。
 
-### 例子
+> 搭配form组件使用。
+
+> form表单组件的用法，请参考[form文档](../form/README.md)
+
+### 引入
 
 ``` javascript
- <yun-checkbox></yun-checkbox>
+import Vue from 'vue'
+import {Form, Checkbox} from 'yun-ui'
+import 'yun-ui/dist/yun/Form/index.css'
+import 'yun-ui/dist/yun/Checkbox/index.css'
+
+Vue.component(Form.name, Form)
+Vue.component(Checkbox.name, Checkbox)
 ```
+
+### 代码示例
+
+``` javascript
+<template>
+<y-form @change="change">
+    <y-checkbox :checkboxList="checkList"></y-checkbox>
+</y-form>
+</template>
+<script>
+export default {
+    props: {},
+    data () {
+        return {
+            checkList: [
+                {
+                    label: '复选框1',
+                    value: '1'
+                },
+                {
+                    label: '复选框2',
+                    value: '2'
+                },
+                {
+                    label: '复选框3',
+                    checked: true,
+                    value: '3'
+                }
+            ]
+        }
+    },
+    methods: {
+        change: function (value, label) {
+            console.log(value，label)
+        }
+    }
+}
+</script>
+```
+
+### API
+
+|      参数      |    说明    |    类型    |       可选值    |      默认值   |
+|     ----      |   ----     |   ----    |      ----      |     ----     |
+|checkboxList|   传入的复选框项，每一项为一个对象  |   Array  |  |       |
+
+
+### checkboxList
+
+checkboxList内各个项需要传入的参数说明：
+
+|      参数     |     说明        |    类型    |       可选值    |      默认值   |
+|     ----     |     ----     |   ----    |      ----      |     ----     |
+|     label    | 复选框项的标题名称  |   String  |              |              |
+|     value     |  区分不同复选框的值         |   String  |             |               |
+|    error  | 表单验证错误提示    |   Boolean  | true,false | false |
+|    checked  | checkbox类型专用，用于区分不同菜单项  |   Boolean |  true,false  | false |
+|    change   | 复选框选中状态改变时的回调函数，第一个参数为改变后的勾选状态，第二个参数为复选框的value值，若无，则为label。可绑定在checkbox组件，也可绑定在form组件上|   Function |  |  |

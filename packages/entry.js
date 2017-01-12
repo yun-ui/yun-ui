@@ -1,49 +1,47 @@
 import '../packages/style/stylesheets/base.less'
-import button from '../packages/button'
-import toast from '../packages/toast'
-import tabbar from '../packages/tabbar'
-import tabItem from '../packages/tabItem'
-import buttonGroup from '../packages/buttonGroup'
-import navbar from '../packages/navbar'
-import popup from '../packages/popup'
-import form from '../packages/form'
+import Button from '../packages/button'
+import Toast from '../packages/toast'
+import Tabbar from '../packages/tabbar'
+import TabItem from '../packages/tabItem'
+import ButtonGroup from '../packages/buttonGroup'
+import Navbar from '../packages/navbar'
+import Popup from '../packages/popup'
+import Form from '../packages/form'
 import Checkbox from '../packages/checkbox'
 import Counter from '../packages/counter'
 import Input from '../packages/input'
-import radio from '../packages/radio'
+import Radio from '../packages/radio'
 import Switch from '../packages/switch'
-import textarea from '../packages/textarea'
-// import formItem from '../packages/formItem'
-import listContainer from '../packages/listContainer'
-import listItem from '../packages/listItem'
-import loading from '../packages/loading'
-import badge from '../packages/badge'
-import search from '../packages/search'
-import actionSheet from '../packages/actionSheet'
+import Textarea from '../packages/textarea'
+import ListContainer from '../packages/listContainer'
+import ListItem from '../packages/listItem'
+import Loading from '../packages/loading'
+import Badge from '../packages/badge'
+import Search from '../packages/search'
+import ActionSheet from '../packages/actionSheet'
 
 const install = function (Vue) {
     if (install.installed) return
-    Vue.component(button.name, button)
-    Vue.component(tabbar.name, tabbar)
-    Vue.component(tabItem.name, tabItem)
-    Vue.component(buttonGroup.name, buttonGroup)
-    Vue.component(navbar.name, navbar)
-    Vue.component(popup.name, popup)
-    Vue.component(form.name, form)
+    Vue.component(Button.name, Button)
+    Vue.component(Tabbar.name, Tabbar)
+    Vue.component(TabItem.name, TabItem)
+    Vue.component(ButtonGroup.name, ButtonGroup)
+    Vue.component(Navbar.name, Navbar)
+    Vue.component(Popup.name, Popup)
+    Vue.component(Form.name, Form)
     Vue.component(Checkbox.name, Checkbox)
     Vue.component(Counter.name, Counter)
     Vue.component(Input.name, Input)
-    Vue.component(radio.name, radio)
+    Vue.component(Radio.name, Radio)
     Vue.component(Switch.name, Switch)
-    Vue.component(textarea.name, textarea)
-    // Vue.component(formItem.name, formItem)
-    Vue.component(listContainer.name, listContainer)
-    Vue.component(listItem.name, listItem)
-    Vue.component(loading.name, loading)
-    Vue.component(badge.name, badge)
-    Vue.component(search.name, search)
-    Vue.component(actionSheet.name, actionSheet)
-    Vue.use(toast)
+    Vue.component(Textarea.name, Textarea)
+    Vue.component(ListContainer.name, ListContainer)
+    Vue.component(ListItem.name, ListItem)
+    Vue.component(Loading.name, Loading)
+    Vue.component(Badge.name, Badge)
+    Vue.component(Search.name, Search)
+    Vue.component(ActionSheet.name, ActionSheet)
+    Vue.use(Toast)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -52,25 +50,24 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 module.exports = {
     install,
-    button,
-    toast,
-    tabbar,
-    tabItem,
-    buttonGroup,
-    navbar,
-    popup,
-    form,
+    Button,
+    Toast,
+    Tabbar,
+    TabItem,
+    ButtonGroup,
+    Navbar,
+    Popup,
+    Form,
     Checkbox,
     Counter,
     Input,
-    radio,
+    Radio,
     Switch,
-    textarea,
-    // formItem,
-    listContainer,
-    listItem,
-    loading,
-    badge,
-    search,
-    actionSheet
+    Textarea,
+    ListContainer,
+    ListItem,
+    Loading,
+    Badge,
+    Search,
+    ActionSheet
 }

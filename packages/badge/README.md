@@ -1,26 +1,39 @@
-# Badge
+# 徽章 Badge
 
-YunUI 提供一套简介的统一标记样式，用于标注状态，提醒。 我们还支持用户自定义颜色（这里推荐使用官方配色）。
+徽章标记，支持自定义颜色（请使用云之家官方推荐配色）。
 
+### 使用场景
 
-###  例子
+用于标注状态，提醒。
+
+### 引入
+
+``` javascript
+import Vue from 'vue'
+import {Badge} from 'yun-ui'
+import 'yun-ui/dist/yun/Badge/index.css'
+
+Vue.component(Badge.name, Badge)
+```
+
+### 代码示例
 
 默认
 
 ``` javascript
-<yun-badge></yun-badge>
+<y-badge></y-badge>
 ```
 
-文本
+传入文本
 
 ``` javascript
-<yun-badge type="text" value="100+"></yun-badge>
+<y-badge type="text" text="100+"></y-badge>
 ```
 
-改变颜色
+自定义颜色，传入RGB值
 
 ``` javascript
-<yun-badge color="#AF65DF"></yun-badge>
+<y-badge color="#AF65DF"></y-badge>
 ```
 
 
@@ -30,5 +43,5 @@ YunUI 提供一套简介的统一标记样式，用于标注状态，提醒。 �
 |   ----    |    ----    |    ----   |      ----      |     ----     |
 |     -     |   默认      |     -     |         -      |       -      |
 |    type   |   徽章形态   |   String  |     dot,text   |       dot    |
-|   value   |   提示文本   |   String  |                |    text的文本 |
+|   text   |   提示文本   |   String  |                |    text的文本 |
 |   color   |   徽章颜色   |   String  |                |   color的颜色 |

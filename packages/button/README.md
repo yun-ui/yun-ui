@@ -1,34 +1,54 @@
-# Button
+# 按钮 Button
 
 按钮，根据尺寸和状态提供了几种基础样式。
 
+### 使用场景
 
-### 例子
+创建按钮。
+
+### 引入
+
+``` javascript
+import Vue from 'vue'
+import {Button} from 'yun-ui'
+import 'yun-ui/dist/yun/Button/index.css'
+
+Vue.component(Button.name, Button)
+```
+
+### 代码示例
 
 默认按钮
 
 ``` javascript
- <yun-button type="normal">normal</yun-button>
+ <y-button>normal</y-button>
+ <y-button type="normal">normal</y-button>
 ```
 
 线性按钮
 
 ``` javascript
-<yun-button type="linear">linear</yun-button>
+<y-button type="linear">linear</y-button>
 ```
 
 改变大小
 
 ``` javascript
-<yun-button size="large">large</yun-button>
-<yun-button size="middle">middle</yun-button>
-<yun-button size="small">small</yun-button>
+<y-button size="large">large</y-button>
+<y-button size="middle">middle</y-button>
+<y-button size="small">small</y-button>
 ```
 
 禁用按钮
 
 ``` javascript
-<yun-button disabled>disabled</yun-button>
+<y-button disabled>disabled</y-button>
+```
+
+绑定事件
+
+``` javascript
+<y-button @click='handleClick'></y-button>
 ```
 
 ### API

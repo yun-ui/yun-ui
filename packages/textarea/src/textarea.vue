@@ -16,6 +16,7 @@
         mixins: [UIName],
         props: {
             label: String,
+            defaultValue: String,
             limit: Number,
             placeholder: String,
             error: {
@@ -26,7 +27,7 @@
         data () {
             return {
                 number: 0,
-                words: ''
+                words: this.defaultValue
             }
         },
         watch: {

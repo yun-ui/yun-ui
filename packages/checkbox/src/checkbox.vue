@@ -1,11 +1,14 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': error}]">
-        <div :class="UIName + '-checkbox'">
-            <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checked" @change="change"/>
-            <div :class="[UIName + '-checkbox-inner']"></div>
-        </div>
-        <div :class="UIName + '-form-title'">
-            <span v-text="label"></span>
+    <div>
+        <div v-for="checkbox in checkboxList" :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': checkbox.error}]">
+            <div :class="UIName + '-checkbox'">
+                <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checkbox.checked"
+                       @change="change($event,checkbox)"/>
+                <div :class="[UIName + '-checkbox-inner']"></div>
+            </div>
+            <div :class="UIName + '-form-title'">
+                <span v-text="checkbox.label"></span>
+            </div>
         </div>
     </div>
 </template>
@@ -20,21 +23,12 @@
         name: 'y-checkbox',
         mixins: [UIName],
         props: {
-            label: String,
-            value: String,
-            error: {
-                type: Boolean,
-                default: false
-            },
-            checked: {
-                type: Boolean,
-                default: false
-            }
+            checkboxList: Array
         },
         methods: {
-            change: function (e) {
-                this.$emit('change', e.target.checked, this.label)
-                this.$parent && this.$parent.$emit('change', e.target.checked, this.label)
+            change: function (e, checkbox) {
+                this.$emit('change', e.target.checked, checkbox.value || checkbox.label)
+                this.$parent && this.$parent.$emit('change', e.target.checked, checkbox.value || checkbox.label)
             }
         }
     }

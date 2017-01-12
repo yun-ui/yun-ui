@@ -3,8 +3,9 @@ import yunToast from './toast.vue'
 
 let defaultOptions = {
     content: '操作成功',
-    type: '',
-    duration: 1000
+    icon: '',
+    duration: 1000,
+    position: ''
 }
 
 function ToastInstall (Vue) {

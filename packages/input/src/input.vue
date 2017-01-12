@@ -3,7 +3,7 @@
         <label :class="UIName + '-input-label'">
             <span v-text="label"></span>
         </label>
-        <div :class="[UIName + '-input-control']">
+        <div :class="[UIName + '-input-control', {'is-align-right': align === 'right'}]">
             <input type="text" :placeholder="placeholder" v-model="value"/>
         </div>
     </div>
@@ -16,15 +16,20 @@
         mixins: [UIName],
         props: {
             label: String,
+            defaultValue: String,
             placeholder: String,
             error: {
                 type: Boolean,
                 default: false
+            },
+            align: {
+                type: String,
+                default: ''
             }
         },
         data () {
             return {
-                value: ''
+                value: this.defaultValue
             }
         },
         watch: {

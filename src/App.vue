@@ -19,16 +19,14 @@
         <div class="group">
             <y-form @change="inputChange">
                 <y-textarea placeholder="多行输入框" :limit="20"></y-textarea>
-                <y-input label="单行输入框" placeholder="输入haha"></y-input>
-                <y-radio label="单选框" value="1" name="radio" :checked="true"></y-radio>
-                <y-radio label="单选框" value="2" name="radio"></y-radio>
-                <y-radio label="单选框" value="3" name="radio"></y-radio>
-                <y-radio label="单选框" name="radio2"></y-radio>
-                <y-radio label="单选框" name="radio2"></y-radio>
-                <y-radio label="单选框" name="radio2"></y-radio>
-                <y-checkbox label="复选框" value="1"></y-checkbox>
-                <y-checkbox label="复选框" value="2"></y-checkbox>
-                <y-checkbox label="复选框" value="3"></y-checkbox>
+                <y-input label="单行输入框" defaultValue="默认值" placeholder="输入haha"></y-input>
+                <y-radio :radioList="radioList"></y-radio>
+                <!--<y-radio label="单选框" value="2" name="radio"></y-radio>-->
+                <!--<y-radio label="单选框" value="3" name="radio"></y-radio>-->
+                <!--<y-radio label="单选框" name="radio2"></y-radio>-->
+                <!--<y-radio label="单选框" name="radio2"></y-radio>-->
+                <!--<y-radio label="单选框" name="radio2"></y-radio>-->
+                <y-checkbox :checkboxList="checkList"></y-checkbox>
                 <y-counter label="计数器"></y-counter>
                 <y-switch label="开关"></y-switch>
             </y-form>
@@ -277,7 +275,7 @@
 
         <!--list--end-->
         <y-button @click="toggleLoading">显示/隐藏Loading</y-button>
-        <y-loading content="加载中" :show="showLoading">
+        <y-loading content="加载中" :show="showLoading" refresh>
             <img src="../src/assets/loading.png" slot="icon"/>
         </y-loading>
         <y-button @click="showToast">显示Toast</y-button>
@@ -327,8 +325,8 @@
             showToast: function () {
                 this.$toast({
                     content: 'test',
-                    duration: 1000000,
-                    bottom: true
+                    duration: 500,
+                    position: 'bottom'
                 })
             },
             toggleLoading: function () {
@@ -371,6 +369,46 @@
         data () {
             return {
                 showPop: false,
+                radioList: [
+                    {
+                        label: '单选框1',
+                        value: '1',
+                        name: 'radio'
+                    },
+                    {
+                        label: '单选框2',
+                        value: '1',
+                        name: 'radio'
+                    },
+                    {
+                        label: '单选框3',
+                        value: '1',
+                        name: 'radio'
+                    },
+                    {
+                        label: '单选框4',
+                        checked: true,
+                        value: '1',
+                        name: 'radio'
+                    }
+                ],
+                checkList: [
+                    {
+                        label: '复选框1',
+                        checked: false,
+                        value: '1'
+                    },
+                    {
+                        label: '复选框2',
+                        checked: false,
+                        value: '2'
+                    },
+                    {
+                        label: '复选框3',
+                        checked: true,
+                        value: '3'
+                    }
+                ],
                 textListArray: [
                     {
                         content: '这是一段文本'
@@ -492,6 +530,7 @@
 <style lang="less" rel="stylesheet/less">
     @import "../packages/style/stylesheets/reset.css";
     @import "../packages/style/stylesheets/base";
+
     html, body {
         height: 100%;
         min-height: 100%;
@@ -503,6 +542,7 @@
         font-family: Microsoft YaHei, Arial, sans-serif;
         background-color: #f2f2f2 !important;
     }
+
     .group {
         margin-top: 20px;
     }

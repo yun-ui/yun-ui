@@ -17,10 +17,6 @@
             },
             text: String,
             color: String
-        },
-        methods: {
-            handleClick (e) {
-            }
         }
     }
 

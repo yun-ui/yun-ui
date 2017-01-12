@@ -1,12 +1,15 @@
 <template>
-    <div :class="[UIName+'-form-item', UIName+'-radio-item', {'error': error}]">
-        <div :class="UIName + '-form-title'">
-            <span v-text="label"></span>
-        </div>
-        <div :class="UIName+'-radio'">
-            <input :class="UIName+'-radio-input'" :name="name" type="radio" :checked="checked" @change="change"/>
-            <div :class="UIName+'-radio-inner'">
-                <i class="iconfont icon-true"></i>
+    <div>
+        <div v-for="radio in radioList" :class="[UIName+'-form-item', UIName+'-radio-item', {'error': radio.error}]">
+            <div :class="UIName + '-form-title'">
+                <span v-text="radio.label"></span>
+            </div>
+            <div :class="UIName+'-radio'">
+                <input :class="UIName+'-radio-input'" :name="radio.name" type="radio" :checked="radio.checked"
+                       @change="change($event,radio)"/>
+                <div :class="UIName+'-radio-inner'">
+                    <i class="iconfont icon-true"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -18,6 +21,7 @@
         name: 'y-radio',
         mixins: [UIName],
         props: {
+            radioList: Array,
             label: String,
             name: String,
             checked: Boolean,
@@ -27,9 +31,9 @@
             }
         },
         methods: {
-            change (e) {
-                this.$emit('change', e.target.checked, this.label)
-                this.$parent && this.$parent.$emit('change', e.target.checked, this.label)
+            change (e, radio) {
+                this.$emit('change', e.target.checked, radio.label)
+                this.$parent && this.$parent.$emit('change', e.target.checked, radio.label)
             }
         }
     }
