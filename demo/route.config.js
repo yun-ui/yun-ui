@@ -145,9 +145,34 @@ export default [
         },
         'list': [
             {
-                'path': '/formItem',
-                'name': 'FormItem',
-                'secondary': '表单项 '
+                'path': '/checkbox',
+                'name': 'Checkbox',
+                'secondary': '复选框 '
+            },
+            {
+                'path': '/counter',
+                'name': 'Counter',
+                'secondary': '计数器 '
+            },
+            {
+                'path': '/input',
+                'name': 'Input',
+                'secondary': '单行输入框 '
+            },
+            {
+                'path': '/radio',
+                'name': 'Radio',
+                'secondary': '单选框 '
+            },
+            {
+                'path': '/switch',
+                'name': 'Switch',
+                'secondary': '开关 '
+            },
+            {
+                'path': '/textarea',
+                'name': 'Textarea',
+                'secondary': '多行输入框 '
             }
         ]
     }

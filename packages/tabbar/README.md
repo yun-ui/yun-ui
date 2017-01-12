@@ -10,16 +10,16 @@
 
 > 依赖 `tab-item` 组件使用
 
-> tab-item组件的使用方法，请参考[TabItem文档](../tabItem/README.md)
-
 ### 引入
 
 ``` javascript
 import Vue from 'vue'
-import {Tabbar} from 'yun-ui'
+import {Tabbar, TabItem} from 'yun-ui'
 import 'yun-ui/dist/yun/Tabbar/index.css'
+import 'yun-ui/dist/yun/TabItem/index.css'
 
 Vue.component(Tabbar.name, Tabbar)
+Vue.component(TabItem.name, TabItem)
 ```
 
 ### 代码示例
@@ -37,3 +37,18 @@ Vue.component(Tabbar.name, Tabbar)
 | ----       | ----       | ----       | ----       | ----  |
 |defaultActiveTabId | 默认active的tab，并在tab-item组件中传入相应的tabId值，若需要切换不同按钮active功能，需要给每个tab-item绑定tabId | String |  |  |
 | change      | tab-item元素active点击切换时的回调函数，参数为切换后的tabId|  Function   |  |    |
+
+## TabItem 组件使用说明
+
+### TabItem API
+
+| 参数        | 描述        | 类型        | 可选值       | 默认值       |
+| ----       | ----       | ----       | ----       | ----       |
+| title |   文本  |   String  |       |       |
+| tabId |   tab绑定的id，用于区分不同的tab  |   String  |       |       |
+
+### TabItem Slot API
+
+| 参数        | 描述        |
+| ----       | ----       |
+| icon      | 加入的图标    |

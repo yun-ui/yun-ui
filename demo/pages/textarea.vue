@@ -1,0 +1,35 @@
+<template>
+    <div>
+        <div class="title">
+            <h3 class="yun-h3">多行输入框 Textarea</h3>
+        </div>
+        <div class="content form">
+            <div class="row clearContentPadding">
+                <y-form>
+                    <y-textarea placeholder="多行输入框"></y-textarea>
+                </y-form>
+            </div>
+            <div class="row clearContentPadding">
+                <y-form>
+                    <y-textarea placeholder="多行输入框 有字数限制" :limit="10"></y-textarea>
+                </y-form>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'y-textarea-demo',
+        props: {},
+        created () {
+            console.log('textarea demo loaded')
+        },
+        methods: {}
+    }
+
+</script>
+
+<style lang="less">
+
+</style>

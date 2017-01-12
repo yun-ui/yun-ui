@@ -4,6 +4,7 @@ import routes from './route.js'
 import Yun from '../dist/yun/'
 import '../dist/yun/index.css'
 import './css/demo-css.less'
+import Root from './Root.vue'
 
 /* eslint-disable no-new */
 console.log('demo entry load!')
@@ -38,9 +39,8 @@ router.beforeEach((to, from, next) => {
     }
 })
 
-const app = new Vue({ // eslint-disable-line
-    router
-}).$mount('#app')
+Root.router = router
+new Vue(Root).$mount('#app')
 
 window.addEventListener('message', function (e) {
     if (e.source !== window.parent) {
@@ -50,6 +50,6 @@ window.addEventListener('message', function (e) {
         router.push({ path: `/${e.data.redirectName}` })
     }
     if (e.data.type && e.data.type === 'GETCURRENTURL') {
-        window.parent.postMessage({ demoUrl: location.href }, '*')
+        window.parent.postMessage({ demoUrl: location.href }, window.location.origin)
     }
 }, false)

@@ -85,4 +85,4 @@ textList内各个项需要传入的参数说明：
 |   button  |   加入按钮    |
 |   buttonGroup |   在底部加入按钮组   |
 
-> 可嵌入ButtonGroup组件使用，ButtonGroup使用方法请参考[ButtonGroup文档](../buttonGroup/README.md)
+> 可嵌入ButtonGroup组件使用，ButtonGroup使用方法请参考[ButtonGroup文档](./buttonGroup)

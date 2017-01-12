@@ -1,8 +1,9 @@
 # ListItem
 
 列表项组件。单行文本列表和双行文本列表。
+
 > 为了语义化组件，我们建议在一个列表组外面添加 ListContainer 容器组件。
-> ListContainer组件的用法，请参考[ListContainer文档](../listContainer/README.md)
+> ListContainer是最基本的通用表单项组件容器，可用于包含文字、图标、图片、文本段等，用于列表区域。
 > ``` javascript
 > <y-list-container>
 >     <y-list-item title="列表标题"></y-list-item>
