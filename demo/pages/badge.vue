@@ -52,7 +52,7 @@
         <div class="row clearContentPadding">
             <y-navbar defaultActiveTabId="1">
                 <y-tab-item title="文本" tabId="1">
-                    <y-badge type="text" value="1" color="#fa5959" class="position-badge position-badge-2"></y-badge>
+                    <y-badge type="text" text="1" color="#fa5959" class="position-badge position-badge-2"></y-badge>
                 </y-tab-item>
                 <y-tab-item title="文本" tabId="2"></y-tab-item>
                 <y-tab-item title="文本" tabId="3"></y-tab-item>
@@ -61,7 +61,7 @@
         <div class="row clearContentPadding">
             <y-navbar defaultActiveTabId="1">
                 <y-tab-item title="文本" tabId="1">
-                    <y-badge type="text" value="new" color="#fa5959" class="position-badge position-badge-3"></y-badge>
+                    <y-badge type="text" text="new" color="#fa5959" class="position-badge position-badge-3"></y-badge>
                 </y-tab-item>
                 <y-tab-item title="文本" tabId="2"></y-tab-item>
                 <y-tab-item title="文本" tabId="3"></y-tab-item>

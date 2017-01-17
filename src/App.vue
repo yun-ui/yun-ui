@@ -325,7 +325,7 @@
             showToast: function () {
                 this.$toast({
                     content: 'test',
-                    duration: 500,
+                    duration: 50000,
                     position: 'bottom'
                 })
             },
