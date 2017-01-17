@@ -1,6 +1,6 @@
 <template>
     <div :class="UIName+'-toast'">
-        <div :class="[UIName+'-toast-container', {'is-loading-bottom': postion && position === 'bottom'}]">
+        <div :class="[UIName+'-toast-container', {'is-loading-bottom': position && position === 'bottom'}]">
             <div :class="UIName+'-toast-icon'" v-if="icon === 'success'">
                 <img src="../../../src/assets/success.png" alt="">
             </div>

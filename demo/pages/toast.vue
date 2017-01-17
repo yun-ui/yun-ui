@@ -26,13 +26,13 @@
             showToast: function () {
                 this.$toast({
                     content: '操作成功',
-                    type: 'success' || 'failed'
+                    icon: 'success'
                 })
             },
             showToastBottom: function () {
                 this.$toast({
                     content: '操作成功',
-                    bottom: true
+                    position: 'bottom'
                 })
             }
         }

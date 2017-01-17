@@ -79,7 +79,7 @@
     height: auto;
   }
   &-input-label,
-  &-cell-title {
+  &-form-title {
     font-size: @formLabelFontSize;
     padding-right: @formPadding;
   }
@@ -96,6 +96,11 @@
       margin: @formPadding 0;
       height: @formTextareaHeight;
       resize: none;
+    }
+    &.is-align-right {
+      >input {
+        text-align: right;
+      }
     }
   }
   &-textarea-count {
