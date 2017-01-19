@@ -11,10 +11,11 @@
 </script>
 <style lang="less" rel="stylesheet/less">
     .state-page-container {
+        margin-top:-40px;
         text-align: center;
         .state-img {
-            width: 80px;
-            margin-bottom: 20px;
+            width: 100px;
+            margin-bottom: 10px;
         }
     }
 </style>

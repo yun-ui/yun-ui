@@ -48,6 +48,9 @@ body {
   font-family: Microsoft YaHei, Arial, sans-serif;
   background-color: #eaeff3;
 }
+.page{
+  padding-top:44px;
+}
 
 /* demo展示通用样式 */
 //垂直居中
@@ -75,12 +78,14 @@ body {
   padding: 30px;
   p {
     margin-top: 10px;
+    text-align: justify;
   }
 }
 
 .title {
   padding: 30px 12px;
   p {
+    text-align: justify;
     margin-top: 10px;
   }
 }
@@ -171,4 +176,14 @@ body {
 
 .cell .row {
   margin: 8px -12px;
+}
+
+/* 清除表单中最后一个表单项的分割线 */
+.yun-form-item:last-child:after{
+  display: none;
+}
+
+/* 清除页面上边距 */
+.in-cloudhub{
+  padding:0;
 }

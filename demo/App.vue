@@ -2,8 +2,7 @@
     <div>
         <div class="banner yun-bg-blue yun-text-white">
             <h1>YunUI</h1>
-            <p>YunUI为云之家轻应用使用的一套基础样式库，便于
-                第三方开发以及统一用户体验。</p>
+            <p>YunUI为云之家轻应用使用的一套基础样式库，便于第三方开发以及统一用户体验。</p>
         </div>
         <div v-for="group in nav">
             <y-list-container>

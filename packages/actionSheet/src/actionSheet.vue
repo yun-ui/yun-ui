@@ -22,7 +22,7 @@
         <!--操作列表型-->
         <div :class="UIName+'-action-sheet-container'" v-if="type === 'list'">
             <div :class="UIName+'-action-sheet-list'">
-                <div :class="[UIName+'-action-sheet-list-item',UIName+'-border',UIName+'-border-b']"
+                <div :class="[UIName+'-action-sheet-list-item']"
                      v-for="item in actionSheetItem" @click="item.callback">
                     <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
                     <span :class="UIName+'-action-sheet-list-title'" v-text="item.title"></span>
@@ -39,7 +39,7 @@
                     <a :class="UIName+'-action-sheet-checkbox-commit'" @click="$emit('confirm')">确定</a>
                 </div>
                 <div :class="UIName+'-action-sheet-checkbox-list'">
-                    <div :class="[UIName+'-action-sheet-checkbox-item',UIName+'-border',UIName+'-border-b']"
+                    <div :class="[UIName+'-action-sheet-checkbox-item']"
                          v-for="item in actionSheetItem" @click="item.callback">
                         <div :class="UIName+'-action-sheet-checkbox-label'">
                             <img :class="UIName+'-action-sheet-icon'" :src="item.icon">

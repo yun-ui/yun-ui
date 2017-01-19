@@ -30,6 +30,9 @@
 
 </script>
 
-<style lang="less">
-
+<style lang="less" scoped>
+    .row{
+        padding:0 0 8px !important;
+        margin-bottom:0;
+    }
 </style>

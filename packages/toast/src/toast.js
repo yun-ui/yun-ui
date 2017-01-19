@@ -4,7 +4,7 @@ import yunToast from './toast.vue'
 let defaultOptions = {
     content: '操作成功',
     icon: '',
-    duration: 1000,
+    duration: 2000,
     position: ''
 }
 

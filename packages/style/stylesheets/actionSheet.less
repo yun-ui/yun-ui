@@ -9,7 +9,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: @zIndexNormal + 1;
+    z-index: @zIndexNormal + 20;
   }
   //分享操作类型
   &-action-sheet-panel {
@@ -49,10 +49,22 @@
     background-color: #ffffff;
   }
   &-action-sheet-list-item {
+    position: relative;
     line-height: @actionSheetLineHeight;
     text-align: center;
     &:hover, &:active {
       background-color: #f6f8fa;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left:0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 1px solid #dce1e8;
+      transform: scaleY(.5);
+      -webkit-transform: scaleY(.5);
     }
   }
   &-action-sheet-button {
@@ -92,13 +104,25 @@
     background-color: #EAEFF3;
     line-height: @actionSheetHeader;
     padding: 0 @actionSheetPadding;
+    .icon-close{
+      cursor: pointer;
+      color: @secondaryFontColor;
+      &:hover,&:active{
+        opacity: 0.5;
+      }
+    }
   }
   &-action-sheet-checkbox-commit {
+    cursor: pointer;
     float: right;
     color: @themeColor;
     text-decoration: none;
+    &:hover,&:active{
+      opacity: 0.5;
+    }
   }
   &-action-sheet-checkbox-item {
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -110,6 +134,17 @@
     -ms-flex-align: center;
     align-items: center;
     line-height: @actionSheetLineHeight;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left:0;
+      right: 0;
+      bottom: 0;
+      border-bottom: 1px solid #dce1e8;
+      transform: scaleY(.5);
+      -webkit-transform: scaleY(.5);
+    }
   }
   &-action-sheet-checkbox-label {
     flex: 1;

@@ -174,23 +174,23 @@
                 </y-button-group>
             </div>
             <div style="position:relative;height:50px;">
-                <y-button-group>
-                    <y-tab-item><i class="iconfont icon-demo" slot="icon"></i>
+                <y-button-group defaultActiveTabId="2">
+                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i>
                         <y-badge></y-badge>
                     </y-tab-item>
-                    <y-tab-item><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
             <div style="position:relative;height:50px;">
-                <y-button-group>
-                    <y-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i>
+                <y-button-group defaultActiveTabId="2">
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i>
                         <y-badge type="text" value="100+" color="#3cbaff"></y-badge>
                     </y-tab-item>
-                    <y-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="2" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
         </div>
@@ -263,6 +263,9 @@
                 <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
             </y-list-item>
+            <y-list-item title="列表标题" secondaryText="辅助文本辅助文本" link>
+                <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
+            </y-list-item>
 
             <y-list-item title="列表标题" link>
                 <img src="../src/assets/placeholder-figure.png" slot="iconLeft">
@@ -324,8 +327,9 @@
             },
             showToast: function () {
                 this.$toast({
-                    content: 'test',
+                    content: '这里有很多',
                     duration: 50000,
+//                    icon: 'success'
                     position: 'bottom'
                 })
             },

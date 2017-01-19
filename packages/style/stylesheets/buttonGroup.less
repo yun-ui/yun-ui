@@ -25,9 +25,15 @@
       font-size: @buttonGroupFontSize;
       &.is-active {
         color: @themeColor;
+        .iconfont{
+          color: @themeColor;
+        }
       }
       .iconfont {
-        padding: 0 @buttonGroupIconFontPadding;
+        opacity: 0.4;
+        vertical-align: middle;
+        color: @secondaryFontColor;
+        //padding: 0 @buttonGroupIconFontPadding;
       }
     }
   }

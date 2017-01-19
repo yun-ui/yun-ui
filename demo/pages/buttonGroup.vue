@@ -32,7 +32,7 @@
                     <y-tab-item title="文本" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
-            <h4>按钮组固定在底部<i class="iconfont icon-"></i></h4>
+            <h4 style="position:fixed;bottom:50px;left:12px;">按钮组固定在底部</h4>
             <y-button-group fixed defaultActiveTabId="2">
                 <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
                 <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>

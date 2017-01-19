@@ -41,6 +41,7 @@
   }
   //loading文字内容显示区域
   &-toast-content {
+    padding-top:@toastPadding/2;
     font-size: @toastFontSize;
   }
 }
@@ -48,7 +49,10 @@
 .is-loading-bottom {
   width: auto;
   top: auto;
-  padding: @toastPadding/2 @toastPadding*2;
+  padding: @toastPadding-top @toastPadding*2;
   bottom: @toastPadding * 2;
   border-radius: @toastPadding * 2;
+  .@{uiName}-toast-content{
+    padding-top:0;
+  }
 }

@@ -35,6 +35,9 @@
     top: 0;
     right: @searchBarPadding*2;
     color: @secondaryFontColor;
+    &:hover{
+      opacity: 0.5;
+    }
   }
   &-input-ph {
     position: absolute;
@@ -56,7 +59,11 @@
     background: #F0F4F7;
   }
   &-search-cancel {
+    cursor: pointer;
     font-size: @searchCancelFontSize;
     padding-right: @searchBarPadding;
+    &:hover{
+      opacity: 0.5;
+    }
   }
 }

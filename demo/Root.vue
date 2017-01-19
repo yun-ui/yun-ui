@@ -6,7 +6,7 @@
             </a>
             YunUI
         </div>
-        <router-view :class="{'in-cloudhub': isInCloudhub}"></router-view>
+        <router-view :class="['page',{'in-cloudhub': isInCloudhub}]"></router-view>
     </div>
 </template>
 
