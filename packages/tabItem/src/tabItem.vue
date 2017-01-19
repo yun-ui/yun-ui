@@ -21,6 +21,7 @@
         },
         methods: {
             handleClick () {
+                this.$emit('click')
                 this.$parent.$emit('change', this.tabId)
                 this.$parent.activeId = this.tabId
             }

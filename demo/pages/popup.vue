@@ -7,33 +7,33 @@
         <div class="content button-container">
             <y-button type="linear" @click="showPopup1 = true">确认类弹窗
             </y-button>
-            <y-button type="linear" @click.native="showPopup2 = !showPopup2">输入类（单行）弹窗</y-button>
-            <y-button type="linear" @click.native="showPopup3 = !showPopup3">输入类（多行）弹窗</y-button>
-            <y-button type="linear" @click.native="showPopup4 = !showPopup4">内容带跳转按钮弹窗</y-button>
-            <y-button type="linear" @click.native="showPopup5 = !showPopup5">宣传弹窗</y-button>
+            <y-button type="linear" @click="showPopup2 = !showPopup2">输入类（单行）弹窗</y-button>
+            <y-button type="linear" @click="showPopup3 = !showPopup3">输入类（多行）弹窗</y-button>
+            <y-button type="linear" @click="showPopup4 = !showPopup4">内容带跳转按钮弹窗</y-button>
+            <y-button type="linear" @click="showPopup5 = !showPopup5">宣传弹窗</y-button>
         </div>
 
         <y-popup title="标题" :show="showPopup1" @maskClicked="maskClicked"
                    content="文本内容文本内容文本内容文本内容文本内容
                             文本内容文本内容文本内容文本内容文本内容">
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item title="确定" tabId="1"></y-tab-item>
+                <y-tab-item title="确定" tabId="1" @click="maskClicked"></y-tab-item>
             </y-button-group>
         </y-popup>
 
         <y-popup title="标题" :show="showPopup2" @maskClicked="maskClicked"
                    input="input">
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item title="取消" tabId="2"></y-tab-item>
-                <y-tab-item title="确定" tabId="1"></y-tab-item>
+                <y-tab-item title="取消" tabId="2" @click="maskClicked"></y-tab-item>
+                <y-tab-item title="确定" tabId="1" @click="maskClicked"></y-tab-item>
             </y-button-group>
         </y-popup>
 
         <y-popup title="标题" :show="showPopup3" @maskClicked="maskClicked"
                    input="textarea">
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item title="取消" tabId="2"></y-tab-item>
-                <y-tab-item class="active" title="确定" tabId="1"></y-tab-item>
+                <y-tab-item title="取消" tabId="2" @click="maskClicked"></y-tab-item>
+                <y-tab-item class="active" title="确定" tabId="1" @click="maskClicked"></y-tab-item>
             </y-button-group>
         </y-popup>
 
@@ -43,7 +43,7 @@
             <y-button size="large" type="normal" slot="button">文本</y-button>
             <y-button size="large" type="normal" disabled slot="button">文本</y-button>
             <y-button-group slot="buttonGroup" defaultActiveTabId="1">
-                <y-tab-item title="知道了" tabId="1"></y-tab-item>
+                <y-tab-item title="知道了" tabId="1" @click="maskClicked"></y-tab-item>
             </y-button-group>
         </y-popup>
 
@@ -51,8 +51,8 @@
                    :textList="textListArray">
             <img src="../assets/popup-cover.png" slot="cover"/>
             <y-button-group slot="buttonGroup" defaultActiveTabId="2">
-                <y-tab-item title="知道了" tabId="1"></y-tab-item>
-                <y-tab-item title="了解更多" class="active" tabId="2"></y-tab-item>
+                <y-tab-item title="知道了" tabId="1" @click="maskClicked"></y-tab-item>
+                <y-tab-item title="了解更多" class="active" tabId="2" @click="maskClicked"></y-tab-item>
             </y-button-group>
         </y-popup>
     </div>
