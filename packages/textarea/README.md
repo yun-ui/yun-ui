@@ -25,8 +25,8 @@ Vue.component(Textarea.name, Textarea)
 
 ``` javascript
 <template>
-<y-form @change="">
-    <y-textarea label="多行输入框" placeholder="placeholder" :limit="20"></y-textarea>
+<y-form>
+    <y-textarea label="多行输入框" placeholder="placeholder" :limit="20" @change=""></y-textarea>
 </y-form>
 </template>
 ```

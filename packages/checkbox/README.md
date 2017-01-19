@@ -25,8 +25,8 @@ Vue.component(Checkbox.name, Checkbox)
 
 ``` javascript
 <template>
-<y-form @change="change">
-    <y-checkbox :checkboxList="checkList"></y-checkbox>
+<y-form>
+    <y-checkbox :checkboxList="checkList" @change="change"></y-checkbox>
 </y-form>
 </template>
 <script>

@@ -24,8 +24,8 @@ Vue.component(Counter.name, Counter)
 ### 代码示例
 
 ``` javascript
-<y-form @change="change">
-    <y-counter label="计数器" :value="5" :min="1" :max="10" :step="2"></y-counter>
+<y-form>
+    <y-counter label="计数器" :value="5" :min="1" :max="10" :step="2" @change="change"></y-counter>
 </y-form>
 ```
 

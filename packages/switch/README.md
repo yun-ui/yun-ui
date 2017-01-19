@@ -25,8 +25,8 @@ Vue.component(Switch.name, Switch)
 
 ``` javascript
 <template>
-<y-form @change="">
-    <y-switch label="开关"></y-switch>
+<y-form>
+    <y-switch label="开关" @change=""></y-switch>
 </y-form>
 </template>
 ```

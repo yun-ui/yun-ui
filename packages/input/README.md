@@ -25,9 +25,9 @@ Vue.component(Input.name, Input)
 
 ``` javascript
 <template>
-<y-form @change="">
-    <y-input label="单行输入框" placeholder="placeholder"></y-input>
-    <y-input label="单行输入框" placeholder="placeholder" align="right"></y-input>
+<y-form>
+    <y-input label="单行输入框" placeholder="placeholder" @change=""></y-input>
+    <y-input label="单行输入框" placeholder="placeholder" align="right" @change=""></y-input>
 </y-form>
 </template>
 ```

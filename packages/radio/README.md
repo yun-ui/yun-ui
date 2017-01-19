@@ -25,8 +25,8 @@ Vue.component(Radio.name, Radio)
 
 ``` javascript
 <template>
-<y-form @change="">
-    <y-radio :radioList="radioList"></y-radio>
+<y-form>
+    <y-radio :radioList="radioList" @change=""></y-radio>
 </y-form>
 </template>
 <script>
