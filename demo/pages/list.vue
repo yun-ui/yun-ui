@@ -69,5 +69,9 @@
 </script>
 
 <style lang="less">
-
+.cell{
+    .yun-list-item:last-child:after{
+        display: none;
+    }
+}
 </style>

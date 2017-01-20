@@ -17,7 +17,7 @@
 </script>
 <style lang="less" rel="stylesheet/less" scoped>
     .state-page-container {
-        padding: 50px 12px 0;
+        padding: 100px 12px 0;
         text-align: center;
 
     .state-img {
