@@ -2,6 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">单选框 Radio</h3>
+            <p>YunUI提供统一的单选框，可以满足无默认及默认勾选场景</p>
         </div>
         <div class="content form">
             <div class="row clearContentPadding">

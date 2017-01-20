@@ -2,6 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">开关 Switch</h3>
+            <p>YunUI提供统一的开关，可以满足无默认及默认列表开关场景</p>
         </div>
         <div class="content form">
             <div class="row clearContentPadding">

@@ -2,6 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">多行输入框 Textarea</h3>
+            <p>YunUI提供统一的多行输入框，可以满足无字数限制及有字数限制场景</p>
         </div>
         <div class="content form">
             <div class="row clearContentPadding">

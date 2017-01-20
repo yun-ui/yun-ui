@@ -2,6 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">计数器 Counter</h3>
+            <p>YunUI提供统一的计数器，可以使用在计算数值的场景</p>
         </div>
         <div class="content form">
             <div class="row clearContentPadding">

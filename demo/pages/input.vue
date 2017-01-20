@@ -2,6 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">单行输入框 Input</h3>
+            <p>YunUI提供统一单行输入框。</p>
         </div>
         <div class="content form">
             <div class="row clearContentPadding">
