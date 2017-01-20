@@ -34,7 +34,10 @@
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
+    .title{
+        padding-top:60px;
+    }
     .is-loading-refresh {
         top: 64px;
     }
