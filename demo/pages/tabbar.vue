@@ -1,10 +1,12 @@
 <template>
-    <y-tabbar @change="tabChange" defaultActiveTabId="2">
-        <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-        <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-        <y-tab-item title="文本" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-        <y-tab-item title="文本" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-    </y-tabbar>
+    <div>
+        <y-tabbar @change="tabChange" defaultActiveTabId="2">
+            <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+            <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+            <y-tab-item title="文本" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+            <y-tab-item title="文本" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+        </y-tabbar>
+    </div>
 </template>
 
 <script>
@@ -23,6 +25,6 @@
 
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 </style>
