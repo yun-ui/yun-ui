@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Popup from '../../../packages/Popup'
+import Popup from '../../../packages/popup'
 
 describe('Popup.vue', () => {
     it('should render Popup', () => {

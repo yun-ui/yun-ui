@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Navbar from '../../../packages/Navbar'
+import Navbar from '../../../packages/navbar'
 
 describe('Navbar.vue', () => {
     it('should render Navbar', () => {
