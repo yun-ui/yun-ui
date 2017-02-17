@@ -21,6 +21,6 @@ describe('Textarea.vue', () => {
             expect(data).to.equal('b')
             done()
         })
-        vm.$children[0].words = 'bb'
+        vm.$children[0].value = 'bb'
     })
 })
