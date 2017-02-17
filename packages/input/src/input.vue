@@ -34,9 +34,13 @@
         },
         watch: {
             value () {
+                this.$emit('input', this.value)
                 this.$emit('change', this.value, this.label)
                 this.$parent && this.$parent.$emit('change', this.value, this.label)
             }
+//            currentValue () {
+//                this.value = this.currentValue;
+//            }
         }
     }
 

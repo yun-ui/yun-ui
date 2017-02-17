@@ -1,7 +1,7 @@
 <template>
     <div :class="[UIName+'-form-item', UIName+'-input-item', UIName+'-textarea-item', {'error': error}]">
         <div :class="[UIName + '-input-control']">
-            <textarea :placeholder="placeholder" v-model="words"></textarea>
+            <textarea :placeholder="placeholder" v-model="value"></textarea>
             <div :class="[UIName + '-textarea-count']" v-if="limit">
                 {{ number }}/{{ limit }}
             </div>
@@ -27,17 +27,18 @@
         data () {
             return {
                 number: 0,
-                words: this.defaultValue
+                value: this.defaultValue
             }
         },
         watch: {
-            words (afterValue) {
+            value (afterValue) {
                 if (afterValue.length > this.limit) {
-                    this.words = afterValue.slice(0, this.limit)
+                    this.value = afterValue.slice(0, this.limit)
                 }
-                this.number = this.words.length
-                this.$emit('change', this.words, this.label)
-                this.$parent && this.$parent.$emit('change', this.words, this.label)
+                this.number = this.value.length
+                this.$emit('input', this.value)
+                this.$emit('change', this.value, this.label)
+                this.$parent && this.$parent.$emit('change', this.value, this.label)
             }
         },
         methods: {}

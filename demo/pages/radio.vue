@@ -8,14 +8,16 @@
             <div class="row clearContentPadding">
                 <y-form>
                     <div>
-                        <y-radio :radioList="radioList"></y-radio>
+                        <y-radio :radioList="radioList" v-model="radio"></y-radio>
+                        <p>{{radio}}</p>
                     </div>
                 </y-form>
             </div>
             <div class="row clearContentPadding">
                 <y-form>
                     <div>
-                        <y-radio :radioList="radioList2"></y-radio>
+                        <y-radio :radioList="radioList2" v-model="radio2"></y-radio>
+                        <p>{{radio2}}</p>
                     </div>
                 </y-form>
             </div>
@@ -30,18 +32,18 @@
             return {
                 radioList: [
                     {
-                        label: '单选框',
+                        label: '单选框1',
                         value: '1',
                         name: 'radio'
                     },
                     {
-                        label: '单选框',
-                        value: '1',
+                        label: '单选框2',
+                        value: '2',
                         name: 'radio'
                     },
                     {
-                        label: '单选框',
-                        value: '1',
+                        label: '单选框3',
+                        value: '3',
                         name: 'radio'
                     }
                 ],
@@ -53,16 +55,18 @@
                         name: 'radio2'
                     },
                     {
-                        label: '单选框',
-                        value: '1',
+                        label: '单选框2',
+                        value: '2',
                         name: 'radio2'
                     },
                     {
-                        label: '单选框',
-                        value: '1',
+                        label: '单选框3',
+                        value: '3',
                         name: 'radio2'
                     }
-                ]
+                ],
+                radio: '',
+                radio2: ''
             }
         },
         created () {
