@@ -8,9 +8,10 @@
             <div class="row clearContentPadding">
                 <y-form>
                     <div>
-                        <y-checkbox :checkboxList="checkList"></y-checkbox>
+                        <y-checkbox :checkboxList="checkList" v-model="checkedList"></y-checkbox>
                     </div>
                 </y-form>
+                <p>选中的值:{{checkedList}}</p>
             </div>
         </div>
     </div>
@@ -37,7 +38,8 @@
                         checked: true,
                         value: '3'
                     }
-                ]
+                ],
+                checkedList: []
             }
         },
         created () {
