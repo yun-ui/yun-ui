@@ -1,6 +1,26 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
+        <div>
+            <y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" @tap="tip('一个元素被点击了')">可点击的元素</y-tap>
+            <y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" :disabled="true">不可点击的元素</y-tap>
+        </div>
+        <div style="text-align:center; padding: 5px 0">
+            <y-icon type="close-line" @tap="tip('close-line')"></y-icon>
+            <y-icon type="like" @tap="tip('like')"></y-icon>
+            <y-icon type="qq" style="color:#F60" @tap="tip('qq')"></y-icon>
+            <y-icon type="wechat" style="color:#393" @tap="tip('wechat')"></y-icon>
+            <y-icon type="email" @tap="tip('email')"></y-icon>
+            <y-icon type="true-block" @tap="tip('true-block')"></y-icon>
+        </div>
+
+        文本输入框：
+        <y-text-input placeholder="请输入123" :style="textInputStyle" 
+            @change="textChange" valid-pattern="^123$"></y-text-input>
+
+        手机号码输入框：
+        <y-mobile-input placeholder="请输入手机号码" @change="$event.valid && tip('valid')"></y-mobile-input>
+
         <!--actionSheet--start-->
         <y-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</y-button>
         <y-button @click="toggleActionList">显示/隐藏List型ActionSheet</y-button>
@@ -306,12 +326,25 @@
         yBadge,
         ySearch,
         yCounter,
-        yActionSheet
+        yActionSheet,
+        yTap,
+        yIcon,
+        yTextInput,
+        yMobileInput
     } from '../packages/index'
     import {UIName} from 'mixins'
     export default {
         props: {},
         methods: {
+            tip: function (msg) {
+                this.$toast({
+                    content: msg,
+                    duration: 2000
+                })
+            },
+            textChange: function (e) {
+                this.textInputStyle = e.valid ? 'background: #393; color: #FFF' : '';
+            },
             inputChange: function (value, label) {
                 console.log(value)
                 console.log(label)
@@ -373,6 +406,7 @@
         data () {
             return {
                 showPop: false,
+                textInputStyle: '',
                 radioList: [
                     {
                         label: '单选框1',
@@ -525,7 +559,11 @@
             yBadge,
             ySearch,
             yCounter,
-            yActionSheet
+            yActionSheet,
+            yTap,
+            yIcon,
+            yTextInput,
+            yMobileInput
         }
     }
 
