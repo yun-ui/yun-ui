@@ -20,7 +20,8 @@ module.exports = {
             'assets': path.resolve(__dirname, '../src/assets'),
             'components': path.resolve(__dirname, '../src/components'),
             'mixins': path.resolve(__dirname, '../src/mixins'),
-            'packages': path.resolve(__dirname, '../packages')
+            'packages': path.resolve(__dirname, '../packages'),
+            'dom': path.resolve(__dirname, '../src/utils/dom')
         }
     },
     resolveLoader: {

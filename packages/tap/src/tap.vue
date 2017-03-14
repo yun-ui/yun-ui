@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import $ from 'tethys'
+import $ from 'dom'
 import {UIName} from 'mixins'
 
 export default {

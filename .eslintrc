@@ -21,6 +21,7 @@
         "no-extra-bind":[
             0
         ],
-        "semi": 0
+        "semi": 0,
+        "no-useless-escape": 0
     }
 }
