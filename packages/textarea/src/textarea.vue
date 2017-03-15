@@ -31,6 +31,11 @@
             }
         },
         watch: {
+            defaultValue (val) {
+                if (val !== this.value) {
+                    this.value = val
+                }
+            },
             value (afterValue) {
                 if (afterValue.length > this.limit) {
                     this.value = afterValue.slice(0, this.limit)
