@@ -42,7 +42,7 @@ describe('TextInput.vue', () => {
         component.value = validValue
     })
 
-    it('should show the close icon', () => {
+    it('should show the close icon when value is not empty string', () => {
         expect(close.style.display).to.not.equal('none')
     })
 })
