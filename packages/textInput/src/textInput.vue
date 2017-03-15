@@ -98,7 +98,7 @@ export default {
                 this.valid = this.validPatternReg(val)
             }
 
-            this.$emit('change', {
+            this.$emit('change', val, {
                 value: val,
                 oldValue: oldValue,
                 valid: this.valid

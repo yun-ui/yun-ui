@@ -19,7 +19,7 @@
             @change="textChange" valid-pattern="^123$"></y-text-input>
 
         手机号码输入框：
-        <y-mobile-input placeholder="请输入手机号码" @change="$event.valid && tip('valid')"></y-mobile-input>
+        <y-mobile-input placeholder="请输入手机号码" @change="mobileChange"></y-mobile-input>
 
         <!--actionSheet--start-->
         <y-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</y-button>
@@ -342,8 +342,13 @@
                     duration: 2000
                 })
             },
-            textChange: function (e) {
+            textChange: function (value, e) {
+                console.log(value)
                 this.textInputStyle = e.valid ? 'background: #393; color: #FFF' : ''
+            },
+            mobileChange: function (value, e) {
+                console.log(value)
+                e.valid && this.tip('valid')
             },
             inputChange: function (value, label) {
                 console.log(value)
