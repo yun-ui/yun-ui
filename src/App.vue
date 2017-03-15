@@ -343,7 +343,7 @@
                 })
             },
             textChange: function (e) {
-                this.textInputStyle = e.valid ? 'background: #393; color: #FFF' : '';
+                this.textInputStyle = e.valid ? 'background: #393; color: #FFF' : ''
             },
             inputChange: function (value, label) {
                 console.log(value)

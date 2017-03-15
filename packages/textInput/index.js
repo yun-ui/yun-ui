@@ -1,2 +1,2 @@
 import TextInput from './src/textInput.vue'
-module.exports = TextInput;
+module.exports = TextInput

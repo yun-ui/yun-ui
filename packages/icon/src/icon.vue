@@ -41,22 +41,22 @@ export default {
     methods: {
         // 动态计算按钮的 class
         getCssCls: function () {
-            var cls = [ 'y-icon', 'iconfont' ];
+            var cls = [ 'y-icon', 'iconfont' ]
 
             // 按钮type的class
-            if (this.type) cls.push('icon-' + this.type);
+            if (this.type) cls.push('icon-' + this.type)
 
             // active时的class
-            if (this.active) cls.push('active');
+            if (this.active) cls.push('active')
 
             // 传入的自定义class
-            if (this['class']) cls.push(this['class']);
+            if (this['class']) cls.push(this['class'])
 
-            return cls.join(' ');
+            return cls.join(' ')
         },
         // 触发点击事件
         tap: function () {
-            this.$emit('tap');
+            this.$emit('tap')
         }
     }
 }

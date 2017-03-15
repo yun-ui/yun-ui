@@ -38,24 +38,24 @@ import {UIName} from 'mixins'
 
 // 创建检测函数
 function createTester (pattern) {
-    var reg;
+    var reg
 
     if (typeof pattern === 'function') {
-        return pattern;
+        return pattern
     } else if (typeof pattern === 'string' && pattern !== '') {
         try {
-            reg = new RegExp(pattern);
+            reg = new RegExp(pattern)
 
             if (reg) {
                 return function (val) {
-                    return this.test(val);
-                }.bind(reg);
+                    return this.test(val)
+                }.bind(reg)
             }
-        } catch (e) {};
-    };
+        } catch (e) {}
+    }
 
-    return null;
-};
+    return null
+}
 
 export default {
     name: 'y-text-input',
@@ -81,7 +81,7 @@ export default {
         return {
             valid: false,
             value: this.$props.defaultValue
-        };
+        }
     },
     computed: {
         validPatternReg: function () {
@@ -95,26 +95,26 @@ export default {
         // 当value发生变化，用validPattern函数去检测，并设置组件的valid状态
         value: function (val, oldValue) {
             if (typeof this.validPatternReg === 'function') {
-                this.valid = this.validPatternReg(val);
-            };
+                this.valid = this.validPatternReg(val)
+            }
 
             this.$emit('change', {
                 value: val,
                 oldValue: oldValue,
                 valid: this.valid
-            });
+            })
         }
     },
     methods: {
         clear: function () {
-            this.value = '';
+            this.value = ''
         },
         keyup: function (e) {
-            var val = e.target.value;
+            var val = e.target.value
 
             if (typeof this.patternReg === 'function' && !this.patternReg(val)) {
-                e.target.value = val.substr(0, val.length - 1);
-            };
+                e.target.value = val.substr(0, val.length - 1)
+            }
         }
     }
 }

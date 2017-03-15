@@ -8,13 +8,13 @@
 </style>
 
 <template>
-    <div :class="getCssCls()" :style="style" @click="tap">
+    <div :class="getCssCls()" :style="style" 
+        @click="tap" @touchstart="active = !disabled" @touchend="active = false">
         <slot></slot>
     </div>
 </template>
 
 <script>
-import $ from 'dom'
 import {UIName} from 'mixins'
 
 export default {
@@ -32,39 +32,27 @@ export default {
         return {
             // 是否按下状态
             active: false
-        };
+        }
     },
     methods: {
         // 动态计算按钮的 class
         getCssCls: function () {
-            var cls = ['y-tap'];
+            var cls = ['y-tap']
 
             // active时的class
-            if (this.active) cls.push('active');
+            if (this.active) cls.push('active')
 
             // 传入的自定义class
-            if (this['class']) cls.push(this['class']);
+            if (this['class']) cls.push(this['class'])
 
-            return cls.join(' ');
+            return cls.join(' ')
         },
         // 触发点击事件
         tap: function () {
             if (!this.disabled) {
-                this.$emit('tap');
-            };
+                this.$emit('tap')
+            }
         }
-    },
-    mounted: function () {
-        var vm = this;
-        // 按下按钮/放开按钮时，改变active状态
-        $(this.$el).on('touchstart, mousedown', function (e) {
-            if (!vm.disabled) {
-                vm.active = true;
-            };
-        });
-        $(document.body).on('touchend, mouseup', function (e) {
-            vm.active = false;
-        });
     }
 }
 </script>
