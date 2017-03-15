@@ -12,7 +12,7 @@
             </div>
             <div class="row clearContentPadding">
                 <y-form>
-                    <y-textarea placeholder="多行输入框 有字数限制" :limit="10"></y-textarea>
+                    <y-textarea placeholder="多行输入框 有字数限制" :limit="10" :defaultValue="defaultValue"></y-textarea>
                 </y-form>
             </div>
         </div>
@@ -22,9 +22,17 @@
 <script>
     export default {
         name: 'y-textarea-demo',
+        data () {
+            return {
+                defaultValue: '默认值'
+            }
+        },
         props: {},
         created () {
             console.log('textarea demo loaded')
+            // setTimeout(() => {
+            //     this.defaultValue = '动态改变初始值'
+            // }, 1000)
         },
         methods: {}
     }
