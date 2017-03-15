@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import {UIName} from 'mixins'
+    import { UIName } from 'mixins'
     export default {
         name: 'y-input',
         mixins: [UIName],
@@ -33,6 +33,11 @@
             }
         },
         watch: {
+            defaultValue (val) {
+                if (val !== this.value) {
+                    this.value = val
+                }
+            },
             value () {
                 this.$emit('input', this.value)
                 this.$emit('change', this.value, this.label)
@@ -43,5 +48,4 @@
 //            }
         }
     }
-
 </script>
