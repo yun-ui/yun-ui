@@ -1,10 +1,31 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
+
+        <div class="group">
+
+        </div>
+        <!--imagePicker and filePicker-->
+        <div class="group">
+            <y-file-picker label="选择附件" fileName="文件名.zip" fileSize="2.2M"
+                           text="已选择5个" uploadTime="提交时间：03月25日">
+                <img src="../src/assets/placeholder-figure.png" slot="fileIcon">
+            </y-file-picker>
+        </div>
+        <div class="group">
+            <y-image-picker label="选择图片" text="已选择5张"></y-image-picker>
+        </div>
+        <!--calendar-->
+        <div style="display:none">
+            <y-calendar></y-calendar>
+        </div>
+
         <!--actionSheet--start-->
-        <y-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</y-button>
-        <y-button @click="toggleActionList">显示/隐藏List型ActionSheet</y-button>
-        <y-button @click="toggleActionCheckbox">显示/隐藏Checkbox型ActionSheet</y-button>
+        <div class="group">
+            <y-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</y-button>
+            <y-button @click="toggleActionList">显示/隐藏List型ActionSheet</y-button>
+            <y-button @click="toggleActionCheckbox">显示/隐藏Checkbox型ActionSheet</y-button>
+        </div>
         <y-action-sheet type="panel" panelTitle="分享到" :actionSheetItem="actionSheetPanelItem"
                         @maskClicked="maskClicked" :show="showActionPanel" @cancel="maskClicked">
         </y-action-sheet>
@@ -95,17 +116,17 @@
 
         <!--Base--start-->
         <div>
-            <h1 class="y-h1">Base 基础样式</h1>
+            <h1 class="yun-h1">Base 基础样式</h1>
             <p>基础样式主要分为：文本（字体），颜色，布局</p>
             <h2>文本</h2>
             <h3>文本大小</h3>
             <ul>
-                <li><h1 class="y-h1">h1,0.36rem</h1></li>
-                <li><h2 class="y-h2">h2,0.34rem</h2></li>
-                <li><h3 class="y-h3">h3,0.32rem</h3></li>
-                <li><h4 class="y-h4">h4,0.28rem</h4></li>
-                <li><h5 class="y-h5">h5,0.26rem</h5></li>
-                <li><h6 class="y-h6">h6,0.2rem</h6></li>
+                <li><h1 class="yun-h1">h1,0.36rem</h1></li>
+                <li><h2 class="yun-h2">h2,0.34rem</h2></li>
+                <li><h3 class="yun-h3">h3,0.32rem</h3></li>
+                <li><h4 class="yun-h4">h4,0.28rem</h4></li>
+                <li><h5 class="yun-h5">h5,0.26rem</h5></li>
+                <li><h6 class="yun-h6">h6,0.2rem</h6></li>
             </ul>
             <h3>文本颜色</h3>
             <ul>
@@ -138,14 +159,14 @@
             </div>
             <h2>辅助类</h2>
             <div class="clearfix">
-                <p class="y-left">左浮动</p>
-                <p class="y-right">右浮动</p>
+                <p class="yun-left">左浮动</p>
+                <p class="yun-right">右浮动</p>
             </div>
             <div>
-                <p class="y-text-left">文字左对齐</p>
-                <p class="y-text-center">文字居中对齐</p>
-                <p class="y-text-right">文字右对齐</p>
-                <div class="y-block-center">定宽的块级元素水平居中</div>
+                <p class="yun-text-left">文字左对齐</p>
+                <p class="yun-text-center">文字居中对齐</p>
+                <p class="yun-text-right">文字右对齐</p>
+                <div class="yun-block-center">定宽的块级元素水平居中</div>
             </div>
         </div>
         <!--Base--end-->
@@ -186,7 +207,7 @@
             <div style="position:relative;height:50px;">
                 <y-button-group defaultActiveTabId="2">
                     <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i>
-                        <y-badge type="text" value="100+" color="#3cbaff"></y-badge>
+                        <y-badge type="text" text="100+" color="#3cbaff"></y-badge>
                     </y-tab-item>
                     <y-tab-item tabId="2" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
                     <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
@@ -287,6 +308,8 @@
 
 <script>
     import {
+        yFilePicker,
+        yImagePicker,
         yButton,
         yTabbar,
         yTabItem,
@@ -306,7 +329,8 @@
         yBadge,
         ySearch,
         yCounter,
-        yActionSheet
+        yActionSheet,
+        yCalendar
     } from '../packages/index'
     import {UIName} from 'mixins'
     export default {
@@ -506,6 +530,8 @@
         created () {
         },
         components: {
+            yImagePicker,
+            yFilePicker,
             yButton,
             yTabbar,
             yTabItem,
@@ -525,17 +551,19 @@
             yBadge,
             ySearch,
             yCounter,
-            yActionSheet
+            yActionSheet,
+            yCalendar
         }
     }
 
 </script>
 
 <style lang="less" rel="stylesheet/less">
-    @import "../packages/style/stylesheets/reset.css";
     @import "../packages/style/stylesheets/base";
 
     html, body {
+        padding:0;
+        margin:0;
         height: 100%;
         min-height: 100%;
     }

@@ -19,6 +19,9 @@ import Loading from '../packages/loading'
 import Badge from '../packages/badge'
 import Search from '../packages/search'
 import ActionSheet from '../packages/actionSheet'
+import Calendar from '../packages/calendar'
+import ImagePicker from '../packages/imagePicker'
+import FilePicker from '../packages/filePicker'
 
 const install = function (Vue) {
     if (install.installed) return
@@ -41,6 +44,9 @@ const install = function (Vue) {
     Vue.component(Badge.name, Badge)
     Vue.component(Search.name, Search)
     Vue.component(ActionSheet.name, ActionSheet)
+    Vue.component(Calendar.name, Calendar)
+    Vue.component(ImagePicker.name, ImagePicker)
+    Vue.component(FilePicker.name, FilePicker)
     Vue.use(Toast)
 }
 
@@ -49,6 +55,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 module.exports = {
+    ImagePicker,
+    FilePicker,
     install,
     Button,
     Toast,
@@ -69,5 +77,6 @@ module.exports = {
     Loading,
     Badge,
     Search,
-    ActionSheet
+    ActionSheet,
+    Calendar
 }

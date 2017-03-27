@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <div :class="[UIName+'-form-item', UIName+'-imagePicker-item']">
-            <div :class="UIName + '-form-title'">
-                <span v-text="label"></span>
-                <small :class="UIName+ '-form-secondary'" v-text="text"></small>
-            </div>
-            <div :class="UIName+'-icon-container'">
+    <div :class="UIName+'-image-picker'">
+        <div :class="[UIName+'-image-picker-title']">
+            <label :class="UIName+'-image-picker-label'" v-text="label"></label>
+            <small :class="UIName+ '-image-picker-secondary'" v-text="text"></small>
+            <div :class="UIName+'-image-picker-add'">
                 <i class="iconfont icon-add-field"></i>
             </div>
         </div>
@@ -40,3 +38,7 @@
     }
 
 </script>
+
+<style lang="less">
+    @import "../../style/stylesheets/imagePicker";
+</style>

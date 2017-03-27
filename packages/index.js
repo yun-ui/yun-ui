@@ -20,10 +20,15 @@ import yBadge from './badge'
 import ySearch from './search'
 import yCounter from './counter'
 import yActionSheet from './actionSheet'
+import yCalendar from './calendar'
+import yImagePicker from './imagePicker'
+import yFilePicker from './filePicker'
 
 Vue.use(yToast)
 
 const Components = {
+    yImagePicker,
+    yFilePicker,
     yButton,
     yTabbar,
     yTabItem,
@@ -43,7 +48,8 @@ const Components = {
     yBadge,
     ySearch,
     yCounter,
-    yActionSheet
+    yActionSheet,
+    yCalendar
 }
 
 module.exports = Components

@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <div :class="[UIName+'-form-item', UIName+'-filePicker-item']">
-            <div :class="UIName + '-form-title'">
-                <span v-text="label"></span>
-                <small :class="UIName+ '-form-secondary'" v-text="text"></small>
-            </div>
-            <div :class="UIName+'-icon-container'">
+    <div :class="UIName+'-file-picker'">
+        <div :class="[UIName+'-file-picker-title']">
+            <label :class="UIName+'-file-picker-label'" v-text="label"></label>
+            <small :class="UIName+ '-file-picker-secondary'" v-text="text"></small>
+            <div :class="UIName+'-file-picker-add'">
                 <i class="iconfont icon-add-field"></i>
             </div>
         </div>
@@ -39,6 +37,7 @@
         mixins: [UIName],
         props: {
             label: String,
+            text: String,
             fileName: String,
             errorInfo: String,
             fileSize: String,
@@ -49,3 +48,7 @@
     }
 
 </script>
+
+<style lang="less">
+    @import "../../style/stylesheets/filePicker";
+</style>

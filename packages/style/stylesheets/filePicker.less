@@ -1,0 +1,107 @@
+@import "var";
+
+/* var */
+@filePickerPadding: 12px;
+@filePickerIconSize: 30px;
+@filePickerFileItemHeight: 44px;
+
+//filePicker
+.@{uiName} {
+  &-file-container {
+    padding: 0 @formPadding @formPadding;
+    background-color: #ffffff;
+  }
+  &-file-content {
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 1;
+    padding: 0 @fieldPadding;
+    color: @secondaryFontColor;
+  }
+  &-file-item {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: middle;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid @borderColor;
+    margin-top: @fieldPadding;
+    background: rgba(241, 244, 248, 0.3);
+    padding: 0 @fieldPadding;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &-file-icon {
+    width: @fieldIconSize;
+    height: @fieldIconSize;
+    img{
+      max-width: 100%;
+    }
+  }
+  &-file-name {
+    font-size: @fieldNameFontSize;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &-file-delete {
+    padding: @formPadding 0 @formPadding @formPadding;
+    width: @deleteFieldIconSize;
+    .icon-close {
+      color: @secondaryFontColor;
+    }
+  }
+  &-file-error,
+  &-file-size,
+  &-upload-time {
+    font-size: @fieldInfoFontSize;
+  }
+  &-file-error {
+    color: @warnColor;
+  }
+  &-upload-time {
+    padding: 0 @formPadding @formPadding;
+    color: @secondaryFontColor;
+    background-color: #ffffff;
+  }
+
+  &-file-picker {
+    background-color: #fff;
+    &-title {
+      display: flex;
+      -ms-flex-align: center;
+      vertical-align: middle;
+      align-items: center;
+      padding: 0 @formPadding;
+      height: @filePickerFileItemHeight;
+      line-height: @filePickerFileItemHeight;
+    }
+    &-label {
+      font-size: 16px;
+    }
+    &-secondary {
+      -moz-box-flex: 1;
+      -webkit-box-flex: 1;
+      flex: 1;
+      font-size: 12px;
+      padding-left: @filePickerPadding/2;
+      color: @secondaryFontColor;
+    }
+    &-add {
+      text-align: right;
+      width: 36px;
+      height: 100%;
+      .icon-add-field {
+        color: @secondaryFontColor;
+        font-size: 20px;
+      }
+    }
+  }
+}

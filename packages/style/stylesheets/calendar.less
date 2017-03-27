@@ -1,0 +1,101 @@
+@import "var";
+@import "mixin-reset";
+
+@calendarPadding: 12px;
+@calendarHeaderHeight: 36px;
+@calendarCountHeight: 44px;
+@calendarValueSize: 30px; //日历日期值
+@calendarValueFontSize: 12px; //日历日期值
+
+/* calendar */
+.@{uiName} {
+  &-calendar {
+    .resetUl();
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: @zIndexNormal + 20;
+    &-mask {
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background-color: @maskColor;
+    }
+    &-pannel {
+      position: relative;
+      background-color: #fff;
+      z-index: 1;
+    }
+    &-header {
+      background-color: #EAEFF3;
+      line-height: 36px;
+      padding: 0 12px;
+      color: @secondaryFontColor;
+    }
+    &-commit {
+      float: right;
+      color: @themeColor;
+    }
+    &-count {
+      text-align: center;
+      &-click,
+      &-value {
+        display: inline-block;
+        line-height: @calendarCountHeight;
+        vertical-align: middle;
+      }
+      &-click {
+        padding: 0 @calendarPadding;
+        color: @secondaryFontColor;
+      }
+    }
+    &-month {
+      overflow: hidden;
+      &-item {
+        text-align: center;
+        float: left;
+        width: 25%;
+        padding: 14px 0;
+      }
+    }
+    &-day {
+      overflow: hidden;
+      &-header {
+        overflow: hidden;
+        padding: @calendarPadding 0;
+        li{
+          float: left;
+          width: 14.28%;
+          text-align: center;
+          color: @defaultFontColor;
+          font-size: @calendarValueFontSize;
+        }
+      }
+      &-item {
+        text-align: center;
+        float: left;
+        width: 14.28%;
+        padding:4px 0;
+      }
+    }
+    &-value {
+      font-size: @calendarValueFontSize;
+      width: @calendarValueSize;
+      height: @calendarValueSize;
+      line-height: @calendarValueSize;
+      margin: 0 auto;
+      border-radius: 100%;
+      &-active {
+        color: #fff;
+        background-color: #3cbaff;
+      }
+      &-disabled {
+        color: @secondaryFontColor;
+        background-color: transparent;
+      }
+    }
+  }
+}
