@@ -1,25 +1,25 @@
 <template>
     <!--页面中所有内联样式都是作为效果展示-->
     <div>
-        <div>
-            <y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" @tap="tip('一个元素被点击了')">可点击的元素</y-tap>
-            <y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" :disabled="true">不可点击的元素</y-tap>
-        </div>
-        <div style="text-align:center; padding: 5px 0">
-            <y-icon type="close-line" @tap="tip('close-line')"></y-icon>
-            <y-icon type="like" @tap="tip('like')"></y-icon>
-            <y-icon type="qq" style="color:#F60" @tap="tip('qq')"></y-icon>
-            <y-icon type="wechat" style="color:#393" @tap="tip('wechat')"></y-icon>
-            <y-icon type="email" @tap="tip('email')"></y-icon>
-            <y-icon type="true-block" @tap="tip('true-block')"></y-icon>
-        </div>
+        <!--<div>-->
+            <!--<y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" @tap="tip('一个元素被点击了')">可点击的元素</y-tap>-->
+            <!--<y-tap style="padding:10px; margin: 5px; border: 1px solid #CCC; background: #FFF" :disabled="true">不可点击的元素</y-tap>-->
+        <!--</div>-->
+        <!--<div style="text-align:center; padding: 5px 0">-->
+            <!--<y-icon type="close-line" @tap="tip('close-line')"></y-icon>-->
+            <!--<y-icon type="like" @tap="tip('like')"></y-icon>-->
+            <!--<y-icon type="qq" style="color:#F60" @tap="tip('qq')"></y-icon>-->
+            <!--<y-icon type="wechat" style="color:#393" @tap="tip('wechat')"></y-icon>-->
+            <!--<y-icon type="email" @tap="tip('email')"></y-icon>-->
+            <!--<y-icon type="true-block" @tap="tip('true-block')"></y-icon>-->
+        <!--</div>-->
 
-        文本输入框：
-        <y-text-input placeholder="请输入123" :style="textInputStyle" 
-            @change="textChange" valid-pattern="^123$"></y-text-input>
+        <!--文本输入框：-->
+        <!--<y-text-input placeholder="请输入123" :style="textInputStyle" -->
+            <!--@change="textChange" valid-pattern="^123$"></y-text-input>-->
 
-        手机号码输入框：
-        <y-mobile-input placeholder="请输入手机号码" @change="$event.valid && tip('valid')"></y-mobile-input>
+        <!--手机号码输入框：-->
+        <!--<y-mobile-input placeholder="请输入手机号码" @change="$event.valid && tip('valid')"></y-mobile-input>-->
 
         <!--actionSheet--start-->
         <y-button @click="toggleActionPanel">显示/隐藏Panel型ActionSheet</y-button>
@@ -40,7 +40,7 @@
             <y-form @change="inputChange">
                 <y-textarea placeholder="多行输入框" :limit="20"></y-textarea>
                 <y-input label="单行输入框" defaultValue="默认值" placeholder="输入haha"></y-input>
-                <y-radio :radioList="radioList"></y-radio>
+                <y-radio :radioList="radioList" v-model="radioValue"></y-radio>
                 <!--<y-radio label="单选框" value="2" name="radio"></y-radio>-->
                 <!--<y-radio label="单选框" value="3" name="radio"></y-radio>-->
                 <!--<y-radio label="单选框" name="radio2"></y-radio>-->
@@ -326,11 +326,7 @@
         yBadge,
         ySearch,
         yCounter,
-        yActionSheet,
-        yTap,
-        yIcon,
-        yTextInput,
-        yMobileInput
+        yActionSheet
     } from '../packages/index'
     import {UIName} from 'mixins'
     export default {
@@ -345,9 +341,9 @@
             textChange: function (e) {
                 this.textInputStyle = e.valid ? 'background: #393; color: #FFF' : '';
             },
-            inputChange: function (value, label) {
-                console.log(value)
-                console.log(label)
+            inputChange: function (status, value, label) {
+                console.log(status, value, label)
+                console.log(this.radioValue)
             },
             togglePop: function () {
                 this.showPop = !this.showPop
@@ -407,6 +403,7 @@
             return {
                 showPop: false,
                 textInputStyle: '',
+                radioValue: '',
                 radioList: [
                     {
                         label: '单选框1',
@@ -415,12 +412,12 @@
                     },
                     {
                         label: '单选框2',
-                        value: '1',
+                        value: '2',
                         name: 'radio'
                     },
                     {
                         label: '单选框3',
-                        value: '1',
+                        value: '3',
                         name: 'radio'
                     },
                     {
@@ -559,11 +556,7 @@
             yBadge,
             ySearch,
             yCounter,
-            yActionSheet,
-            yTap,
-            yIcon,
-            yTextInput,
-            yMobileInput
+            yActionSheet
         }
     }
 
