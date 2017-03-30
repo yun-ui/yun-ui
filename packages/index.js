@@ -20,10 +20,10 @@ import yBadge from './badge'
 import ySearch from './search'
 import yCounter from './counter'
 import yActionSheet from './actionSheet'
-import yTap from './tap'
-import yIcon from './icon'
-import yTextInput from './textInput'
-import yMobileInput from './mobileInput'
+// import yTap from './tap'
+// import yIcon from './icon'
+// import yTextInput from './textInput'
+// import yMobileInput from './mobileInput'
 
 Vue.use(yToast)
 
@@ -47,11 +47,11 @@ const Components = {
     yBadge,
     ySearch,
     yCounter,
-    yActionSheet,
-    yTap,
-    yIcon,
-    yTextInput,
-    yMobileInput
+    yActionSheet
+    // yTap,
+    // yIcon,
+    // yTextInput,
+    // yMobileInput
 }
 
 module.exports = Components

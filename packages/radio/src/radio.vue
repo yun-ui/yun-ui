@@ -39,8 +39,8 @@
             change (e, radio) {
                 this.value = radio.value
                 this.$emit('input', this.value)
-                this.$emit('change', e.target.checked, radio.label)
-                this.$parent && this.$parent.$emit('change', e.target.checked, radio.label)
+                this.$emit('change', e.target.checked, radio.value !== undefined ? radio.value : radio.label, radio.label)
+                this.$parent && this.$parent.$emit('change', e.target.checked, radio.value !== undefined ? radio.value : radio.label, radio.label)
             }
         }
     }

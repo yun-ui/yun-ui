@@ -35,8 +35,8 @@
             change: function (e, checkbox) {
                 this.value = this.checkedItems
                 this.$emit('input', this.value)
-                this.$emit('change', e.target.checked, checkbox.value || checkbox.label)
-                this.$parent && this.$parent.$emit('change', e.target.checked, checkbox.value || checkbox.label)
+                this.$emit('change', e.target.checked, checkbox.value || checkbox.label, checkbox.label)
+                this.$parent && this.$parent.$emit('change', e.target.checked, checkbox.value || checkbox.label, checkbox.label)
             }
         }
     }
