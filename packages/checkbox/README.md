@@ -26,7 +26,7 @@ Vue.component(Checkbox.name, Checkbox)
 ``` javascript
 <template>
 <y-form>
-    <y-checkbox :checkboxList="checkList" @change="change"></y-checkbox>
+    <y-checkbox :checkboxList="checkList" @change="change" v-model="checkedList"></y-checkbox>
 </y-form>
 </template>
 <script>
@@ -45,10 +45,10 @@ export default {
                 },
                 {
                     label: '复选框3',
-                    checked: true,
                     value: '3'
                 }
-            ]
+            ],
+            checkedList: ['2']
         }
     },
     methods: {
@@ -66,6 +66,9 @@ export default {
 |     ----      |   ----     |   ----    |      ----      |     ----     |
 |checkboxList|   传入的复选框项，每一项为一个对象  |   Array  |  |       |
 
+### v-model
+
+传入数组，为已勾选的项的value值，如上例，若需"复选框2"、"复选框3"默认勾选，则v-model中传入`['2','3']`
 
 ### checkboxList
 
@@ -76,5 +79,4 @@ checkboxList内各个项需要传入的参数说明：
 |     label    | 复选框项的标题名称  |   String  |              |              |
 |     value     |  区分不同复选框的值         |   String  |             |               |
 |    error  | 表单验证错误提示    |   Boolean  | true,false | false |
-|    checked  | checkbox类型专用，用于区分不同菜单项  |   Boolean |  true,false  | false |
 |    change   | 复选框选中状态改变时的回调函数，第一个参数为改变后的勾选状态，第二个参数为复选框的value值，若无，则为label。可绑定在checkbox组件，也可绑定在form组件上|   Function |  |  |

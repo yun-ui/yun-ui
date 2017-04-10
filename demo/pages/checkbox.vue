@@ -39,7 +39,7 @@
                         value: '3'
                     }
                 ],
-                checkedList: []
+                checkedList: ['2']
             }
         },
         created () {
