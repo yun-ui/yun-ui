@@ -46,7 +46,7 @@
                 <!--<y-radio label="单选框" name="radio2"></y-radio>-->
                 <!--<y-radio label="单选框" name="radio2"></y-radio>-->
                 <!--<y-radio label="单选框" name="radio2"></y-radio>-->
-                <y-checkbox :checkboxList="checkList"></y-checkbox>
+                <y-checkbox :checkboxList="checkList" v-model="checkedList"></y-checkbox>
                 <y-counter label="计数器"></y-counter>
                 <y-switch label="开关"></y-switch>
             </y-form>
@@ -444,6 +444,7 @@
                         value: '3'
                     }
                 ],
+                checkedList: ['3'],
                 textListArray: [
                     {
                         content: '这是一段文本'
