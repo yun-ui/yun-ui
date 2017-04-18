@@ -3,7 +3,7 @@
         <div class="title">
             <h3 class="yun-h3">徽章 Badge</h3>
             <p>YunUI 提供一套简介的统一标记样式，用于标注状态，提醒。
-                我们还支持用户自定义颜色（这里推荐使用官方配色）。
+                我们还支持用户自定义颜色（这里推荐使用官方配色）。</p>
         </div>
         <div class="content yun-bg-white">
             <div class="row yun-text-center">
