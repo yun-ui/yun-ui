@@ -2,7 +2,7 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">搜索 Search</h3>
-            <p>YunUI 统一搜索组件。
+            <p>YunUI 统一搜索组件。</p>
         </div>
         <div class="content">
             <div class="row clearContentPadding">
