@@ -26,10 +26,16 @@
         },
         data () {
             return {
-                number: 0,
-                value: this.defaultValue
+                value: this.defaultValue || ''
             }
         },
+
+        computed: {
+            number () {
+                return this.value.length
+            }
+        },
+
         watch: {
             defaultValue (val) {
                 if (val !== this.value) {
@@ -40,7 +46,6 @@
                 if (afterValue.length > this.limit) {
                     this.value = afterValue.slice(0, this.limit)
                 }
-                this.number = this.value.length
                 this.$emit('input', this.value)
                 this.$emit('change', this.value, this.label)
                 this.$parent && this.$parent.$emit('change', this.value, this.label)
