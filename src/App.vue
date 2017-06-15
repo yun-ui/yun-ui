@@ -38,7 +38,7 @@
         <!--cell--start-->
         <div class="group">
             <y-form @change="inputChange">
-                <y-textarea placeholder="多行输入框" :limit="20"></y-textarea>
+                <y-textarea placeholder="多行输入框" :limit="20" defaultValue="default"></y-textarea>
                 <y-input label="单行输入框" defaultValue="默认值" placeholder="输入haha"></y-input>
                 <y-radio :radioList="radioList" v-model="radioValue"></y-radio>
                 <!--<y-radio label="单选框" value="2" name="radio"></y-radio>-->
