@@ -8,7 +8,7 @@
             <div :class="UIName+'-action-sheet-panel'">
                 <div :class="UIName+'-action-sheet-title'" v-text="panelTitle"></div>
                 <div :class="UIName+'-action-sheet-content'">
-                    <div :class="UIName+'-action-sheet-item'" v-for="item in actionSheetItem" @click="item.callback">
+                    <div :class="UIName+'-action-sheet-item'" v-for="item in actionSheetItem" @click="item.callback(item.id || item.title)">
                         <div :class="UIName+'-action-sheet-image'">
                             <img :src="item.icon">
                         </div>
@@ -23,7 +23,7 @@
         <div :class="UIName+'-action-sheet-container'" v-if="type === 'list'">
             <div :class="UIName+'-action-sheet-list'">
                 <div :class="[UIName+'-action-sheet-list-item']"
-                     v-for="item in actionSheetItem" @click="item.callback">
+                     v-for="item in actionSheetItem" @click="item.callback(item.id || item.title)">
                     <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
                     <span :class="UIName+'-action-sheet-list-title'" v-text="item.title"></span>
                 </div>
@@ -40,13 +40,13 @@
                 </div>
                 <div :class="UIName+'-action-sheet-checkbox-list'">
                     <div :class="[UIName+'-action-sheet-checkbox-item']"
-                         v-for="item in actionSheetItem" @click="item.callback">
+                         v-for="item in actionSheetItem" @click="item.callback(item.value || item.title)">
                         <div :class="UIName+'-action-sheet-checkbox-label'">
                             <img :class="UIName+'-action-sheet-icon'" :src="item.icon">
                             <span v-text="item.title"></span>
                         </div>
                         <div :class="UIName + '-checkbox'">
-                            <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="checked"/>
+                            <input :class="UIName + '-checkbox-input'" type="checkbox" :checked="item.checked"/>
                             <div :class="[UIName + '-checkbox-inner']"></div>
                         </div>
                     </div>
