@@ -391,7 +391,9 @@
                 console.log(value)
                 console.log(status)
             },
-            actionItemClick: function () {
+            actionItemClick: function (value, checked) {
+                console.log(value)
+                console.log(checked)
                 console.log('action item clicked')
             },
             actionSheetChange: function (value, status) {
@@ -459,31 +461,37 @@
                 actionSheetPanelItem: [
                     {
                         title: '微信',
+                        id: 'wechat',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '同事圈',
+                        id: 'moment',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '收藏',
+                        id: 'collection',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '上传电脑',
+                        id: 'upload',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '转发',
+                        id: 'forward',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '其他应用',
+                        id: 'other',
                         icon: require('../src/assets/placeholder-figure.png'),
                         callback: this.actionItemClick
                     }

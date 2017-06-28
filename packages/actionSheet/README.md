@@ -113,7 +113,8 @@ actionSheetItem内各个项需要传入的参数说明：
 |      参数     |         说明        |    类型    |       可选值    |      默认值   |
 |     ----     |         ----     |   ----    |      ----      |     ----     |
 |     title    | 通用，菜单项的标题  |   String  |              |              |
+|     id    | 除checkbox项，菜单项的id，用于作为事件回调的参数  |   String  |              |              |
 |     icon     |  通用，菜单项的图标         |   String  |             |               |
-|    callback  | 通用，菜单项点击后的事件回调，参数为当前菜单项    |   Function  |  |  |
+|    callback  | 通用，菜单项点击后的事件回调，参数为当前菜单项id，若无id，则为title，对于checkbox类型，则为value或title    |   Function  |  |  |
 |    value     | checkbox类型专用，用于区分不同菜单项  |   String |          |      |
 |    checked   | checkbox类型专用，菜单项默认是否勾选 |   Boolean | true,false | false |
