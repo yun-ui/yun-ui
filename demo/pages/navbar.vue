@@ -1,7 +1,7 @@
 <template>
     <y-navbar fixed @change="navChange" defaultActiveTabId="2">
-        <y-tab-item title="文本" tabId="1"></y-tab-item>
-        <y-tab-item title="文本" tabId="2"></y-tab-item>
+        <y-tab-item title="导航文本" tabId="1"></y-tab-item>
+        <y-tab-item title="导航文本" tabId="2"></y-tab-item>
     </y-navbar>
 </template>
 

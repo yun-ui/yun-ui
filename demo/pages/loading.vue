@@ -11,11 +11,11 @@
             <y-button type="linear" @click.native="showLoading = !showLoading">跳转类 Loading</y-button>
         </div>
 
-        <y-loading content="加载中" refresh :show="showFresh" style="top:64px">
-            <img src="../assets/loading.png" slot="icon"/>
+        <y-loading content="加载中..." refresh :show="showFresh" style="top:64px">
+            <img src="../assets/refresh.gif" slot="icon"/>
         </y-loading>
-        <y-loading content="加载中" :show="showLoading">
-            <img src="../assets/loading.png" slot="icon"/>
+        <y-loading :show="showLoading">
+            <img src="../assets/waiting.gif" slot="icon"/>
         </y-loading>
     </div>
 </template>

@@ -5,17 +5,18 @@
 
 /* App color 用于替换themeColor */
 @themeColorBlue: #3CBAFF;
-@themeColorOlive: #94D301;
-@themeColorOrange: #F87E4E;
-@themeColorYellow: #F7BF28;
-@themeColorPurple: #AF65DF;
-@themeColorPink: #FB6691;
-@themeColorRed: #F35959;
-@themeColorSkyBlue: #31D2EA;
-@themeColorRoyalBlue: #4788D8;
-@themeColorGreen: #01D386;
-@themeColorBrown: #C18E6F;
-@themeColorGrey: #6D777D;
+@themeColorDeepBlue: #4598F0;
+@themeColorOlive: #32AA70;
+@themeColorOrange: #E26735;
+@themeColorYellow: #F59C25;
+@themeColorPurple: #655DD4;
+@themeColorPink: #DE4873;
+@themeColorRed: #EA5E56;
+@themeColorSkyBlue: #3FB7DF;
+@themeColorRoyalBlue: #4570D3;
+@themeColorGreen: #13BBAD;
+@themeColorBrown: #BD784D;
+@themeColorGrey: #484B51;
 @themeColorWhiteSmoke: #EAEFF3;
 @themeColorWhite: #FFFFFF;
 
@@ -24,10 +25,11 @@
 
 /* font color */
 @defaultFontColor: #030303; //默认
-@secondaryFontColor: #98a1a8; //辅助，次要
-@activeFontColor: #3cbaff; //活动（被点击，高亮）
-@warnFontColor: #f35959; //警告
+@secondaryFontColor: #768893; //辅助，次要
+@setFontColor:#A4A8AB; //置灰
 @tipsFontColor: #7a797b; //提示
+@warnFontColor: #f35959; //警告
+@activeFontColor: #3cbaff; //活动（被点击，高亮）
 @whiteFontColor: #ffffff; //反色
 
 /* font size */
@@ -40,10 +42,10 @@
 @smallSize: 11px;
 
 /* page color */
-@borderColor: #eaeff3; //分隔线
-@bgColor: #eaeff3; //背景
+@borderColor: #E6E8EE; //分隔线
+@bgColor: #F8F9FB; //背景
 @warnColor: #fa5959; //badge/提醒（小红点，提醒标签）
-@maskColor: rgba(12, 33, 63, 0.3); //遮罩层
+@maskColor: rgba(14,46,70, 0.3); //遮罩层
 
 /* ellipse */
 @line-clamp-value: 2;
@@ -64,6 +66,9 @@
 @tabbarTabItemIconFontSize: 20px;
 
 /* button */
+@buttonBorderRadius: 4px;
+@buttonColor: #4598F0;
+
 @buttonNormalHeight: 44px;
 @buttonNormalFontSize: 16px;
 
@@ -91,8 +96,10 @@
 
 /* list */
 @listActiveBG: #f6f8fa;
+@listFirstTitLeFontSize: 17px;
 @listTileFontSize: 16px;
 @listSecondaryTextFontSize: 14px;
+@listAssistTextFontSize: 10px;
 @blank: 12px; //元素之间的间隙
 @list-link-width: 20px; //元素之间的间隙
 
@@ -101,8 +108,13 @@
 @itemSingleLinePadding: 12px;
 @itemSingleLineIconSize: 22px;
 
-@itemMultiImgSize: 40px;
+@itemMultiImgSize: 36px;
 @itemMultiIconSize: 25px;
+
+@itemAddIconSize: 13px;
+@itemAddTextLineHeight: 26px;
+@iconAddPadding: 8px;
+@itemAddTextMargin: 6px;
 
 //TODO 后期合并list和cell
 
@@ -117,12 +129,13 @@
 @formError: #FFF2F2;
 
 @formTextareaHeight: 70px; //多行输入框的默认高度
+@formTextareaMaxHeight: 99px; //多行输入框的最大高度
 
 @formRadioInnerSize: 24px; //单选钩
 
 @iconContainerSize: 24px; //选择器添加文件图标容器
 @addFieldTconSize: 0.44rem; //选择器添加文件图标大小
-@imageItemSize: 55px; //上传图片组件下方图片大小
+
 @imageItemRadius: 6px; //上传图片组件下方图片大小
 @deleteImageIconSize: 14px;
 
@@ -133,7 +146,7 @@
 @fieldInfoFontSize: 12px;
 
 /* checkbox */
-@checkboxSize: 24px; //复选组件尺寸
+@checkboxSize: 22px; //复选组件尺寸
 @checkboxInnerSize: 12px; //对勾尺寸
 
 /* counter */
@@ -160,24 +173,33 @@
 
 /* loading */
 @loadingBG: rgb(12, 33, 63);
-@loadingSize: 80px;
+@loadingSize: 72px;
+@loadingImageSize: 100%;
 @loadingRadius: 8px;
 
 @loadingIconSize: 40px;
 @loadingFontSize: 12px;
 
 @loadingRefreshIconSize: 20px; //刷新类型loading的icon尺寸
+@loadingRefreshIconHeight: 15px;
 @loadingRefreshBG: #fff;
 
-@loadingPadding: 12px; //loading元素的边距
+@loadingPadding: 11px; //loading元素的边距
 
 /* toast */
 @toastBG: rgb(12, 33, 63);
-@toastSize: 80px;
-@toastRadius: 8px;
+@toastSize: 120px;
+@toastBigRadius: 6px;
+@toastRadius: 4px;
 
 @toastIconSize: 40px;
+@toastIconWidth: 40px;
+@toastIconHeight: 27px;
+@toastIconWaitingWidth: 50px;
+@toastIconWaitingHeight: 30px;
+@toastIconWaitingPadding: 20px 12px;
 @toastFontSize: 12px;
+@toastLineHeight: 17px;
 
 @toastPadding: 12px; //toast元素的边距
 @toastPadding-top: 7px; //toast元素的上边距
@@ -192,6 +214,9 @@
 /* search */
 @searchBarHeight: 44px; //搜索栏高度
 @searchBarPadding: 12px;
+@searchBarInputPadding: 30px;
+@searchBarBorderRadius: 3px;
+@searchBarInputColor: #030303;
 @searchCancelFontSize: 14px; //搜索按钮
 
 /* actionSheet */
@@ -204,4 +229,18 @@
 @actionSheetLineHeight: 44px;
 @actionSheetHeader: 36px;
 
-@actionSheetImageSize: 55px;
+@actionSheetImageSize: 48px;
+
+// imagePicker
+@imagePickerTitleLineHeight: 20px;
+@imagePickerPadding: 12px;
+@imageItemSize: 55px; //上传图片组件下方图片大小
+@imageDeleteIconSize: 16px;
+@addFieldTconSize: 1rem;
+
+@filePadding: 8px 12px 9px;
+@fileFieldPadding: 9px 14px;
+@fileFieldMargin: 8px;
+@filePicSize: 33px;
+@fileNameFontsize: 15px;
+@fileNameLineHeight: 21px;

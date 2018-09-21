@@ -37,6 +37,7 @@ export default {
             radioList: [
                 {
                     label: '单选框1',
+                    secondaryText: '辅助文本',
                     value: '1',
                     name: 'radio'
                 },
@@ -72,6 +73,7 @@ radioList内各个项需要传入的参数说明：
 |      参数     |     说明        |    类型    |       可选值    |      默认值   |
 |     ----     |     ----     |   ----    |      ----      |     ----     |
 |     label    | 单选框项的标题名称  |   String  |              |              |
+| secondaryText | 单选框项的二级标题名称 | String | ||
 |     name    | 用于标识不同的单选列表  |   String  |              |              |
 |     value     |  区分不同复选框的值         |   String  |             |               |
 |    error  | 表单验证错误提示    |   Boolean  | true,false | false |

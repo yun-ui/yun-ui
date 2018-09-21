@@ -1,13 +1,14 @@
 <template>
     <div>
-        <div v-for="radio in radioList" :class="[UIName+'-form-item', UIName+'-radio-item', {'error': radio.error}]">
+        <div v-for="radio in radioList" :class="[UIName+'-form-item', UIName+'-radio-item', {'error': radio.error},{'radio-height': radio.secondaryText}]">
             <div :class="UIName + '-form-title'">
-                <span v-text="radio.label"></span>
+                <div v-text="radio.label"></div>
+                <div v-if="radio.secondaryText" v-text="radio.secondaryText" class="radio-secondaryText"></div>
             </div>
             <div :class="UIName+'-radio'">
                 <input :class="UIName+'-radio-input'" :name="radio.name" type="radio" :checked="radio.checked"
                        @change="change($event,radio)"/>
-                <div :class="UIName+'-radio-inner'">
+                <div :class="[UIName+'-radio-inner', {'radio-position' : radio.secondaryText}]">
                     <i class="iconfont icon-true"></i>
                 </div>
             </div>
@@ -22,6 +23,7 @@
         mixins: [UIName],
         props: {
             radioList: Array,
+            secondaryText: String,
             label: String,
             name: String,
             checked: Boolean,
@@ -46,3 +48,17 @@
     }
 
 </script>
+<style lang="less" rel="stylesheet/less" scoped>
+    .radio-height {
+        padding: 12px;
+        height: auto;
+    }
+    .radio-secondaryText{
+        color: #768893;
+        font-size: 14px;
+    }
+    .radio-position {
+        height: 64px;
+        line-height: 64px;
+    }
+</style>

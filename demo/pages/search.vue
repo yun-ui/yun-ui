@@ -6,14 +6,25 @@
         </div>
         <div class="content">
             <div class="row clearContentPadding">
-                <y-search text="搜索" placeholder="输入以搜索"></y-search>
+                <y-search placeholder="输入以搜索" text="搜索" operation="取消" v-model="searchText" @operate="operation"></y-search>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+        data () {
+            return {
+                searchText: ''
+            }
+        },
+        methods: {
+            operation: function (val) {
+                this.searchText = ''
+            }
+        }
+    }
 
 </script>
 

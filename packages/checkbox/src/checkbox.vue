@@ -1,15 +1,16 @@
 <template>
     <div>
-        <div v-for="checkbox in checkboxList" :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': checkbox.error}]">
+        <label v-for="checkbox in checkboxList" :class="[UIName+'-form-item', UIName+'-checkbox-item', {'error': checkbox.error},{'checkbox-height': checkbox.secondaryText}]">
+            <div :class="UIName + '-form-title'">
+                <div v-text="checkbox.label"></div>
+                <div v-if="checkbox.secondaryText" v-text="checkbox.secondaryText" class="checkbox-secondaryText"></div>
+            </div>
             <div :class="UIName + '-checkbox'">
                 <input :class="UIName + '-checkbox-input'" type="checkbox" :value="checkbox.value"
                        @change="change($event,checkbox)" v-model="checkedItems"/>
                 <div :class="[UIName + '-checkbox-inner']"></div>
             </div>
-            <div :class="UIName + '-form-title'">
-                <span v-text="checkbox.label"></span>
-            </div>
-        </div>
+        </label>
     </div>
 </template>
 

@@ -11,7 +11,13 @@
                         <y-checkbox :checkboxList="checkList" v-model="checkedList"></y-checkbox>
                     </div>
                 </y-form>
-                <p>选中的值:{{checkedList}}</p>
+            </div>
+            <div class="row clearContentPadding">
+                <y-form>
+                    <div>
+                        <y-checkbox :checkboxList="checkList1" v-model="checkedList1"></y-checkbox>
+                    </div>
+                </y-form>
             </div>
         </div>
     </div>
@@ -24,22 +30,30 @@
             return {
                 checkList: [
                     {
-                        label: '复选框1',
+                        label: '文本',
                         checked: false,
                         value: '1'
                     },
                     {
-                        label: '复选框2',
+                        label: '文本',
                         checked: false,
                         value: '2'
-                    },
-                    {
-                        label: '复选框3',
-                        checked: true,
-                        value: '3'
                     }
                 ],
-                checkedList: ['2']
+                checkList1: [
+                    {
+                        label: '文本',
+                        secondaryText: '辅助文本',
+                        checked: false,
+                        value: '1'
+                    },
+                    {
+                        label: '文本',
+                        secondaryText: '辅助文本',
+                        checked: false,
+                        value: '2'
+                    }
+                ]
             }
         },
         created () {

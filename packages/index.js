@@ -24,7 +24,6 @@ import yActionSheet from './actionSheet'
 // import yIcon from './icon'
 // import yTextInput from './textInput'
 // import yMobileInput from './mobileInput'
-
 Vue.use(yToast)
 
 const Components = {

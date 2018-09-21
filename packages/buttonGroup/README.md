@@ -38,9 +38,9 @@ Vue.component(TabItem.name, TabItem)
 
 ``` javascript
 <y-button-group defaultActiveTabId="2">
-    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
-    <y-tab-item tabId="2"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
-    <y-tab-item tabId="3"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
+    <y-tab-item tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
 </y-button-group>
 ```
 
@@ -48,9 +48,9 @@ Vue.component(TabItem.name, TabItem)
 
 ``` javascript
 <y-button-group defaultActiveTabId="2">
-    <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
-    <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
-    <y-tab-item title="文本" tabId="3"><i class="iconfont icon-demo" slot="icon"></y-tab-item>
+    <y-tab-item title="文本" tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本" tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本" tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
 </y-button-group>
 ```
 
@@ -71,6 +71,7 @@ Vue.component(TabItem.name, TabItem)
 | fixed      | 定位，为true时按钮组固定在页面底部|  Boolean   | true,false | false    |
 |defaultActiveTabId | 默认active的tab，并在tab-item组件中传入相应的tabId值，若需要切换不同按钮active功能，需要给每个tab-item绑定tabId | String |  |  |
 | change      | tab-item元素active点击切换时的回调函数，参数为切换后的tabId|  Function   |  |    |
+
 
 ## TabItem 组件使用说明
 

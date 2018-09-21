@@ -30,70 +30,90 @@
                 actionSheetPanelItem: [
                     {
                         title: '微信',
-                        icon: require('../assets/placeholder-figure.png'),
+                        icon: require('../assets/weixin.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '朋友圈',
+                        icon: require('../assets/weixin-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '同事圈',
-                        icon: require('../assets/placeholder-figure.png'),
+                        icon: require('../assets/colleague-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '收藏',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: '同事',
+                        icon: require('../assets/colleague.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '上传电脑',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: 'QQ',
+                        icon: require('../assets/qq.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '转发',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: 'QQ空间',
+                        icon: require('../assets/qq-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '其他应用',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: '短信',
+                        icon: require('../assets/short-message.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '微博',
+                        icon: require('../assets/weibo.png'),
                         callback: this.actionItemClick
                     }
                 ],
                 actionSheetCheckboxItem: [
                     {
                         title: '微信',
-                        icon: require('../assets/placeholder-figure.png'),
+                        icon: require('../assets/weixin.png'),
                         checked: true,
                         value: 'wechat',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '同事圈',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: '朋友圈',
+                        icon: require('../assets/weixin-circle.png'),
                         value: 'group',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '收藏',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: '同事圈',
+                        icon: require('../assets/colleague-circle.png'),
                         value: 'favorite',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '上传到电脑',
+                        title: '同事',
                         checked: true,
                         value: 'upload',
-                        icon: require('../assets/placeholder-figure.png'),
+                        icon: require('../assets/colleague.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '转发',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: 'QQ',
+                        icon: require('../assets/qq.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '其他应用打开',
-                        icon: require('../assets/placeholder-figure.png'),
+                        title: 'QQ空间',
+                        icon: require('../assets/qq-circle.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '短信',
+                        icon: require('../assets/short-message.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '微博',
+                        icon: require('../assets/weibo.png'),
                         callback: this.actionItemClick
                     }
                 ],

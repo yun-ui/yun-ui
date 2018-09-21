@@ -1,37 +1,37 @@
 @import "var";
 
-@keyframes loading {
-  0% {
-    transform-origin: center;
-    transform: rotate(0deg);
-  }
-  100% {
-    transform-origin: center;
-    transform: rotate(360deg);
-  }
-}
+// @keyframes loading {
+//   0% {
+//     transform-origin: center;
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform-origin: center;
+//     transform: rotate(360deg);
+//   }
+// }
 
-@-webkit-keyframes loading {
-  0% {
-    -webkit-transform-origin: center;
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform-origin: center;
-    -webkit-transform: rotate(360deg);
-  }
-}
+// @-webkit-keyframes loading {
+//   0% {
+//     -webkit-transform-origin: center;
+//     -webkit-transform: rotate(0deg);
+//   }
+//   100% {
+//     -webkit-transform-origin: center;
+//     -webkit-transform: rotate(360deg);
+//   }
+// }
 
-@-moz-keyframes loading {
-  0% {
-    -moz-transform-origin: center;
-    -moz-transform: rotate(0deg);
-  }
-  100% {
-    -moz-transform-origin: center;
-    -moz-transform: rotate(360deg);
-  }
-}
+// @-moz-keyframes loading {
+//   0% {
+//     -moz-transform-origin: center;
+//     -moz-transform: rotate(0deg);
+//   }
+//   100% {
+//     -moz-transform-origin: center;
+//     -moz-transform: rotate(360deg);
+//   }
+// }
 
 //垂直居中
 .middleCenter {
@@ -50,9 +50,10 @@
 .@{uiName} {
   &-loading {
     position: fixed;
-    display: block;
+    display: table;
     width: @loadingSize;
-    padding: @loadingPadding 0;
+    height: @loadingSize;
+    padding: 0 @loadingPadding;
     .middleCenter;
     z-index: @zIndexNormal;
     text-align: center;
@@ -63,15 +64,11 @@
   }
   //loading icon
   &-loading-icon {
-    position: relative;
-    width: @loadingIconSize;
-    height: @loadingIconSize;
-    margin: 0 auto;
-    animation: loading .9s linear infinite;
-    -webkit-animation: loading .9s linear infinite;
-    -moz-animation: loading .9s linear infinite;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     img {
-      width: 100%;
+      width: @loadingImageSize;
       height: auto;
     }
   }
@@ -84,6 +81,9 @@
 
 //刷新类型的loading
 .is-loading-refresh {
+  display: block;
+  width: auto;
+  height: @loadingRefreshIconSize;
   top: @loadingPadding*2;
   background-color: transparent;
   .@{uiName}-loading-icon,
@@ -91,13 +91,17 @@
     display: inline-block;
     vertical-align: middle;
   }
-  .@{uiName}-loading-icon {
-    width: @loadingRefreshIconSize;
-    height: @loadingRefreshIconSize;
-    margin-right: @loadingPadding/2;
-  }
   .@{uiName}-loading-content {
     margin: 0;
-    color: #7a797b;
+    color: rgb(160, 176, 185);
+    line-height: @loadingRefreshIconSize;
+  }
+  .@{uiName}-loading-icon {
+    width: @loadingRefreshIconSize;
+    height: @loadingRefreshIconHeight;
+    margin-right: @loadingPadding/2;
+    > img {
+      height: 100%;
+    }
   }
 }

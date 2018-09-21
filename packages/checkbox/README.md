@@ -37,7 +37,8 @@ export default {
             checkList: [
                 {
                     label: '复选框1',
-                    value: '1'
+                    value: '1',
+                    secondaryText: '辅助文本'
                 },
                 {
                     label: '复选框2',
@@ -78,5 +79,6 @@ checkboxList内各个项需要传入的参数说明：
 |     ----     |     ----     |   ----    |      ----      |     ----     |
 |     label    | 复选框项的标题名称  |   String  |              |              |
 |     value     |  区分不同复选框的值         |   String  |             |               |
+|     secondaryText     |  复选框项的二级标题名称         |   String  |             |               |
 |    error  | 表单验证错误提示    |   Boolean  | true,false | false |
 |    change   | 复选框选中状态改变时的回调函数，第一个参数为改变后的勾选状态，第二个参数为复选框的value值，若无，则为label。可绑定在checkbox组件，也可绑定在form组件上|   Function |  |  |

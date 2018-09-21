@@ -2,12 +2,13 @@
     <div>
         <div class="title">
             <h3 class="yun-h3">提示 Toast</h3>
-            <p>YunUI 提供了两种提示样式，一种是位于中间的 <strong>图文提示</strong>，
-                一种是位于 <strong>底部</strong> 的文字提示。</p>
+            <p>YunUI 提供了多种提示样式</p>
         </div>
         <div class="content button-container">
-            <y-button type="linear" @click="showToast">图文提示</y-button>
-            <y-button type="linear" @click="showToastBottom">底部提示</y-button>
+            <y-button type="linear" @click="showToastPicture">操作成功-图文</y-button>
+            <y-button type="linear" @click="showToastText">操作成功-文本</y-button>
+            <y-button type="linear" @click="showToastLoadingPic">操作等待-图</y-button>
+            <y-button type="linear" @click="showToastLoadingText">操作等待-图文</y-button>
         </div>
     </div>
 </template>
@@ -23,16 +24,27 @@
             console.log('button demo loaded')
         },
         methods: {
-            showToast: function () {
+            showToastPicture: function () {
                 this.$toast({
                     content: '操作成功',
                     icon: 'success'
                 })
             },
-            showToastBottom: function () {
+            showToastText: function () {
                 this.$toast({
-                    content: '操作成功',
-                    position: 'bottom'
+                    content: '正在同步人员数据'
+                })
+            },
+            showToastLoadingPic: function () {
+                this.$toast({
+                    icon: 'waiting',
+                    content: ''
+                })
+            },
+            showToastLoadingText: function () {
+                this.$toast({
+                    icon: 'waiting',
+                    content: '正在同步人员数据'
                 })
             }
         }

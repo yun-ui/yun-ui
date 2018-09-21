@@ -16,6 +16,7 @@
         mixins: [UIName],
         props: {
             label: String,
+            limit: Number,
             defaultValue: String,
             placeholder: String,
             error: {
@@ -38,7 +39,10 @@
                     this.value = val
                 }
             },
-            value () {
+            value (afterValue) {
+                if (this.limit && afterValue.length > this.limit) {
+                    this.value = afterValue.slice(0, this.limit)
+                }
                 this.$emit('input', this.value)
                 this.$emit('change', this.value, this.label)
                 this.$parent && this.$parent.$emit('change', this.value, this.label)

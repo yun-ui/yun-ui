@@ -4,6 +4,7 @@
 .@{uiName} {
   &-search {
     .resetInput();
+    
   }
   &-searchbar {
     display: flex;
@@ -33,9 +34,9 @@
   &-search-reset {
     position: absolute;
     top: 0;
-    right: @searchBarPadding*2;
+    right: 24px;
     color: @secondaryFontColor;
-    &:hover{
+    &:active{
       opacity: 0.5;
     }
   }
@@ -44,26 +45,32 @@
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
     color: @tipsFontColor;
+    .icon-search {
+        margin-left: 24px;
+    }
   }
-  &-input-wrap &-search-input {
+  &-search-input {
     display: block;
     box-sizing: border-box;
-    padding: 0 @searchBarPadding 0 @searchBarPadding*3;
+    padding: 0 36px 0 @searchBarPadding*3 !important;
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: @searchBarHeight/2;
-    color: @tipsFontColor;
+    border-radius: 3px;
+    color: #3abcff;
     background: #F0F4F7;
   }
   &-search-cancel {
     cursor: pointer;
+    color: #7a797b;
     font-size: @searchCancelFontSize;
     padding-right: @searchBarPadding;
-    &:hover{
+    &:active{
       opacity: 0.5;
     }
   }
+}
+.input-text {
+    color: rgb(3,3,3);
 }

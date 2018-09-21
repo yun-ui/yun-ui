@@ -27,23 +27,20 @@
                         <span><i class="iconfont icon-true"></i></span>
                     </li>
                     <li>
-                        <span><i class="iconfont icon-delete"></i></span>
+                        <span><i class="iconfont icon-close"></i></span>
                     </li>
                     <li>
                         <span><i class="iconfont icon-close-line"></i></span>
                     </li>
                     <li>
-                        <span><i class="iconfont icon-addr"></i></span>
+                        <span><i class="iconfont icon-delete1"></i></span>
                     </li>
                     <li>
-                        <span><i class="iconfont icon-close"></i></span>
+                        <span><i class="iconfont icon-addr"></i></span>
                     </li>
                     <li>
                         <span><i class="iconfont icon-add-field"></i></span>
                     </li>
-                    <!--<li>-->
-                    <!--<span><i class="iconfont icon-demo"></i></span>-->
-                    <!--</li>-->
                     <li>
                         <span><i class="iconfont icon-warn"></i></span>
                     </li>
@@ -72,7 +69,7 @@
                         <span><i class="iconfont icon-email"></i></span>
                     </li>
                     <li>
-                        <span><i class="iconfont icon-friends-community"></i></span>
+                        <span><i class="iconfont icon-how"></i></span>
                     </li>
                     <li>
                         <span><i class="iconfont icon-colleague-community"></i></span>
@@ -85,12 +82,6 @@
                     </li>
                     <li>
                         <span><i class="iconfont icon-user"></i></span>
-                    </li>
-                    <li>
-                        <span><i class="iconfont icon-sun"></i></span>
-                    </li>
-                    <li>
-                        <span><i class="iconfont icon-moon"></i></span>
                     </li>
                     <li>
                         <span><i class="iconfont icon-search"></i></span>

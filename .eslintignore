@@ -5,3 +5,4 @@
 /static/*
 /src/assets/*
 /test/unit/coverage/*
+/packages/qing.js

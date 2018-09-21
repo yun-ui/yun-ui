@@ -2,12 +2,13 @@
     <div :class="[UIName+'-form-item', UIName+'-counter-item', {'error': error}]">
         <div :class="UIName + '-form-title'">
             <span v-text="label"></span>
+            <span v-text="supplement" :class="UIName + '-form-supplement'"></span>
         </div>
         <div :class="UIName+'-counter'">
-        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ 'is-disabled': min >= initValue }]"
+        <span :class="[UIName + '-counter-icon' ,'iconfont' ,'icon-delete-block',{ 'is-disabled': disabled || min >= initValue }]"
               @click="minus"></span>
             <span :class="UIName + '-counter-number'">{{ initValue }}</span>
-            <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ 'is-disabled': max <= initValue }]"
+            <span :class="[UIName + '-counter-icon','iconfont', 'icon-add-block',{ 'is-disabled': disabled || max <= initValue }]"
                   @click="increase"></span>
         </div>
     </div>
@@ -16,6 +17,8 @@
 <script>
     /**
      * @param label {string} 显示的表单名称
+     * @param supplement {string} 显示的表单补充说明
+     * @param disabled {Boolean} 禁选
      * @param min {number} 计数器可达到的最小值，默认为负无穷大
      * @param max {number} 计数器可达到的最大值，默认为正无穷大
      * @param counterValue {number} 计数器初始值，默认为0
@@ -33,6 +36,11 @@
         },
         props: {
             label: String,
+            supplement: String,
+            disabled: {
+                type: Boolean,
+                default: false
+            },
             error: {
                 type: Boolean,
                 default: false
@@ -56,6 +64,9 @@
         },
         methods: {
             minus: function () {
+                if (this.disabled) {
+                    return
+                }
                 if (this.initValue - this.step >= this.min) {
                     this.initValue -= this.step
                 } else {
@@ -65,6 +76,9 @@
                 this.$parent && this.$parent.$emit('change', this.initValue, this.label)
             },
             increase: function () {
+                if (this.disabled) {
+                    return
+                }
                 if (this.initValue + this.step <= this.max) {
                     this.initValue += this.step
                 } else {

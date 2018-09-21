@@ -26,8 +26,8 @@ Vue.component(Input.name, Input)
 ``` javascript
 <template>
 <y-form>
-    <y-input label="单行输入框" placeholder="placeholder" @change=""></y-input>
-    <y-input label="单行输入框" placeholder="placeholder" align="right" @change=""></y-input>
+    <y-input placeholder="输入" :limit="60" @change=""></y-input>
+    <y-input label="文本" placeholder="提示文本" align="right" @change=""></y-input>
 </y-form>
 </template>
 ```
@@ -37,6 +37,7 @@ Vue.component(Input.name, Input)
 |    参数    |      说明      |    类型    |   可选值    |   默认值   |
 |   ----    |      ----      |   ----    |   ----     |  ----     |
 |   label   |  输入框项的名称  |   String  |             |           |
+| limit     |  输入框限制字数   | Number |               |           |
 |defaultValue|   输入框初始值   |   String  |            |            |
 |placeholder|  输入框的placeholder|   String  |             |   |
 |align|  输入框内的文字对齐方式，默认为左对齐|   String  | right |   |

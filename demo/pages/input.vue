@@ -6,11 +6,13 @@
         </div>
         <div class="content form">
             <div class="row clearContentPadding">
+                 <y-form>
+                    <y-input placeholder="文本可以输入20字" v-model="input0" :limit="20"></y-input>
+                </y-form>
+            </div>
+             <div class="row clearContentPadding">
                 <y-form>
-                    <y-input label="单行输入框" placeholder="单行输入框" v-model="input0"></y-input>
-                    <p>内容:{{input0}}</p>
-                    <y-input label="输入框 有默认值" placeholder="单行输入框" :defaultValue="defaultValue" v-model="input1"></y-input>
-                    <p>内容:{{input1}}</p>
+                    <y-input label="文本" placeholder="提示文本" v-model="input1"></y-input>
                 </y-form>
             </div>
         </div>

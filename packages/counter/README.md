@@ -25,7 +25,12 @@ Vue.component(Counter.name, Counter)
 
 ``` javascript
 <y-form>
-    <y-counter label="计数器" :value="5" :min="1" :max="10" :step="2" @change="change"></y-counter>
+    <y-counter label="计数器" supplement= "(极值为3)" :counterValue="5" :min="1" :max="10" :step="2" @change="change"></y-counter>
+</y-form>
+```
+``` javascript
+<y-form>
+    <y-counter label="计数器" supplement= "(禁选)" disabled></y-counter>
 </y-form>
 ```
 
@@ -34,7 +39,9 @@ Vue.component(Counter.name, Counter)
 |    参数    |      说明      |    类型    |   可选值    |   默认值   |
 |   ----    |      ----      |   ----    |   ----     |  ----     |
 |   label   |  计数器项的名称  |   String  |             |           |
-|   value   |  计数器默认的值  |   Number  |            |            |
+|   supplement   |  计数器项的补充说明  |   String  |             |           |
+|   disabled   |  计数器禁选  |   Boolean  |      true,false       |     false      |
+|   counterValue   |  计数器默认的值  |   Number  |            |            |
 |    min    |  计数器最小值    |   Number  |             |           |
 |    max    |  计数器最大值    |   Number  |             |           |
 |    step   |计数器数值一次变化的大小|   Number  |         |           |

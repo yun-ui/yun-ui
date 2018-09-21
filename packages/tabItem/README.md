@@ -13,10 +13,10 @@
 ``` javascript
 // 嵌入tabbar组件中
 <y-tabbar>
-    <y-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-    <y-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-    <y-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-    <y-tab-item title="文本"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+    <y-tab-item title="文本"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
 </y-tabbar>
 ```
 

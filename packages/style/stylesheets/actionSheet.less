@@ -15,6 +15,20 @@
   &-action-sheet-panel {
     background-color: #ffffff;
     padding: 0 @actionSheetPanelPadding;
+    .@{uiName} {
+      &-action-sheet-item {
+        width: 25%;
+      }
+      &-action-sheet-item {
+        margin: 0 0 @actionSheetPadding 0;
+      }
+      &-action-sheet-image{
+        margin: 0 auto;
+      }
+      &-action-sheet-item-name {
+        margin: @actionSheetPadding/2 auto 0;
+      }
+    }
   }
   &-action-sheet-title {
     font-size: @actionSheetTitleFontSize;
@@ -25,6 +39,7 @@
     padding: @actionSheetPanelPadding 0 @actionSheetPadding;
     font-size: 0;
     margin-right: -@actionSheetPanelPadding;
+    width: 100%;
   }
   &-action-sheet-item {
     display: inline-block;

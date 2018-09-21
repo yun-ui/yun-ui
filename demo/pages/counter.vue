@@ -8,8 +8,16 @@
             <div class="row clearContentPadding">
                 <y-form>
                     <y-counter label="计数器"></y-counter>
-                    <y-counter label="计数器 步数2" :step="2"></y-counter>
-                    <y-counter label="计数器 有极值" :min="-3" :max="3"></y-counter>
+                </y-form>
+            </div>
+            <div class="row clearContentPadding">
+                <y-form>
+                    <y-counter label="计数器" supplement= "(极值为3)" :min="0" :max="3"></y-counter>
+                </y-form>
+            </div>
+             <div class="row clearContentPadding">
+                <y-form>
+                    <y-counter label="计数器" supplement= "(禁选)" disabled></y-counter>
                 </y-form>
             </div>
         </div>

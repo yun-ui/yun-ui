@@ -13,6 +13,9 @@
             <y-button type="linear" @click.native="goToPage('statePage4')">操作成功</y-button>
             <y-button type="linear" @click.native="goToPage('statePage5')">操作失败</y-button>
             <y-button type="linear" @click.native="goToPage('statePage6')">操作等待</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage7')">服务器异常 - 按钮</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage8')">网络异常 - 按钮</y-button>
+            <y-button type="linear" @click.native="goToPage('statePage9')">无数据缺省 - 按钮</y-button>
         </div>
     </div>
 </template>

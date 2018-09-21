@@ -70,6 +70,11 @@
   &-bg-blue {
     background-color: @themeColorBlue;
   }
+  //V10主要用色
+  &-v-bg-blue {
+    background-color: @themeColorDeepBlue;
+  }
+
   &-bg-olive {
     background-color: @themeColorOlive;
   }
@@ -109,6 +114,15 @@
   &-bg-white {
     background-color: @themeColorWhite;
   }
+  &-bg-color {
+    background-color: @bgColor;
+  }
+  &-bg-stroke-color {
+    background-color: @borderColor;
+  }
+  &-bg-mask-color {
+    background-color: @maskColor;
+  }
 }
 
 //quick position 快速定位
@@ -136,8 +150,10 @@
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
     -webkit-line-clamp: @line-clamp-value;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
   }
 }
 
@@ -150,7 +166,7 @@
     height: @dividedHeight;
     border-left: 1px solid #dce1e8;
     position: absolute;
-    vertical-align: middle;
+    vertical-align: middle;    
     top: 50%;
     right: 0;
     margin-top: -@dividedHeight/2;

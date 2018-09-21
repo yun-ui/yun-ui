@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import {UIName} from 'mixins'
+    import { UIName } from 'mixins'
     export default {
         name: 'y-tab-item',
         mixins: [UIName],

@@ -5,7 +5,7 @@
   width: @width;
   height: @height;
   line-height: @height;
-  border-radius: @height/2;
+  border-radius: @buttonBorderRadius;
   padding: 0 @padding;
   font-size: @fontSize;
 }
@@ -17,9 +17,9 @@
     .buttonSize(100%, @buttonNormalHeight, 0, @buttonNormalFontSize);
     text-align: center;
     color: #ffffff;
-    background-color: @themeColor;
+    background-color:@buttonColor;
     &-normal {
-      background-color: @themeColor;
+      background-color: @buttonColor;
     }
     &-linear {
       border: 1px solid #b9c7d2;
@@ -39,6 +39,7 @@
       .buttonSize(100%, @buttonLargeHeight, 0, @buttonLargeFontSize);
     }
     &.is-disabled {
+      pointer-events: none;
       color: #98a1a8;
       background: #DCE1E7;
     }

@@ -7,7 +7,7 @@
         <div class="content">
             <h4 class="yun-h4">普通文本按钮组</h4>
             <div class="row clearContentPadding">
-                <y-button-group defaultActiveTabId="2">
+                <y-button-group defaultActiveTabId="1">
                     <y-tab-item title="文本" tabId="1"></y-tab-item>
                     <y-tab-item title="文本" tabId="2"></y-tab-item>
                     <y-tab-item title="文本" tabId="3"></y-tab-item>
@@ -16,28 +16,28 @@
             </div>
             <h4 class="yun-h4">图标按钮组</h4>
             <div class="row clearContentPadding">
-                <y-button-group defaultActiveTabId="2">
-                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                <y-button-group defaultActiveTabId="1">
+                    <y-tab-item tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="4"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
             <h4 class="yun-h4">图标 + 文本按钮组</h4>
             <div class="row clearContentPadding">
-                <y-button-group defaultActiveTabId="2">
-                    <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="文本" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="文本" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                <y-button-group defaultActiveTabId="1">
+                    <y-tab-item title="文本" tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="文本" tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="文本" tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="文本" tabId="4"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
-            <h4 style="position:fixed;bottom:50px;left:12px;">按钮组固定在底部</h4>
-            <y-button-group fixed defaultActiveTabId="2">
-                <y-tab-item title="文本" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                <y-tab-item title="文本" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                <y-tab-item title="文本" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                <y-tab-item title="文本" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+            <h4 class="button-bottom">按钮组固定在底部</h4>
+            <y-button-group fixed defaultActiveTabId="1">
+                <y-tab-item title="文本" tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                <y-tab-item title="文本" tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                <y-tab-item title="文本" tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                <y-tab-item title="文本" tabId="4"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
             </y-button-group>
         </div>
     </div>
@@ -50,6 +50,10 @@
 
 </script>
 
-<style lang="less">
-
+<style lang="less" scoped>
+    .button-bottom {
+        position: fixed;
+        bottom: 54px;
+        left: 12px;
+    }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div :class="[UIName+'-form-item', UIName+'-input-item', UIName+'-textarea-item', {'error': error}]">
         <div :class="[UIName + '-input-control']">
-            <textarea :placeholder="placeholder" v-model="value"></textarea>
-            <div :class="[UIName + '-textarea-count']" v-if="limit">
+            <textarea :placeholder="placeholder" v-model="value" class="input-textarea-content"></textarea>
+            <div class="textarea-count" v-if="limit">
                 {{ number }}/{{ limit }}
             </div>
         </div>
@@ -55,3 +55,12 @@
     }
 
 </script>
+
+
+<style lang="less" rel="stylesheet/less" scoped>
+    .textarea-count{
+        color: rgb(118, 136, 147);
+        padding-bottom: 15px;
+        text-align: right;
+    }
+</style>

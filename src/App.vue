@@ -38,8 +38,10 @@
         <!--cell--start-->
         <div class="group">
             <y-form @change="inputChange">
-                <y-textarea placeholder="多行输入框" :limit="20" defaultValue="default"></y-textarea>
-                <y-input label="单行输入框" defaultValue="默认值" placeholder="输入haha"></y-input>
+                <y-textarea placeholder="多行输入框" :limit="20"></y-textarea>
+                <y-textarea placeholder="多行输入框"></y-textarea>
+                <y-input placeholder="输入" :limit="60"></y-input>
+                <y-input label="文本" placeholder="提示文本"></y-input>
                 <y-radio :radioList="radioList" v-model="radioValue"></y-radio>
                 <!--<y-radio label="单选框" value="2" name="radio"></y-radio>-->
                 <!--<y-radio label="单选框" value="3" name="radio"></y-radio>-->
@@ -48,6 +50,11 @@
                 <!--<y-radio label="单选框" name="radio2"></y-radio>-->
                 <y-checkbox :checkboxList="checkList" v-model="checkedList"></y-checkbox>
                 <y-counter label="计数器"></y-counter>
+                  
+                <y-counter label="计数器" supplement= "(极值为3)" :counterValue="5" :min="0" :max="3"></y-counter>
+               
+                <y-counter label="计数器" supplement= "(禁选)" disabled></y-counter>
+
                 <y-switch label="开关"></y-switch>
             </y-form>
             <!--<y-form>-->
@@ -69,22 +76,15 @@
             <!--<y-form-item type="radio" label="单选框" name="radio2"></y-form-item>-->
             <!--<y-form-item type="radio" label="单选框" name="radio2"></y-form-item>-->
             <!--<y-form-item type="radio" label="单选框" name="radio2"></y-form-item>-->
-            <!--<y-form-item type="imagePicker" label="照片选择器" text="已选择5张">-->
-            <!--<img src="../src/assets/placeholder-figure.png" slot="image">-->
-            <!--</y-form-item>-->
-            <!--<y-form-item type="filePicker" label="选择附件" text="已选择2个" fileName="文件名称"-->
-            <!--errorInfo="上传失败，点击重传" fileSize="9.2M/20M" uploadTime="12月25日 13:22 星期五">-->
-            <!--<img src="../src/assets/placeholder-figure.png" slot="fileIcon">-->
-            <!--</y-form-item>-->
             <!--</y-form>-->
         </div>
         <!--cell--end-->
 
         <!--search--start-->
-        <div>
-            <y-search placeholder="输入以搜索" text="搜索" @search="search"></y-search>
+        <!-- <div>
+            <y-search placeholder="输入以搜索" text="搜索" operation="取消" v-model="searchText" @operate="operation"></y-search>
             输入的内容：{{ searchText }}
-        </div>
+        </div> -->
         <!--search--end-->
         <!--badge--start-->
         <div>
@@ -195,22 +195,22 @@
             </div>
             <div style="position:relative;height:50px;">
                 <y-button-group defaultActiveTabId="2">
-                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i>
+                    <y-tab-item tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></i>
                         <y-badge></y-badge>
                     </y-tab-item>
-                    <y-tab-item tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
             <div style="position:relative;height:50px;">
                 <y-button-group defaultActiveTabId="2">
-                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i>
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-normal-icon" slot="icon"></i></i>
                         <y-badge type="text" value="100+" color="#3cbaff"></y-badge>
                     </y-tab-item>
-                    <y-tab-item tabId="2" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="2" title="text"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item tabId="1" title="text"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
                 </y-button-group>
             </div>
         </div>
@@ -220,11 +220,11 @@
         <div>
             <h1>Tabbar</h1>
             <div style="position:relative;height:50px">
-                <y-tabbar @change="navChange" defaultActiveTabId="3">
-                    <y-tab-item title="text" tabId="1"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="text" tabId="2"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="text" tabId="3"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
-                    <y-tab-item title="text" tabId="4"><i class="iconfont icon-demo" slot="icon"></i></y-tab-item>
+                <y-tabbar @change="navChange" defaultActiveTabId="1">
+                    <y-tab-item title="text" tabId="1"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="text" tabId="2"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="text" tabId="3"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
+                    <y-tab-item title="text" tabId="4"><i class="iconfont icon-normal-icon" slot="icon"></i></y-tab-item>
                 </y-tabbar>
             </div>
 
@@ -260,6 +260,16 @@
         <!--Navbar--end-->
 
         <!--list--start-->
+        <y-list-container style="margin: 20px 0;">
+            <y-list-item title="添加请假明细" add :itemStyle="itemAddStyle"></y-list-item>
+        </y-list-container>
+        <y-list-container style="margin: 20px 0;">
+            <y-list-item :items="itemData"></y-list-item>
+        </y-list-container>
+        <y-list-container style="margin: 20px 0;">
+            <y-list-item title="示例字段" secondaryText="删除" :itemStyle="itemAddStyle" @operate="deleteItems"></y-list-item>
+        </y-list-container>
+        <y-list-item title="列表标题" secondaryText="辅助文本" multi link></y-list-item>
         <y-list-item title="列表标题" secondaryText="辅助文本" multi>
             <img src="../src/assets/placeholder-figure.png" slot="icon">
         </y-list-item>
@@ -272,7 +282,7 @@
             <y-list-item title="列表标题" secondaryText="辅助文本" multi link>
             </y-list-item>
 
-            <y-list-item title="列表标题" secondaryText="辅助文本" multi>
+            <y-list-item title="列表标题" secondaryText="辅助文本" multi link>
                 <img src="../src/assets/placeholder-figure.png" slot="img">
             </y-list-item>
             <y-list-item title="列表标题" secondaryText="辅助文本" multi avatar>
@@ -294,12 +304,34 @@
             <y-list-item title="列表标题" secondaryText="辅助文本">
                 <img src="../src/assets/placeholder-figure.png" slot="iconRight">
             </y-list-item>
+            <h4 class="yun-h4">特殊列表</h4>
+            <y-list-container>
+                <y-list-item title="列表一级标题" first></y-list-item>
+                <y-list-item title="列表二级标题" link secondaryText="辅助文本"></y-list-item>
+                <y-list-item title="列表二级标题" link secondaryText="辅助文本"></y-list-item>
+            </y-list-container>
+            <y-list-container>
+                <y-list-item title="列表标题" secondaryText="辅助文本" multi link assist="辅助文本分栏"> 
+                    <img src="../src/assets/placeholder-figure.png" slot="img">
+                </y-list-item>
+            </y-list-container>
         </y-list-container>
 
         <!--list--end-->
-        <y-button @click="toggleLoading">显示/隐藏Loading</y-button>
+        <!-- <y-button @click="toggleLoading">显示/隐藏Loading</y-button>
         <y-loading content="加载中" :show="showLoading" refresh>
             <img src="../src/assets/loading.png" slot="icon"/>
+        </y-loading> -->
+        <div class="content button-container">
+            <y-button type="linear" @click.native="showFresh = !showFresh">刷新类 Loading</y-button>
+            <y-button type="linear" @click.native="showLoading = !showLoading">跳转类 Loading</y-button>
+        </div>
+
+        <y-loading content="加载中" refresh :show="showFresh" style="top:64px">
+            <img src="../src/assets/refresh.gif" slot="icon"/>
+        </y-loading>
+        <y-loading :show="showLoading">
+            <img src="../src/assets/loading.gif" slot="icon"/>
         </y-loading>
         <y-button @click="showToast">显示Toast</y-button>
     </div>
@@ -348,18 +380,22 @@
             togglePop: function () {
                 this.showPop = !this.showPop
             },
-            search: function (value) {
-                this.searchText = value
+            operation: function (value) {
+                console.log(value)
+                this.searchText = ''
             },
             navChange: function (activeTab) {
                 console.log(activeTab)
             },
             showToast: function () {
                 this.$toast({
-                    content: '这里有很多',
-                    duration: 50000,
-//                    icon: 'success'
-                    position: 'bottom'
+                    // content: '正在同步人员数据',
+                    icon: 'waiting',
+                    content: '',
+                    duration: 50000
+                    // icon: 'waiting',
+                    // icon: 'success',
+                    // position: 'bottom'
                 })
             },
             toggleLoading: function () {
@@ -399,16 +435,42 @@
             actionSheetChange: function (value, status) {
                 console.log(value)
                 console.log(status)
+            },
+            showImage: function (data) {
+                alert(JSON.stringify(data))
+            },
+            showPersons: function (data) {
+                // alert(JSON.stringify(data))
+            },
+            fileInfo: function (data) {
+                // alert(JSON.stringify(data))
+            },
+            showTimes: function (data) {
+                // alert(JSON.stringify(data))
+                this.showTime = data.data.dateTime
+            },
+            deleteItems: function (data) {
+                alert(data)
+                this.itemData = []
             }
         },
         data () {
             return {
+                itemData: [
+                    '请假总天数： 0.00',
+                    '请假总时长： 0.00'
+                ],
+                itemAddStyle: {
+                    color: 'rgb(253, 163, 43)'
+                },
+                showTime: '',
                 showPop: false,
                 textInputStyle: '',
                 radioValue: '',
                 radioList: [
                     {
                         label: '单选框1',
+                        secondaryText: '辅助文本',
                         value: '1',
                         name: 'radio'
                     },
@@ -432,21 +494,18 @@
                 checkList: [
                     {
                         label: '复选框1',
+                        secondaryText: '辅助文本',
                         checked: false,
                         value: '1'
                     },
                     {
                         label: '复选框2',
+                        // text: '辅助文本',
                         checked: false,
                         value: '2'
-                    },
-                    {
-                        label: '复选框3',
-                        checked: true,
-                        value: '3'
                     }
                 ],
-                checkedList: ['3'],
+                checkedList: ['2'],
                 textListArray: [
                     {
                         content: '这是一段文本'
@@ -461,76 +520,90 @@
                 actionSheetPanelItem: [
                     {
                         title: '微信',
-                        id: 'wechat',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        icon: require('../src/assets/weixin.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '朋友圈',
+                        icon: require('../src/assets/weixin-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
                         title: '同事圈',
-                        id: 'moment',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        icon: require('../src/assets/colleague-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '收藏',
-                        id: 'collection',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: '同事',
+                        icon: require('../src/assets/colleague.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '上传电脑',
-                        id: 'upload',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: 'QQ',
+                        icon: require('../src/assets/qq.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '转发',
-                        id: 'forward',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: 'QQ空间',
+                        icon: require('../src/assets/qq-circle.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '其他应用',
-                        id: 'other',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: '短信',
+                        icon: require('../src/assets/short-message.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '微博',
+                        icon: require('../src/assets/weibo.png'),
                         callback: this.actionItemClick
                     }
                 ],
                 actionSheetCheckboxItem: [
                     {
                         title: '微信',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        icon: require('../src/assets/weixin.png'),
                         checked: true,
                         value: 'wechat',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '同事圈',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: '朋友圈',
+                        icon: require('../src/assets/weixin-circle.png'),
                         value: 'group',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '收藏',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: '同事圈',
+                        icon: require('../src/assets/colleague-circle.png'),
                         value: 'favorite',
                         callback: this.actionItemClick
                     },
                     {
-                        title: '上传到电脑',
+                        title: '同事',
                         checked: true,
                         value: 'upload',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        icon: require('../src/assets/colleague.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '转发',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: 'QQ',
+                        icon: require('../src/assets/qq.png'),
                         callback: this.actionItemClick
                     },
                     {
-                        title: '其他应用打开',
-                        icon: require('../src/assets/placeholder-figure.png'),
+                        title: 'QQ空间',
+                        icon: require('../src/assets/qq-circle.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '短信',
+                        icon: require('../src/assets/short-message.png'),
+                        callback: this.actionItemClick
+                    },
+                    {
+                        title: '微博',
+                        icon: require('../src/assets/weibo.png'),
                         callback: this.actionItemClick
                     }
                 ],

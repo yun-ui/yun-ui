@@ -9,7 +9,6 @@
                 <y-form>
                     <div>
                         <y-radio :radioList="radioList" v-model="radio"></y-radio>
-                        <p>{{radio}}</p>
                     </div>
                 </y-form>
             </div>
@@ -17,7 +16,6 @@
                 <y-form>
                     <div>
                         <y-radio :radioList="radioList2" v-model="radio2"></y-radio>
-                        <p>{{radio2}}</p>
                     </div>
                 </y-form>
             </div>
@@ -32,37 +30,30 @@
             return {
                 radioList: [
                     {
-                        label: '单选框1',
+                        label: '文本',
+                        checked: true,
                         value: '1',
                         name: 'radio'
                     },
                     {
-                        label: '单选框2',
+                        label: '文本',
                         value: '2',
-                        name: 'radio'
-                    },
-                    {
-                        label: '单选框3',
-                        value: '3',
                         name: 'radio'
                     }
                 ],
                 radioList2: [
                     {
-                        label: '单选框 默认勾选',
+                        label: '文本',
+                        secondaryText: '辅助文本',
                         checked: true,
                         value: '1',
-                        name: 'radio2'
+                        name: 'radio'
                     },
                     {
-                        label: '单选框2',
+                        label: '文本',
+                        secondaryText: '辅助文本',
                         value: '2',
-                        name: 'radio2'
-                    },
-                    {
-                        label: '单选框3',
-                        value: '3',
-                        name: 'radio2'
+                        name: 'radio'
                     }
                 ],
                 radio: '',

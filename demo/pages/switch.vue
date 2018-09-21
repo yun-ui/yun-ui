@@ -7,8 +7,8 @@
         <div class="content form">
             <div class="row clearContentPadding">
                 <y-form>
-                    <y-switch label="开关列表"></y-switch>
-                    <y-switch label="开关列表 默认勾选" checked></y-switch>
+                    <y-switch label="关闭"></y-switch>
+                    <y-switch label="开启" checked></y-switch>
                 </y-form>
             </div>
         </div>

@@ -6,8 +6,8 @@
         </div>
         <div v-for="group in nav">
             <y-list-container>
-                <y-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi>
-                    <img :src="group.title.icon" slot="icon">
+                <y-list-item :title="group.title.main" :secondaryText="group.title.secondary" multi class="no-hover">
+                    <img :src="group.title.icon" slot="img">
                 </y-list-item>
                 <y-list-item v-for="component in group.list" :title="component.secondary + component.name"
                                link @click.native="goToDetail(component.path)">
@@ -48,5 +48,8 @@
 
     .banner h1 {
         font-size: 32px;
+    }
+    .no-hover {
+        pointer-events: none;
     }
 </style>

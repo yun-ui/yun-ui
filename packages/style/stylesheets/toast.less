@@ -26,33 +26,50 @@
     color: #ffffff;
     overflow: hidden;
     background-color: fade(@toastBG, 80%);
-    border-radius: @toastRadius;
+    border-radius: @toastBigRadius;
   }
   //loading icon
   &-toast-icon {
     position: relative;
-    width: @toastIconSize;
-    height: @toastIconSize;
+    width: @toastIconWidth;
+    height: @toastIconHeight;
     margin: 0 auto;
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
   //loading文字内容显示区域
   &-toast-content {
-    padding-top:@toastPadding/2;
+    padding-top:@toastPadding;
     font-size: @toastFontSize;
+    line-height: @toastLineHeight;
   }
 }
 
+.toast-border-radius {
+  width: auto;
+  border-radius: @toastRadius;
+  padding: @toastPadding-top @toastPadding*2;
+  .@{uiName}-toast-content{
+    padding-top:0;
+  }
+}
+
+.waiting-icon {
+  width: @toastIconWaitingWidth;
+  height: @toastIconWaitingHeight;
+}
 .is-loading-bottom {
   width: auto;
   top: auto;
   padding: @toastPadding-top @toastPadding*2;
   bottom: @toastPadding * 2;
-  border-radius: @toastPadding * 2;
   .@{uiName}-toast-content{
     padding-top:0;
   }
+}
+.waiting-width {
+   width: auto;
+   padding: @toastIconWaitingPadding;
 }

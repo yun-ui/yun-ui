@@ -25,7 +25,7 @@ Vue.component(Loading.name, Loading)
 </y-loading>
 <!-- 在页面顶部显示的刷新提示 -->
 <y-loading content="加载中..." refresh>
-    <img src="../assets/loading.png" slot="icon"/>
+    <img src="../assets/waiting.png" slot="icon"/>
 </y-loading>
 ```
 

@@ -6,65 +6,36 @@
                 我们还支持用户自定义颜色（这里推荐使用官方配色）。</p>
         </div>
         <div class="content yun-bg-white">
-            <div class="row yun-text-center">
-                <y-badge type="text" text="new"></y-badge>
-                <y-badge type="text" text="100" color="#3CBAFF"></y-badge>
-                <y-badge type="text" text="100" color="#94D301"></y-badge>
-                <y-badge type="text" text="100" color="#F87E4E"></y-badge>
-                <y-badge type="text" text="100" color="#F7BF28"></y-badge>
-                <y-badge type="text" text="100" color="#AF65DF"></y-badge>
-                <y-badge type="text" text="100" color="#FB6691"></y-badge>
-                <y-badge type="text" text="100" color="#F35959"></y-badge>
-                <y-badge type="text" text="100" color="#31D2EA"></y-badge>
-                <y-badge type="text" text="100" color="#4788D8"></y-badge>
-                <y-badge type="text" text="100" color="#01D386"></y-badge>
-                <y-badge type="text" text="100" color="#C18E6F"></y-badge>
-                <y-badge type="text" text="100" color="#6D777D"></y-badge>
-                <y-badge type="text" text="100" color="#EAEFF3"></y-badge>
-                <y-badge type="text" text="1"></y-badge>
-            </div>
-            <div class="row yun-text-center">
-                <y-badge></y-badge>
-                <y-badge color="#3CBAFF"></y-badge>
-                <y-badge color="#94D301"></y-badge>
-                <y-badge color="#F87E4E"></y-badge>
-                <y-badge color="#F7BF28"></y-badge>
-                <y-badge color="#AF65DF"></y-badge>
-                <y-badge color="#FB6691"></y-badge>
-                <y-badge color="#F35959"></y-badge>
-                <y-badge color="#31D2EA"></y-badge>
-                <y-badge color="#4788D8"></y-badge>
-                <y-badge color="#01D386"></y-badge>
-                <y-badge color="#C18E6F"></y-badge>
-                <y-badge color="#6D777D"></y-badge>
-                <y-badge color="#EAEFF3"></y-badge>
+            <div>
+                <span class="red-tips">红点提示规范：</span>
+                <span class="tips-padding"><y-badge class="badge-doc-top"></y-badge></span>
+                <span class="tips-padding"><y-badge type="text" text="1"></y-badge></span>
+                <span class="tips-padding"><y-badge type="text" text="100"></y-badge></span>
+                <span class="tips-padding"><y-badge type="text" text="new"></y-badge></span>
             </div>
         </div>
         <div class="row clearContentPadding">
             <y-navbar defaultActiveTabId="1">
-                <y-tab-item title="文本" tabId="1"></y-tab-item>
-                <y-tab-item title="文本" tabId="2">
-                    <y-badge color="#fa5959" class="position-badge position-badge-1"></y-badge>
+                <y-tab-item title="导航文本" tabId="1">
+                    <y-badge class="position-badge position-badge-1"></y-badge>
                 </y-tab-item>
-                <y-tab-item title="文本" tabId="3"></y-tab-item>
+                <y-tab-item title="导航文本" tabId="2"></y-tab-item>
             </y-navbar>
         </div>
         <div class="row clearContentPadding">
             <y-navbar defaultActiveTabId="1">
-                <y-tab-item title="文本" tabId="1">
-                    <y-badge type="text" text="1" color="#fa5959" class="position-badge position-badge-2"></y-badge>
+                <y-tab-item title="导航文本" tabId="1">
+                    <y-badge type="text" text="1" class="position-badge position-badge-2"></y-badge>
                 </y-tab-item>
-                <y-tab-item title="文本" tabId="2"></y-tab-item>
-                <y-tab-item title="文本" tabId="3"></y-tab-item>
+                <y-tab-item title="导航文本" tabId="2"></y-tab-item>
             </y-navbar>
         </div>
         <div class="row clearContentPadding">
             <y-navbar defaultActiveTabId="1">
-                <y-tab-item title="文本" tabId="1">
-                    <y-badge type="text" text="new" color="#fa5959" class="position-badge position-badge-3"></y-badge>
+                <y-tab-item title="导航文本" tabId="1">
+                    <y-badge type="text" text="new" class="position-badge position-badge-3"></y-badge>
                 </y-tab-item>
-                <y-tab-item title="文本" tabId="2"></y-tab-item>
-                <y-tab-item title="文本" tabId="3"></y-tab-item>
+                <y-tab-item title="导航文本" tabId="2"></y-tab-item>
             </y-navbar>
         </div>
     </div>
@@ -77,7 +48,19 @@
 
 <style lang="less" scoped>
     .content {
-        padding-top:20px;
+        padding: 18px 24px;
+        .badge-doc-top{
+            margin-top: 8px;
+        }
+        .red-tips {
+          color: #3D464A;
+          font-size: 12px;
+          line-height: 17px;
+        }
+        .tips-padding {
+            display: inline-block;
+            padding-left: 15px;
+        }
     }
     .row{
         margin-top:12px;
@@ -88,7 +71,7 @@
     .position-badge{
         position: absolute;
         top:50%;
-        right:12px;
+        margin-left: 4px;
     }
     .position-badge-1{
         margin-top:2px;
@@ -98,6 +81,5 @@
     }
     .position-badge-3{
         margin-top:-7px;
-        right:4px;
     }
 </style>
